@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Heterogeneous System Interoperability</title><link>https://cn.dubbo.apache.org/en/docs3-v2/golang-sdk/tutorial/develop/interflow/</link><description>Recent content in Heterogeneous System Interoperability on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://cn.dubbo.apache.org/en/docs3-v2/golang-sdk/tutorial/develop/interflow/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs3-V2: Cross-language interoperability with Java applications</title><link>https://cn.dubbo.apache.org/en/docs3-v2/golang-sdk/tutorial/develop/interflow/call_java/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/golang-sdk/tutorial/develop/interflow/call_java/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Heterogeneous System Interoperability</title><link>https://wxbty.github.io/web-site/en/docs3-v2/golang-sdk/tutorial/develop/interflow/</link><description>Recent content in Heterogeneous System Interoperability on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://wxbty.github.io/web-site/en/docs3-v2/golang-sdk/tutorial/develop/interflow/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs3-V2: Cross-language interoperability with Java applications</title><link>https://wxbty.github.io/web-site/en/docs3-v2/golang-sdk/tutorial/develop/interflow/call_java/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/golang-sdk/tutorial/develop/interflow/call_java/</guid><description>
 &lt;h2 id="preparation">Preparation&lt;/h2>
 &lt;h3 id="environment">environment&lt;/h3>
 &lt;p>JDK 8, Golang &amp;gt;= 1.15, Dubbo 3.0.2, zookeeper enabled,&lt;/p>
@@ -103,7 +103,7 @@
 &lt;h3 id="11-go-client---java-server">1.1 Go-Client -&amp;gt; Java-Server&lt;/h3>
 &lt;h4 id="java-server-start">Java-Server start&lt;/h4>
 &lt;ol>
-&lt;li>Define Java PB file, please refer to &lt;a href="https://cn.dubbo.apache.org/zh-cn/docs/quick-start/">Dubbo Quick Start&lt;/a>&lt;/li>
+&lt;li>Define Java PB file, please refer to &lt;a href="https://wxbty.github.io/web-site/zh-cn/docs/quick-start/">Dubbo Quick Start&lt;/a>&lt;/li>
 &lt;/ol>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-protobuf" data-lang="protobuf">&lt;span style="display:flex;">&lt;span>syntax &lt;span style="color:#719e07">=&lt;/span> &lt;span style="color:#2aa198">&amp;#34;proto3&amp;#34;&lt;/span>;
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
@@ -359,7 +359,7 @@
 &lt;h3 id="21-go-client---java-server">2.1 Go-Client -&amp;gt; Java-Server&lt;/h3>
 &lt;h4 id="java-server-start-1">Java-Server start&lt;/h4>
 &lt;ol>
-&lt;li>Define the Java interface, parameters and return values, please refer to &lt;a href="https://cn.dubbo.apache.org/zh-cn/docs/quick-start/">Dubbo Quick Start&lt;/a>&lt;/li>
+&lt;li>Define the Java interface, parameters and return values, please refer to &lt;a href="https://wxbty.github.io/web-site/zh-cn/docs/quick-start/">Dubbo Quick Start&lt;/a>&lt;/li>
 &lt;/ol>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#719e07">package&lt;/span> org.apache.dubbo;
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
@@ -698,7 +698,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> System.out.println(user.getId());
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Interoperate with gRPC applications</title><link>https://cn.dubbo.apache.org/en/docs3-v2/golang-sdk/tutorial/develop/interflow/call_grpc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/golang-sdk/tutorial/develop/interflow/call_grpc/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Interoperate with gRPC applications</title><link>https://wxbty.github.io/web-site/en/docs3-v2/golang-sdk/tutorial/develop/interflow/call_grpc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/golang-sdk/tutorial/develop/interflow/call_grpc/</guid><description>
 &lt;h2 id="1-preparations">1. Preparations&lt;/h2>
 &lt;ul>
 &lt;li>dubbo-go cli tools and dependent tools have been installed&lt;/li>

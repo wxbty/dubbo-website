@@ -1,5 +1,5 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Concepts and Architecture</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/concepts-and-architecture/</link><description>Recent content in Concepts and Architecture on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/concepts-and-architecture/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs3-V2: Overall Architecture</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/concepts-and-architecture/overall-architecture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/concepts-and-architecture/overall-architecture/</guid><description>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/user/dubbo-architecture.jpg" alt="dubbo-architecture">&lt;/p>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Concepts and Architecture</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/concepts-and-architecture/</link><description>Recent content in Concepts and Architecture on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/concepts-and-architecture/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs3-V2: Overall Architecture</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/concepts-and-architecture/overall-architecture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/concepts-and-architecture/overall-architecture/</guid><description>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/user/dubbo-architecture.jpg" alt="dubbo-architecture">&lt;/p>
 &lt;h5 id="node-role-description">Node role description&lt;/h5>
 &lt;table>
 &lt;thead>
@@ -68,7 +68,7 @@
 &lt;/ul>
 &lt;h2 id="upgradability">Upgradability&lt;/h2>
 &lt;p>When the scale of service clusters is further expanded and the IT governance structure is further upgraded, it is necessary to realize dynamic deployment and perform flow computing, and the existing distributed service architecture will not bring resistance. The following figure is a possible architecture in the future:&lt;/p>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/user/dubbo-architecture-future.jpg" alt="dubbo-architecture-futures">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/user/dubbo-architecture-future.jpg" alt="dubbo-architecture-futures">&lt;/p>
 &lt;h5 id="node-role-description-1">Node role description&lt;/h5>
 &lt;table>
 &lt;thead>
@@ -103,9 +103,9 @@
 &lt;td>A monitoring center that counts service calls and call times&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Docs3-V2: Code Architecture</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/concepts-and-architecture/code-architecture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/concepts-and-architecture/code-architecture/</guid><description>
+&lt;/table></description></item><item><title>Docs3-V2: Code Architecture</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/concepts-and-architecture/code-architecture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/concepts-and-architecture/code-architecture/</guid><description>
 &lt;h2 id="overall-design">overall design&lt;/h2>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/dev/dubbo-framework.jpg" alt="/dev-guide/images/dubbo-framework.jpg">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/dev/dubbo-framework.jpg" alt="/dev-guide/images/dubbo-framework.jpg">&lt;/p>
 &lt;p>illustration:&lt;/p>
 &lt;ul>
 &lt;li>The light blue background on the left in the figure is the interface used by the service consumer, the light green background on the right is the interface used by the service provider, and the interface on the central axis is the interface used by both parties.&lt;/li>
@@ -135,7 +135,7 @@
 &lt;li>Registry and Monitor are actually not considered a layer, but an independent node, just for a global overview, drawn together in layers.&lt;/li>
 &lt;/ul>
 &lt;h2 id="module-subpackage">Module Subpackage&lt;/h2>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/dev/dubbo-modules.jpg" alt="/dev-guide/images/dubbo-modules.jpg">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/dev/dubbo-modules.jpg" alt="/dev-guide/images/dubbo-modules.jpg">&lt;/p>
 &lt;p>Module description:&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>dubbo-common public logic module&lt;/strong>: including Util class and common model.&lt;/li>
@@ -155,7 +155,7 @@
 &lt;li>The Serialize layer is placed in the common module for greater reuse.&lt;/li>
 &lt;/ul>
 &lt;h2 id="dependencies">Dependencies&lt;/h2>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/dev/dubbo-relation.jpg" alt="/dev-guide/images/dubbo-relation.jpg">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/dev/dubbo-relation.jpg" alt="/dev-guide/images/dubbo-relation.jpg">&lt;/p>
 &lt;p>illustration:&lt;/p>
 &lt;ul>
 &lt;li>The small squares in the figure Protocol, Cluster, Proxy, Service, Container, Registry, Monitor represent layers or modules, the blue ones indicate that they interact with the business, and the green ones only interact with Dubbo internally.&lt;/li>
@@ -165,13 +165,13 @@
 &lt;/ul>
 &lt;h2 id="call-chain">call chain&lt;/h2>
 &lt;p>Expand the red call chain of the general design diagram, as follows:&lt;/p>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/dev/dubbo-extension.jpg" alt="/dev-guide/images/dubbo-extension.jpg">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/dev/dubbo-extension.jpg" alt="/dev-guide/images/dubbo-extension.jpg">&lt;/p>
 &lt;h2 id="expose-service-timing">Expose service timing&lt;/h2>
 &lt;p>Expand the blue initialization chain of the exposed service of the service provider on the right side of the general design diagram, and the sequence diagram is as follows:&lt;/p>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/dev/dubbo-export.jpg" alt="/dev-guide/images/dubbo-export.jpg">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/dev/dubbo-export.jpg" alt="/dev-guide/images/dubbo-export.jpg">&lt;/p>
 &lt;h2 id="reference-service-timing">Reference service timing&lt;/h2>
 &lt;p>Expand the green initialization chain of the service consumer reference service on the left side of the general design diagram, and the sequence diagram is as follows:&lt;/p>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/dev/dubbo-refer.jpg" alt="/dev-guide/images/dubbo-refer.jpg">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/dev/dubbo-refer.jpg" alt="/dev-guide/images/dubbo-refer.jpg">&lt;/p>
 &lt;h2 id="domain-model">Domain Model&lt;/h2>
 &lt;p>In Dubbo&amp;rsquo;s core domain model:&lt;/p>
 &lt;ul>
@@ -183,13 +183,13 @@
 &lt;ul>
 &lt;li>Adopt Microkernel + Plugin mode, Microkernel is only responsible for assembling Plugin, and Dubbo&amp;rsquo;s own functions are also realized through extension points, that is, all function points of Dubbo can be replaced by user-defined extensions.&lt;/li>
 &lt;li>URL is used as the unified format of configuration information, and all extension points carry configuration information by passing URL.&lt;/li>
-&lt;/ul></description></item><item><title>Docs3-V2: Service Discovery</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/concepts-and-architecture/service-discovery/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/concepts-and-architecture/service-discovery/</guid><description>
+&lt;/ul></description></item><item><title>Docs3-V2: Service Discovery</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/concepts-and-architecture/service-discovery/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/concepts-and-architecture/service-discovery/</guid><description>
 &lt;p>Service discovery, that is, the ability of the consumer to automatically discover the list of service addresses, is a key capability that the microservice framework needs to have. With the help of automated service discovery, microservices can be implemented without knowing the deployment location and IP address of the peer. communication.&lt;/p>
 &lt;h3 id="method-to-realize">Method to realize&lt;/h3>
 &lt;p>There are many ways to realize service discovery. Dubbo provides a Client-Based service discovery mechanism. Usually, additional third-party registry components need to be deployed to coordinate the service discovery process, such as commonly used Nacos, Consul, Zookeeper, etc. Dubbo itself also provides the connection to various registry components, and users can choose flexibly.&lt;/p>
 &lt;h3 id="working-principle">working principle&lt;/h3>
 &lt;p>Dubbo is based on the automatic service discovery capability of the consumer, and its basic working principle is as follows:&lt;/p>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/architecture.png" alt="//imgs/architecture.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/architecture.png" alt="//imgs/architecture.png">&lt;/p>
 &lt;p>A core component of service discovery is the registry, Provider registers addresses to the registry, and Consumer reads and subscribes to the Provider address list from the registry.
 Therefore, to enable service discovery, you need to add registry configuration to Dubbo:&lt;/p>
 &lt;p>Take dubbo-spring-boot-starter as an example, add registry configuration&lt;/p>
@@ -204,14 +204,14 @@ Therefore, to enable service discovery, you need to add registry configuration t
 &lt;li>Improved performance and scalability. The service governance that supports ultra-large-scale clusters has always been Dubbo&amp;rsquo;s advantage. By introducing an application-level service discovery model, it essentially solves the storage and push pressure of the registry address data, and the corresponding address calculation pressure on the consumer side also drops by an order of magnitude. ; The cluster size has also become predictable and assessable (it has nothing to do with the number of RPC interfaces, but only with the instance deployment scale).&lt;/li>
 &lt;/ul>
 &lt;p>The following figure shows the service discovery model of Dubbo2: Provider registers the service address, Consumer coordinates with the registration center and discovers the service address, and then initiates communication with the address. This is the classic service discovery process used by most microservice frameworks. The special feature of Dubbo2 is that it also integrates the information of &amp;ldquo;RPC interface&amp;rdquo; into the address discovery process, and this part of information is often closely related to specific business definitions.&lt;/p>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/v3/concepts/servicediscovery_old.png" alt="//imgs/v3/concepts/servicediscovery_old.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/concepts/servicediscovery_old.png" alt="//imgs/v3/concepts/servicediscovery_old.png">&lt;/p>
 &lt;p>After accessing the cloud-native infrastructure, the infrastructure incorporates the abstraction of the concept of microservices, and the process of orchestrating and scheduling containerized microservices completes the registration at the infrastructure level. As shown in the figure below, the infrastructure not only assumes the responsibility of the registration center, but also completes the service registration action, and the information of the &amp;ldquo;RPC interface&amp;rdquo;, because it is related to specific businesses, is impossible and unsuitable to be hosted by the infrastructure.&lt;/p>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/v3/concepts/servicediscovery_k8s.png" alt="//imgs/v3/concepts/servicediscovery_k8s.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/concepts/servicediscovery_k8s.png" alt="//imgs/v3/concepts/servicediscovery_k8s.png">&lt;/p>
 &lt;p>In such a scenario, there are two requirements for Dubbo3&amp;rsquo;s service registration discovery mechanism:
 Dubbo3 needs to abstract a common address mapping model that has nothing to do with business logic in the original service discovery process, and ensure that this part of the model is reasonable enough to support entrusting the registration behavior and storage of addresses to the underlying infrastructure
 Dubbo3&amp;rsquo;s unique business interface synchronization mechanism is an advantage that Dubbo3 needs to retain. It needs to be resolved through its own mechanism within the framework on top of the new address model defined in Dubbo3.&lt;/p>
 &lt;p>The new service discovery model designed in this way brings greater advantages to Dubbo3 in terms of architecture compatibility and scalability.&lt;/p>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/v3/concepts/servicediscovery_mem.png" alt="//imgs/v3/concepts/servicediscovery_mem.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/concepts/servicediscovery_mem.png" alt="//imgs/v3/concepts/servicediscovery_mem.png">&lt;/p>
 &lt;p>In terms of architectural compatibility, as mentioned above, it is possible for Dubbo3 to reuse the service abstraction capabilities of the underlying infrastructure; on the other hand, other microservice solutions in the industry such as Spring Cloud also follow this model.
 After opening the address discovery, it becomes possible for users to explore using Dubbo to connect heterogeneous microservice systems.&lt;/p>
 &lt;p>The Dubbo3 service discovery model is more suitable for building a scalable service system. How to understand this?
@@ -220,8 +220,8 @@ You need to register 100 services in the registry. If this application is deploy
 For Dubbo3, the new registration discovery model only needs 1 service (only related to the application and has nothing to do with the interface), and only registers 1 * 100 = 100 virtual nodes equal to the number of machine instances to the registration center.
 In this simple example, the number of addresses registered by Dubbo has dropped to 1/100 of the original, which greatly relieves the storage pressure on the registration center and subscribers. more importantly,
 The address discovery capacity is completely decoupled from the business RPC definition, and the capacity evaluation of the entire cluster will become more transparent for operation and maintenance: as many machines are deployed as there are loads, it will not be like Dubbo2.
-Because business RPC reconstruction will affect the stability of the entire cluster service discovery.&lt;/p></description></item><item><title>Docs3-V2: Service Call Extension Point</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/concepts-and-architecture/service-invocation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/concepts-and-architecture/service-invocation/</guid><description>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/v3/concepts/invoke-arch.jpg" alt="dubbo-architecture">&lt;/p>
+Because business RPC reconstruction will affect the stability of the entire cluster service discovery.&lt;/p></description></item><item><title>Docs3-V2: Service Call Extension Point</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/concepts-and-architecture/service-invocation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/concepts-and-architecture/service-invocation/</guid><description>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/concepts/invoke-arch.jpg" alt="dubbo-architecture">&lt;/p>
 &lt;p>As shown in the figure above, from the perspective of service invocation, Dubbo provides a wealth of extension points in the link, covering load balancing methods, interceptors before and after site selection, and server-side processing interceptors.
 To put it simply, when Dubbo initiates a remote call, the main workflow can be divided into two parts: the consumer side and the server side.&lt;/p>
 &lt;p>The workflow on the consumer side is as follows:&lt;/p>
@@ -248,7 +248,7 @@ To put it simply, when Dubbo initiates a remote call, the main workflow can be d
 &lt;h2 id="filter-interceptor">Filter (interceptor)&lt;/h2>
 &lt;p>The interceptor can implement the interception of the call process of the service provider and the service consumer. Most of Dubbo&amp;rsquo;s own functions are implemented based on this extension point. Every time the remote method is executed, the interception will be executed. Please pay attention to the impact on performance.
 Among them, on the consumer side, &lt;code>ClusterFilter&lt;/code> is used for interception before location selection and &lt;code>Filter&lt;/code> is used for interception after location selection. If there is no special need, use &lt;code>ClusterFilter&lt;/code> for extended interception to improve performance.&lt;/p>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/v3/concepts/filter-arch.jpg" alt="filter-architecture">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/concepts/filter-arch.jpg" alt="filter-architecture">&lt;/p>
 &lt;p>In Dubbo 3, the interface signatures of &lt;code>Filter&lt;/code> and &lt;code>ClusterFilter&lt;/code> are unified and abstracted into &lt;code>BaseFilter&lt;/code>, and developers can implement the interfaces of &lt;code>Filter&lt;/code> or &lt;code>ClusterFilter&lt;/code> respectively to implement their own interceptors.
 If you need to intercept the return status, you can directly implement the &lt;code>BaseFilter.Listener&lt;/code> interface, and Dubbo will automatically recognize and call it.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#719e07">package&lt;/span> org.apache.dubbo.rpc;
@@ -327,18 +327,18 @@ It is recommended to implement the &lt;code>StateRouter&lt;/code> interface in D
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#719e07">&amp;lt;&lt;/span>T&lt;span style="color:#719e07">&amp;gt;&lt;/span> Invoker&lt;span style="color:#719e07">&amp;lt;&lt;/span>T&lt;span style="color:#719e07">&amp;gt;&lt;/span> &lt;span style="color:#268bd2">select&lt;/span>(List&lt;span style="color:#719e07">&amp;lt;&lt;/span>Invoker&lt;span style="color:#719e07">&amp;lt;&lt;/span>T&lt;span style="color:#719e07">&amp;gt;&amp;gt;&lt;/span> invokers, URL url, Invocation invocation) &lt;span style="color:#268bd2">throws&lt;/span> RpcException;
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Please refer to &lt;a href="../../reference-manual/spi/description/load-balance/">Reference&lt;/a> for specific call interception extension methods&lt;/p></description></item><item><title>Docs3-V2: Dubbo Mesh</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/concepts-and-architecture/mesh/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/concepts-and-architecture/mesh/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Please refer to &lt;a href="../../reference-manual/spi/description/load-balance/">Reference&lt;/a> for specific call interception extension methods&lt;/p></description></item><item><title>Docs3-V2: Dubbo Mesh</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/concepts-and-architecture/mesh/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/concepts-and-architecture/mesh/</guid><description>
 &lt;p>From the design concept, Dubbo Mesh emphasizes the unified control, standardization and governance capabilities of the control plane, while giving more choices on the data plane, including deployment modes such as Sidecar Mesh and Proxyless Mesh. Multiple deployment models provide enterprises with more choices. Through the hybrid deployment model, while realizing the sharing of the service governance control plane, it can better respond to the deployment requirements of different scenarios (performance, deployment complexity, etc.), and adapt to complex infrastructure environment and improve the availability of the architecture as a whole.&lt;/p>
 &lt;h2 id="background">background&lt;/h2>
 &lt;p>In the context of cloud native, if we understand Service Mesh as the underlying infrastructure, in the Mesh architecture, some of the capabilities of microservice governance that were previously coupled in the business process are being taken over by Mesh. The traditional microservice framework pays more attention to RPC protocols and programming. Model. The following is an architecture diagram of the popular Mesh product Istio:&lt;/p>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/v3/mesh/istio.jpg" alt="istio">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/mesh/istio.jpg" alt="istio">&lt;/p>
 &lt;p>Under the Mesh architecture&lt;/p>
 &lt;ul>
 &lt;li>The unified control plane provides certificate management, observability, traffic governance and other capabilities&lt;/li>
 &lt;li>Sidecar makes the SDK lighter and less intrusive, better implementing transparent upgrades, traffic interception, etc.&lt;/li>
 &lt;/ul>
 &lt;h2 id="dubbo-mesh-overall-architecture">Dubbo Mesh Overall Architecture&lt;/h2>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/v3/mesh/dubbo-mesh-arc.png" alt="istio">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/mesh/dubbo-mesh-arc.png" alt="istio">&lt;/p>
 &lt;ul>
 &lt;li>The data plane performs RPC communication based on the Triple protocol;&lt;/li>
 &lt;li>The address discovery model adopts application-level service discovery to support ultra-large-scale instance clusters while providing richer service governance capabilities;&lt;/li>
@@ -352,7 +352,7 @@ However, some functions may be limited, and there will be certain performance an
 &lt;h3 id="dubbo-sidecar-mesh">Dubbo Sidecar Mesh&lt;/h3>
 &lt;p>Dubbo provides a ThinSDK deployment mode. In this mode, Dubbo ThinSDK will only provide business application-oriented programming APIs and RPC transmission and communication capabilities, and the rest of the service management
 Including address discovery, load balancing, routing addressing, etc., all sink to Sidecar, and Sidecar is responsible for direct communication with the control plane and receiving various traffic control rules. The following is a basic deployment architecture diagram. Dubbo ThinSDK and Sidecar are deployed in the same pod or container. By deploying an independent control plane on the periphery, unified control of traffic and governance is achieved. The control plane and Sicecar are configured and distributed through the xDS protocol shown in the dotted line in the figure, and the communication between Dubbo processes is no longer a direct connection mode, but instead passes through the Sidecar proxy, which intercepts all incoming and outgoing traffic and completes routing and addressing, etc. Service governance tasks.&lt;/p>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/v3/mesh/dubbo-sidecar.png" alt="dubbo-sidecar">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/mesh/dubbo-sidecar.png" alt="dubbo-sidecar">&lt;/p>
 &lt;p>The community recommends Envoy as a sidecar, and the communication protocol uses Triple for better gateway penetration and performance experience. For users who are still using the Dubbo2 protocol who cannot upgrade Triple temporarily, they can refer to the Dubbo2 protocol support solutions provided by Envoy and Aeraki Mesh.&lt;/p>
 &lt;p>The Mesh architecture of the ThinSDK + Sidecar mode has many advantages, such as smooth upgrade, multi-language, and small business intrusion, but it also brings some additional problems, such as:&lt;/p>
 &lt;ul>
@@ -362,12 +362,12 @@ Including address discovery, load balancing, routing addressing, etc., all sink 
 &lt;/ul>
 &lt;p>For detailed scheme design and examples, please refer to&lt;/p>
 &lt;ul>
-&lt;li>&lt;a href="https://cn.dubbo.apache.org/zh-cn/overview/tasks/mesh">Dubbo ThinSDK Proposal&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://cn.dubbo.apache.org/zh-cn/overview/tasks/mesh">Example of use&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://wxbty.github.io/web-site/zh-cn/overview/tasks/mesh">Dubbo ThinSDK Proposal&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://wxbty.github.io/web-site/zh-cn/overview/tasks/mesh">Example of use&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h3 id="dubbo-proxyless-mesh">Dubbo Proxyless Mesh&lt;/h3>
 &lt;p>As a supplement to the ThinSDK + Sidecar model, the Dubbo community has conceived and thought about the direct connection of Dubbo to the control plane since a long time ago, which is currently called the Proxyless Mesh model. The Proxyless mode brings microservices back to the deployment architecture of the 2.x era. As shown in the figure below, it is very similar to the Dubbo classic service governance model we saw above, so this model is not new. Dubbo has been such a design model from the very beginning. However, compared with the Mesh architecture, Dubbo2 does not emphasize the unified management and control of the control plane, which is exactly what Service Mesh emphasizes. It emphasizes the standardized management, control and governance of traffic, observability, certificates, etc., which is also an advanced part of the Mesh concept. .&lt;/p>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/v3/mesh/dubbo-proxyless.png" alt="dubbo-proxyless">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/mesh/dubbo-proxyless.png" alt="dubbo-proxyless">&lt;/p>
 &lt;p>Through the Dubbo3 SDK of different language versions, the xDS protocol analysis can be directly realized, and the Dubbo process can directly communicate with the control plane (Control Plane), so as to realize the unified control of traffic control, service governance, observability, security, etc. of the control plane, avoiding the Sidecar mode The resulting performance loss and complexity of the deployment architecture.&lt;/p>
 &lt;blockquote>
 &lt;p>Proxyless mode supports both Dubbo2 and Triple protocols, but only supports the address model of application-level service discovery.&lt;/p>
@@ -381,12 +381,12 @@ Including address discovery, load balancing, routing addressing, etc., all sink 
 &lt;/ul>
 &lt;p>For detailed scheme design and examples, please refer to&lt;/p>
 &lt;ul>
-&lt;li>&lt;a href="https://cn.dubbo.apache.org/zh-cn/overview/tasks/mesh">Dubbo Proxyless Mesh&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://cn.dubbo.apache.org/zh-cn/overview/tasks/mesh">Example of use&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://wxbty.github.io/web-site/zh-cn/overview/tasks/mesh">Dubbo Proxyless Mesh&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://wxbty.github.io/web-site/zh-cn/overview/tasks/mesh">Example of use&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h3 id="dubbo-control-plane-governance-rules">Dubbo Control Plane Governance Rules&lt;/h3>
 &lt;p>TBD&lt;/p>
-&lt;p>Dubbo SDK provides very flexible configurations to control service governance behaviors, such as interface granular service address discovery capabilities, interface granular configuration synchronization, etc. These capabilities make application development and deployment more flexible. However, some advanced functions may be limited under the general Mesh deployment scheme or product, which generally affects the ease of use and flexibility. To this end, Dubbo plans to provide self-developed control surface products to maximize the capabilities of Dubbo3 in the Mesh system.&lt;/p></description></item><item><title>Docs3-V2: Triple Protocol</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/concepts-and-architecture/triple/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/concepts-and-architecture/triple/</guid><description>
+&lt;p>Dubbo SDK provides very flexible configurations to control service governance behaviors, such as interface granular service address discovery capabilities, interface granular configuration synchronization, etc. These capabilities make application development and deployment more flexible. However, some advanced functions may be limited under the general Mesh deployment scheme or product, which generally affects the ease of use and flexibility. To this end, Dubbo plans to provide self-developed control surface products to maximize the capabilities of Dubbo3 in the Mesh system.&lt;/p></description></item><item><title>Docs3-V2: Triple Protocol</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/concepts-and-architecture/triple/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/concepts-and-architecture/triple/</guid><description>
 &lt;h3 id="protocol-description">Protocol Description&lt;/h3>
 &lt;p>Triple is an HTTP2-based open protocol proposed by Dubbo3, which aims to solve the interoperability problems brought about by Dubbo2&amp;rsquo;s private protocol. Compared with the original Dubbo2 protocol, Triple has the following advantages:&lt;/p>
 &lt;ol>
@@ -397,11 +397,11 @@ Including address discovery, load balancing, routing addressing, etc., all sink 
 &lt;/ol>
 &lt;p>**Currently, the Dubbo SDK for Java and Go fully supports the Triple protocol. ** In Alibaba, the Triple protocol is widely used for cross-environment, cross-language, and cross-ecology interoperability, and hundreds of thousands of containers have been used in production.&lt;/p>
 &lt;h3 id="support-methods">Support methods&lt;/h3>
-&lt;p>Java SDK supports &lt;a href="https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/quick-start/idl">IDL Generate Stub&lt;/a>
-and &lt;a href="https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/quick-start/idl">Java Interface&lt;/a>, the IDL method is recommended for multi-language, ecological interoperability, and streaming requirements, and the smooth upgrade of existing services is recommended
+&lt;p>Java SDK supports &lt;a href="https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/quick-start/idl">IDL Generate Stub&lt;/a>
+and &lt;a href="https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/quick-start/idl">Java Interface&lt;/a>, the IDL method is recommended for multi-language, ecological interoperability, and streaming requirements, and the smooth upgrade of existing services is recommended
 Interface method.&lt;/p>
 &lt;ul>
 &lt;li>How old Dubbo2 users can upgrade from existing protocol to Triple(TBD)&lt;/li>
-&lt;li>New user or business reference &lt;a href="https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/quick-start/idl/">Dubbo3 Triple Quick Start&lt;/a>&lt;/li>
+&lt;li>New user or business reference &lt;a href="https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/quick-start/idl/">Dubbo3 Triple Quick Start&lt;/a>&lt;/li>
 &lt;li>In-depth understanding of the Triple protocol: &lt;a href="https://github.com/apache/dubbo-awesome/blob/master/proposals/D0-triple.md">Dubbo3 Triple Protocol Design and Principles&lt;/a>&lt;/li>
 &lt;/ul></description></item></channel></rss>

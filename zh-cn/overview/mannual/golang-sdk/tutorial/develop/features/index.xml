@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – 高级特性</title><link>https://cn.dubbo.apache.org/zh-cn/overview/mannual/golang-sdk/tutorial/develop/features/</link><description>Recent content in 高级特性 on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://cn.dubbo.apache.org/zh-cn/overview/mannual/golang-sdk/tutorial/develop/features/index.xml" rel="self" type="application/rss+xml"/><item><title>Overview: 使用配置 API 启动应用</title><link>https://cn.dubbo.apache.org/zh-cn/overview/mannual/golang-sdk/tutorial/develop/features/config_api/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/zh-cn/overview/mannual/golang-sdk/tutorial/develop/features/config_api/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – 高级特性</title><link>https://wxbty.github.io/web-site/zh-cn/overview/mannual/golang-sdk/tutorial/develop/features/</link><description>Recent content in 高级特性 on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://wxbty.github.io/web-site/zh-cn/overview/mannual/golang-sdk/tutorial/develop/features/index.xml" rel="self" type="application/rss+xml"/><item><title>Overview: 使用配置 API 启动应用</title><link>https://wxbty.github.io/web-site/zh-cn/overview/mannual/golang-sdk/tutorial/develop/features/config_api/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/zh-cn/overview/mannual/golang-sdk/tutorial/develop/features/config_api/</guid><description>
 &lt;h2 id="1-准备工作">1. 准备工作&lt;/h2>
 &lt;ul>
 &lt;li>dubbo-go cli 工具和依赖工具已安装&lt;/li>
@@ -69,7 +69,7 @@
 &lt;h3 id="23-验证-config-api">2.3 验证 Config API&lt;/h3>
 &lt;p>分别启动 server 和 client ，查看调用信息。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>INFO cmd/client.go:62 client response result: name:&amp;#34;Hello laurence&amp;#34; id:&amp;#34;12345&amp;#34; age:21
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Overview: 日志</title><link>https://cn.dubbo.apache.org/zh-cn/overview/mannual/golang-sdk/tutorial/develop/features/custom-logger/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/zh-cn/overview/mannual/golang-sdk/tutorial/develop/features/custom-logger/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Overview: 日志</title><link>https://wxbty.github.io/web-site/zh-cn/overview/mannual/golang-sdk/tutorial/develop/features/custom-logger/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/zh-cn/overview/mannual/golang-sdk/tutorial/develop/features/custom-logger/</guid><description>
 &lt;p>参考samples &lt;a href="https://github.com/apache/dubbo-go-samples/tree/f7febed9d686cb940ea55d34b5baa567d7574a44/logger">dubbo-go-samples/logger&lt;/a>&lt;/p>
 &lt;h2 id="1-日志配置">1. 日志配置&lt;/h2>
 &lt;p>dubbogo 3.0 默认采用 zap 日志库，在配置文件中不添加 logger 配置，日志将会打印到控制默认级别为debug。您也可在配置文件中配置日志级别、, 可参照如下方式来配置zap-config和lumberjack-config，从而定制化日志输出。&lt;/p>
@@ -135,14 +135,14 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#586e75">&lt;/span>logger.&lt;span style="color:#268bd2">SetLogger&lt;/span>(myLogger) &lt;span style="color:#586e75">// 在 main 函数中设置自定义logger
 &lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
 &lt;li>日志API不可以在Init 阶段使用，否则可能会发生意料之外的问题。&lt;/li>
-&lt;/ul></description></item><item><title>Overview: 使用 ctx 传递上下文信息</title><link>https://cn.dubbo.apache.org/zh-cn/overview/mannual/golang-sdk/tutorial/develop/features/context/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/zh-cn/overview/mannual/golang-sdk/tutorial/develop/features/context/</guid><description>
+&lt;/ul></description></item><item><title>Overview: 使用 ctx 传递上下文信息</title><link>https://wxbty.github.io/web-site/zh-cn/overview/mannual/golang-sdk/tutorial/develop/features/context/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/zh-cn/overview/mannual/golang-sdk/tutorial/develop/features/context/</guid><description>
 &lt;h2 id="1-准备工作">1. 准备工作&lt;/h2>
 &lt;ul>
 &lt;li>dubbo-go cli 工具和依赖工具已安装&lt;/li>
 &lt;li>创建一个新的 demo 应用&lt;/li>
 &lt;/ul>
 &lt;h2 id="2-使用-context-传递附加信息">2. 使用 context 传递附加信息&lt;/h2>
-&lt;p>参考 &lt;a href="https://github.com/apache/dubbo-go-samples/tree/f7febed9d686cb940ea55d34b5baa567d7574a44/context">dubbo-go-samples/context&lt;/a>&lt;/p></description></item><item><title>Overview: 泛化调用</title><link>https://cn.dubbo.apache.org/zh-cn/overview/mannual/golang-sdk/tutorial/develop/features/generic-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/zh-cn/overview/mannual/golang-sdk/tutorial/develop/features/generic-2/</guid><description>
+&lt;p>参考 &lt;a href="https://github.com/apache/dubbo-go-samples/tree/f7febed9d686cb940ea55d34b5baa567d7574a44/context">dubbo-go-samples/context&lt;/a>&lt;/p></description></item><item><title>Overview: 泛化调用</title><link>https://wxbty.github.io/web-site/zh-cn/overview/mannual/golang-sdk/tutorial/develop/features/generic-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/zh-cn/overview/mannual/golang-sdk/tutorial/develop/features/generic-2/</guid><description>
 &lt;h2 id="1-dubbogo-泛化调用-java-server">1. Dubbogo 泛化调用 Java Server&lt;/h2>
 &lt;p>使用 Triple 协议 + hessian2 序列化方案&lt;/p>
 &lt;p>可参考Dubbogo 3.0 &lt;a href="https://www.yuque.com/docs/share/f4e72670-74ab-45b9-bc0c-4b42249ed953?#">泛化调用文档&lt;/a>&lt;/p>

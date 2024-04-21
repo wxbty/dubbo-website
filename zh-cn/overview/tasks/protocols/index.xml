@@ -1,7 +1,7 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – 通信协议</title><link>https://cn.dubbo.apache.org/zh-cn/overview/tasks/protocols/</link><description>Recent content in 通信协议 on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://cn.dubbo.apache.org/zh-cn/overview/tasks/protocols/index.xml" rel="self" type="application/rss+xml"/><item><title>Overview: 使用 Dubbo 开发 TCP 通信协议服务</title><link>https://cn.dubbo.apache.org/zh-cn/overview/tasks/protocols/dubbo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/zh-cn/overview/tasks/protocols/dubbo/</guid><description>
-&lt;p>文档编写中&amp;hellip;&lt;/p></description></item><item><title>Overview: 使用 Dubbo 开发 gRPC 服务</title><link>https://cn.dubbo.apache.org/zh-cn/overview/tasks/protocols/grpc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/zh-cn/overview/tasks/protocols/grpc/</guid><description>
-&lt;p>文档编写中&amp;hellip;&lt;/p></description></item><item><title>Overview: 使用 Dubbo 开发 Triple 协议通信服务</title><link>https://cn.dubbo.apache.org/zh-cn/overview/tasks/protocols/triple/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/zh-cn/overview/tasks/protocols/triple/</guid><description>
-&lt;p>文档编写中&amp;hellip;&lt;/p></description></item><item><title>Overview: 使用 Dubbo 开发 Web 应用</title><link>https://cn.dubbo.apache.org/zh-cn/overview/tasks/protocols/web/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/zh-cn/overview/tasks/protocols/web/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – 通信协议</title><link>https://wxbty.github.io/web-site/zh-cn/overview/tasks/protocols/</link><description>Recent content in 通信协议 on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://wxbty.github.io/web-site/zh-cn/overview/tasks/protocols/index.xml" rel="self" type="application/rss+xml"/><item><title>Overview: 使用 Dubbo 开发 TCP 通信协议服务</title><link>https://wxbty.github.io/web-site/zh-cn/overview/tasks/protocols/dubbo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/zh-cn/overview/tasks/protocols/dubbo/</guid><description>
+&lt;p>文档编写中&amp;hellip;&lt;/p></description></item><item><title>Overview: 使用 Dubbo 开发 gRPC 服务</title><link>https://wxbty.github.io/web-site/zh-cn/overview/tasks/protocols/grpc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/zh-cn/overview/tasks/protocols/grpc/</guid><description>
+&lt;p>文档编写中&amp;hellip;&lt;/p></description></item><item><title>Overview: 使用 Dubbo 开发 Triple 协议通信服务</title><link>https://wxbty.github.io/web-site/zh-cn/overview/tasks/protocols/triple/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/zh-cn/overview/tasks/protocols/triple/</guid><description>
+&lt;p>文档编写中&amp;hellip;&lt;/p></description></item><item><title>Overview: 使用 Dubbo 开发 Web 应用</title><link>https://wxbty.github.io/web-site/zh-cn/overview/tasks/protocols/web/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/zh-cn/overview/tasks/protocols/web/</guid><description>
 &lt;p>文档编写中&amp;hellip;&lt;/p>
 &lt;p>Dubbo3 HTTP 协议支持仍在建设中，目前最新的 3.3 开发分支已经有初版原型供体验。正式的生产可用版本预计会在 3.4/3.4 的某个正式版本发布。&lt;/p>
 &lt;p>以下是 Dubbo3 HTTP 协议与编程模式计划支持的几种业务场景：&lt;/p>
@@ -17,7 +17,7 @@
 &lt;li>支持 SpringCloud 体系的服务发现地址格式&lt;/li>
 &lt;li>支持 HTTP+JSON 的数据传输格式&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/v3/tasks/protocol/http-usecase-1.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/tasks/protocol/http-usecase-1.png" alt="img">&lt;/p>
 &lt;p>基于以上分析，当我们需要调用 Spring Cloud 体系的服务时，只需要在 Dubbo 侧编写标准的 Dubbo Reference 服务引用就可以。同时，为了简化开发工作，&lt;strong>Dubbo 支持标准的 Spring Web 注解&lt;/strong>，因此，如果你可以直接在 Dubbo 中复用 Spring Cloud 中的接口定义：&lt;/p>
 &lt;p>Spring Cloud 侧的服务定义：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">interface&lt;/span> &lt;span style="color:#268bd2">SpringCloudRestService&lt;/span> {
@@ -28,14 +28,14 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">private&lt;/span> SpringCloudRestService restService;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="发布-http-协议的服务">发布 http 协议的服务&lt;/h2>
 &lt;h2 id="多协议发布">多协议发布&lt;/h2>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/v3/tasks/protocol/http-usecase-1.png" alt="img">&lt;/p></description></item><item><title>Overview: 使用 Dubbo 作为消费端调用 Spring Cloud 服务</title><link>https://cn.dubbo.apache.org/zh-cn/overview/tasks/protocols/springcloud/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/zh-cn/overview/tasks/protocols/springcloud/</guid><description>
-&lt;p>最新版本的 Dubbo3、Spring Cloud 体系互通方案已经设计完成，相关示例文档将在随后发布。&lt;/p></description></item><item><title>Overview: 发布使用不同协议的多个服务，通过单端口监听</title><link>https://cn.dubbo.apache.org/zh-cn/overview/tasks/protocols/multi-protocols/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/zh-cn/overview/tasks/protocols/multi-protocols/</guid><description>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/tasks/protocol/http-usecase-1.png" alt="img">&lt;/p></description></item><item><title>Overview: 使用 Dubbo 作为消费端调用 Spring Cloud 服务</title><link>https://wxbty.github.io/web-site/zh-cn/overview/tasks/protocols/springcloud/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/zh-cn/overview/tasks/protocols/springcloud/</guid><description>
+&lt;p>最新版本的 Dubbo3、Spring Cloud 体系互通方案已经设计完成，相关示例文档将在随后发布。&lt;/p></description></item><item><title>Overview: 发布使用不同协议的多个服务，通过单端口监听</title><link>https://wxbty.github.io/web-site/zh-cn/overview/tasks/protocols/multi-protocols/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/zh-cn/overview/tasks/protocols/multi-protocols/</guid><description>
 &lt;h2 id="特性说明">特性说明&lt;/h2>
 &lt;p>通过对protocol进行配置，dubbo3可以支持端口的协议复用。
 比如使用Triple协议启动端口复用后，可以在相同的端口上为服务增加
 Dubbo协议支持，以及Qos协议支持。这些协议的识别都是由一个统一的端口复用
 服务器进行处理的，可以用于服务的协议迁移，并且可以节约端口以及相关的资源，减少运维的复杂性。&lt;/p>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/blog/pu-server/pu-server-flow.png" alt="pu-server-image1">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/blog/pu-server/pu-server-flow.png" alt="pu-server-image1">&lt;/p>
 &lt;ul>
 &lt;li>
 &lt;p>在服务的创建阶段，通过从Config层获取到服务导出的协议配置从而创建不同的Protocol对象进行导出。在导出的过程
@@ -53,7 +53,7 @@ Dubbo协议支持，以及Qos协议支持。这些协议的识别都是由一个
 &lt;h2 id="参考用例">参考用例&lt;/h2>
 &lt;p>&lt;a href="https://github.com/apache/dubbo-samples/tree/master/3-extensions/protocol/dubbo-samples-port-unification">https://github.com/apache/dubbo-samples/tree/master/dubbo-samples-port-unification&lt;/a>&lt;/p>
 &lt;h2 id="配置方式">配置方式&lt;/h2>
-&lt;p>关于Dubbo支持的配置方式，可以参考&lt;a href="https://cn.dubbo.apache.org/zh-cn/overview/mannual/java-sdk/reference-manual/config/">配置说明&lt;/a>&lt;/p>
+&lt;p>关于Dubbo支持的配置方式，可以参考&lt;a href="https://wxbty.github.io/web-site/zh-cn/overview/mannual/java-sdk/reference-manual/config/">配置说明&lt;/a>&lt;/p>
 &lt;h3 id="服务多协议导出">服务多协议导出&lt;/h3>
 &lt;p>ext-protocol参数支持配置多个不同的协议，协议之间通过&amp;quot;,&amp;ldquo;进行分隔。&lt;/p>
 &lt;h4 id="xml-配置">xml 配置&lt;/h4>
@@ -84,7 +84,7 @@ Dubbo协议支持，以及Qos协议支持。这些协议的识别都是由一个
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">&amp;lt;groupId&amp;gt;&lt;/span>org.apache.dubbo&lt;span style="color:#268bd2">&amp;lt;/groupId&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">&amp;lt;artifactId&amp;gt;&lt;/span>dubbo-qos&lt;span style="color:#268bd2">&amp;lt;/artifactId&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;/dependency&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>完成Qos模块的导入之后，相关的配置项可参考&lt;a href="https://cn.dubbo.apache.org/zh-cn/overview/mannual/java-sdk/reference-manual/qos/overview/">Qos操作手册&lt;/a>进行配置。&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>完成Qos模块的导入之后，相关的配置项可参考&lt;a href="https://wxbty.github.io/web-site/zh-cn/overview/mannual/java-sdk/reference-manual/qos/overview/">Qos操作手册&lt;/a>进行配置。&lt;/p>
 &lt;p>默认情况下，基于端口复用的Qos服务在模块导入后是启动的。&lt;/p>
 &lt;h2 id="使用方式-1">使用方式&lt;/h2>
 &lt;h3 id="qos使用">Qos使用&lt;/h3>
@@ -93,7 +93,7 @@ Dubbo协议支持，以及Qos协议支持。这些协议的识别都是由一个
 &lt;li>
 &lt;p>直接调用命令&lt;/p>
 &lt;p>直接调用telnet支持的命令也可以完成识别，在用户不熟悉的情况下可以调用help指令完成识别&lt;/p>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/blog/pu-server/qos-telnet-directcall.png" alt="pu-server-image2">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/blog/pu-server/qos-telnet-directcall.png" alt="pu-server-image2">&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>发送telnet命令识别&lt;/p>
@@ -103,7 +103,7 @@ Dubbo协议支持，以及Qos协议支持。这些协议的识别都是由一个
 &lt;li>调用 &amp;ldquo;send ayt&amp;rdquo; 向服务端发送特殊识别字段(为telnet协议的一个特殊字段)&lt;/li>
 &lt;li>回车完成消息发送并进入到dubbo的交互界面&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/blog/pu-server/qos-telnet-sendayt.png" alt="pu-server-imgs3">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/blog/pu-server/qos-telnet-sendayt.png" alt="pu-server-imgs3">&lt;/p>
 &lt;/li>
 &lt;/ol>
 &lt;h3 id="服务引用">服务引用&lt;/h3>
@@ -114,4 +114,4 @@ Dubbo协议支持，以及Qos协议支持。这些协议的识别都是由一个
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>reference.setProtocol(&lt;span style="color:#719e07">this&lt;/span>.protocol);
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#586e75">// reference.setProtocol(CommonConstants.DUBBO);&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#586e75">// reference.setProtocol(CommonConstants.TRIPLE);&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/blog/pu-server/reference-service.png" alt="pu-server-imgs4">&lt;/p></description></item></channel></rss>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/blog/pu-server/reference-service.png" alt="pu-server-imgs4">&lt;/p></description></item></channel></rss>

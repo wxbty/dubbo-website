@@ -1,6 +1,6 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – 源码架构</title><link>https://cn.dubbo.apache.org/zh-cn/overview/mannual/java-sdk/reference-manual/architecture/</link><description>Recent content in 源码架构 on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://cn.dubbo.apache.org/zh-cn/overview/mannual/java-sdk/reference-manual/architecture/index.xml" rel="self" type="application/rss+xml"/><item><title>Overview: 代码架构</title><link>https://cn.dubbo.apache.org/zh-cn/overview/mannual/java-sdk/reference-manual/architecture/code-architecture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/zh-cn/overview/mannual/java-sdk/reference-manual/architecture/code-architecture/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – 源码架构</title><link>https://wxbty.github.io/web-site/zh-cn/overview/mannual/java-sdk/reference-manual/architecture/</link><description>Recent content in 源码架构 on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://wxbty.github.io/web-site/zh-cn/overview/mannual/java-sdk/reference-manual/architecture/index.xml" rel="self" type="application/rss+xml"/><item><title>Overview: 代码架构</title><link>https://wxbty.github.io/web-site/zh-cn/overview/mannual/java-sdk/reference-manual/architecture/code-architecture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/zh-cn/overview/mannual/java-sdk/reference-manual/architecture/code-architecture/</guid><description>
 &lt;h2 id="整体设计">整体设计&lt;/h2>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/dev/dubbo-framework.jpg" alt="/dev-guide/images/dubbo-framework.jpg">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/dev/dubbo-framework.jpg" alt="/dev-guide/images/dubbo-framework.jpg">&lt;/p>
 &lt;p>图例说明：&lt;/p>
 &lt;ul>
 &lt;li>图中左边淡蓝背景的为服务消费方使用的接口，右边淡绿色背景的为服务提供方使用的接口，位于中轴线上的为双方都用到的接口。&lt;/li>
@@ -30,7 +30,7 @@
 &lt;li>Registry 和 Monitor 实际上不算一层，而是一个独立的节点，只是为了全局概览，用层的方式画在一起。&lt;/li>
 &lt;/ul>
 &lt;h2 id="模块分包">模块分包&lt;/h2>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/dev/dubbo-modules.jpg" alt="/dev-guide/images/dubbo-modules.jpg">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/dev/dubbo-modules.jpg" alt="/dev-guide/images/dubbo-modules.jpg">&lt;/p>
 &lt;p>模块说明：&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>dubbo-common 公共逻辑模块&lt;/strong>：包括 Util 类和通用模型。&lt;/li>
@@ -50,7 +50,7 @@
 &lt;li>Serialize 层放在 common 模块中，以便更大程度复用。&lt;/li>
 &lt;/ul>
 &lt;h2 id="依赖关系">依赖关系&lt;/h2>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/dev/dubbo-relation.jpg" alt="/dev-guide/images/dubbo-relation.jpg">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/dev/dubbo-relation.jpg" alt="/dev-guide/images/dubbo-relation.jpg">&lt;/p>
 &lt;p>图例说明：&lt;/p>
 &lt;ul>
 &lt;li>图中小方块 Protocol, Cluster, Proxy, Service, Container, Registry, Monitor 代表层或模块，蓝色的表示与业务有交互，绿色的表示只对 Dubbo 内部交互。&lt;/li>
@@ -60,13 +60,13 @@
 &lt;/ul>
 &lt;h2 id="调用链">调用链&lt;/h2>
 &lt;p>展开总设计图的红色调用链，如下：&lt;/p>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/dev/dubbo-extension.jpg" alt="/dev-guide/images/dubbo-extension.jpg">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/dev/dubbo-extension.jpg" alt="/dev-guide/images/dubbo-extension.jpg">&lt;/p>
 &lt;h2 id="暴露服务时序">暴露服务时序&lt;/h2>
 &lt;p>展开总设计图右边服务提供方暴露服务的蓝色初始化链，时序图如下：&lt;/p>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/dev/dubbo-export.jpg" alt="/dev-guide/images/dubbo-export.jpg">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/dev/dubbo-export.jpg" alt="/dev-guide/images/dubbo-export.jpg">&lt;/p>
 &lt;h2 id="引用服务时序">引用服务时序&lt;/h2>
 &lt;p>展开总设计图左边服务消费方引用服务的绿色初始化链，时序图如下：&lt;/p>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/dev/dubbo-refer.jpg" alt="/dev-guide/images/dubbo-refer.jpg">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/dev/dubbo-refer.jpg" alt="/dev-guide/images/dubbo-refer.jpg">&lt;/p>
 &lt;h2 id="领域模型">领域模型&lt;/h2>
 &lt;p>在 Dubbo 的核心领域模型中：&lt;/p>
 &lt;ul>
@@ -78,8 +78,8 @@
 &lt;ul>
 &lt;li>采用 Microkernel + Plugin 模式，Microkernel 只负责组装 Plugin，Dubbo 自身的功能也是通过扩展点实现的，也就是 Dubbo 的所有功能点都可被用户自定义扩展所替换。&lt;/li>
 &lt;li>采用 URL 作为配置信息的统一格式，所有扩展点都通过传递 URL 携带配置信息。&lt;/li>
-&lt;/ul></description></item><item><title>Overview: 服务调用扩展点</title><link>https://cn.dubbo.apache.org/zh-cn/overview/mannual/java-sdk/reference-manual/architecture/service-invocation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/zh-cn/overview/mannual/java-sdk/reference-manual/architecture/service-invocation/</guid><description>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/v3/concepts/invoke-arch.jpg" alt="dubbo-architucture">&lt;/p>
+&lt;/ul></description></item><item><title>Overview: 服务调用扩展点</title><link>https://wxbty.github.io/web-site/zh-cn/overview/mannual/java-sdk/reference-manual/architecture/service-invocation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/zh-cn/overview/mannual/java-sdk/reference-manual/architecture/service-invocation/</guid><description>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/concepts/invoke-arch.jpg" alt="dubbo-architucture">&lt;/p>
 &lt;p>如上图所示，从服务调用的角度来看，Dubbo 在链路中提供了丰富的扩展点，覆盖了负载均衡方式、选址前后的拦截器、服务端处理拦截器等。
 简单来说 Dubbo 发起远程调用的时候，主要工作流程可以分为消费端和服务端两个部分。&lt;/p>
 &lt;p>消费端的工作流程如下：&lt;/p>
@@ -106,7 +106,7 @@
 &lt;h2 id="filter拦截器">Filter（拦截器）&lt;/h2>
 &lt;p>拦截器可以实现服务提供方和服务消费方调用过程拦截，Dubbo 本身的大多功能均基于此扩展点实现，每次远程方法执行，该拦截都会被执行，请注意对性能的影响。
 其中在消费端侧，&lt;code>ClusterFilter&lt;/code> 用于选址前的拦截和 &lt;code>Filter&lt;/code> 用于选址后的拦截。如无特殊需要使用 &lt;code>ClusterFilter&lt;/code> 进行扩展拦截，以提高性能。&lt;/p>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/v3/concepts/filter-arch.jpg" alt="filter-architucture">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/concepts/filter-arch.jpg" alt="filter-architucture">&lt;/p>
 &lt;p>在 Dubbo 3 中，&lt;code>Filter&lt;/code> 和 &lt;code>ClusterFilter&lt;/code> 的接口签名被统一抽象到 &lt;code>BaseFilter&lt;/code> 中，开发者可以分别实现 &lt;code>Filter&lt;/code> 或 &lt;code>ClusterFilter&lt;/code> 的接口来实现自己的拦截器。
 如果需要拦截返回状态，可以直接实现 &lt;code>BaseFilter.Listener&lt;/code> 的接口，Dubbo 将自动识别，并进行调用。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#719e07">package&lt;/span> org.apache.dubbo.rpc;
@@ -137,7 +137,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>如果需要在 Provider 侧生效 &lt;code>Filter&lt;/code> 或 &lt;code>ClusterFilter&lt;/code>，需要增加 &lt;code>@Activate&lt;/code> 注解，并且需要指定 &lt;code>group&lt;/code> 的值为 &lt;code>provider&lt;/code>。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">@Activate&lt;/span>(group &lt;span style="color:#719e07">=&lt;/span> CommonConstants.PROVIDER)
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
-&lt;p>&lt;a href="https://cn.dubbo.apache.org/zh-cn/overview/mannual/java-sdk/reference-manual/spi/description/filter/">调用拦截扩展方式&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://wxbty.github.io/web-site/zh-cn/overview/mannual/java-sdk/reference-manual/spi/description/filter/">调用拦截扩展方式&lt;/a>&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="router路由选址">Router（路由选址）&lt;/h2>
 &lt;p>路由选址提供从多个服务提供方中选择&lt;strong>一批&lt;/strong>满足条件的目标提供方进行调用的能力。
@@ -169,7 +169,7 @@ Dubbo 的路由主要需要实现 3 个接口，分别是负责每次调用筛�
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#dc322f">void&lt;/span> &lt;span style="color:#268bd2">stop&lt;/span>();
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
-&lt;p>&lt;a href="https://cn.dubbo.apache.org/zh-cn/overview/mannual/java-sdk/reference-manual/spi/description/router/">路由选址扩展方式&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://wxbty.github.io/web-site/zh-cn/overview/mannual/java-sdk/reference-manual/spi/description/router/">路由选址扩展方式&lt;/a>&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="cluster集群规则">Cluster（集群规则）&lt;/h2>
 &lt;p>集群规则提供在有多个服务提供方时进行结果聚合、容错等能力。&lt;/p>
@@ -181,7 +181,7 @@ Dubbo 的路由主要需要实现 3 个接口，分别是负责每次调用筛�
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> LoadBalance loadbalance) &lt;span style="color:#268bd2">throws&lt;/span> RpcException;
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
-&lt;p>&lt;a href="https://cn.dubbo.apache.org/zh-cn/overview/mannual/java-sdk/reference-manual/spi/description/cluster/">集群规则扩展方式&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://wxbty.github.io/web-site/zh-cn/overview/mannual/java-sdk/reference-manual/spi/description/cluster/">集群规则扩展方式&lt;/a>&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="loadbalance负载均衡">LoadBalance（负载均衡）&lt;/h2>
 &lt;p>负载均衡提供从多个服务提供方中选择&lt;strong>一个&lt;/strong>目标提供方进行调用的能力。&lt;/p>
@@ -192,5 +192,5 @@ Dubbo 的路由主要需要实现 3 个接口，分别是负责每次调用筛�
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#719e07">&amp;lt;&lt;/span>T&lt;span style="color:#719e07">&amp;gt;&lt;/span> Invoker&lt;span style="color:#719e07">&amp;lt;&lt;/span>T&lt;span style="color:#719e07">&amp;gt;&lt;/span> &lt;span style="color:#268bd2">select&lt;/span>(List&lt;span style="color:#719e07">&amp;lt;&lt;/span>Invoker&lt;span style="color:#719e07">&amp;lt;&lt;/span>T&lt;span style="color:#719e07">&amp;gt;&amp;gt;&lt;/span> invokers, URL url, Invocation invocation) &lt;span style="color:#268bd2">throws&lt;/span> RpcException;
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
-&lt;p>&lt;a href="https://cn.dubbo.apache.org/zh-cn/overview/mannual/java-sdk/reference-manual/spi/description/filter/">调用拦截扩展方式&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://wxbty.github.io/web-site/zh-cn/overview/mannual/java-sdk/reference-manual/spi/description/filter/">调用拦截扩展方式&lt;/a>&lt;/p>
 &lt;/blockquote></description></item></channel></rss>

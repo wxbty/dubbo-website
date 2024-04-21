@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Registration Center Description</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/registry/</link><description>Recent content in Registration Center Description on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/registry/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs3-V2: Overview</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/registry/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/registry/overview/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Registration Center Description</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/registry/</link><description>Recent content in Registration Center Description on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/registry/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs3-V2: Overview</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/registry/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/registry/overview/</guid><description>
 &lt;p>The registration center is the core component of Dubbo service governance. Dubbo relies on the coordination of the registration center to realize service (address) discovery. Automatic service discovery is the basis for microservices to achieve dynamic scaling, load balancing, and traffic management. Dubbo&amp;rsquo;s service discovery mechanism has experienced interface-level service discovery in the Dubbo2 era and application-level service discovery in the Dubbo3 era. For details, see [Service Discovery Mechanism](/en/docs3-v2/java-sdk/concepts-and-architecture/service -discovery/) analysis to understand the specific evolution process.&lt;/p>
 &lt;h2 id="basic-usage">Basic usage&lt;/h2>
 &lt;p>The Dubbo registry component must be specified when developing an application. The configuration is very simple, just specify the cluster address of the registry:&lt;/p>
@@ -13,7 +13,7 @@
 &lt;blockquote>
 &lt;p>The application must specify the Dubbo registration center, even if the registration center is not enabled (you can set the address to be empty address=&amp;lsquo;N/A&amp;rsquo; ).&lt;/p>
 &lt;/blockquote>
-&lt;p>In addition to the rest, depending on each configuration center, you can refer to the &lt;a href="https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/config/properties/#registry">registry configuration reference manual&lt;/a> or expand through the parameters parameter.&lt;/p>
+&lt;p>In addition to the rest, depending on each configuration center, you can refer to the &lt;a href="https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/config/properties/#registry">registry configuration reference manual&lt;/a> or expand through the parameters parameter.&lt;/p>
 &lt;h2 id="configuration-center-and-metadata-center">Configuration Center and Metadata Center&lt;/h2>
 &lt;p>The configuration center and metadata center are the basic components to realize Dubbo&amp;rsquo;s high-level service governance capabilities. Compared with the registration center, the configuration of these two components is usually optional.&lt;/p>
 &lt;p>In order to be compatible with configurations of 2.6 and older versions, Dubbo will use it as both a metadata center and a configuration center for some registry types (such as Zookeeper, Nacos, etc.).&lt;/p>
@@ -43,7 +43,7 @@
 &lt;/ul>
 &lt;p>It also supports service discovery of Kubernetes and Mesh systems.&lt;/p>
 &lt;p>In addition, &lt;a href="https://github.com/apache/dubbo-spi-extensions">Dubbo extension ecology&lt;/a> also provides registry extension implementations such as Consul, Eureka, and Etcd. Also welcome to contribute more registry implementations to the Dubbo ecosystem through &lt;a href="../../spi/">registry spi extension&lt;/a>.&lt;/p>
-&lt;p>Dubbo also supports [specifying multiple registries] (../multiple-registry/) in an application, and grouping services according to registries, which makes service group management or service migration easier.&lt;/p></description></item><item><title>Docs3-V2: Zookeeper</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/registry/zookeeper/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/registry/zookeeper/</guid><description>
+&lt;p>Dubbo also supports [specifying multiple registries] (../multiple-registry/) in an application, and grouping services according to registries, which makes service group management or service migration easier.&lt;/p></description></item><item><title>Docs3-V2: Zookeeper</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/registry/zookeeper/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/registry/zookeeper/</guid><description>
 &lt;h2 id="1-precondition">1 precondition&lt;/h2>
 &lt;ul>
 &lt;li>Understand &lt;a href="../../../quick-start/spring-boot/">Dubbo basic development steps&lt;/a>&lt;/li>
@@ -150,7 +150,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The Zookeeper registry also supports some other control parameters, for details, see &lt;a href="../../config/properties#registry">Registry configuration item manual&lt;/a>&lt;/p>
 &lt;h2 id="4-how-it-works">4 How it works&lt;/h2>
 &lt;h3 id="41-dubbo2-node-structure">4.1 Dubbo2 node structure&lt;/h3>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/user/zookeeper.jpg" alt="/user-guide/images/zookeeper.jpg">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/user/zookeeper.jpg" alt="/user-guide/images/zookeeper.jpg">&lt;/p>
 &lt;p>process:&lt;/p>
 &lt;ul>
 &lt;li>When the service provider starts: write its own URL address to the &lt;code>/dubbo/com.foo.BarService/providers&lt;/code> directory.&lt;/li>
@@ -167,7 +167,7 @@
 &lt;li>The root node of zookeeper can be set through &lt;code>&amp;lt;dubbo:registry group=&amp;quot;dubbo&amp;quot; /&amp;gt;&lt;/code>, if not configured, the default root node will be used.&lt;/li>
 &lt;li>Support &lt;code>*&lt;/code> wildcard &lt;code>&amp;lt;dubbo:reference group=&amp;quot;*&amp;quot; version=&amp;quot;*&amp;quot; /&amp;gt;&lt;/code>, you can subscribe to all groups of services and providers of all versions&lt;/li>
 &lt;/ul>
-&lt;h3 id="42-dubbo3-node-structure">4.2 Dubbo3 node structure&lt;/h3></description></item><item><title>Docs3-V2: Nacos</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/registry/nacos/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/registry/nacos/</guid><description>
+&lt;h3 id="42-dubbo3-node-structure">4.2 Dubbo3 node structure&lt;/h3></description></item><item><title>Docs3-V2: Nacos</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/registry/nacos/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/registry/nacos/</guid><description>
 &lt;h2 id="1-precondition">1 precondition&lt;/h2>
 &lt;ul>
 &lt;li>Understand &lt;a href="../../../quick-start/spring-boot/">Dubbo basic development steps&lt;/a>&lt;/li>
@@ -406,16 +406,16 @@
 &lt;p>The following is just to show the working principle of Nacos as the Dubbo registration center. It is recommended to use &lt;a href="https://github.com/apache/dubbo-admin">Dubbo Admin&lt;/a> for Dubbo service operation and maintenance&lt;/p>
 &lt;h3 id="41-dubbo2-registration-data">4.1 Dubbo2 registration data&lt;/h3>
 &lt;p>Then, restart your Dubbo application, and Dubbo&amp;rsquo;s service provision and consumption information can be displayed in the Nacos console:&lt;/p>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/blog/dubbo-registry-nacos-1.png" alt="dubbo-registry-nacos-1.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/blog/dubbo-registry-nacos-1.png" alt="dubbo-registry-nacos-1.png">&lt;/p>
 &lt;p>As shown in the figure, the service name prefixed with &lt;code>providers:&lt;/code> is the meta information of the service provider, and &lt;code>consumers:&lt;/code> represents the meta information of the service consumer. Click &amp;ldquo;&lt;strong>Details&lt;/strong>&amp;rdquo; to view the service status details:&lt;/p>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/blog/dubbo-registry-nacos-2.png" alt="image-dubbo-registry-nacos-2.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/blog/dubbo-registry-nacos-2.png" alt="image-dubbo-registry-nacos-2.png">&lt;/p>
 &lt;h3 id="42-dubbo3-registration-data">4.2 Dubbo3 registration data&lt;/h3>
 &lt;p>The &amp;ldquo;service name&amp;rdquo; for application-level service discovery is the application name&lt;/p>
 &lt;blockquote>
 &lt;p>Dubbo3 adopts the dual registration mode of &amp;ldquo;application-level service discovery + interface-level service discovery&amp;rdquo; by default, so you will find that application-level services (application names) and interface-level services (interface names) appear in the Nacos console at the same time, you can configure &lt;code>dubbo .registry.register-mode=instance/interface/all&lt;/code> to change the registration behavior.&lt;/p>
-&lt;/blockquote></description></item><item><title>Docs3-V2: Multicast</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/registry/multicast/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/registry/multicast/</guid><description>
+&lt;/blockquote></description></item><item><title>Docs3-V2: Multicast</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/registry/multicast/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/registry/multicast/</guid><description>
 &lt;p>The Multicast registration center does not need to start any central nodes, as long as the broadcast address is the same, they can discover each other.&lt;/p>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/user/multicast.jpg" alt="/user-guide/images/multicast.jpg">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/user/multicast.jpg" alt="/user-guide/images/multicast.jpg">&lt;/p>
 &lt;h2 id="1-instructions-for-use">1 Instructions for use&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;dubbo:registry&lt;/span> address=&lt;span style="color:#2aa198">&amp;#34;multicast://224.5.6.7:1234&amp;#34;&lt;/span> &lt;span style="color:#268bd2">/&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>or&lt;/p>
@@ -439,7 +439,7 @@ If multiple consumer processes are started on a machine at the same time, the co
 &lt;li>When the consumer receives the provider&amp;rsquo;s address, it connects to the address to make an RPC call.&lt;/li>
 &lt;/ol>
 &lt;h3 id="22-restrictions-on-use">2.2 Restrictions on Use&lt;/h3>
-&lt;p>Multicast is limited by the network structure and is only suitable for small-scale applications or development stages. Multicast address segment: 224.0.0.0 - 239.255.255.255&lt;/p></description></item><item><title>Docs3-V2: Redis</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/registry/redis/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/registry/redis/</guid><description>
+&lt;p>Multicast is limited by the network structure and is only suitable for small-scale applications or development stages. Multicast address segment: 224.0.0.0 - 239.255.255.255&lt;/p></description></item><item><title>Docs3-V2: Redis</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/registry/redis/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/registry/redis/</guid><description>
 &lt;h2 id="precondition">precondition&lt;/h2>
 &lt;ul>
 &lt;li>Understand &lt;a href="../../../quick-start/spring-boot/">Dubbo basic development steps&lt;/a>&lt;/li>
@@ -466,7 +466,7 @@ If multiple consumer processes are started on a machine at the same time, the co
 &lt;h2 id="working-principle">working principle&lt;/h2>
 &lt;p>A registry implemented based on Redis [^1].&lt;/p>
 &lt;p>Redis expired data detects dirty data through heartbeat, the server time must be synchronized, and there is a certain pressure on the server, otherwise the expiration detection will be inaccurate&lt;/p>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/user/dubbo-redis-registry.jpg" alt="/user-guide/images/dubbo-redis-registry.jpg">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/user/dubbo-redis-registry.jpg" alt="/user-guide/images/dubbo-redis-registry.jpg">&lt;/p>
 &lt;p>Use Redis&amp;rsquo;s Key/Map structure to store data structures:&lt;/p>
 &lt;ul>
 &lt;li>The main key is the service name and type&lt;/li>
@@ -489,7 +489,7 @@ If multiple consumer processes are started on a machine at the same time, the co
 &lt;li>When the service monitoring center starts, subscribe to &lt;code>register&lt;/code> and &lt;code>unregister&lt;/code>, and &lt;code>subscribe&lt;/code> and &lt;code>unsubscribe&lt;/code> events from &lt;code>Channel:/dubbo/*&lt;/code>&lt;/li>
 &lt;li>After receiving the &lt;code>register&lt;/code> and &lt;code>unregister&lt;/code> events, the service monitoring center obtains the provider address list from &lt;code>Key:/dubbo/com.foo.BarService/providers&lt;/code>&lt;/li>
 &lt;li>After receiving the &lt;code>subscribe&lt;/code> and &lt;code>unsubscribe&lt;/code> events, the service monitoring center obtains the consumer address list from &lt;code>Key:/dubbo/com.foo.BarService/consumers&lt;/code>&lt;/li>
-&lt;/ol></description></item><item><title>Docs3-V2: Multiple Registries</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/registry/multiple-registry/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/registry/multiple-registry/</guid><description>
+&lt;/ol></description></item><item><title>Docs3-V2: Multiple Registries</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/registry/multiple-registry/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/registry/multiple-registry/</guid><description>
 &lt;h2 id="1-associated-service-and-multiple-registration-centers">1 Associated service and multiple registration centers&lt;/h2>
 &lt;h3 id="11-global-default-registration-center">1.1 Global Default Registration Center&lt;/h3>
 &lt;p>The Dubbo registry and services are configured independently. Usually, developers do not need to set the relationship between services and registry components. The Dubbo framework will automatically perform the following actions:&lt;/p>
@@ -540,7 +540,7 @@ If multiple consumer processes are started on a machine at the same time, the co
 &lt;li>Site selection among the registration center clusters, select a cluster&lt;/li>
 &lt;li>Select the address in the registration center cluster, and perform address screening in the cluster&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/v3/registry/no-aggregation.png" alt="multi-registris-no-aggregation">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/registry/no-aggregation.png" alt="multi-registris-no-aggregation">&lt;/p>
 &lt;p>Below we will focus on how to control &lt;strong>Registration center inter-cluster site selection&lt;/strong>, the optional strategies are as follows
 &lt;strong>random&lt;/strong>
 Each request is randomly assigned to a registry cluster&lt;/p>
@@ -568,7 +568,7 @@ Each request is randomly assigned to a registry cluster&lt;/p>
 &lt;li>&lt;code>reference-registry&lt;/code> specifies the list of registry clusters to be aggregated. In the example, there are two clusters, &lt;code>zookeeper://address11?backup=address12,address13&lt;/code> and &lt;code>zookeeper://address21?backup=address22&lt;/code> ,address23&lt;code>, which also specifies the cluster separator &lt;/code>separator=&amp;quot;;&amp;quot;`&lt;/li>
 &lt;/ul>
 &lt;p>As shown in the figure below, the addresses of different registration center clusters will be aggregated into one address pool for load balancing or routing address selection on the consumer side.&lt;/p>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/v3/registry/aggregation.png" alt="multi-registris-aggregation">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/registry/aggregation.png" alt="multi-registris-aggregation">&lt;/p>
 &lt;p>In version 3.1.0 and later, it is also supported to set specific attachments attributes on each registry cluster to achieve specific marking of addresses under the registry cluster, and then cooperate with Router component extensions such as TagRouter to realize cross-machine rooms traffic management capabilities.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;dubbo:registry&lt;/span> address=&lt;span style="color:#2aa198">&amp;#34;multiple://127.0.0.1:2181?separator=;&amp;amp;reference-registry=zookeeper://address11?attachments=zone=hangzhou,tag=middleware;zookeeper://address21&amp;#34;&lt;/span> &lt;span style="color:#268bd2">/&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>After adding &lt;code>attachments=zone=hangzhou,tag=middleware&lt;/code>, all URL addresses from the registration center will automatically carry the two identifiers of &lt;code>zone&lt;/code> and &lt;code>tag&lt;/code>, which facilitates more flexible traffic management on the consumer side.&lt;/p>
@@ -602,7 +602,7 @@ Each request is randomly assigned to a registry cluster&lt;/p>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;dubbo:registry&lt;/span> address=&lt;span style="color:#2aa198">&amp;#34;10.20.141.150:9090|10.20.154.177:9010&amp;#34;&lt;/span> &lt;span style="color:#268bd2">/&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#586e75">&amp;lt;!-- Reference service --&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;dubbo:reference&lt;/span> id=&lt;span style="color:#2aa198">&amp;#34;helloService&amp;#34;&lt;/span> interface=&lt;span style="color:#2aa198">&amp;#34;com.alibaba.hello.api.HelloService&amp;#34;&lt;/span> version=&lt;span style="color:#2aa198">&amp;#34;1.0.0&amp;#34;&lt;/span> &lt;span style="color:#268bd2">/&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Simple Registry</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/registry/simple/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/registry/simple/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Simple Registry</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/registry/simple/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/registry/simple/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
 &lt;p>This function has been removed in Dubbo 2.7, please select &lt;a href="../">other registry&lt;/a> for migration.&lt;/p>
 &lt;/div>

@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Performance Reference Manual</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/performance/</link><description>Recent content in Performance Reference Manual on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/performance/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs3-V2: Application-Level Service Discovery Benchmark</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/performance/benchmarking/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/performance/benchmarking/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Performance Reference Manual</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/performance/</link><description>Recent content in Performance Reference Manual on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/performance/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs3-V2: Application-Level Service Discovery Benchmark</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/performance/benchmarking/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/performance/benchmarking/</guid><description>
 &lt;h2 id="1-benchmark-conclusion">1 Benchmark Conclusion&lt;/h2>
 &lt;p>Compared with 2.x version, Dubbo3 version&lt;/p>
 &lt;ul>
@@ -18,18 +18,18 @@
 | &lt;strong>Pressure test data&lt;/strong> | Provider&lt;br/>500 running instances✖️8interface✖️5protocol, that is, each provider registers 40 URLs with the registration center, a total of 20,000 URLs, and the length of each URL is about 1k characters. &lt;br/>&lt;br/>Registration center&lt;br/>2 independent zookeeper registration centers, service providers and consumers adopt parallel configuration. &lt;br/>&lt;br/>Consumer&lt;br/>Configure 1c2g, xmx=768, enable GC, subscribe from 2 registries, and call the service every 5 seconds. Run for 20 hours. |
 | &lt;strong>Pressure test environment&lt;/strong> | Java version &amp;ldquo;1.8.0&amp;rdquo;&lt;br/>Java(TM) SE Runtime Environment (build pxa6480sr3fp12-20160919_01(SR3 FP12))&lt;br/>IBM J9 VM (Build 2.8, JRE 1.8 .0 Linux amd64-64 Compressed References 20160915_318796, JIT enabled, AOT enabled) |&lt;/p>
 &lt;h3 id="22-data-analysis">2.2 Data Analysis&lt;/h3>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/v3/performance/registry-mem.svg" alt="//imgs/v3/performance/registry-mem.svg">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/performance/registry-mem.svg" alt="//imgs/v3/performance/registry-mem.svg">&lt;/p>
 &lt;p>&lt;br />Figure 1 Changes in memory usage of the service discovery model&lt;br />&lt;br />&lt;/p>
 &lt;ul>
 &lt;li>Dubbo3 interface-level service discovery model, the resident memory is reduced by about 50% compared with version 2.x&lt;/li>
 &lt;li>Dubbo3 application-level service discovery model, the resident memory is reduced by about 75% compared with version 2.x&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/v3/performance/registry-gc.svg" alt="//imgs/v3/performance/registry-gc.svg">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/performance/registry-gc.svg" alt="//imgs/v3/performance/registry-gc.svg">&lt;/p>
 &lt;p>&lt;br />Figure 2 Service Discovery Model GC Changes&lt;br />&lt;br />&lt;/p>
 &lt;ul>
 &lt;li>Dubbo3 interface-level service discovery model, the number of YGC times in version 2.x has dropped significantly, from hundreds of times to more than a dozen times&lt;/li>
 &lt;li>Dubbo3 application-level service discovery model, the number of FGC times in version 2.x has dropped significantly, from hundreds of times to zero&lt;/li>
-&lt;/ul></description></item><item><title>Docs3-V2: RPC Protocol Triple&amp;Dubbo Benchmark</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/performance/rpc-benchmarking/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/performance/rpc-benchmarking/</guid><description>
+&lt;/ul></description></item><item><title>Docs3-V2: RPC Protocol Triple&amp;Dubbo Benchmark</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/performance/rpc-benchmarking/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/performance/rpc-benchmarking/</guid><description>
 &lt;ul>
 &lt;li>The &lt;em>Dubbo protocol&lt;/em> implementation of Dubbo3 is basically the same as the Dubbo2 version in terms of performance.&lt;/li>
 &lt;li>Since the Triple protocol itself is built based on HTTP/2, the RPC call on a single link is not improved compared with TCP-based Dubbo2, but has a certain decline in some call scenarios. But the greater advantage of the _Triple protocol _ lies in the gateway penetration, versatility, and overall throughput improvement brought about by the Stream communication model.&lt;/li>
@@ -49,13 +49,13 @@
 | &lt;strong>pojo return value&lt;/strong> | 8984 ops/s&lt;br />6.1 ms P99 | 12279 ops/s&lt;br />5.7 ms P99 | 21479 ops/s&lt;br />3.0 ms P99 | 6255 ops/s&amp;lt; br /&amp;gt;8.9 ms P99 | 6491 ops/s&lt;br />10 ms P99 |
 | &lt;strong>pojo list return value&lt;/strong> | 1916 ops/s&lt;br />34 ms P99 | 2037 ops/s&lt;br />34 ms P99 | 12722 ops/s&lt;br />7.7 ms P99 | 6920 ops/s &lt;br />9.6 ms P99 | 2833 ops/s&lt;br />27 ms P99 |&lt;/p>
 &lt;h3 id="121-comparison-of-different-versions-of-dubbo-protocol">1.2.1 Comparison of different versions of Dubbo protocol&lt;/h3>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/v3/performance/rpc-dubbo.svg" alt="//imgs/v3/performance/rpc-dubbo.svg">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/performance/rpc-dubbo.svg" alt="//imgs/v3/performance/rpc-dubbo.svg">&lt;/p>
 &lt;p>&lt;br />Figure 3 Comparison of implementations of the Dubbo protocol in different versions&lt;br />&lt;/p>
 &lt;ul>
 &lt;li>As far as the default combination of Dubbo RPC + Hessian is concerned, the performance of Dubbo3 and Dubbo2 is basically the same in different calling scenarios&lt;/li>
 &lt;/ul>
 &lt;h3 id="122-dubbo-protocol-vs-triple-protocol">1.2.2 Dubbo protocol vs Triple protocol&lt;/h3>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/v3/performance/rpc-triple.svg" alt="//imgs/v3/performance/rpc-triple.svg">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/performance/rpc-triple.svg" alt="//imgs/v3/performance/rpc-triple.svg">&lt;/p>
 &lt;p>&lt;br />Figure 4 Triple vs Dubbo&lt;br />&lt;/p>
 &lt;ul>
 &lt;li>Simply looking at the point-to-point calls of Consumer &amp;lt;-&amp;gt; Provider, it can be seen that the Triple protocol itself is not dominant. Also using the Protobuf serialization method, the overall performance of the Dubbo RPC protocol is still better than Triple. &lt;br />&lt;br />&lt;/li>

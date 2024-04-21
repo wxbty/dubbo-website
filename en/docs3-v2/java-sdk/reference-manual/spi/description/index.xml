@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Dubbo SPI extension implementation description</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/</link><description>Recent content in Dubbo SPI extension implementation description on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs3-V2: Protocol Extension</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/protocol/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/protocol/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Dubbo SPI extension implementation description</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/</link><description>Recent content in Dubbo SPI extension implementation description on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs3-V2: Protocol Extension</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/protocol/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/protocol/</guid><description>
 &lt;h2 id="expansion-description">Expansion Description&lt;/h2>
 &lt;p>RPC protocol extension, encapsulates remote call details.&lt;/p>
 &lt;p>contract:&lt;/p>
@@ -121,7 +121,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>META-INF/dubbo/org.apache.dubbo.rpc.Protocol:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-properties" data-lang="properties">&lt;span style="display:flex;">&lt;span>xxx&lt;span style="color:#719e07">=&lt;/span>&lt;span style="color:#2aa198">com.xxx.XxxProtocol&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Call Intercept Extension</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/filter/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/filter/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Call Intercept Extension</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/filter/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/filter/</guid><description>
 &lt;h2 id="expansion-description">Expansion Description&lt;/h2>
 &lt;p>Service provider and service consumer call process interception. Most functions of Dubbo itself are implemented based on this extension point. Every time a remote method is executed, this interception will be executed. Please pay attention to the impact on performance.&lt;/p>
 &lt;p>agreement:&lt;/p>
@@ -189,7 +189,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>META-INF/dubbo/org.apache.dubbo.rpc.Filter:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-properties" data-lang="properties">&lt;span style="display:flex;">&lt;span>xxx&lt;span style="color:#719e07">=&lt;/span>&lt;span style="color:#2aa198">com.xxx.XxxFilter&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Reference Listener Extension</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/invoker-listener/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/invoker-listener/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Reference Listener Extension</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/invoker-listener/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/invoker-listener/</guid><description>
 &lt;h2 id="expansion-description">Expansion Description&lt;/h2>
 &lt;p>This event is triggered when there is a service reference.&lt;/p>
 &lt;h2 id="extension-ports">Extension ports&lt;/h2>
@@ -230,7 +230,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>META-INF/dubbo/org.apache.dubbo.rpc.InvokerListener:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-properties" data-lang="properties">&lt;span style="display:flex;">&lt;span>xxx&lt;span style="color:#719e07">=&lt;/span>&lt;span style="color:#2aa198">com.xxx.XxxInvokerListener&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Expose Listener Extension</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/exporter-listener/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/exporter-listener/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Expose Listener Extension</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/exporter-listener/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/exporter-listener/</guid><description>
 &lt;h2 id="expansion-description">Expansion Description&lt;/h2>
 &lt;p>This event is triggered when a service is exposed.&lt;/p>
 &lt;h2 id="extension-ports">Extension ports&lt;/h2>
@@ -272,7 +272,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>META-INF/dubbo/org.apache.dubbo.rpc.ExporterListener:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-properties" data-lang="properties">&lt;span style="display:flex;">&lt;span>xxx&lt;span style="color:#719e07">=&lt;/span>&lt;span style="color:#2aa198">com.xxx.XxxExporterListener&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Cluster Expansion</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/cluster/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/cluster/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Cluster Expansion</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/cluster/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/cluster/</guid><description>
 &lt;h2 id="expansion-description">Expansion Description&lt;/h2>
 &lt;p>When there are multiple service providers, organize multiple service providers into a cluster and pretend to be one provider.&lt;/p>
 &lt;h2 id="extension-ports">Extension ports&lt;/h2>
@@ -329,7 +329,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>META-INF/dubbo/org.apache.dubbo.rpc.cluster.Cluster:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-properties" data-lang="properties">&lt;span style="display:flex;">&lt;span>xxx&lt;span style="color:#719e07">=&lt;/span>&lt;span style="color:#2aa198">com.xxx.XxxCluster&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Route Extension</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/router/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/router/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Route Extension</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/router/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/router/</guid><description>
 &lt;h2 id="expansion-description">Expansion Description&lt;/h2>
 &lt;p>Select one of multiple service providers to call.&lt;/p>
 &lt;h2 id="extension-ports">Extension ports&lt;/h2>
@@ -375,7 +375,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>META-INF/dubbo/org.apache.dubbo.rpc.cluster.RouterFactory:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-properties" data-lang="properties">&lt;span style="display:flex;">&lt;span>xxx&lt;span style="color:#719e07">=&lt;/span>&lt;span style="color:#2aa198">com.xxx.XxxRouterFactory&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Load Balancing Extension</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/load-balance/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/load-balance/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Load Balancing Extension</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/load-balance/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/load-balance/</guid><description>
 &lt;h2 id="expansion-description">Expansion Description&lt;/h2>
 &lt;p>Select one of multiple service providers to call&lt;/p>
 &lt;h2 id="extension-ports">Extension ports&lt;/h2>
@@ -419,7 +419,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>META-INF/dubbo/org.apache.dubbo.rpc.cluster.LoadBalance:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-properties" data-lang="properties">&lt;span style="display:flex;">&lt;span>xxx&lt;span style="color:#719e07">=&lt;/span>&lt;span style="color:#2aa198">com.xxx.XxxLoadBalance&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Merge result extension</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/merger/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/merger/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Merge result extension</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/merger/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/merger/</guid><description>
 &lt;h2 id="expansion-description">Expansion Description&lt;/h2>
 &lt;p>Merge returns results for grouping and aggregation.&lt;/p>
 &lt;h2 id="extension-ports">Extension ports&lt;/h2>
@@ -465,7 +465,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>META-INF/dubbo/org.apache.dubbo.rpc.cluster.Merger:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-properties" data-lang="properties">&lt;span style="display:flex;">&lt;span>xxx&lt;span style="color:#719e07">=&lt;/span>&lt;span style="color:#2aa198">com.xxx.XxxMerger&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Registry Extension</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/registry/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/registry/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Registry Extension</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/registry/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/registry/</guid><description>
 &lt;h2 id="expansion-description">Expansion Description&lt;/h2>
 &lt;p>Responsible for service registration and discovery.&lt;/p>
 &lt;h2 id="extension-ports">Extension ports&lt;/h2>
@@ -632,7 +632,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>META-INF/dubbo/org.apache.dubbo.registry.RegistryFactory:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-properties" data-lang="properties">&lt;span style="display:flex;">&lt;span>xxx&lt;span style="color:#719e07">=&lt;/span>&lt;span style="color:#2aa198">com.xxx.XxxRegistryFactory&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Monitoring Center Extension</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/monitor/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/monitor/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Monitoring Center Extension</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/monitor/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/monitor/</guid><description>
 &lt;h2 id="expansion-description">Expansion Description&lt;/h2>
 &lt;p>Responsible for the monitoring of service call times and call time.&lt;/p>
 &lt;h2 id="extension-ports">Extension ports&lt;/h2>
@@ -682,7 +682,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>META-INF/dubbo/org.apache.dubbo.monitor.MonitorFactory:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-properties" data-lang="properties">&lt;span style="display:flex;">&lt;span>xxx&lt;span style="color:#719e07">=&lt;/span>&lt;span style="color:#2aa198">com.xxx.XxxMonitorFactory&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Extension Point Load Extension</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/extension-factory/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/extension-factory/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Extension Point Load Extension</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/extension-factory/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/extension-factory/</guid><description>
 &lt;h2 id="expansion-description">Expansion Description&lt;/h2>
 &lt;p>The loading container of the extension point itself, which can load the extension point from different containers.&lt;/p>
 &lt;h2 id="extension-ports">Extension ports&lt;/h2>
@@ -718,7 +718,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>META-INF/dubbo/org.apache.dubbo.common.extension.ExtensionFactory:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-properties" data-lang="properties">&lt;span style="display:flex;">&lt;span>xxx&lt;span style="color:#719e07">=&lt;/span>&lt;span style="color:#2aa198">com.xxx.XxxExtensionFactory&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Dynamic Proxy Extension</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/proxy-factory/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/proxy-factory/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Dynamic Proxy Extension</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/proxy-factory/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/proxy-factory/</guid><description>
 &lt;h2 id="expansion-description">Expansion Description&lt;/h2>
 &lt;p>Convert the &lt;code>Invoker&lt;/code> interface into a business interface.&lt;/p>
 &lt;h2 id="extension-ports">Extension ports&lt;/h2>
@@ -762,7 +762,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>META-INF/dubbo/org.apache.dubbo.rpc.ProxyFactory:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-properties" data-lang="properties">&lt;span style="display:flex;">&lt;span>xxx&lt;span style="color:#719e07">=&lt;/span>&lt;span style="color:#2aa198">com.xxx.XxxProxyFactory&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Readiness Probe</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/readiness/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/readiness/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Readiness Probe</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/readiness/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/readiness/</guid><description>
 &lt;h2 id="expansion-description">Expansion Description&lt;/h2>
 &lt;p>Extend the detection points of application readiness.&lt;/p>
 &lt;h2 id="extension-ports">Extension ports&lt;/h2>
@@ -797,7 +797,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>META-INF/dubbo/org.apache.dubbo.qos.probe.ReadinessProbe:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>xxx=com.xxx.XxxReadinessProbe
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Startup Startup Probe</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/startup/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/startup/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Startup Startup Probe</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/startup/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/startup/</guid><description>
 &lt;h2 id="expansion-description">Expansion Description&lt;/h2>
 &lt;p>Extend the detection point of application startup.&lt;/p>
 &lt;h2 id="extension-ports">Extension ports&lt;/h2>
@@ -831,7 +831,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>META-INF/dubbo/org.apache.dubbo.qos.probe.StartupProbe:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>xxx=com.xxx.XxxStartupProbe
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Liveness Survival Probe</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/liveness/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/liveness/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Liveness Survival Probe</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/liveness/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/liveness/</guid><description>
 &lt;h2 id="expansion-description">Expansion Description&lt;/h2>
 &lt;p>Expand the detection point of application survival.&lt;/p>
 &lt;h2 id="extension-ports">Extension ports&lt;/h2>
@@ -863,7 +863,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>META-INF/dubbo/org.apache.dubbo.qos.probe.LivenessProbe:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>xxx=com.xxx.XxxLivenessProbe
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Compiler Extensions</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/compiler/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/compiler/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Compiler Extensions</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/compiler/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/compiler/</guid><description>
 &lt;h2 id="expansion-description">Expansion Description&lt;/h2>
 &lt;p>Java code compiler, used to dynamically generate bytecode to speed up calls.&lt;/p>
 &lt;h2 id="extension-ports">Extension ports&lt;/h2>
@@ -899,7 +899,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>META-INF/dubbo/org.apache.dubbo.common.compiler.Compiler:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-properties" data-lang="properties">&lt;span style="display:flex;">&lt;span>xxx&lt;span style="color:#719e07">=&lt;/span>&lt;span style="color:#2aa198">com.xxx.XxxCompiler&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Configuration Center Extension</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/config-center/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/config-center/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Configuration Center Extension</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/config-center/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/config-center/</guid><description>
 &lt;h2 id="aim-of-design">aim of design&lt;/h2>
 &lt;p>The core function of the configuration center is as Key-Value storage. The Dubbo framework informs the configuration center of the key it cares about, and the configuration center returns the value corresponding to the key.&lt;/p>
 &lt;p>According to the application scenarios, the configuration center mainly undertakes the following responsibilities in the Dubbo framework:&lt;/p>
@@ -927,12 +927,12 @@
 &lt;h2 id="implementation-principle">Implementation principle&lt;/h2>
 &lt;h3 id="zookeeper">Zookeeper&lt;/h3>
 &lt;p>zookeeper provides a tree-like storage model, the implementation principle is as follows:&lt;/p>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/dev/configcenter_zk_model.jpg" alt="image-20190127225608553">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/dev/configcenter_zk_model.jpg" alt="image-20190127225608553">&lt;/p>
 &lt;p>namespace, group, key, etc. correspond to different levels of ZNode nodes, and value is stored as the value of the root ZNode node.&lt;/p>
 &lt;ol>
 &lt;li>
 &lt;p>External configuration center dubbo.properties&lt;/p>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/dev/configcenter_zk_properties.jpg" alt="image-20190127225608553">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/dev/configcenter_zk_properties.jpg" alt="image-20190127225608553">&lt;/p>
 &lt;p>The figure above shows the storage structure of dubbo.properties files in two different scopes in zookeeper:&lt;/p>
 &lt;ul>
 &lt;li>Namespace namespace is: dubbo&lt;/li>
@@ -942,7 +942,7 @@
 &lt;/li>
 &lt;li>
 &lt;p>Single configuration item&lt;/p>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/dev/configcenter_zk_singleitem.jpg" alt="image-20190127225608553">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/dev/configcenter_zk_singleitem.jpg" alt="image-20190127225608553">&lt;/p>
 &lt;p>Set the graceful shutdown event to 15000:&lt;/p>
 &lt;ul>
 &lt;li>Namespace namespace: dubbo&lt;/li>
@@ -953,7 +953,7 @@
 &lt;/li>
 &lt;li>
 &lt;p>Service Governance Rules&lt;/p>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/dev/configcenter_zk_rule.jpg" alt="image-20190127225608553">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/dev/configcenter_zk_rule.jpg" alt="image-20190127225608553">&lt;/p>
 &lt;p>The figure above shows an application-level conditional routing rule:&lt;/p>
 &lt;ul>
 &lt;li>Namespace namespace: dubbo&lt;/li>
@@ -976,7 +976,7 @@
 &lt;h3 id="nacos">Nacos&lt;/h3>
 &lt;p>As a professional third-party configuration center, Nacos has a storage structure specially designed for configuration centers, including built-in concepts such as namespace, group, and dataid. And these concepts are basically in one-to-one correspondence with the abstract configuration center of the Dubbo framework.&lt;/p>
 &lt;p>The corresponding relationship with Zookeeper implementation is as follows:&lt;/p>
-&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/dev/configcenter_nacos_model.jpg" alt="image-20190127225608553">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/dev/configcenter_nacos_model.jpg" alt="image-20190127225608553">&lt;/p>
 &lt;p>Referring to the example described above about the zookeeper implementation, the dataid here may be:&lt;/p>
 &lt;ul>
 &lt;li>External configuration center: dubbo.properties&lt;/li>
@@ -984,7 +984,7 @@
 &lt;li>Service governance rules: org.apache.dubbo.demo.DemoService:1.0.0:group1.configurators&lt;/li>
 &lt;/ul>
 &lt;h3 id="apollo">Apollo&lt;/h3>
-&lt;p>Apollo is similar to Nacos, please refer to the description about Apollo in the Dynamic Configuration Center Documentation.&lt;/p></description></item><item><title>Docs3-V2: Metadata Center Extension</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/metadata-report/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/metadata-report/</guid><description>
+&lt;p>Apollo is similar to Nacos, please refer to the description about Apollo in the Dynamic Configuration Center Documentation.&lt;/p></description></item><item><title>Docs3-V2: Metadata Center Extension</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/metadata-report/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/metadata-report/</guid><description>
 &lt;h2 id="aim-of-design">aim of design&lt;/h2>
 &lt;p>See the &lt;a href="../../../metadata-center/overview/">Metadata Center Manual&lt;/a>&lt;/p>
 &lt;h2 id="extension-ports">Extension ports&lt;/h2>
@@ -1043,7 +1043,7 @@
 &lt;/blockquote>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-properties" data-lang="properties">&lt;span style="display:flex;">&lt;span>redis&lt;span style="color:#719e07">=&lt;/span>&lt;span style="color:#2aa198">org.apache.dubbo.metadata.store.redis.RedisMetadataReportFactory&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Just pack the above modification and project into a jar package, and then configure the url of the metadata center: redis://10.20.153.10:6379.&lt;/p>
-&lt;p>At this point, a custom metadata store is ready to run.&lt;/p></description></item><item><title>Docs3-V2: Message Dispatch Extension</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/dispatcher/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/dispatcher/</guid><description>
+&lt;p>At this point, a custom metadata store is ready to run.&lt;/p></description></item><item><title>Docs3-V2: Message Dispatch Extension</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/dispatcher/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/dispatcher/</guid><description>
 &lt;h2 id="expansion-description">Expansion Description&lt;/h2>
 &lt;p>Channel information dispatcher, used to specify the thread pool model.&lt;/p>
 &lt;h2 id="extension-ports">Extension ports&lt;/h2>
@@ -1084,7 +1084,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>META-INF/dubbo/org.apache.dubbo.remoting.Dispatcher:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-properties" data-lang="properties">&lt;span style="display:flex;">&lt;span>xxx&lt;span style="color:#719e07">=&lt;/span>&lt;span style="color:#2aa198">com.xxx.XxxDispatcher&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Thread Pool Extension</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/threadpool/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/threadpool/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Thread Pool Extension</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/threadpool/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/threadpool/</guid><description>
 &lt;h2 id="expansion-description">Expansion Description&lt;/h2>
 &lt;p>The service provider&amp;rsquo;s thread pool implements the strategy. When the server receives a request, it needs to create a thread in the thread pool to execute the service provider&amp;rsquo;s business logic.&lt;/p>
 &lt;h2 id="extension-ports">Extension ports&lt;/h2>
@@ -1123,7 +1123,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>META-INF/dubbo/org.apache.dubbo.common.threadpool.ThreadPool:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-properties" data-lang="properties">&lt;span style="display:flex;">&lt;span>xxx&lt;span style="color:#719e07">=&lt;/span>&lt;span style="color:#2aa198">com.xxx.XxxThreadPool&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Serialization Extension</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/serialize/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/serialize/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Serialization Extension</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/serialize/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/serialize/</guid><description>
 &lt;h2 id="expansion-description">Expansion Description&lt;/h2>
 &lt;p>Convert the object into a byte stream for network transmission, and convert the byte stream into an object for restoring the byte stream data into an object.&lt;/p>
 &lt;h2 id="extension-ports">Extension ports&lt;/h2>
@@ -1176,7 +1176,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>META-INF/dubbo/org.apache.dubbo.common.serialize.Serialization:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-properties" data-lang="properties">&lt;span style="display:flex;">&lt;span>xxx&lt;span style="color:#719e07">=&lt;/span>&lt;span style="color:#2aa198">com.xxx.XxxSerialization&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Network Transport Extension</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/remoting/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/remoting/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Network Transport Extension</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/remoting/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/remoting/</guid><description>
 &lt;h2 id="expansion-description">Expansion Description&lt;/h2>
 &lt;p>Realization of remote communication server and client transmission.&lt;/p>
 &lt;h2 id="extension-ports">Extension ports&lt;/h2>
@@ -1271,7 +1271,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>META-INF/dubbo/org.apache.dubbo.remoting.Transporter:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-properties" data-lang="properties">&lt;span style="display:flex;">&lt;span>xxx&lt;span style="color:#719e07">=&lt;/span>&lt;span style="color:#2aa198">com.xxx.XxxTransporter&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Information Exchange Extension</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/exchanger/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/exchanger/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Information Exchange Extension</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/exchanger/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/exchanger/</guid><description>
 &lt;h2 id="expansion-description">Expansion Description&lt;/h2>
 &lt;p>Based on the transport layer, implement the Request-Response information exchange semantics.&lt;/p>
 &lt;h2 id="extension-ports">Extension ports&lt;/h2>
@@ -1333,7 +1333,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>META-INF/dubbo/org.apache.dubbo.remoting.exchange.Exchanger:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-properties" data-lang="properties">&lt;span style="display:flex;">&lt;span>xxx&lt;span style="color:#719e07">=&lt;/span>&lt;span style="color:#2aa198">com.xxx.XxxExchanger&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Network Expansion</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/networker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/networker/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Network Expansion</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/networker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/networker/</guid><description>
 &lt;h2 id="expansion-description">Expansion Description&lt;/h2>
 &lt;p>Peer-to-peer network node builder.&lt;/p>
 &lt;h2 id="extension-ports">Extension ports&lt;/h2>
@@ -1371,7 +1371,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>META-INF/dubbo/org.apache.dubbo.remoting.p2p.Networker:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-properties" data-lang="properties">&lt;span style="display:flex;">&lt;span>xxx&lt;span style="color:#719e07">=&lt;/span>&lt;span style="color:#2aa198">com.xxx.XxxNetworker&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Peer-to-peer network node builder extension</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/page/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/page/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Peer-to-peer network node builder extension</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/page/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/page/</guid><description>
 &lt;h1 id="page-extension">page extension&lt;/h1>
 &lt;h2 id="expansion-description">Expansion Description&lt;/h2>
 &lt;p>Peer-to-peer network node builder.&lt;/p>
@@ -1412,7 +1412,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>META-INF/dubbo/org.apache.dubbo.container.page.PageHandler:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-properties" data-lang="properties">&lt;span style="display:flex;">&lt;span>xxx&lt;span style="color:#719e07">=&lt;/span>&lt;span style="color:#2aa198">com.xxx.XxxPageHandler&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Telnet Command Extensions</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/telnet-handler/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/telnet-handler/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Telnet Command Extensions</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/telnet-handler/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/telnet-handler/</guid><description>
 &lt;h2 id="expansion-description">Expansion Description&lt;/h2>
 &lt;p>All servers support telnet access for manual intervention.&lt;/p>
 &lt;h2 id="extension-ports">Extension ports&lt;/h2>
@@ -1464,7 +1464,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="usage">Usage&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>telnet 127.0.0.1 &lt;span style="color:#2aa198">20880&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>dubbo&amp;gt; xxx args
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Status Check Extension</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/status-checker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/status-checker/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Status Check Extension</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/status-checker/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/status-checker/</guid><description>
 &lt;h2 id="expansion-description">Expansion Description&lt;/h2>
 &lt;p>Check the status of various resources that the service relies on. This status check can be used for both telnet&amp;rsquo;s status command and hosting&amp;rsquo;s status page.&lt;/p>
 &lt;h2 id="extension-ports">Extension ports&lt;/h2>
@@ -1507,7 +1507,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>META-INF/dubbo/org.apache.dubbo.common.status.StatusChecker:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-properties" data-lang="properties">&lt;span style="display:flex;">&lt;span>xxx&lt;span style="color:#719e07">=&lt;/span>&lt;span style="color:#2aa198">com.xxx.XxxStatusChecker&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Container Extension</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/container/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/container/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Container Extension</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/container/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/container/</guid><description>
 &lt;h2 id="expansion-description">Expansion Description&lt;/h2>
 &lt;p>Service container extension for custom loading content.&lt;/p>
 &lt;h2 id="extension-ports">Extension ports&lt;/h2>
@@ -1548,7 +1548,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>META-INF/dubbo/org.apache.dubbo.container.Container:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-properties" data-lang="properties">&lt;span style="display:flex;">&lt;span>xxx&lt;span style="color:#719e07">=&lt;/span>&lt;span style="color:#2aa198">com.xxx.XxxContainer&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Cache Extension</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/cache/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/cache/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Cache Extension</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/cache/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/cache/</guid><description>
 &lt;h2 id="expansion-description">Expansion Description&lt;/h2>
 &lt;p>Use the request parameter as the key to cache the returned result.&lt;/p>
 &lt;h2 id="extension-ports">Extension ports&lt;/h2>
@@ -1605,7 +1605,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>META-INF/dubbo/org.apache.dubbo.cache.CacheFactory:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-properties" data-lang="properties">&lt;span style="display:flex;">&lt;span>xxx&lt;span style="color:#719e07">=&lt;/span>&lt;span style="color:#2aa198">com.xxx.XxxCacheFactory&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Authentication Extension</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/validation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/validation/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Authentication Extension</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/validation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/validation/</guid><description>
 &lt;h2 id="expansion-description">Expansion Description&lt;/h2>
 &lt;p>Parameter validation extension point.&lt;/p>
 &lt;h2 id="extension-ports">Extension ports&lt;/h2>
@@ -1653,7 +1653,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>META-INF/dubbo/org.apache.dubbo.validation.Validation:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-properties" data-lang="properties">&lt;span style="display:flex;">&lt;span>xxx&lt;span style="color:#719e07">=&lt;/span>&lt;span style="color:#2aa198">com.xxx.XxxValidation&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Log Adaptation Extension</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/logger-adapter/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/logger-adapter/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Log Adaptation Extension</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/logger-adapter/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/logger-adapter/</guid><description>
 &lt;h2 id="expansion-description">Expansion Description&lt;/h2>
 &lt;p>Log output adaptation extension point.&lt;/p>
 &lt;h2 id="extension-ports">Extension ports&lt;/h2>
@@ -1708,7 +1708,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>META-INF/dubbo/org.apache.dubbo.common.logger.LoggerAdapter:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-properties" data-lang="properties">&lt;span style="display:flex;">&lt;span>xxx&lt;span style="color:#719e07">=&lt;/span>&lt;span style="color:#2aa198">com.xxx.XxxLoggerAdapter&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: QoS Anonymous Access Verification Extension</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/qos-permission/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/qos-permission/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: QoS Anonymous Access Verification Extension</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/qos-permission/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/qos-permission/</guid><description>
 &lt;h2 id="expansion-description">Expansion Description&lt;/h2>
 &lt;p>QoS anonymous access authentication extension point.&lt;/p>
 &lt;h2 id="extension-ports">Extension ports&lt;/h2>
@@ -1743,7 +1743,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>META-INF/dubbo/org.apache.dubbo.qos.permission.PermissionChecker:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-properties" data-lang="properties">&lt;span style="display:flex;">&lt;span>qosPermissionChecker&lt;span style="color:#719e07">=&lt;/span>&lt;span style="color:#2aa198">com.xxx.XxxPermissionChecker&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Extension Point Development Guide</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/dubbo-spi/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/dubbo-spi/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Extension Point Development Guide</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/dubbo-spi/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/dubbo-spi/</guid><description>
 &lt;h2 id="1-introduction">1 Introduction&lt;/h2>
 &lt;p>The full name of SPI is Service Provider Interface, which is a service discovery mechanism. The essence of SPI is to configure the fully qualified name of the interface implementation class in the file, and the service loader reads the configuration file and loads the implementation class. In this way, the implementation class can be dynamically replaced for the interface at runtime. Because of this feature, we can easily provide extended functions for our programs through the SPI mechanism. The SPI mechanism is also used in third-party frameworks. For example, Dubbo loads all components through the SPI mechanism. However, Dubbo does not use Java&amp;rsquo;s native SPI mechanism, but enhances it to better meet the needs. In Dubbo, SPI is a very important module. Based on SPI, we can easily expand Dubbo.
 In Dubbo, SPI has two main usages, one is to load fixed extension classes, and the other is to load adaptive extension classes. These two methods will be described in detail below.
