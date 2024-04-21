@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Microservice Governance</title><link>https://wxbty.github.io/dubbo-website/en/overview/tasks/ecosystem/</link><description>Recent content in Microservice Governance on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://wxbty.github.io/dubbo-website/en/overview/tasks/ecosystem/index.xml" rel="self" type="application/rss+xml"/><item><title>Overview: Transaction Management</title><link>https://wxbty.github.io/dubbo-website/en/overview/tasks/ecosystem/transaction/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/overview/tasks/ecosystem/transaction/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Microservice Governance</title><link>https://wxbty.github.io/en/overview/tasks/ecosystem/</link><description>Recent content in Microservice Governance on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://wxbty.github.io/en/overview/tasks/ecosystem/index.xml" rel="self" type="application/rss+xml"/><item><title>Overview: Transaction Management</title><link>https://wxbty.github.io/en/overview/tasks/ecosystem/transaction/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/en/overview/tasks/ecosystem/transaction/</guid><description>
 &lt;h2 id="what-is-seata">What is Seata&lt;/h2>
 &lt;p>Seata is an open source distributed transaction solution dedicated to providing high-performance and easy-to-use distributed transaction services. Seata will provide users with AT, TCC, SAGA and XA transaction modes to create a one-stop distributed solution for users.&lt;/p>
 &lt;h2 id="1-example-architecture-description">1. Example architecture description&lt;/h2>
@@ -8,7 +8,7 @@
 &lt;li>Order service: Generate orders based on purchase requests.&lt;/li>
 &lt;li>Account Services: deduction of the user account amount.&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/docs3-v2/java-sdk/seata/transaction-1.png" alt="image.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/imgs/docs3-v2/java-sdk/seata/transaction-1.png" alt="image.png">&lt;/p>
 &lt;h3 id="storageservice">StorageService&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">public&lt;/span> &lt;span style="color:#268bd2">interface&lt;/span> &lt;span style="color:#268bd2">StorageService&lt;/span> {
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
@@ -129,7 +129,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="step-7-start-businessservice">Step 7: Start BusinessService&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>java &lt;span style="color:#719e07">-&lt;/span>classpath .&lt;span style="color:#719e07">/&lt;/span>target&lt;span style="color:#719e07">/&lt;/span>dubbo&lt;span style="color:#719e07">-&lt;/span>samples&lt;span style="color:#719e07">-&lt;/span>transaction&lt;span style="color:#719e07">-&lt;/span>1.0&lt;span style="color:#719e07">-&lt;/span>SNAPSHOT.jar org.apache.dubbo.samples.starter.DubboBusinessTester
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="4-example-core-process">4. Example core process&lt;/h2>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/docs3-v2/java-sdk/seata/transaction-2.png" alt="image.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/imgs/docs3-v2/java-sdk/seata/transaction-2.png" alt="image.png">&lt;/p>
 &lt;h3 id="step-1-modify-the-business-code">Step 1: Modify the business code&lt;/h3>
 &lt;p>Here only one line of annotation &lt;code>@GlobalTransactional&lt;/code> is required to be written on the method of the business initiator:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">@GlobalTransactional&lt;/span>
@@ -214,7 +214,7 @@ dubbo-storage-service.xml&lt;/p>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>e.g.
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sh seata-server.sh -p &lt;span style="color:#2aa198">8091&lt;/span> -h 127.0.0.1 -m file
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Overview: Current Limit Downgrade</title><link>https://wxbty.github.io/dubbo-website/en/overview/tasks/ecosystem/rate-limit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/overview/tasks/ecosystem/rate-limit/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Overview: Current Limit Downgrade</title><link>https://wxbty.github.io/en/overview/tasks/ecosystem/rate-limit/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/en/overview/tasks/ecosystem/rate-limit/</guid><description>
 &lt;h2 id="what-is-sentinel">What is Sentinel&lt;/h2>
 &lt;p>With the popularity of microservices, the stability between services and services has become more and more important. Sentinel is a traffic management component for distributed, multilingual and heterogeneous service architectures. It mainly uses traffic as the entry point, from traffic routing, traffic control, traffic shaping, fuse downgrade, system adaptive overload protection, hotspot traffic protection, etc. dimensions to help developers ensure the stability of microservices.&lt;/p>
 &lt;h2 id="1-example-architecture-description">1. Example architecture description&lt;/h2>
@@ -265,5 +265,5 @@ dubbo-storage-service.xml&lt;/p>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Blocked
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Blocked
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
-&lt;p>For more usage methods of Sentinel, please refer to: &lt;a href="https://wxbty.github.io/dubbo-website/zh-cn/blog/2018/07/27/sentinel-%E4%B8%BA-dubbo-%E6%9C%8D%E5%8A%A1%E4%BF%9D%E9%A9%BE%E6%8A%A4%E8%88%AA/">Sentinel escorts Dubbo services&lt;/a>, &lt;a href="https://sentinelguard.io/zh-cn/index.html">Sentinel official website&lt;/a>&lt;/p>
+&lt;p>For more usage methods of Sentinel, please refer to: &lt;a href="https://wxbty.github.io/zh-cn/blog/2018/07/27/sentinel-%E4%B8%BA-dubbo-%E6%9C%8D%E5%8A%A1%E4%BF%9D%E9%A9%BE%E6%8A%A4%E8%88%AA/">Sentinel escorts Dubbo services&lt;/a>, &lt;a href="https://sentinelguard.io/zh-cn/index.html">Sentinel official website&lt;/a>&lt;/p>
 &lt;/blockquote></description></item></channel></rss>
