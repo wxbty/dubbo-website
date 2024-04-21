@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – 观测服务</title><link>https://wxbty.github.io/web-site/zh-cn/overview/tasks/observability/</link><description>Recent content in 观测服务 on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://wxbty.github.io/web-site/zh-cn/overview/tasks/observability/index.xml" rel="self" type="application/rss+xml"/><item><title>Overview: 使用 Admin 可视化查看集群状态</title><link>https://wxbty.github.io/web-site/zh-cn/overview/tasks/observability/admin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/zh-cn/overview/tasks/observability/admin/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – 观测服务</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/tasks/observability/</link><description>Recent content in 观测服务 on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://wxbty.github.io/dubbo-website/zh-cn/overview/tasks/observability/index.xml" rel="self" type="application/rss+xml"/><item><title>Overview: 使用 Admin 可视化查看集群状态</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/tasks/observability/admin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/overview/tasks/observability/admin/</guid><description>
 &lt;p>前面章节我们提到 Dubbo 框架提供了丰富的服务治理功能如流量控制、动态配置、服务 Mock、服务测试等，而 Dubbo Admin 控制台的一部分重要作用在于将 dubbo 框架提供的服务治理能力提供一个开箱即用的可视化平台。本文将介绍 Dubbo Admin 控制台所提供的功能，让大家快速了解和使用 Admin 并对 Dubbo 所提供的服务治理能力有个更直观的了解。&lt;/p>
 &lt;blockquote>
 &lt;p>Dubbo Admin 已经升级为 Dubbo 服务治理统一入口，涵盖的范围非常广泛，本文讲解的只是 Admin 可视化控制台部分。&lt;/p>
@@ -17,18 +17,18 @@
 &lt;h3 id="服务状态与依赖关系查询">服务状态与依赖关系查询&lt;/h3>
 &lt;p>服务状态查询以接口为维度展示 dubbo 集群信息，包含服务提供者、消费者信息和服务的元数据等。元数据包含了服务定义、方法名和参数列表等信息。Admin 支持最新版本 dubbo3 所提供的应用级发现模型，以统一的页面交互展示了应用级&amp;amp;接口级地址信息，并以特殊的标记对记录进行区分。&lt;/p>
 &lt;h4 id="基于服务名查询">基于服务名查询&lt;/h4>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/tasks/observability/admin/1-search-by-service.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/tasks/observability/admin/1-search-by-service.png" alt="img">&lt;/p>
 &lt;h4 id="基于应用名查询">基于应用名查询&lt;/h4>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/tasks/observability/admin/1-search-by-appname.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/tasks/observability/admin/1-search-by-appname.png" alt="img">&lt;/p>
 &lt;h4 id="基于实例地址查询">基于实例地址查询&lt;/h4>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/tasks/observability/admin/1-search-by-ip.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/tasks/observability/admin/1-search-by-ip.png" alt="img">&lt;/p>
 &lt;h4 id="服务实例详情">服务实例详情&lt;/h4>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/tasks/observability/admin/1-service-detail.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/tasks/observability/admin/1-service-detail.png" alt="img">&lt;/p>
 &lt;h3 id="服务在线测试与文档管理">服务在线测试与文档管理&lt;/h3>
 &lt;h4 id="服务测试">服务测试&lt;/h4>
 &lt;p>服务测试相，主要用于模拟服务消费方，验证 Dubbo 服务的使用方式与正确性。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/tasks/observability/admin/2-service-test2.png" alt="img">&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/tasks/observability/admin/2-service-test.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/tasks/observability/admin/2-service-test2.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/tasks/observability/admin/2-service-test.png" alt="img">&lt;/p>
 &lt;h4 id="服务-mock">服务 Mock&lt;/h4>
 &lt;p>服务Mock通过无代码嵌入的方式将Consumer对Provider的请求进行拦截，动态的对Consumer的请求进行放行或返回用户自定义的Mock数据。从而解决在前期开发过程中，Consumer所依赖的Provider未准备就绪时，造成Consumer开发方的阻塞问题。
 只需要以下两步，即可享受服务Mock功能带来的便捷：&lt;/p>
@@ -40,23 +40,23 @@ Consumer应用引入服务Mock依赖，添加JVM启动参数-Denable.dubbo.admin
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">&amp;lt;version&amp;gt;&lt;/span>${version}&lt;span style="color:#268bd2">&amp;lt;/version&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;/denpendency&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>第二步：在Dubbo Admin中配置对应的Mock数据。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/tasks/observability/admin/2-service-mock.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/tasks/observability/admin/2-service-mock.png" alt="img">&lt;/p>
 &lt;h4 id="服务文档管理">服务文档管理&lt;/h4>
 &lt;p>Admin 提供的接口文档，相当于 swagger 对于 RESTful 风格的 Web 服务的作用。使用该功能可以有效的管理 Dubbo 接口文档。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/tasks/observability/admin/2-service-doc.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/tasks/observability/admin/2-service-doc.png" alt="img">&lt;/p>
 &lt;h3 id="集群状态监控">集群状态监控&lt;/h3>
 &lt;h4 id="首页大盘">首页大盘&lt;/h4>
 &lt;p>TBD&lt;/p>
 &lt;h4 id="grafana">Grafana&lt;/h4>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/tasks/observability/admin/3-grafana.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/tasks/observability/admin/3-grafana.png" alt="img">&lt;/p>
 &lt;h4 id="tracing">Tracing&lt;/h4>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/tasks/observability/admin/3-tracing-zipkin.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/tasks/observability/admin/3-tracing-zipkin.png" alt="img">&lt;/p>
 &lt;h3 id="流量管控">流量管控&lt;/h3>
 &lt;p>Admin 提供了四种路由规则的可视化管理支持，分别是条件路由规则、标签路由规则、动态配置规则、脚本路由规则，所提供的功能可以轻松实现黑白名单、灰度环境隔离、多套测试环境、金丝雀发布等服务治理诉求。接下来以条件路由为例，可以可视化的创建条件路由规则。&lt;/p>
 &lt;h4 id="条件路由">条件路由&lt;/h4>
 &lt;p>条件路由可以编写一些自定义路由规则实现服务治理的需求比如同区域优先、参数路由、黑白名单、读写分离等。路由规则在发起一次RPC调用前起到过滤目标服务器地址的作用，过滤后的地址列表，将作为消费端最终发起RPC调用的备选地址。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/tasks/observability/admin/4-traffic-management.png" alt="img">&lt;/p>
-&lt;p>请参考 &lt;a href="../../traffic-management/">流量管控任务&lt;/a> 中关于如何进行路由规则配置的更多详细描述。&lt;/p></description></item><item><title>Overview: 全链路追踪</title><link>https://wxbty.github.io/web-site/zh-cn/overview/tasks/observability/tracing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/zh-cn/overview/tasks/observability/tracing/</guid><description>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/tasks/observability/admin/4-traffic-management.png" alt="img">&lt;/p>
+&lt;p>请参考 &lt;a href="../../traffic-management/">流量管控任务&lt;/a> 中关于如何进行路由规则配置的更多详细描述。&lt;/p></description></item><item><title>Overview: 全链路追踪</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/tasks/observability/tracing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/overview/tasks/observability/tracing/</guid><description>
 &lt;section id="section-0" style="">
 &lt;div class="td-content list-page">
 &lt;div class="lead">&lt;/div>
@@ -66,7 +66,7 @@ Consumer应用引入服务Mock依赖，添加JVM启动参数-Denable.dubbo.admin
 &lt;div class="h-100 card shadow">
 &lt;div class="card-body">
 &lt;h4 class="card-title">
-&lt;a href='https://wxbty.github.io/web-site/web-site/zh-cn/overview/tasks/observability/tracing/zipkin/'>Zipkin 全链路追踪&lt;/a>
+&lt;a href='https://wxbty.github.io/dubbo-website/dubbo-website/zh-cn/overview/tasks/observability/tracing/zipkin/'>Zipkin 全链路追踪&lt;/a>
 &lt;/h4>
 &lt;p>演示如果通过 Zipkin 实现对 Dubbo 服务的全链路追踪。
 &lt;/p>
@@ -77,7 +77,7 @@ Consumer应用引入服务Mock依赖，添加JVM启动参数-Denable.dubbo.admin
 &lt;div class="h-100 card shadow">
 &lt;div class="card-body">
 &lt;h4 class="card-title">
-&lt;a href='https://wxbty.github.io/web-site/web-site/zh-cn/overview/tasks/observability/tracing/skywalking/'>Skywalking 全链路追踪&lt;/a>
+&lt;a href='https://wxbty.github.io/dubbo-website/dubbo-website/zh-cn/overview/tasks/observability/tracing/skywalking/'>Skywalking 全链路追踪&lt;/a>
 &lt;/h4>
 &lt;p>演示如果通过 Skywalking 实现对 Dubbo 服务的全链路追踪。
 &lt;/p>
@@ -88,7 +88,7 @@ Consumer应用引入服务Mock依赖，添加JVM启动参数-Denable.dubbo.admin
 &lt;div class="h-100 card shadow">
 &lt;div class="card-body">
 &lt;h4 class="card-title">
-&lt;a href='https://wxbty.github.io/web-site/web-site/zh-cn/overview/tasks/observability/tracing/otlp/'>OTlp 全链路追踪&lt;/a>
+&lt;a href='https://wxbty.github.io/dubbo-website/dubbo-website/zh-cn/overview/tasks/observability/tracing/otlp/'>OTlp 全链路追踪&lt;/a>
 &lt;/h4>
 &lt;p>演示如果通过 OpenTelemetry 的 Otlp Collector 实现对 Dubbo 服务的全链路追踪。
 &lt;/p>
@@ -189,7 +189,7 @@ Consumer应用引入服务Mock依赖，添加JVM启动参数-Denable.dubbo.admin
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>后续还会补齐更多的 starters，如 Jagger、SkyWalking等。&lt;/p>
 &lt;h2 id="dubbo-bootstrap-api">Dubbo Bootstrap API&lt;/h2>
 &lt;p>对于像非 SpringBoot 的项目，可以使用 Dubbo API 使用Tracing。&lt;/p>
-&lt;p>详细案例可参考&lt;a href="https://github.com/conghuhu/dubbo-samples/tree/master/4-governance/dubbo-samples-tracing/dubbo-sample-api-tracing-otel-zipkin">代码地址&lt;/a>&lt;/p></description></item><item><title>Overview: 使用 Grafana 可视化查看集群 Metrics 指标</title><link>https://wxbty.github.io/web-site/zh-cn/overview/tasks/observability/grafana/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/zh-cn/overview/tasks/observability/grafana/</guid><description>
+&lt;p>详细案例可参考&lt;a href="https://github.com/conghuhu/dubbo-samples/tree/master/4-governance/dubbo-samples-tracing/dubbo-sample-api-tracing-otel-zipkin">代码地址&lt;/a>&lt;/p></description></item><item><title>Overview: 使用 Grafana 可视化查看集群 Metrics 指标</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/tasks/observability/grafana/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/overview/tasks/observability/grafana/</guid><description>
 &lt;p>指标可视化页面目前推荐的方式是使用 Grafana 来配置 Dubbo 的可观测性监控大盘。&lt;/p>
 &lt;h2 id="在您开始之前">在您开始之前&lt;/h2>
 &lt;ul>
@@ -225,11 +225,11 @@ Consumer应用引入服务Mock依赖，添加JVM启动参数-Denable.dubbo.admin
 &lt;ol>
 &lt;li>提供者流量视图&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/advantages/grafana-dashboard-1.png" alt="grafana-dashboard-1.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/advantages/grafana-dashboard-1.png" alt="grafana-dashboard-1.png">&lt;/p>
 &lt;ol start="2">
 &lt;li>消费者流量视图&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/advantages/grafana-dashboard-1.png" alt="grafana-dashboard-1.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/advantages/grafana-dashboard-1.png" alt="grafana-dashboard-1.png">&lt;/p>
 &lt;ol start="3">
 &lt;li>注册中心视图&lt;/li>
 &lt;/ol>
@@ -239,11 +239,11 @@ Consumer应用引入服务Mock依赖，添加JVM启动参数-Denable.dubbo.admin
 &lt;/ol>
 &lt;p>TBD&lt;/p>
 &lt;h3 id="jvm-实例视图">JVM 实例视图&lt;/h3>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/advantages/grafana-dashboard-2.png" alt="grafana-dashboard-2.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/advantages/grafana-dashboard-2.png" alt="grafana-dashboard-2.png">&lt;/p>
 &lt;h3 id="关于-dubbo-官方提供的-grafana-dashboard">关于 Dubbo 官方提供的 Grafana Dashboard&lt;/h3>
 &lt;p>Dubbo 提供了丰富的指标面板，以上视图面板均可以在 Grafana 官方面板库中找到：您可以直接导入如下模版，并配置好数据源即可。&lt;/p>
 &lt;p>&lt;strong>Apache Dubbo Observability Dashboard：&lt;/strong> &lt;a href="https://grafana.com/grafana/dashboards/18469">https://grafana.com/grafana/dashboards/18469&lt;/a>&lt;/p>
-&lt;p>&lt;strong>JVM (Micrometer) Dashboard：&lt;/strong> &lt;a href="https://grafana.com/grafana/dashboards/4701">https://grafana.com/grafana/dashboards/4701&lt;/a>&lt;/p></description></item><item><title>Overview: 从 Prometheus 查询 Metrics 监控指标</title><link>https://wxbty.github.io/web-site/zh-cn/overview/tasks/observability/prometheus/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/zh-cn/overview/tasks/observability/prometheus/</guid><description>
+&lt;p>&lt;strong>JVM (Micrometer) Dashboard：&lt;/strong> &lt;a href="https://grafana.com/grafana/dashboards/4701">https://grafana.com/grafana/dashboards/4701&lt;/a>&lt;/p></description></item><item><title>Overview: 从 Prometheus 查询 Metrics 监控指标</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/tasks/observability/prometheus/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/overview/tasks/observability/prometheus/</guid><description>
 &lt;h2 id="准备条件">准备条件&lt;/h2>
 &lt;p>本文演示如何在 Kubernetes 环境下部署 Prometheus 并实现对 Dubbo 集群的监控数据统计与查询，你需要完成或具备以下内容：&lt;/p>
 &lt;ul>
@@ -262,4 +262,4 @@ Consumer应用引入服务Mock依赖，添加JVM启动参数-Denable.dubbo.admin
 打开浏览器，访问 localhost:9090/graph 即可打开 Prometheus 控制台。&lt;/p>
 &lt;p>接下来，执行 Prometheus 查询命令。可以在此确认 &lt;a href="../../../reference/proposals/metrics/">Dubbo 支持的 Metrics 指标&lt;/a>。&lt;/p>
 &lt;p>&lt;strong>1. 在 “Expression” 一览，输入 &lt;code>dubbo_consumer_qps_total&lt;/code>，返回以下结果&lt;/strong>&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/tasks/observability/prometheus.png" alt="img">&lt;/p></description></item></channel></rss>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/tasks/observability/prometheus.png" alt="img">&lt;/p></description></item></channel></rss>

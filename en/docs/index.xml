@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Documentation</title><link>https://wxbty.github.io/web-site/en/docs/</link><description>Recent content in Documentation on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://wxbty.github.io/web-site/en/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs3-V2: 0-1 - thread pool resource exhausted</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/faq/0/1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/faq/0/1/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Documentation</title><link>https://wxbty.github.io/dubbo-website/en/docs/</link><description>Recent content in Documentation on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://wxbty.github.io/dubbo-website/en/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs3-V2: 0-1 - thread pool resource exhausted</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/faq/0/1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/faq/0/1/</guid><description>
 &lt;p>The server&amp;rsquo;s thread resources are exhausted.
 By default, the number of business threads on the Dubbo server is 200. If the number of concurrent requests exceeds 200, new requests will be rejected and this error will be thrown.&lt;/p>
 &lt;h3 id="possible-reason">Possible Reason&lt;/h3>
@@ -16,7 +16,7 @@ By default, the number of business threads on the Dubbo server is 200. If the nu
 &lt;blockquote>
 &lt;p>The FAQ page of this error code refers to &lt;a href="https://github.com/StabilityMan/StabilityGuide/blob/master/docs/diagnosis/plugin/rpc/%E7%B3%BB%E7%BB%9F%E7%A8%B3%E5%AE%9A%E6%80%A7%E2%80%94%E2%80%94Dubbo%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95.md">&amp;ldquo;Dubbo Common Errors and Solutions&amp;rdquo;&lt;/a>.
 Articles cited are compiled under license &lt;a href="http://creativecommons.org/licenses/by/4.0/">CC-BY-4.0&lt;/a>. Thanks to the original author here.&lt;/p>
-&lt;/blockquote></description></item><item><title>Docs3-V2: 1-1 - Address Illegal</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/faq/1/1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/faq/1/1/</guid><description>
+&lt;/blockquote></description></item><item><title>Docs3-V2: 1-1 - Address Illegal</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/faq/1/1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/faq/1/1/</guid><description>
 &lt;p>This log can be ignored, service version or grouping mismatch. Appears only in the zookeeper registry, this check has been removed in version 3.1.7.&lt;/p>
 &lt;h3 id="possible-reason">possible reason&lt;/h3>
 &lt;ol>
@@ -24,11 +24,11 @@ Articles cited are compiled under license &lt;a href="http://creativecommons.org
 &lt;li>The &lt;code>service.version&lt;/code> configured on the Provider side does not match the &lt;code>reference.version&lt;/code> configured on the Consumer side (that is, the configuration of the service version).&lt;/li>
 &lt;/ol>
 &lt;h3 id="troubleshooting-and-resolution-steps">Troubleshooting and resolution steps&lt;/h3>
-&lt;p>Can be ignored, this check has been removed in version 3.1.7.&lt;/p></description></item><item><title>Docs3-V2: 2-1 - Routing execution failed</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/faq/2/1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/faq/2/1/</guid><description>
-&lt;h2 id="routing-address-execution-failed">Routing address execution failed&lt;/h2></description></item><item><title>Docs3-V2: 2.x to 3.x Operation Guide</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/upgrades-and-compatibility/2.x-to-3.x-compatibility-guide/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/upgrades-and-compatibility/2.x-to-3.x-compatibility-guide/</guid><description>
+&lt;p>Can be ignored, this check has been removed in version 3.1.7.&lt;/p></description></item><item><title>Docs3-V2: 2-1 - Routing execution failed</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/faq/2/1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/faq/2/1/</guid><description>
+&lt;h2 id="routing-address-execution-failed">Routing address execution failed&lt;/h2></description></item><item><title>Docs3-V2: 2.x to 3.x Operation Guide</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/upgrades-and-compatibility/2.x-to-3.x-compatibility-guide/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/upgrades-and-compatibility/2.x-to-3.x-compatibility-guide/</guid><description>
 &lt;h2 id="benefits-of-upgrading-to-dubbo-3x">Benefits of upgrading to Dubbo 3.X&lt;/h2>
 &lt;p>Dubbo3 still maintains the classic architecture of 2.x. Its main responsibility is to solve the communication between microservice processes, and to better manage and control microservice clusters through rich service governance (such as address discovery, traffic management, etc.); The upgrade of the framework is comprehensive, reflected in almost every aspect of the core Dubbo features, through the upgrade to achieve a comprehensive improvement in stability, performance, scalability, and ease of use.&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/concepts/architecture-1.png" alt="architecture-1">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/concepts/architecture-1.png" alt="architecture-1">&lt;/p>
 &lt;ul>
 &lt;li>**Universal communication protocol. ** The new RPC protocol should abandon the private protocol stack, use the more general HTTP/2 protocol as the transport layer carrier, and use the standardized features of the HTTP protocol to solve the problems of traffic versatility and penetration, so that the protocol can better respond Scenarios such as front-end and back-end docking, gateway proxy, etc.; supports the Stream communication mode, which meets the demands of different business communication models and brings greater throughput to the cluster.&lt;/li>
 &lt;li>**For millions of cluster instances, the cluster is highly scalable. ** With the promotion of micro-service practices, the scale of micro-service cluster instances is also constantly expanding, which benefits from the characteristics of light-weight micro-services and easy horizontal expansion, but also brings a burden to the entire cluster capacity, especially It is some centralized service governance components; Dubbo3 needs to solve various resource bottlenecks caused by the expansion of instance scale, and realize truly unlimited horizontal expansion.&lt;/li>
@@ -39,21 +39,21 @@ Articles cited are compiled under license &lt;a href="http://creativecommons.org
 &lt;ul>
 &lt;li>** New address discovery model (application-level service discovery). **
 &lt;ul>
-&lt;li>See &lt;a href="https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/upgrades-and-compatibility/service-discovery/service-discovery-samples/">Application-Level Service Discovery Migration Samples&lt;/a>.&lt;/li>
-&lt;li>See &lt;a href="https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/upgrades-and-compatibility/service-discovery/migration-service-discovery/">Migration steps for application-level service discovery&lt;/a>&lt;/li>
-&lt;li>See &lt;a href="https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/upgrades-and-compatibility/service-discovery/service-discovery-rule/">Description of application-level service discovery address migration rules&lt;/a>&lt;/li>
+&lt;li>See &lt;a href="https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/upgrades-and-compatibility/service-discovery/service-discovery-samples/">Application-Level Service Discovery Migration Samples&lt;/a>.&lt;/li>
+&lt;li>See &lt;a href="https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/upgrades-and-compatibility/service-discovery/migration-service-discovery/">Migration steps for application-level service discovery&lt;/a>&lt;/li>
+&lt;li>See &lt;a href="https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/upgrades-and-compatibility/service-discovery/service-discovery-rule/">Description of application-level service discovery address migration rules&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>**The next generation of the HTTP/2-based Triple protocol. **
 &lt;ul>
-&lt;li>See &lt;a href="https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/upgrades-and-compatibility/migration-triple/">Triple Protocol Migration Steps&lt;/a>&lt;/li>
-&lt;li>See &lt;a href="https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/protocol/triple/guide/">Triple protocol usage&lt;/a>&lt;/li>
-&lt;li>See &lt;a href="https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/protocol/triple/overview/">Triple Protocol Design and Implementation&lt;/a>.&lt;/li>
+&lt;li>See &lt;a href="https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/upgrades-and-compatibility/migration-triple/">Triple Protocol Migration Steps&lt;/a>&lt;/li>
+&lt;li>See &lt;a href="https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/protocol/triple/guide/">Triple protocol usage&lt;/a>&lt;/li>
+&lt;li>See &lt;a href="https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/protocol/triple/overview/">Triple Protocol Design and Implementation&lt;/a>.&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>**Unified routing rules. **
 &lt;ul>
-&lt;li>See &lt;a href="https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/">Design and Implementation of Unified Routing Rules&lt;/a>&lt;/li>
+&lt;li>See &lt;a href="https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/">Design and Implementation of Unified Routing Rules&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
@@ -120,7 +120,7 @@ During the publishing process, we recommend that you first upgrade the downstrea
 &lt;/ul>
 &lt;h2 id="precautions">Precautions&lt;/h2>
 &lt;h3 id="1-application-level-service-discovery">1. Application-level service discovery&lt;/h3>
-&lt;p>Due to design problems in the application-level service discovery model of Dubbo 2.7, a large number of format changes have been made in Dubbo 3.x, so the application-level service discovery of 2.7.x and 3.x may not be able to subscribe to each other. sex. Although Dubbo will eliminate unrecognized instances, from the perspective of stability, if you enable the application-level service discovery feature in 2.7.x (not registered by default in 2.7.x), we recommend first Turn it off, and turn it on again after upgrading to 3.x.&lt;/p></description></item><item><title>Docs3-V2: 3-1 - Failed to convert address to Invoker</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/faq/3/1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/faq/3/1/</guid><description>
+&lt;p>Due to design problems in the application-level service discovery model of Dubbo 2.7, a large number of format changes have been made in Dubbo 3.x, so the application-level service discovery of 2.7.x and 3.x may not be able to subscribe to each other. sex. Although Dubbo will eliminate unrecognized instances, from the perspective of stability, if you enable the application-level service discovery feature in 2.7.x (not registered by default in 2.7.x), we recommend first Turn it off, and turn it on again after upgrading to 3.x.&lt;/p></description></item><item><title>Docs3-V2: 3-1 - Failed to convert address to Invoker</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/faq/3/1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/faq/3/1/</guid><description>
 &lt;h2 id="possible-reason">Possible Reason&lt;/h2>
 &lt;ol>
 &lt;li>
@@ -135,7 +135,7 @@ During the publishing process, we recommend that you first upgrade the downstrea
 &lt;li>Check the protocol configuration of both the provider and the consumer.&lt;/li>
 &lt;li>Update the version of the registry.&lt;/li>
 &lt;/ol>
-&lt;p style="margin-top: 3rem;"> &lt;/p></description></item><item><title>Docs3-V2: 4-1 - Unsupported protocol</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/faq/4/1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/faq/4/1/</guid><description>
+&lt;p style="margin-top: 3rem;"> &lt;/p></description></item><item><title>Docs3-V2: 4-1 - Unsupported protocol</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/faq/4/1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/faq/4/1/</guid><description>
 &lt;h2 id="possible-reason">Possible Reason&lt;/h2>
 &lt;p>This situation may occur in the scenario of custom Protocol. Dubbo&amp;rsquo;s SPI mechanism cannot find the Protocol specified in the URL.&lt;/p>
 &lt;h2 id="troubleshooting-and-resolution-steps">Troubleshooting and resolution steps&lt;/h2>
@@ -144,9 +144,9 @@ During the publishing process, we recommend that you first upgrade the downstrea
 &lt;li>Make sure that the name of the SPI configuration file of the Protocol&amp;rsquo;s dependent package is correct.&lt;/li>
 &lt;/ol>
 &lt;h2 id="see-also">see also&lt;/h2>
-&lt;p>&lt;a href="https://wxbty.github.io/web-site/zh-cn/overview/mannual/java-sdk/reference-manual/spi/overview/">Dubbo SPI Overview&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://wxbty.github.io/web-site/zh-cn/overview/mannual/java-sdk/reference-manual/spi/description/protocol/">Protocol Extension Description&lt;/a>&lt;/p>
-&lt;p style="margin-top: 3rem;"> &lt;/p></description></item><item><title>Docs3-V2: 5-1 - Failed to connect to configuration center</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/faq/5/1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/faq/5/1/</guid><description>
+&lt;p>&lt;a href="https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/java-sdk/reference-manual/spi/overview/">Dubbo SPI Overview&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/java-sdk/reference-manual/spi/description/protocol/">Protocol Extension Description&lt;/a>&lt;/p>
+&lt;p style="margin-top: 3rem;"> &lt;/p></description></item><item><title>Docs3-V2: 5-1 - Failed to connect to configuration center</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/faq/5/1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/faq/5/1/</guid><description>
 &lt;h2 id="possible-reason">Possible Reason&lt;/h2>
 &lt;ol>
 &lt;li>The server where the configuration center is located is shut down or down.&lt;/li>
@@ -159,7 +159,7 @@ During the publishing process, we recommend that you first upgrade the downstrea
 &lt;li>Check whether the server is turned on and works normally.&lt;/li>
 &lt;li>Check whether the port used by the configuration center is allowed by the firewall or not.&lt;/li>
 &lt;/ol>
-&lt;p style="margin-top: 3rem;"> &lt;/p></description></item><item><title>Docs3-V2: 6-1 - Server Connection Failed</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/faq/6/1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/faq/6/1/</guid><description>
+&lt;p style="margin-top: 3rem;"> &lt;/p></description></item><item><title>Docs3-V2: 6-1 - Server Connection Failed</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/faq/6/1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/faq/6/1/</guid><description>
 &lt;p>Network communication layer, failed to connect to the service provider service&lt;/p>
 &lt;h2 id="possible-reason">Possible Reason&lt;/h2>
 &lt;p>The service provider&amp;rsquo;s network is abnormally disconnected or blocked by firewalls and third-party tools, and cannot provide external services.&lt;/p>
@@ -168,19 +168,19 @@ During the publishing process, we recommend that you first upgrade the downstrea
 &lt;li>If it is a rest connection, check whether the requested server configuration is correct.&lt;/li>
 &lt;li>Check whether the network communication is normal, you can use some simple cmd commands to detect, such as &lt;code>ping&lt;/code> and so on.&lt;/li>
 &lt;/ol>
-&lt;p style="margin-top: 3rem;"> &lt;/p></description></item><item><title>Docs3-V2: 7-1 - QOS OFF</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/faq/7/1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/faq/7/1/</guid><description>
+&lt;p style="margin-top: 3rem;"> &lt;/p></description></item><item><title>Docs3-V2: 7-1 - QOS OFF</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/faq/7/1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/faq/7/1/</guid><description>
 &lt;h2 id="possible-reason">Possible Reason&lt;/h2>
 &lt;p>QOS is off&lt;/p>
 &lt;h2 id="troubleshooting-and-resolution-steps">Troubleshooting and resolution steps&lt;/h2>
-&lt;p>Please refer to &lt;a href="https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/qos/">QOS Operation Manual&lt;/a>.&lt;/p>
-&lt;p style="margin-top: 3rem;"> &lt;/p></description></item><item><title>Docs3-V2: 99-1 - Program Interrupted</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/faq/99/1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/faq/99/1/</guid><description>
+&lt;p>Please refer to &lt;a href="https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/qos/">QOS Operation Manual&lt;/a>.&lt;/p>
+&lt;p style="margin-top: 3rem;"> &lt;/p></description></item><item><title>Docs3-V2: 99-1 - Program Interrupted</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/faq/99/1/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/faq/99/1/</guid><description>
 &lt;p>Unknown error inside Dubbo.&lt;/p>
 &lt;h3 id="possible-reason">Possible Reason&lt;/h3>
 &lt;p>The program receives an interrupt notification from the JVM level and is forced to stop blocking and waiting&lt;/p>
 &lt;h3 id="troubleshooting-and-resolution-steps">Troubleshooting and resolution steps&lt;/h3>
 &lt;p>This exception usually occurs when the thread pool is closed or the application is closed.
 Please check whether the normal use of the business is affected. If there is no impact, it can be ignored. If there is an impact, please refer to the corresponding troubleshooting manual.
-For more troubleshooting ideas, please refer to &lt;a href="../0/">99-0&lt;/a>.&lt;/p></description></item><item><title>Docs3-V2: Access Ingress Traffic</title><link>https://wxbty.github.io/web-site/en/docs3-v2/golang-sdk/tutorial/governance/service-mesh/pixiu/http_triple/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/golang-sdk/tutorial/governance/service-mesh/pixiu/http_triple/</guid><description>
+For more troubleshooting ideas, please refer to &lt;a href="../0/">99-0&lt;/a>.&lt;/p></description></item><item><title>Docs3-V2: Access Ingress Traffic</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/golang-sdk/tutorial/governance/service-mesh/pixiu/http_triple/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/golang-sdk/tutorial/governance/service-mesh/pixiu/http_triple/</guid><description>
 &lt;h2 id="1-preparations">1. Preparations&lt;/h2>
 &lt;p>-kubectl&lt;/p>
 &lt;ul>
@@ -188,7 +188,7 @@ For more troubleshooting ideas, please refer to &lt;a href="../0/">99-0&lt;/a>.&
 &lt;/ul>
 &lt;h2 id="2-use-the-http-protocol-to-call-the-triple-application-through-the-gateway">2. Use the HTTP protocol to call the Triple application through the gateway&lt;/h2>
 &lt;p>The Dubbo-go-pixiu gateway supports calling GO/Java Dubbo clusters. In the Dubbo-go 3.0 scenario, we can use the Pixiu gateway to request the Pixiu gateway with the HTTP protocol outside the cluster, perform protocol conversion at the gateway layer, and further call the Dubbo-go service in the cluster.&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/docs3-v2/golang-sdk/tasks/pixiu/http_triple/triple-pixiu.png" alt="image.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/docs3-v2/golang-sdk/tasks/pixiu/http_triple/triple-pixiu.png" alt="image.png">&lt;/p>
 &lt;p>The path for users to call Dubbo-go service is http://$(app_name)/$(service_name)/$(method).&lt;/p>
 &lt;p>For example, a proto file has the following definition:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-protobuf" data-lang="protobuf">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#719e07">package&lt;/span> org&lt;span style="color:#719e07">.&lt;/span>apache.dubbo.quickstart.samples;
@@ -224,7 +224,7 @@ For more troubleshooting ideas, please refer to &lt;a href="../0/">99-0&lt;/a>.&
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Call the demo service through curl and get the response result.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ curl -X POST -d &lt;span style="color:#2aa198">&amp;#39;{&amp;#34;name&amp;#34;:&amp;#34;laurence&amp;#34;}&amp;#39;&lt;/span> http://30.XXX.XXX.XX:8881/dubbogoDemoServer/org.apache.dubbo.laurence.samples.UserProvider/SayHello
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#719e07">{&lt;/span>&lt;span style="color:#2aa198">&amp;#34;name&amp;#34;&lt;/span>:&lt;span style="color:#2aa198">&amp;#34;Hello Laurence&amp;#34;&lt;/span>,&lt;span style="color:#2aa198">&amp;#34;id&amp;#34;&lt;/span>:&lt;span style="color:#2aa198">&amp;#34;12345&amp;#34;&lt;/span>,&lt;span style="color:#2aa198">&amp;#34;age&amp;#34;&lt;/span>:21&lt;span style="color:#719e07">}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Install Admin Console</title><link>https://wxbty.github.io/web-site/en/docs/v2.7/admin/install/admin-console/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs/v2.7/admin/install/admin-console/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Install Admin Console</title><link>https://wxbty.github.io/dubbo-website/en/docs/v2.7/admin/install/admin-console/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs/v2.7/admin/install/admin-console/</guid><description>
 &lt;p>The current version of dubbo admin is under development, including: route rule, dynamic configuration, access control, weight adjustment, load balance, etc.&lt;/p>
 &lt;p>Install:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>git clone https://github.com/apache/dubbo-admin.git /var/tmp/dubbo-admin
@@ -250,7 +250,7 @@ For more troubleshooting ideas, please refer to &lt;a href="../0/">99-0&lt;/a>.&
 &lt;p>There&amp;rsquo;s no login for current version, will be added later&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/div></description></item><item><title>Latest: Advantage</title><link>https://wxbty.github.io/web-site/en/latest/facade-docs/why/advantage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/latest/facade-docs/why/advantage/</guid><description/></item><item><title>Docs3-V2: Application-Level Service Discovery Benchmark</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/performance/benchmarking/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/performance/benchmarking/</guid><description>
+&lt;/div></description></item><item><title>Latest: Advantage</title><link>https://wxbty.github.io/dubbo-website/en/latest/facade-docs/why/advantage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/latest/facade-docs/why/advantage/</guid><description/></item><item><title>Docs3-V2: Application-Level Service Discovery Benchmark</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/performance/benchmarking/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/performance/benchmarking/</guid><description>
 &lt;h2 id="1-benchmark-conclusion">1 Benchmark Conclusion&lt;/h2>
 &lt;p>Compared with 2.x version, Dubbo3 version&lt;/p>
 &lt;ul>
@@ -270,18 +270,18 @@ For more troubleshooting ideas, please refer to &lt;a href="../0/">99-0&lt;/a>.&
 | &lt;strong>Pressure test data&lt;/strong> | Provider&lt;br/>500 running instances✖️8interface✖️5protocol, that is, each provider registers 40 URLs with the registration center, a total of 20,000 URLs, and the length of each URL is about 1k characters. &lt;br/>&lt;br/>Registration center&lt;br/>2 independent zookeeper registration centers, service providers and consumers adopt parallel configuration. &lt;br/>&lt;br/>Consumer&lt;br/>Configure 1c2g, xmx=768, enable GC, subscribe from 2 registries, and call the service every 5 seconds. Run for 20 hours. |
 | &lt;strong>Pressure test environment&lt;/strong> | Java version &amp;ldquo;1.8.0&amp;rdquo;&lt;br/>Java(TM) SE Runtime Environment (build pxa6480sr3fp12-20160919_01(SR3 FP12))&lt;br/>IBM J9 VM (Build 2.8, JRE 1.8 .0 Linux amd64-64 Compressed References 20160915_318796, JIT enabled, AOT enabled) |&lt;/p>
 &lt;h3 id="22-data-analysis">2.2 Data Analysis&lt;/h3>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/performance/registry-mem.svg" alt="//imgs/v3/performance/registry-mem.svg">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/performance/registry-mem.svg" alt="//imgs/v3/performance/registry-mem.svg">&lt;/p>
 &lt;p>&lt;br />Figure 1 Changes in memory usage of the service discovery model&lt;br />&lt;br />&lt;/p>
 &lt;ul>
 &lt;li>Dubbo3 interface-level service discovery model, the resident memory is reduced by about 50% compared with version 2.x&lt;/li>
 &lt;li>Dubbo3 application-level service discovery model, the resident memory is reduced by about 75% compared with version 2.x&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/performance/registry-gc.svg" alt="//imgs/v3/performance/registry-gc.svg">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/performance/registry-gc.svg" alt="//imgs/v3/performance/registry-gc.svg">&lt;/p>
 &lt;p>&lt;br />Figure 2 Service Discovery Model GC Changes&lt;br />&lt;br />&lt;/p>
 &lt;ul>
 &lt;li>Dubbo3 interface-level service discovery model, the number of YGC times in version 2.x has dropped significantly, from hundreds of times to more than a dozen times&lt;/li>
 &lt;li>Dubbo3 application-level service discovery model, the number of FGC times in version 2.x has dropped significantly, from hundreds of times to zero&lt;/li>
-&lt;/ul></description></item><item><title>Docs3-V2: Apply Template</title><link>https://wxbty.github.io/web-site/en/docs3-v2/golang-sdk/tutorial/develop/template/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/golang-sdk/tutorial/develop/template/</guid><description>
+&lt;/ul></description></item><item><title>Docs3-V2: Apply Template</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/golang-sdk/tutorial/develop/template/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/golang-sdk/tutorial/develop/template/</guid><description>
 &lt;h2 id="1-preparations">1. Preparations&lt;/h2>
 &lt;ul>
 &lt;li>dubbo-go cli tools and dependent tools have been installed&lt;/li>
@@ -380,10 +380,10 @@ TAG = 1.0.0&lt;/p>
 &lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;/ul></description></item><item><title>Docs: Background</title><link>https://wxbty.github.io/web-site/en/docs/v2.7/user/preface/background/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs/v2.7/user/preface/background/</guid><description>
+&lt;/ul></description></item><item><title>Docs: Background</title><link>https://wxbty.github.io/dubbo-website/en/docs/v2.7/user/preface/background/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs/v2.7/user/preface/background/</guid><description>
 &lt;h1 id="background">Background&lt;/h1>
 &lt;p>With the fast development of Internet, the scale of web applications expands unceasingly, and finally we find that the traditional vertical architecture(monolithic) can not handle this any more. Distributed service architecture and the flow computing architecture are imperative, and a governance system is urgently needed to ensure an orderly evolution of the architecture.&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/user/dubbo-architecture-roadmap.jpg" alt="image">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/user/dubbo-architecture-roadmap.jpg" alt="image">&lt;/p>
 &lt;h4 id="monolithic-architecture">Monolithic architecture&lt;/h4>
 &lt;p>When the traffic is very low, there is only one application, all the features are deployed together to reduce the deployment node and cost. At this point, the data access framework (ORM) is the key to simplifying the workload of the CRUD.&lt;/p>
 &lt;h4 id="vertical-architecture">Vertical architecture&lt;/h4>
@@ -391,7 +391,7 @@ TAG = 1.0.0&lt;/p>
 &lt;h4 id="distributed-service-architecture">Distributed service architecture&lt;/h4>
 &lt;p>When there are more and more vertical applications, the interaction between applications is inevitable, some core businesses are extracted and served as independent services, which gradually forms a stable service center，this way the front-end application can respond to the changeable market demand more quickly. At this point, the distributed service framework (RPC) for business reuse and integration is the key.&lt;/p>
 &lt;h4 id="flow-computing-architecture">Flow computing architecture&lt;/h4>
-&lt;p>When there are more and more services, capacity evaluation becomes difficult, and also services with small scales often causes waste of resources. To solve these problems, a scheduling center should be added to manage the cluster capacity based on traffics and to improve the utilization of the cluster. At this time, the resource scheduling and governance centers (SOA), which are used to improve machine utilization, are the keys.&lt;/p></description></item><item><title>Docs: Source Code Build</title><link>https://wxbty.github.io/web-site/en/docs/v2.7/dev/build/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs/v2.7/dev/build/</guid><description>
+&lt;p>When there are more and more services, capacity evaluation becomes difficult, and also services with small scales often causes waste of resources. To solve these problems, a scheduling center should be added to manage the cluster capacity based on traffics and to improve the utilization of the cluster. At this time, the resource scheduling and governance centers (SOA), which are used to improve machine utilization, are the keys.&lt;/p></description></item><item><title>Docs: Source Code Build</title><link>https://wxbty.github.io/dubbo-website/en/docs/v2.7/dev/build/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs/v2.7/dev/build/</guid><description>
 &lt;h2 id="checkout">Checkout&lt;/h2>
 &lt;p>checkout the lastest project source code with commands blow:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>git clone https://github.com/apache/dubbo.git dubbo
@@ -427,7 +427,7 @@ TAG = 1.0.0&lt;/p>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol>
 &lt;li>view the source code through &lt;a href="https://github.com/apache/dubbo">https://github.com/apache/dubbo&lt;/a>&lt;/li>
 &lt;li>path under UNIX is ${HOME}/.m2/repository, path under Windows is C:\Documents and Settings&amp;lt;user&amp;gt;.m2\repository&lt;/li>
-&lt;/ol></description></item><item><title>Docs3-V2: Check at startup</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/service/preflight-check/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/service/preflight-check/</guid><description>
+&lt;/ol></description></item><item><title>Docs3-V2: Check at startup</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/preflight-check/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/preflight-check/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>By default, Dubbo will check whether the dependent service is available at startup, and will throw an exception when it is unavailable, preventing Spring initialization from completing, so that problems can be detected early when going online. The default &lt;code>check=&amp;quot;true&amp;quot;&lt;/code>.&lt;/p>
 &lt;p>Checking can be turned off by &lt;code>check=&amp;quot;false&amp;quot;&lt;/code>. For example, when testing, some services do not care, or there is a circular dependency, and one of them must be started first.&lt;/p>
@@ -460,7 +460,7 @@ TAG = 1.0.0&lt;/p>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="meaning-of-configuration">Meaning of configuration&lt;/h2>
 &lt;p>&lt;code>dubbo.reference.com.foo.BarService.check&lt;/code>, overrides the check value of the reference of &lt;code>com.foo.BarService&lt;/code>, even if there is a statement in the configuration, it will be overwritten.&lt;/p>
 &lt;p>&lt;code>dubbo.consumer.check=false&lt;/code> is the default value of &lt;code>check&lt;/code> for setting reference. If there is an explicit statement in the configuration, such as: &lt;code>&amp;lt;dubbo:reference check=&amp;quot;true&amp;quot;/&amp;gt;&lt;/code>, it will not be affected influences.&lt;/p>
-&lt;p>&lt;code>dubbo.registry.check=false&lt;/code>, the first two means that the subscription is successful, but whether the provider list is empty or whether an error is reported, if the registration subscription fails, it is also allowed to start, you need to use this option, and will retry periodically in the background .&lt;/p></description></item><item><title>Docs: Apache Committer Guide</title><link>https://wxbty.github.io/web-site/en/docs/contribution-guidelines/committer/new-committer-guide_dev/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs/contribution-guidelines/committer/new-committer-guide_dev/</guid><description>
+&lt;p>&lt;code>dubbo.registry.check=false&lt;/code>, the first two means that the subscription is successful, but whether the provider list is empty or whether an error is reported, if the registration subscription fails, it is also allowed to start, you need to use this option, and will retry periodically in the background .&lt;/p></description></item><item><title>Docs: Apache Committer Guide</title><link>https://wxbty.github.io/dubbo-website/en/docs/contribution-guidelines/committer/new-committer-guide_dev/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs/contribution-guidelines/committer/new-committer-guide_dev/</guid><description>
 &lt;h2 id="first-how-to-become-a-committer">First: How to become a committer&lt;/h2>
 &lt;h3 id="initial-committers-at-the-project-incubator-stage">Initial committers at the project incubator stage&lt;/h3>
 &lt;p>At the project incubator stage, there will be an initial committers list in the proposal of the incubator project. Confirm that you are one of the initial committers. After the vote is passed in the Apache incubator community, these committers can start preparing their account. See &lt;a href="https://wiki.apache.org/incubator/">incubator wiki&lt;/a> for details.&lt;/p>
@@ -541,12 +541,12 @@ TAG = 1.0.0&lt;/p>
 &lt;p>The community is more important than the code
 If not discussed in the community (mailing list), just as it did not happen.&lt;/p>
 &lt;h3 id="add-your-name">Add your name&lt;/h3>
-&lt;p>Please update Dubbo incubator status &lt;a href="https://incubator.apache.org/projects/dubbo.html">page&lt;/a> to add your name. See this &lt;a href="https://wxbty.github.io/web-site/en/latest/contribution-guidelines/contributor/">guide&lt;/a> for instructions.&lt;/p>
-&lt;p>Please update Dubbo official &lt;a href="https://wxbty.github.io/web-site/en/latest/contribution-guidelines/committer">website&lt;/a> to update your name.&lt;/p>
+&lt;p>Please update Dubbo incubator status &lt;a href="https://incubator.apache.org/projects/dubbo.html">page&lt;/a> to add your name. See this &lt;a href="https://wxbty.github.io/dubbo-website/en/latest/contribution-guidelines/contributor/">guide&lt;/a> for instructions.&lt;/p>
+&lt;p>Please update Dubbo official &lt;a href="https://wxbty.github.io/dubbo-website/en/latest/contribution-guidelines/committer">website&lt;/a> to update your name.&lt;/p>
 &lt;h3 id="a-small-benefit">A small benefit&lt;/h3>
 &lt;p>Jetbrains company gives Apache committers a small benefit, which is free to use IDEA&amp;rsquo;s full series products. The specific address is: &lt;a href="https://www.jetbrains.com/shop/eform/apache?Product=ALL">https://www.jetbrains.com/shop/eform/apache?Product=ALL&lt;/a>&lt;/p>
 &lt;h3 id="reference-wiki">Reference wiki&lt;/h3>
-&lt;p>&lt;a href="https://www.apache.org/dev/new-committers-guide.html">https://www.apache.org/dev/new-committers-guide.html&lt;/a>&lt;/p></description></item><item><title>Overview: Conditional Routing Rules</title><link>https://wxbty.github.io/web-site/en/overview/core-features/traffic/condition-rule/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/overview/core-features/traffic/condition-rule/</guid><description>
+&lt;p>&lt;a href="https://www.apache.org/dev/new-committers-guide.html">https://www.apache.org/dev/new-committers-guide.html&lt;/a>&lt;/p></description></item><item><title>Overview: Conditional Routing Rules</title><link>https://wxbty.github.io/dubbo-website/en/overview/core-features/traffic/condition-rule/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/overview/core-features/traffic/condition-rule/</guid><description>
 &lt;p>Conditional routing rules forward requests that meet specific conditions to a subset of destination instances. The rules match the request parameters of incoming traffic, and requests that meet the matching criteria are forwarded to a subset that contains a specific list of instance addresses.&lt;/p>
 &lt;p>Here is an example of a conditional routing rule.&lt;/p>
 &lt;p>Based on the following example rule, all invocations of the &lt;code>getComment&lt;/code> method in the &lt;code>org.apache.dubbo.samples.CommentService&lt;/code> service will be forwarded to a subset of addresses marked with &lt;code>region=Hangzhou&lt;/code>.&lt;/p>
@@ -648,7 +648,7 @@ If not discussed in the community (mailing list), just as it did not happen.&lt;
 &lt;li>Starting with a dollar sign ($) indicates referencing consumer parameters, for example: region = $region.&lt;/li>
 &lt;li>Integer value ranges, for example: userId = 1~100, userId = 101~.&lt;/li>
 &lt;li>Supports developer-defined extensions.&lt;/li>
-&lt;/ul></description></item><item><title>Docs3-V2: configuration item reference</title><link>https://wxbty.github.io/web-site/en/docs3-v2/golang-sdk/refer/config/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/golang-sdk/refer/config/</guid><description>
+&lt;/ul></description></item><item><title>Docs3-V2: configuration item reference</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/golang-sdk/refer/config/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/golang-sdk/refer/config/</guid><description>
 &lt;h2 id="root-configuration">root configuration&lt;/h2>
 &lt;h2 id="client-configuration">Client configuration&lt;/h2>
 &lt;h2 id="server-configuration">Server configuration&lt;/h2>
@@ -736,7 +736,7 @@ If not discussed in the community (mailing list), just as it did not happen.&lt;
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#586e75">&lt;/span> &lt;span style="color:#268bd2">SetName&lt;/span>(&lt;span style="color:#2aa198">&amp;#34;tri&amp;#34;&lt;/span>). &lt;span style="color:#586e75">// set service protocol to triple
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#586e75">&lt;/span> &lt;span style="color:#268bd2">Build&lt;/span>()).
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">build&lt;/span>()
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="heading-1">&lt;/h3></description></item><item><title>Docs3-V2: Configuration Overview</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/config/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/config/overview/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="heading-1">&lt;/h3></description></item><item><title>Docs3-V2: Configuration Overview</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/config/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/config/overview/</guid><description>
 &lt;p>Quickly jump to the content you care about through the following links:&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="../../../quick-start/spring-boot/">Use Spring Boot to quickly develop Dubbo applications&lt;/a>&lt;/li>
@@ -745,7 +745,7 @@ If not discussed in the community (mailing list), just as it did not happen.&lt;
 &lt;/ul>
 &lt;h2 id="configuration-components">Configuration components&lt;/h2>
 &lt;p>In order to better manage various configurations, Dubbo abstracts a set of structured configuration components. Each component is generally divided by purpose and controls the behavior of different scopes.&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/user/dubbo-config.jpg" alt="dubbo-config">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/user/dubbo-config.jpg" alt="dubbo-config">&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -950,12 +950,12 @@ If not discussed in the community (mailing list), just as it did not happen.&lt;
 &lt;li>Application Configuration, application attribute configuration, extract the attribute set starting with &amp;ldquo;dubbo&amp;rdquo; from the Spring application Environment&lt;/li>
 &lt;li>The configuration collected by programming interfaces such as API/XML/annotation can be understood as a kind of configuration source, which is a configuration collection method directly oriented to user programming&lt;/li>
 &lt;li>Read configuration file dubbo.properties from classpath&lt;/li>
-&lt;/ul></description></item><item><title>Docs3-V2: Custom service call middleware</title><link>https://wxbty.github.io/web-site/en/docs3-v2/golang-sdk/tutorial/governance/features/aop/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/golang-sdk/tutorial/governance/features/aop/</guid><description>
+&lt;/ul></description></item><item><title>Docs3-V2: Custom service call middleware</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/golang-sdk/tutorial/governance/features/aop/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/golang-sdk/tutorial/governance/features/aop/</guid><description>
 &lt;p>Refer to samples &lt;a href="https://github.com/apache/dubbo-go-samples/tree/f7febed9d686cb940ea55d34b5baa567d7574a44/filter">dubbo-go-samples/filter&lt;/a>&lt;/p>
 &lt;h2 id="1-preparations">1. Preparations&lt;/h2>
 &lt;ul>
 &lt;li>dubbo-go cli tools and dependent tools have been installed&lt;/li>
-&lt;li>Read &lt;a href="https://wxbty.github.io/web-site/en/docs3-v2/golang-sdk/preface/design/aop_and_extension/">[Component Loading and Extensibility]&lt;/a>&lt;/li>
+&lt;li>Read &lt;a href="https://wxbty.github.io/dubbo-website/en/docs3-v2/golang-sdk/preface/design/aop_and_extension/">[Component Loading and Extensibility]&lt;/a>&lt;/li>
 &lt;li>Create a new demo application&lt;/li>
 &lt;/ul>
 &lt;h2 id="2-configure-the-specified-filter">2. Configure the specified Filter&lt;/h2>
@@ -997,7 +997,7 @@ If not discussed in the community (mailing list), just as it did not happen.&lt;
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>fmt.&lt;span style="color:#268bd2">Println&lt;/span>(&lt;span style="color:#2aa198">&amp;#34;MyClientFilter OnResponse is called&amp;#34;&lt;/span>)
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#719e07">return&lt;/span> result
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Custom Service Container</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/others/service-container/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/others/service-container/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Custom Service Container</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/others/service-container/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/others/service-container/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>The service container of Dubbo 3 is a standalone startup program, because the background service does not need the functions of web containers such as Tomcat or JBoss. If you insist on using the web container to load the service provider, it will increase complexity and waste resources. Therefore, services usually do not require the features of web containers such as Tomcat/JBoss, and there is no need to use web containers to load services.&lt;/p>
 &lt;p>The Dubbo3 service container is just a simple Main method and loads a simple Spring container for exposing services.&lt;/p>
@@ -1046,7 +1046,7 @@ If not discussed in the community (mailing list), just as it did not happen.&lt;
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-sh" data-lang="sh">&lt;span style="display:flex;">&lt;span>java org.apache.dubbo.container.Main -Ddubbo.container&lt;span style="color:#719e07">=&lt;/span>spring,jetty,log4j
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Pass in the container to be loaded through &lt;code>dubbo.properties&lt;/code> configuration under the classpath&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>dubbo.container=spring,jetty,log4j
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Deploy the Istio environment</title><link>https://wxbty.github.io/web-site/en/docs3-v2/golang-sdk/tutorial/governance/service-mesh/istio/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/golang-sdk/tutorial/governance/service-mesh/istio/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Deploy the Istio environment</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/golang-sdk/tutorial/governance/service-mesh/istio/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/golang-sdk/tutorial/governance/service-mesh/istio/</guid><description>
 &lt;h2 id="1-preparations">1. Preparations&lt;/h2>
 &lt;ul>
 &lt;li>The docker, helm, and kubectl environments have been installed.&lt;/li>
@@ -1067,7 +1067,7 @@ If not discussed in the community (mailing list), just as it did not happen.&lt;
 &lt;/li>
 &lt;/ol>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ kubectl delete hpa istiod -n istio-system
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>After the installation is complete, you can see an istiod pod running normally under the istio-system namespace.&lt;/p></description></item><item><title>Docs: The Devil Is In The Details</title><link>https://wxbty.github.io/web-site/en/docs/v2.7/dev/principals/code-detail/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs/v2.7/dev/principals/code-detail/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>After the installation is complete, you can see an istiod pod running normally under the istio-system namespace.&lt;/p></description></item><item><title>Docs: The Devil Is In The Details</title><link>https://wxbty.github.io/dubbo-website/en/docs/v2.7/dev/principals/code-detail/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs/v2.7/dev/principals/code-detail/</guid><description>
 &lt;p>Recently, I have been worried about the quality of the Dubbo distributed service framework. If there are more maintenance personnel or changes, there will be a decline in quality. I am thinking, is there any need for everyone to abide by it, according to a habit when writing code, I have summarized it. The code process, especially the framework code, should always keep in mind the details. Maybe the following will be said, everyone will feel very simple, very basic, but always keep in mind. Considering these factors in every line of code requires a lot of patience. It is often said that the devil is in the details.&lt;/p>
 &lt;h2 id="prevent-null-pointer-dereference-and-index-out-of-bounds">Prevent null pointer dereference and index out of bounds&lt;/h2>
 &lt;p>This is the exception I least like to see, especially in the core framework, in contrast I would like to see a parameter not legal exception with detail information. This is also a robust program developer who should be prevented in the subconscious by writing every line of code. Basically, you must be able to ensure that the code that is written once will not appear in the case of no test.&lt;/p>
@@ -1084,7 +1084,7 @@ If not discussed in the community (mailing list), just as it did not happen.&lt;
 &lt;h2 id="reduce-misunderstanding-when-modifying-do-not-bury-mine">Reduce misunderstanding when modifying, do not bury mine&lt;/h2>
 &lt;p>It is repeatedly mentioned that the code being modified by the others, and this is something developers should keep in mind. This other person includes the future of yourself, you always have to think about this code, someone may change it. I should give the modified person a hint, let him know my current design intent, instead of adding hidden rules in the program, or bury some easily overlooked mines, such as: use null to indicate that it is not available, the size is equal to 0 means black list, this is a mine. The next modifier, including yourself, will not remember to have such an agreement, may later change some of the other bugs, accidentally changed to here, directly detonated the fault. For this example, one principle is to never distinguish between null references and null values.&lt;/p>
 &lt;h2 id="improve-code-testability">Improve code testability&lt;/h2>
-&lt;p>The testability here mainly refers to the ease of Mock and the isolation of the test cases. As for the automation, repeatability, stability, disorder, completeness (full coverage), lightweight (fast execution) of the test, the general developer, plus the assist of tools such as JUnit can do it. Can also understand its benefits, just the matter of workload. Primary emphasis on unicity(only test the target class itself) and isolation(do not propagate failure). Nowadays there is too much emphasis on completeness, a lot of crossed and repeated test cases. It seems fine, but the more test code, the higher maintenance cost. A common problem is that modifying a line of code or adding an assertion causes more than 100 test cases to fail. It will cost a lot of time to fix these variance test cases. Over time, this test cases can&amp;rsquo;t really reflect the current state of the code, and it will often be compromised to bypass. In the best case, modify a line of code, and only one line of test code does not pass. If the code is modified and the test case can still pass, that doesn&amp;rsquo;t work, indicating that the scenario is not covered. In addition, Mockability is the basis of isolation, it hide the logic of indirect dependencies. One of the biggest killers of Mockability is the static method, which should be avoid as possible.&lt;/p></description></item><item><title>Docs3-V2: Distributed Transactions</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/service/transaction/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/service/transaction/</guid><description>
+&lt;p>The testability here mainly refers to the ease of Mock and the isolation of the test cases. As for the automation, repeatability, stability, disorder, completeness (full coverage), lightweight (fast execution) of the test, the general developer, plus the assist of tools such as JUnit can do it. Can also understand its benefits, just the matter of workload. Primary emphasis on unicity(only test the target class itself) and isolation(do not propagate failure). Nowadays there is too much emphasis on completeness, a lot of crossed and repeated test cases. It seems fine, but the more test code, the higher maintenance cost. A common problem is that modifying a line of code or adding an assertion causes more than 100 test cases to fail. It will cost a lot of time to fix these variance test cases. Over time, this test cases can&amp;rsquo;t really reflect the current state of the code, and it will often be compromised to bypass. In the best case, modify a line of code, and only one line of test code does not pass. If the code is modified and the test case can still pass, that doesn&amp;rsquo;t work, indicating that the scenario is not covered. In addition, Mockability is the basis of isolation, it hide the logic of indirect dependencies. One of the biggest killers of Mockability is the static method, which should be avoid as possible.&lt;/p></description></item><item><title>Docs3-V2: Distributed Transactions</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/transaction/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/transaction/</guid><description>
 &lt;h2 id="how-to-use">How to use&lt;/h2>
 &lt;h3 id="first-step">&lt;strong>First step&lt;/strong>&lt;/h3>
 &lt;p>First visit: &lt;a href="https://seata.apache.org/unversioned/download/seata-server">https://seata.apache.org/unversioned/download/seata-server&lt;/a>&lt;/p>
@@ -1264,7 +1264,7 @@ If not discussed in the community (mailing list), just as it did not happen.&lt;
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>store.db.lockTable&lt;span style="color:#719e07">=&lt;/span>&lt;span style="color:#2aa198">lock_table&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>store.db.maxWait&lt;span style="color:#719e07">=&lt;/span>&lt;span style="color:#2aa198">5000&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Open the nacos console, create a configuration whose dataId is seata.properties under the corresponding namespace, fill in the group as SEATA_GROUP, and fill in the above content and select the type as properties to save
-&lt;img src="https://wxbty.github.io/web-site/imgs/blog/Dingtalk_20220724021635.jpg" alt="Dingtalk_20220724021635.jpg.png" style="zoom:50%;" />&lt;/p>
+&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/Dingtalk_20220724021635.jpg" alt="Dingtalk_20220724021635.jpg.png" style="zoom:50%;" />&lt;/p>
 &lt;h3 id="step-6">&lt;strong>Step 6&lt;/strong>&lt;/h3>
 &lt;p>Change application.yml in server&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">server&lt;/span>:
@@ -1398,7 +1398,7 @@ If not discussed in the community (mailing list), just as it did not happen.&lt;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Run seata-server, after success, run your own service dubbo provider&amp;amp;consumer&lt;/p>
 &lt;h3 id="the-eighth-step-is-to-build-a-highly-available-seata-server">&lt;strong>The eighth step is to build a highly available Seata-server&lt;/strong>&lt;/h3>
 &lt;p>Since seata-server supports the separation mode of computing and storage, and supports exposing service addresses to multiple registration centers, it only needs to be configured according to the sixth step and then expanded horizontally&lt;/p>
-&lt;p>For details, please visit: &lt;a href="https://seata.io/">https://seata.io/&lt;/a>&lt;/p></description></item><item><title>Docs3-V2: Dubbo Class Inspection Mechanism</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/security/class-check/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/security/class-check/</guid><description>
+&lt;p>For details, please visit: &lt;a href="https://seata.io/">https://seata.io/&lt;/a>&lt;/p></description></item><item><title>Docs3-V2: Dubbo Class Inspection Mechanism</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/security/class-check/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/security/class-check/</guid><description>
 &lt;h2 id="supported-versions">Supported versions&lt;/h2>
 &lt;p>Dubbo &amp;gt;= 3.1.6&lt;/p>
 &lt;h2 id="scope-of-application">Scope of application&lt;/h2>
@@ -1521,7 +1521,7 @@ Note 2: At present, the built-in &lt;code>Serializable&lt;/code> check configura
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Request the result in json format via http:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&amp;gt; curl http://127.0.0.1:22222/serializeWarnedClasses
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#719e07">{&lt;/span>&lt;span style="color:#2aa198">&amp;#34;warnedClasses&amp;#34;&lt;/span>:&lt;span style="color:#719e07">[&lt;/span>&lt;span style="color:#2aa198">&amp;#34;io.dubbo.test2.NotSerializable&amp;#34;&lt;/span>,&lt;span style="color:#2aa198">&amp;#34;org.apache.dubbo.samples.NotSerializable&amp;#34;&lt;/span>,&lt;span style="color:#2aa198">&amp;#34;io.dubbo.test.NotSerializable&amp;#34;&lt;/span>,&lt;span style="color:#2aa198">&amp;#34;io.dubbo.test2.OthersSerializable&amp;#34;&lt;/span>&lt;span style="color:#719e07">]}&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Note: It is recommended to pay attention to the result of &lt;code>serializeWarnedClasses&lt;/code> in time, and judge whether it is attacked by whether the returned result is not empty.&lt;/p></description></item><item><title>Docs3-V2: Dubbo SPI Overview</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/overview/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Note: It is recommended to pay attention to the result of &lt;code>serializeWarnedClasses&lt;/code> in time, and judge whether it is attacked by whether the returned result is not empty.&lt;/p></description></item><item><title>Docs3-V2: Dubbo SPI Overview</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/spi/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/spi/overview/</guid><description>
 &lt;h2 id="extended-design-ideas">Extended Design Ideas&lt;/h2>
 &lt;p>Scalability is what any system pursues, and it is equally applicable to Dubbo.&lt;/p>
 &lt;h3 id="what-is-scalability">What is scalability&lt;/h3>
@@ -1554,7 +1554,7 @@ And building a small IoC container by myself feels a bit over-designed, so choos
 &lt;p>From the design goal of Dubbo extension, it can be seen that some features implemented by Dubbo, such as dynamic selection of extension implementation, IOC, AOP, etc., can provide users with very flexible expansion capabilities.&lt;/p>
 &lt;h2 id="dubbo-extension-loading-process">Dubbo extension loading process&lt;/h2>
 &lt;p>The whole process of Dubbo loading extension is as follows:&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/concepts/extension-load.png" alt="//imgs/v3/concepts/extension-load.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/concepts/extension-load.png" alt="//imgs/v3/concepts/extension-load.png">&lt;/p>
 &lt;p>There are 4 main steps:&lt;/p>
 &lt;ul>
 &lt;li>Read and parse configuration files&lt;/li>
@@ -1577,7 +1577,7 @@ And building a small IoC container by myself feels a bit over-designed, so choos
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>As can be seen from the above expansion steps, the user basically completes the expansion under the black box.&lt;/p>
 &lt;h2 id="dubbo-extended-application">Dubbo extended application&lt;/h2>
 &lt;p>Dubbo&amp;rsquo;s expansion capability is very flexible, and it is ubiquitous in the realization of its own functions.&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/concepts/extension-use.png" alt="//imgs/v3/concepts/extension-use.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/concepts/extension-use.png" alt="//imgs/v3/concepts/extension-use.png">&lt;/p>
 &lt;p>Dubbo&amp;rsquo;s extensibility makes it easy to divide the Dubbo project into sub-modules one by one to realize the hot-swappable feature. Users can completely replace Dubbo&amp;rsquo;s native implementation based on their own needs to meet their own business needs.&lt;/p>
 &lt;h2 id="scenes-to-be-used">scenes to be used&lt;/h2>
 &lt;ul>
@@ -1585,10 +1585,10 @@ And building a small IoC container by myself feels a bit over-designed, so choos
 &lt;li>If you need to implement a custom registry, you can use Dubbo&amp;rsquo;s extension capabilities.&lt;/li>
 &lt;li>If you need to implement custom filters, you can use Dubbo&amp;rsquo;s extension capabilities.&lt;/li>
 &lt;/ul>
-&lt;p>Dubbo extensions treat internal implementations and third-party implementations equally. For more usage scenarios, see &lt;a href="../description/">SPI extension implementation&lt;/a>&lt;/p></description></item><item><title>Docs: dubbo protocol</title><link>https://wxbty.github.io/web-site/en/docs/v2.7/user/references/protocol/dubbo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs/v2.7/user/references/protocol/dubbo/</guid><description>
+&lt;p>Dubbo extensions treat internal implementations and third-party implementations equally. For more usage scenarios, see &lt;a href="../description/">SPI extension implementation&lt;/a>&lt;/p></description></item><item><title>Docs: dubbo protocol</title><link>https://wxbty.github.io/dubbo-website/en/docs/v2.7/user/references/protocol/dubbo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs/v2.7/user/references/protocol/dubbo/</guid><description>
 &lt;p>Dubbo protocol which is the default protocol of Dubbo RPC Framework uses a single long connection and NIO asynchronous communication,it is suitable for small data but with high concurrency RPC call and the number of consumer machine is much greater than provider&lt;/p>
 &lt;p>On the other hand, the Dubbo protocol is not suitable for transmitting large amounts of data, such as file transmission, video transmission, etc., unless the request is very low.&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/user/dubbo-protocol.jpg" alt="dubbo-protocol.jpg">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/user/dubbo-protocol.jpg" alt="dubbo-protocol.jpg">&lt;/p>
 &lt;ul>
 &lt;li>Transporter: mina, netty, grizzy&lt;/li>
 &lt;li>Serialization: dubbo, hessian2, java, json&lt;/li>
@@ -1675,7 +1675,7 @@ And building a small IoC container by myself feels a bit over-designed, so choos
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;dubbo:protocol&lt;/span> name=&lt;span style="color:#2aa198">&amp;#34;dubbo&amp;#34;&lt;/span> accepts=&lt;span style="color:#2aa198">&amp;#34;1000&amp;#34;&lt;/span> &lt;span style="color:#268bd2">/&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>or configure in &lt;code>dubbo.properties&lt;/code>：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>dubbo.service.protocol=dubbo
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: dubbo:application</title><link>https://wxbty.github.io/web-site/en/docs/v2.7/user/references/xml/dubbo-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs/v2.7/user/references/xml/dubbo-application/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: dubbo:application</title><link>https://wxbty.github.io/dubbo-website/en/docs/v2.7/user/references/xml/dubbo-application/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs/v2.7/user/references/xml/dubbo-application/</guid><description>
 &lt;p>Application configuration. The corresponding class: &lt;code>org.apache.dubbo.config.ApplicationConfig&lt;/code>&lt;/p>
 &lt;table>
 &lt;thead>
@@ -1772,7 +1772,7 @@ And building a small IoC container by myself feels a bit over-designed, so choos
 &lt;td>above 2.2.0&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Docs: dubbo:argument</title><link>https://wxbty.github.io/web-site/en/docs/v2.7/user/references/xml/dubbo-argument/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs/v2.7/user/references/xml/dubbo-argument/</guid><description>
+&lt;/table></description></item><item><title>Docs: dubbo:argument</title><link>https://wxbty.github.io/dubbo-website/en/docs/v2.7/user/references/xml/dubbo-argument/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs/v2.7/user/references/xml/dubbo-argument/</guid><description>
 &lt;p>Method argument configuration. The corresponding class：&lt;code>org.apache.dubbo.config.ArgumentConfig&lt;/code>. This tag is child of &lt;code>&amp;lt;dubbo:method&amp;gt;&lt;/code>, which is for feature description of method argument, such as:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;dubbo:method&lt;/span> name=&lt;span style="color:#2aa198">&amp;#34;findXxx&amp;#34;&lt;/span> timeout=&lt;span style="color:#2aa198">&amp;#34;3000&amp;#34;&lt;/span> retries=&lt;span style="color:#2aa198">&amp;#34;2&amp;#34;&lt;/span>&lt;span style="color:#268bd2">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">&amp;lt;dubbo:argument&lt;/span> index=&lt;span style="color:#2aa198">&amp;#34;0&amp;#34;&lt;/span> callback=&lt;span style="color:#2aa198">&amp;#34;true&amp;#34;&lt;/span> &lt;span style="color:#268bd2">/&amp;gt;&lt;/span>
@@ -1822,7 +1822,7 @@ And building a small IoC container by myself feels a bit over-designed, so choos
 &lt;td>above 2.0.6&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Docs: dubbo:config-center</title><link>https://wxbty.github.io/web-site/en/docs/v2.7/user/references/xml/dubbo-config-center/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs/v2.7/user/references/xml/dubbo-config-center/</guid><description>
+&lt;/table></description></item><item><title>Docs: dubbo:config-center</title><link>https://wxbty.github.io/dubbo-website/en/docs/v2.7/user/references/xml/dubbo-config-center/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs/v2.7/user/references/xml/dubbo-config-center/</guid><description>
 &lt;p>Configuration center. Corresponding configuration class: &lt;code>org.apache.dubbo.config.ConfigCenterConfig&lt;/code>&lt;/p>
 &lt;table>
 &lt;thead>
@@ -1955,7 +1955,7 @@ And building a small IoC container by myself feels a bit over-designed, so choos
 &lt;td>2.7.0+&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Docs: dubbo:consumer</title><link>https://wxbty.github.io/web-site/en/docs/v2.7/user/references/xml/dubbo-consumer/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs/v2.7/user/references/xml/dubbo-consumer/</guid><description>
+&lt;/table></description></item><item><title>Docs: dubbo:consumer</title><link>https://wxbty.github.io/dubbo-website/en/docs/v2.7/user/references/xml/dubbo-consumer/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs/v2.7/user/references/xml/dubbo-consumer/</guid><description>
 &lt;p>Consumer default configuration. The corresponding clas： &lt;code>org.apache.dubbo.config.ConsumerConfig&lt;/code>. It is also default configuration of &lt;code>&amp;lt;dubbo:reference&amp;gt;&lt;/code>.&lt;/p>
 &lt;table>
 &lt;thead>
@@ -2152,7 +2152,7 @@ And building a small IoC container by myself feels a bit over-designed, so choos
 &lt;td>at least 2.1.0&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Docs: dubbo:method</title><link>https://wxbty.github.io/web-site/en/docs/v2.7/user/references/xml/dubbo-method/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs/v2.7/user/references/xml/dubbo-method/</guid><description>
+&lt;/table></description></item><item><title>Docs: dubbo:method</title><link>https://wxbty.github.io/dubbo-website/en/docs/v2.7/user/references/xml/dubbo-method/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs/v2.7/user/references/xml/dubbo-method/</guid><description>
 &lt;p>Method level configuration. The corresponding class: &lt;code>org.apache.dubbo.config.MethodConfig&lt;/code>. This tag is a child tag of &lt;code>&amp;lt;dubbo:service&amp;gt;&lt;/code> or &lt;code>&amp;lt;dubbo:reference&amp;gt;&lt;/code>, for accuracy to method level.&lt;/p>
 &lt;table>
 &lt;thead>
@@ -2334,7 +2334,7 @@ And building a small IoC container by myself feels a bit over-designed, so choos
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;dubbo:reference&lt;/span> interface=&lt;span style="color:#2aa198">&amp;#34;com.xxx.XxxService&amp;#34;&lt;/span>&lt;span style="color:#268bd2">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">&amp;lt;dubbo:method&lt;/span> name=&lt;span style="color:#2aa198">&amp;#34;findXxx&amp;#34;&lt;/span> timeout=&lt;span style="color:#2aa198">&amp;#34;3000&amp;#34;&lt;/span> retries=&lt;span style="color:#2aa198">&amp;#34;2&amp;#34;&lt;/span> &lt;span style="color:#268bd2">/&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;/dubbo:reference&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: dubbo:module</title><link>https://wxbty.github.io/web-site/en/docs/v2.7/user/references/xml/dubbo-module/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs/v2.7/user/references/xml/dubbo-module/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: dubbo:module</title><link>https://wxbty.github.io/dubbo-website/en/docs/v2.7/user/references/xml/dubbo-module/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs/v2.7/user/references/xml/dubbo-module/</guid><description>
 &lt;p>Module configuration. The corresponding class &lt;code>org.apache.dubbo.config.ModuleConfig&lt;/code>&lt;/p>
 &lt;table>
 &lt;thead>
@@ -2391,7 +2391,7 @@ And building a small IoC container by myself feels a bit over-designed, so choos
 &lt;td>above 2.2.0&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Docs: dubbo:monitor</title><link>https://wxbty.github.io/web-site/en/docs/v2.7/user/references/xml/dubbo-monitor/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs/v2.7/user/references/xml/dubbo-monitor/</guid><description>
+&lt;/table></description></item><item><title>Docs: dubbo:monitor</title><link>https://wxbty.github.io/dubbo-website/en/docs/v2.7/user/references/xml/dubbo-monitor/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs/v2.7/user/references/xml/dubbo-monitor/</guid><description>
 &lt;p>Monitor center configuration. The corresponding class: &lt;code>org.apache.dubbo.config.MonitorConfig&lt;/code>&lt;/p>
 &lt;table>
 &lt;thead>
@@ -2428,7 +2428,7 @@ And building a small IoC container by myself feels a bit over-designed, so choos
 &lt;td>above 1.0.16&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Docs: dubbo:parameter</title><link>https://wxbty.github.io/web-site/en/docs/v2.7/user/references/xml/dubbo-parameter/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs/v2.7/user/references/xml/dubbo-parameter/</guid><description>
+&lt;/table></description></item><item><title>Docs: dubbo:parameter</title><link>https://wxbty.github.io/dubbo-website/en/docs/v2.7/user/references/xml/dubbo-parameter/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs/v2.7/user/references/xml/dubbo-parameter/</guid><description>
 &lt;p>Optional parameter configuration. The corresponding class is &lt;code>java.util.Map&lt;/code>. This tag is used as a sub tag to configure custom parameters for extending &lt;code>&amp;lt;dubbo:protocol&amp;gt;&lt;/code>, &lt;code>&amp;lt;dubbo:service&amp;gt;&lt;/code>, &lt;code>&amp;lt;dubbo:provider&amp;gt;&lt;/code>, &lt;code>&amp;lt;dubbo:reference&amp;gt;&lt;/code> or &lt;code>&amp;lt;dubbo:consumer&amp;gt;&lt;/code>.&lt;/p>
 &lt;table>
 &lt;thead>
@@ -2472,7 +2472,7 @@ And building a small IoC container by myself feels a bit over-designed, so choos
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;/dubbo:protocol&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>you can also use it like this:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;dubbo:protocol&lt;/span> name=&lt;span style="color:#2aa198">&amp;#34;jms&amp;#34;&lt;/span> p:queue=&lt;span style="color:#2aa198">&amp;#34;xxx&amp;#34;&lt;/span> &lt;span style="color:#268bd2">/&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: dubbo:protocol</title><link>https://wxbty.github.io/web-site/en/docs/v2.7/user/references/xml/dubbo-protocol/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs/v2.7/user/references/xml/dubbo-protocol/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: dubbo:protocol</title><link>https://wxbty.github.io/dubbo-website/en/docs/v2.7/user/references/xml/dubbo-protocol/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs/v2.7/user/references/xml/dubbo-protocol/</guid><description>
 &lt;p>Service provider protocol configuration. The corresponding class is &lt;code>org.apache.dubbo.config.ProtocolConfig&lt;/code>. If you need to support multiple protocols, you could declare multiple &lt;code>&amp;lt;dubbo:protocol&amp;gt;&lt;/code> tags, and specify the protocol via &lt;code>protocol&lt;/code> property.&lt;/p>
 &lt;table>
 &lt;thead>
@@ -2729,7 +2729,7 @@ And building a small IoC container by myself feels a bit over-designed, so choos
 &lt;td>Above 2.0.6&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Docs: dubbo:provider</title><link>https://wxbty.github.io/web-site/en/docs/v2.7/user/references/xml/dubbo-provider/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs/v2.7/user/references/xml/dubbo-provider/</guid><description>
+&lt;/table></description></item><item><title>Docs: dubbo:provider</title><link>https://wxbty.github.io/dubbo-website/en/docs/v2.7/user/references/xml/dubbo-provider/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs/v2.7/user/references/xml/dubbo-provider/</guid><description>
 &lt;p>The default configuration of service provider. The corresponding class is &lt;code>org.apache.dubbo.config.ProviderConfig&lt;/code>. This tag provider default values for &lt;code>&amp;lt;dubbo:service&amp;gt;&lt;/code> and &lt;code>&amp;lt;dubbo:protocol&amp;gt;&lt;/code>.&lt;/p>
 &lt;table>
 &lt;thead>
@@ -3186,7 +3186,7 @@ And building a small IoC container by myself feels a bit over-designed, so choos
 &lt;td>Above 2.0.7&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Docs: dubbo:reference</title><link>https://wxbty.github.io/web-site/en/docs/v2.7/user/references/xml/dubbo-reference/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs/v2.7/user/references/xml/dubbo-reference/</guid><description>
+&lt;/table></description></item><item><title>Docs: dubbo:reference</title><link>https://wxbty.github.io/dubbo-website/en/docs/v2.7/user/references/xml/dubbo-reference/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs/v2.7/user/references/xml/dubbo-reference/</guid><description>
 &lt;p>The configuration of service consumer. The corresponding class is&lt;code>org.apache.dubbo.config.ReferenceConfig&lt;/code>&lt;/p>
 &lt;table>
 &lt;thead>
@@ -3473,7 +3473,7 @@ And building a small IoC container by myself feels a bit over-designed, so choos
 &lt;td>Above 2.2.0&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Docs: dubbo:registry</title><link>https://wxbty.github.io/web-site/en/docs/v2.7/user/references/xml/dubbo-registry/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs/v2.7/user/references/xml/dubbo-registry/</guid><description>
+&lt;/table></description></item><item><title>Docs: dubbo:registry</title><link>https://wxbty.github.io/dubbo-website/en/docs/v2.7/user/references/xml/dubbo-registry/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs/v2.7/user/references/xml/dubbo-registry/</guid><description>
 &lt;p>The configuration of the registry center. The corresponding class is &lt;code>org.apache.dubbo.config.RegistryConfig&lt;/code>. If you have multiple different registries, you can declare multiple &lt;code>&amp;lt;dubbo:registry&amp;gt;&lt;/code> tags, and then reference specified registry with &lt;code>registry&lt;/code> property in &lt;code>&amp;lt;dubbo:service&amp;gt;&lt;/code> or &lt;code>&amp;lt;dubbo:reference&amp;gt;&lt;/code> tag.&lt;/p>
 &lt;table>
 &lt;thead>
@@ -3670,7 +3670,7 @@ And building a small IoC container by myself feels a bit over-designed, so choos
 &lt;td>Above 2.7.0&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Docs: dubbo:service</title><link>https://wxbty.github.io/web-site/en/docs/v2.7/user/references/xml/dubbo-service/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs/v2.7/user/references/xml/dubbo-service/</guid><description>
+&lt;/table></description></item><item><title>Docs: dubbo:service</title><link>https://wxbty.github.io/dubbo-website/en/docs/v2.7/user/references/xml/dubbo-service/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs/v2.7/user/references/xml/dubbo-service/</guid><description>
 &lt;p>The configuration of the service provider. The corresponding class is &lt;code>org.apache.dubbo.config.ServiceConfig&lt;/code>.&lt;/p>
 &lt;table>
 &lt;thead>
@@ -3997,18 +3997,18 @@ And building a small IoC container by myself feels a bit over-designed, so choos
 &lt;td>Above 2.0.8&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Docs: Dubbo Admin Functions</title><link>https://wxbty.github.io/web-site/en/docs/v2.7/admin/ops/functions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs/v2.7/admin/ops/functions/</guid><description>
+&lt;/table></description></item><item><title>Docs: Dubbo Admin Functions</title><link>https://wxbty.github.io/dubbo-website/en/docs/v2.7/admin/ops/functions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs/v2.7/admin/ops/functions/</guid><description>
 &lt;h2 id="page-search">Page search&lt;/h2>
 &lt;p>If you need to manage a Dubbo service, you need to search it first and open it&amp;rsquo;s management page&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/admin/dubbo-search.jpg" alt="/admin-guide/images/dubbo-search.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/admin/dubbo-search.jpg" alt="/admin-guide/images/dubbo-search.png">&lt;/p>
 &lt;h2 id="service-provider-page">Service provider page&lt;/h2>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/admin/dubbo-providers.jpg" alt="/admin-guide/images/dubbo-providers.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/admin/dubbo-providers.jpg" alt="/admin-guide/images/dubbo-providers.png">&lt;/p>
 &lt;h2 id="service-consumer-page">Service consumer page&lt;/h2>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/admin/dubbo-consumers.jpg" alt="/admin-guide/images/dubbo-consumers.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/admin/dubbo-consumers.jpg" alt="/admin-guide/images/dubbo-consumers.png">&lt;/p>
 &lt;h2 id="add-route-rule-page">Add route rule page&lt;/h2>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/admin/dubbo-add-route.jpg" alt="/admin-guide/images/dubbo-add-route.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/admin/dubbo-add-route.jpg" alt="/admin-guide/images/dubbo-add-route.png">&lt;/p>
 &lt;h2 id="add-dynamic-configuration-page">Add dynamic configuration page&lt;/h2>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/admin/dubbo-add-config.jpg" alt="/admin-guide/images/dubbo-add-config.png">&lt;/p></description></item><item><title>Docs3-V2: Group Aggregation</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/service/group-merger/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/service/group-merger/</guid><description>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/admin/dubbo-add-config.jpg" alt="/admin-guide/images/dubbo-add-config.png">&lt;/p></description></item><item><title>Docs3-V2: Group Aggregation</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/group-merger/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/group-merger/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>Aggregate the results by grouping and return the aggregated results, such as menu service, use group to distinguish multiple implementations of the same interface, now the consumer needs to call once from each group and return the result, and return the result after merging, so You can implement aggregated menu items.&lt;/p>
 &lt;p>For relevant codes, please refer to &lt;a href="https://github.com/apache/dubbo-samples/tree/master/2-advanced/dubbo-samples-merge">Samples in the dubbo project&lt;/a>&lt;/p>
@@ -4040,14 +4040,14 @@ And building a small IoC container by myself feels a bit over-designed, so choos
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">&amp;lt;dubbo:method&lt;/span> name=&lt;span style="color:#2aa198">&amp;#34;getMenuItems&amp;#34;&lt;/span> merger=&lt;span style="color:#2aa198">&amp;#34;.addAll&amp;#34;&lt;/span> &lt;span style="color:#268bd2">/&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;/dubbo:reference&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="hint">hint:&lt;/h4>
-&lt;p>Supported since &lt;code>2.1.0&lt;/code> version&lt;/p></description></item><item><title>Docs: How to become a Dubbo committer</title><link>https://wxbty.github.io/web-site/en/docs/contribution-guidelines/contributor/become-a-committer_dev/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs/contribution-guidelines/contributor/become-a-committer_dev/</guid><description>
+&lt;p>Supported since &lt;code>2.1.0&lt;/code> version&lt;/p></description></item><item><title>Docs: How to become a Dubbo committer</title><link>https://wxbty.github.io/dubbo-website/en/docs/contribution-guidelines/contributor/become-a-committer_dev/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs/contribution-guidelines/contributor/become-a-committer_dev/</guid><description>
 &lt;p>Anyone can be a contributor to an Apache project. Being a contributor simply means that you take an interest in the project and contribute in some way, ranging from asking sensible questions (which documents the project and provides feedback to developers) through to providing new features as patches.&lt;/p>
 &lt;p>If you become a valuable contributor to the project you may well be invited to become a committer. Committer is a term used at the ASF to signify someone who is committed to a particular project. It brings with it the privilege of write access to the project repository and resources.&lt;/p>
 &lt;p>In Dubbo community, if a committer who have earned even more merit, can be invited to be a part of the Project Management Committee (PMC).&lt;/p>
 &lt;p>One thing that is sometimes hard to understand when you are new to the open development process used at the ASF, is that we value the community more than the code. A strong and healthy community will be respectful and be a fun and rewarding place. More importantly, a diverse and healthy community can continue to support the code over the longer term, even as individual companies come and go from the field.&lt;/p>
 &lt;p>More details could be found &lt;a href="https://community.apache.org/contributors/">here&lt;/a>.&lt;/p>
 &lt;h3 id="what-can-i-contribute">What can I contribute?&lt;/h3>
-&lt;p>Please refer to the &lt;a href="https://wxbty.github.io/web-site/en/docs/contribution-guidelines/contributor/new-contributor-guide_dev">new contributor guide&lt;/a>.&lt;/p></description></item><item><title>Docs3-V2: Install Dubbo-go development environment</title><link>https://wxbty.github.io/web-site/en/docs3-v2/golang-sdk/quickstart/install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/golang-sdk/quickstart/install/</guid><description>
+&lt;p>Please refer to the &lt;a href="https://wxbty.github.io/dubbo-website/en/docs/contribution-guidelines/contributor/new-contributor-guide_dev">new contributor guide&lt;/a>.&lt;/p></description></item><item><title>Docs3-V2: Install Dubbo-go development environment</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/golang-sdk/quickstart/install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/golang-sdk/quickstart/install/</guid><description>
 &lt;h3 id="1-install-the-go-language-environment">1. Install the Go language environment&lt;/h3>
 &lt;p>It is recommended to use the latest version of go 1.17&lt;/p>
 &lt;p>go version &amp;gt;= go 1.15&lt;/p>
@@ -4070,18 +4070,18 @@ And building a small IoC container by myself feels a bit over-designed, so choos
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>protoc-gen-go v1.26.0
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ protoc-gen-go-triple --version
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>protoc-gen-go-triple 1.0.8
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Latest: Introduction</title><link>https://wxbty.github.io/web-site/en/latest/facade-docs/what/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/latest/facade-docs/what/overview/</guid><description/></item><item><title>Overview: Introduction to Dubbo</title><link>https://wxbty.github.io/web-site/en/overview/what/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/overview/what/overview/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Latest: Introduction</title><link>https://wxbty.github.io/dubbo-website/en/latest/facade-docs/what/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/latest/facade-docs/what/overview/</guid><description/></item><item><title>Overview: Introduction to Dubbo</title><link>https://wxbty.github.io/dubbo-website/en/overview/what/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/overview/what/overview/</guid><description>
 &lt;p>Apache Dubbo is an RPC service development framework, which is used to solve service governance and communication problems under the microservice architecture. It officially provides multi-language SDK implementations such as Java and Golang. Microservices developed using Dubbo are natively capable of remote address discovery and communication with each other.
 Using the rich service governance features provided by Dubbo, service governance demands such as service discovery, load balancing, and traffic scheduling can be realized. Dubbo is designed to be highly scalable, and users can easily implement various custom logics for traffic interception and location selection.&lt;/p>
 &lt;p>Dubbo3 is defined as a cloud-native-oriented next-generation RPC service framework. 3.0 has evolved based on Dubbo 2.x. While maintaining the original core features, Dubbo3 has improved in ease of use, ultra-large-scale microservice practice, cloud-native infrastructure adaptation, and security. Comprehensive upgrades have been made in several major directions, including ease of use, hyperscale microservice practices, cloud-native infrastructure adaptation, and security.&lt;/p>
 &lt;h3 id="what-is-dubbo">What is Dubbo&lt;/h3>
 &lt;p>Apache Dubbo was originally donated by Alibaba as an open source in 2008, and soon became the de facto standard framework for the selection of open source service frameworks in China, and has been widely used in various industries. In 2017, Dubbo officially donated to the Apache Software Foundation and became a top-level project of Apache. Currently, Dubbo3 is already a one-stop microservice solution providing:&lt;/p>
 &lt;ul>
-&lt;li>HTTP/2-based &lt;a href="https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/concepts-and-architecture/triple/">Triple protocol&lt;/a> and programming experience for proxy API.&lt;/li>
+&lt;li>HTTP/2-based &lt;a href="https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/concepts-and-architecture/triple/">Triple protocol&lt;/a> and programming experience for proxy API.&lt;/li>
 &lt;li>Powerful [traffic management capability] (../../tasks/traffic-management), such as address discovery, load balancing, routing address selection, dynamic configuration, etc.&lt;/li>
 &lt;li>&lt;a href="../../mannual/">Multi-language SDK implementation&lt;/a>, covering Java, Golang, Javascript, etc. More language implementations will be released in succession.&lt;/li>
 &lt;li>Flexible adaptation and expansion capabilities, which can be easily adapted to other components of the microservice system such as Tracing and Transaction.&lt;/li>
-&lt;li>&lt;a href="https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/concepts-and-architecture/mesh/">Dubbo Mesh Solution&lt;/a>, while supporting flexible Mesh deployment solutions such as Sidecar and Proxyless.&lt;/li>
+&lt;li>&lt;a href="https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/concepts-and-architecture/mesh/">Dubbo Mesh Solution&lt;/a>, while supporting flexible Mesh deployment solutions such as Sidecar and Proxyless.&lt;/li>
 &lt;/ul>
 &lt;p>The overall architecture of Apache Dubbo can well meet the large-scale microservice practice of enterprises, because it is designed to solve the practical problems of ultra-large-scale microservice clusters from the beginning, whether it is Alibaba, ICBC, China Ping An, Ctrip and other community users, They have fully verified the stability and performance of Dubbo through years of large-scale production environment traffic. Therefore, Dubbo has unparalleled advantages in solving business landing and large-scale practice:&lt;/p>
 &lt;ul>
@@ -4111,7 +4111,7 @@ Using the rich service governance features provided by Dubbo, service governance
 &lt;/li>
 &lt;/ul>
 &lt;h3 id="dubbo-basic-workflow">Dubbo basic workflow&lt;/h3>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/concepts/rpc.png" alt="dubbo-rpc">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/concepts/rpc.png" alt="dubbo-rpc">&lt;/p>
 &lt;p>First of all, Dubbo is an RPC framework, which defines its own RPC communication protocol and programming method. As shown in the figure above, when using Dubbo, users first need to define the Dubbo service; secondly, after deploying the Dubbo service online, rely on Dubbo&amp;rsquo;s application layer communication protocol to realize data exchange, and the data transmitted by Dubbo must be serialized. And here the serialization protocol is fully extensible.
 The first step in using Dubbo is to define Dubbo services. The definition of services in Dubbo is a set of methods to complete business functions. You can choose to define them in a way that is bound to a certain language. For example, in Java, Dubbo services have a set of interface of the method can also use the language-neutral Protobuf Buffers &lt;a href="../../tasks/triple/idl/">IDL definition service&lt;/a>. After the service is defined, the server (Provider) needs to provide a specific implementation of the service and declare it as a Dubbo service. From the perspective of the service consumer (Consumer), a service proxy can be obtained by calling the API provided by the Dubbo framework ( stub) object, and then you can call the service method like a local service.
 After the consumer initiates a call to the service method, the Dubbo framework is responsible for sending the request to the service provider deployed on the remote machine. After receiving the request, the provider will call the implementation class of the service, and then return the processing result to the consumer. This completes a complete service call. The data flow of Request and Response in the figure is shown.&lt;/p>
@@ -4119,7 +4119,7 @@ After the consumer initiates a call to the service method, the Dubbo framework i
 &lt;p>It should be noted that in Dubbo, when we refer to services, we usually refer to RPC-grained interfaces or methods that provide the function of adding, deleting, and modifying a specific business, which is not the same as the services generally referred to in some microservice concept books concept.&lt;/p>
 &lt;/blockquote>
 &lt;p>In a distributed system, especially with the development of the microservice architecture, the deployment, release, and scaling of applications become extremely frequent. As an RPC consumer, how to dynamically discover the address of the service provider becomes a precondition for RPC communication . Dubbo provides an automatic address discovery mechanism to deal with the dynamic migration of machine instances in distributed scenarios. As shown in the figure below, the address of the provider and the consumer is coordinated by introducing the registration center. After the provider starts, it registers its own address with the registration center, and the consumer dynamically perceives the address list of the provider by pulling or subscribing to a specific node in the registration center. Variety.&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/architecture.png" alt="arch-service-discovery">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/architecture.png" alt="arch-service-discovery">&lt;/p>
 &lt;h3 id="dubbo-core-features">Dubbo core features&lt;/h3>
 &lt;h4 id="high-performance-rpc-communication-protocol">High performance RPC communication protocol&lt;/h4>
 &lt;p>Service communication across processes or hosts is a basic capability of Dubbo. Dubbo RPC sends the request data (Request) to the backend service in a predefined protocol encoding method, and receives the calculation result (Response) returned by the server. RPC communication is completely transparent to the user, and the user does not need to care about how and where the request is sent, and only needs to get the correct call result for each call. In addition to the Request-Response communication model in synchronous mode, Dubbo3 also provides a richer selection of communication models:&lt;/p>
@@ -4130,7 +4130,7 @@ After the consumer initiates a call to the service method, the Dubbo framework i
 &lt;li>Provider response stream (Response Streaming)&lt;/li>
 &lt;li>Bidirectional Streaming&lt;/li>
 &lt;/ul>
-&lt;p>For details, please refer to the list of optional protocols implemented by each language SDK or &lt;a href="https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/concepts-and-architecture/triple/">Triple Protocol&lt;/a>&lt;/p>
+&lt;p>For details, please refer to the list of optional protocols implemented by each language SDK or &lt;a href="https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/concepts-and-architecture/triple/">Triple Protocol&lt;/a>&lt;/p>
 &lt;h4 id="automatic-service-address-discovery">Automatic service (address) discovery&lt;/h4>
 &lt;p>Dubbo&amp;rsquo;s service discovery mechanism allows microservice components to evolve independently and be deployed arbitrarily, and the consumer can complete communication without knowing the deployment location and IP address of the peer. Dubbo provides a Client-Based service discovery mechanism, and users can enable service discovery in various ways:&lt;/p>
 &lt;ul>
@@ -4154,7 +4154,7 @@ After the consumer initiates a call to the service method, the Dubbo framework i
 &lt;p>Combined with the current version, this section mainly expands Dubbo&amp;rsquo;s cloud-native features from the following two points&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="../../tasks/kubernetes/deploy-on-k8s">Container Scheduling Platform (Kubernetes)&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/concepts-and-architecture/mesh/">Dubbo Mesh&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/concepts-and-architecture/mesh/">Dubbo Mesh&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h5 id="kubernetes">Kubernetes&lt;/h5>
 &lt;p>For Dubbo microservices to support Kubernetes platform scheduling, the most basic thing is to realize the alignment of the dubbo service life cycle and the container life cycle, which includes life cycle events such as Dubbo startup, destruction, and service registration. Compared with the past where Dubbo defined life cycle events by itself and required developers to abide by the agreement during operation and maintenance practice, the underlying infrastructure of Kubernetes defines strict component life cycle events (probes), and instead requires Dubbo to adapt according to the agreement.&lt;/p>
@@ -4169,5 +4169,5 @@ After the consumer initiates a call to the service method, the Dubbo framework i
 &lt;li>It is necessary to consider the performance loss of the entire link after introducing Sidecar&lt;/li>
 &lt;/ol>
 &lt;p>In order to solve the related cost problems introduced by Sidecar, Dubbo introduced and implemented a new Proxyless Mesh architecture. As the name suggests, Proxyless Mesh refers to the deployment without Sidecar, and the Dubbo SDK directly interacts with the control plane. The architecture diagram is as follows&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/mesh/dubbo-proxyless.png" alt="dubbo-proxyless">&lt;/p>
-&lt;p>It can be imagined that in different organizations and different development stages, microservices built with Dubbo will allow three deployment architectures in the future: traditional SDK, Sidecar-based Service Mesh, and Proxyless Mesh without Sidecar. Based on Sidecar&amp;rsquo;s Service Mesh, that is, the classic Mesh architecture, the independent sidecar runtime takes over all the traffic, separate from the Sidecar&amp;rsquo;s Proxyless Mesh, and the secondary SDK directly communicates with the control plane through xDS. Dubbo microservices allow deployment on physical machines, containers, and Kubernetes platforms, and can use Admin as the control plane and manage them with unified traffic governance rules.&lt;/p></description></item><item><title>Docs3-V2: Introduction to Configuration Center</title><link>https://wxbty.github.io/web-site/en/docs3-v2/golang-sdk/tutorial/develop/config-center/desc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/golang-sdk/tutorial/develop/config-center/desc/</guid><description/></item></channel></rss>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/mesh/dubbo-proxyless.png" alt="dubbo-proxyless">&lt;/p>
+&lt;p>It can be imagined that in different organizations and different development stages, microservices built with Dubbo will allow three deployment architectures in the future: traditional SDK, Sidecar-based Service Mesh, and Proxyless Mesh without Sidecar. Based on Sidecar&amp;rsquo;s Service Mesh, that is, the classic Mesh architecture, the independent sidecar runtime takes over all the traffic, separate from the Sidecar&amp;rsquo;s Proxyless Mesh, and the secondary SDK directly communicates with the control plane through xDS. Dubbo microservices allow deployment on physical machines, containers, and Kubernetes platforms, and can use Admin as the control plane and manage them with unified traffic governance rules.&lt;/p></description></item><item><title>Docs3-V2: Introduction to Configuration Center</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/golang-sdk/tutorial/develop/config-center/desc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/golang-sdk/tutorial/develop/config-center/desc/</guid><description/></item></channel></rss>

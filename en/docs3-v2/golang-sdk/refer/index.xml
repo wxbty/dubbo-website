@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Reference</title><link>https://wxbty.github.io/web-site/en/docs3-v2/golang-sdk/refer/</link><description>Recent content in Reference on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://wxbty.github.io/web-site/en/docs3-v2/golang-sdk/refer/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs3-V2: configuration item reference</title><link>https://wxbty.github.io/web-site/en/docs3-v2/golang-sdk/refer/config/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/golang-sdk/refer/config/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Reference</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/golang-sdk/refer/</link><description>Recent content in Reference on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://wxbty.github.io/dubbo-website/en/docs3-v2/golang-sdk/refer/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs3-V2: configuration item reference</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/golang-sdk/refer/config/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/golang-sdk/refer/config/</guid><description>
 &lt;h2 id="root-configuration">root configuration&lt;/h2>
 &lt;h2 id="client-configuration">Client configuration&lt;/h2>
 &lt;h2 id="server-configuration">Server configuration&lt;/h2>
@@ -86,7 +86,7 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#586e75">&lt;/span> &lt;span style="color:#268bd2">SetName&lt;/span>(&lt;span style="color:#2aa198">&amp;#34;tri&amp;#34;&lt;/span>). &lt;span style="color:#586e75">// set service protocol to triple
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#586e75">&lt;/span> &lt;span style="color:#268bd2">Build&lt;/span>()).
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">build&lt;/span>()
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="heading-1">&lt;/h3></description></item><item><title>Docs3-V2: Use dubbogo-cli tool</title><link>https://wxbty.github.io/web-site/en/docs3-v2/golang-sdk/refer/use_dubbogo_cli/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/golang-sdk/refer/use_dubbogo_cli/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="heading-1">&lt;/h3></description></item><item><title>Docs3-V2: Use dubbogo-cli tool</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/golang-sdk/refer/use_dubbogo_cli/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/golang-sdk/refer/use_dubbogo_cli/</guid><description>
 &lt;h2 id="1-installation">1. Installation&lt;/h2>
 &lt;p>dubbogo-cli is a sub-project of the Apache/dubbo-go ecosystem, which provides developers with convenient functions such as application template creation, tool installation, and interface debugging to improve user R&amp;amp;D efficiency.&lt;/p>
 &lt;p>Execute the following command to install dubbogo-cli to $GOPATH/bin&lt;/p>
@@ -447,7 +447,7 @@ Among them, type supports string int bool time, and val is initialized with stri
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>=========================
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>req:&amp;amp;main.CallUserStruct{ID:&amp;#34;A000&amp;#34;, Male:true, SubInfo:main.SubInfo{SubID:&amp;#34;A001&amp;#34;, SubMale:false, SubAge:18}}
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>=========================
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>It can be seen that the data from the cli has been received&lt;/p></description></item><item><title>Docs3-V2: Dubbogo Ecological Components</title><link>https://wxbty.github.io/web-site/en/docs3-v2/golang-sdk/refer/ecology/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/golang-sdk/refer/ecology/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>It can be seen that the data from the cli has been received&lt;/p></description></item><item><title>Docs3-V2: Dubbogo Ecological Components</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/golang-sdk/refer/ecology/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/golang-sdk/refer/ecology/</guid><description>
 &lt;h3 id="dubbo-go--dubbo-go-30">Dubbo-go / Dubbo-go 3.0&lt;/h3>
 &lt;p>&lt;a href="https://github.com/apache/dubbo-go">github.com/apache/dubbo-go&lt;/a>&lt;/p>
 &lt;p>Apache Dubbo is implemented in Go language, which bridges between Java and Golang.&lt;/p>
@@ -471,7 +471,7 @@ Among them, type supports string int bool time, and val is initialized with stri
 &lt;/ul>
 &lt;h3 id="triple-go">Triple-go&lt;/h3>
 &lt;p>&lt;a href="https://github.com/dubbogo/triple">github.com/dubbogo/triple&lt;/a>&lt;/p>
-&lt;p>Triple-go is a Triple (Dubbo3) network protocol library implemented in Go language, based on HTTP2 protocol.&lt;/p></description></item><item><title>Docs3-V2: Depends on the adaptation version number</title><link>https://wxbty.github.io/web-site/en/docs3-v2/golang-sdk/refer/compatible_version/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/golang-sdk/refer/compatible_version/</guid><description>
+&lt;p>Triple-go is a Triple (Dubbo3) network protocol library implemented in Go language, based on HTTP2 protocol.&lt;/p></description></item><item><title>Docs3-V2: Depends on the adaptation version number</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/golang-sdk/refer/compatible_version/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/golang-sdk/refer/compatible_version/</guid><description>
 &lt;p>When Dubbo-go releases a new version, update the version it currently depends on.&lt;/p>
 &lt;table>
 &lt;thead>
@@ -508,7 +508,7 @@ Among them, type supports string int bool time, and val is initialized with stri
 &lt;td>v1.0.0&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Docs3-V2: Basic concepts of configuration</title><link>https://wxbty.github.io/web-site/en/docs3-v2/golang-sdk/refer/basic_concept/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/golang-sdk/refer/basic_concept/</guid><description>
+&lt;/table></description></item><item><title>Docs3-V2: Basic concepts of configuration</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/golang-sdk/refer/basic_concept/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/golang-sdk/refer/basic_concept/</guid><description>
 &lt;h2 id="1-framework-configuration">1. Framework configuration&lt;/h2>
 &lt;p>The Dubbo-go framework needs to rely on configuration to start. Configuration contains the various capabilities that a developer wishes to use with the framework.&lt;/p>
 &lt;h3 id="configuration-format">Configuration format&lt;/h3>

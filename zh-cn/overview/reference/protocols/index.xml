@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – 协议规范</title><link>https://wxbty.github.io/web-site/zh-cn/overview/reference/protocols/</link><description>Recent content in 协议规范 on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://wxbty.github.io/web-site/zh-cn/overview/reference/protocols/index.xml" rel="self" type="application/rss+xml"/><item><title>Overview: Triple 协议设计理念与规范</title><link>https://wxbty.github.io/web-site/zh-cn/overview/reference/protocols/triple-spec/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/zh-cn/overview/reference/protocols/triple-spec/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – 协议规范</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/reference/protocols/</link><description>Recent content in 协议规范 on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://wxbty.github.io/dubbo-website/zh-cn/overview/reference/protocols/index.xml" rel="self" type="application/rss+xml"/><item><title>Overview: Triple 协议设计理念与规范</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/reference/protocols/triple-spec/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/overview/reference/protocols/triple-spec/</guid><description>
 &lt;h2 id="1-协议设计理念">1 协议设计理念&lt;/h2>
 &lt;p>Triple 协议的设计参考了 gRPC、gRPC-Web、通用 HTTP 等多种协议模式，吸取每个协议各自的特性和优点，最终设计成为一个易于浏览器访问、完全兼容 gRPC 且支持 Streaming 通信的协议，Triple 支持同时运行在 HTTP/1、HTTP/2 协议之上。&lt;/p>
 &lt;p>Triple 协议的设计目标如下：&lt;/p>
@@ -331,7 +331,7 @@ Content-Encoding Accept-Encoding Accept Content-Length&lt;/li>
 &lt;li>&lt;strong>Percent-Byte-Unencoded&lt;/strong> → 1*( %x20-%x24 / %x26-%x7E ) ; space and VCHAR, except %&lt;/li>
 &lt;li>&lt;strong>Percent-Byte-Encoded&lt;/strong> → &amp;ldquo;%&amp;rdquo; 2HEXDIGIT ; 0-9 A-F&lt;/li>
 &lt;/ul>
-&lt;p>以上即为 Triple 扩展版本的 gRPC 协议，更多详细规范说明请参照 &lt;a href="https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-HTTP2.md" target="_blank">gRPC 协议规范&lt;/a>。&lt;/p></description></item><item><title>Overview: Triple 协议优势与目标</title><link>https://wxbty.github.io/web-site/zh-cn/overview/reference/protocols/triple/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/zh-cn/overview/reference/protocols/triple/</guid><description>
+&lt;p>以上即为 Triple 扩展版本的 gRPC 协议，更多详细规范说明请参照 &lt;a href="https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-HTTP2.md" target="_blank">gRPC 协议规范&lt;/a>。&lt;/p></description></item><item><title>Overview: Triple 协议优势与目标</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/reference/protocols/triple/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/overview/reference/protocols/triple/</guid><description>
 &lt;h2 id="简介">简介&lt;/h2>
 &lt;p>Triple 协议是 Dubbo3 设计的基于 HTTP 的 RPC 通信协议规范，它完全兼容 gRPC 协议，支持 Request-Response、Streaming 流式等通信模型，可同时运行在 HTTP/1 和 HTTP/2 之上。&lt;/p>
 &lt;p>Dubbo 框架提供了 Triple 协议的多种语言实现，它们可以帮助你构建浏览器、gRPC 兼容的 HTTP API 接口：你只需要定义一个标准的 Protocol Buffer 格式的服务并实现业务逻辑，Dubbo 负责帮助生成语言相关的 Server Stub、Client Stub，并将整个调用流程无缝接入如路由、服务发现等 Dubbo 体系。Go、Java 等语言的 Triple 协议实现原生支持 HTTP/1 传输层通信，相比于 gRPC 官方实现，Dubbo 框架提供的协议实现更简单、更稳定，帮助你更容易的开发和治理微服务应用。&lt;/p>
@@ -389,8 +389,8 @@ Content-Encoding Accept-Encoding Accept Content-Length&lt;/li>
 &lt;h3 id="go-语言实现">Go 语言实现&lt;/h3>
 &lt;p>Dubbo Go 推荐 IDL 开发模式，通过 Dubbo 配套的 protoc 插件生成 stub 代码，你只需要提供对应的业务逻辑实现即可，你可以通过 curl、浏览器访问 Dubbo Go 发布的 gRPC 服务。&lt;/p>
 &lt;h2 id="后续规划">后续规划&lt;/h2>
-&lt;p>当前我们已经提供了 Triple 协议的 Java、Go 语言版本，接下来我们计划陆续提供 Rust、Python、Node.js 等语言的对应实现。&lt;/p></description></item><item><title>Overview: Dubbo2 协议规范</title><link>https://wxbty.github.io/web-site/zh-cn/overview/reference/protocols/tcp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/zh-cn/overview/reference/protocols/tcp/</guid><description>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/dev/dubbo_protocol_header.png" alt="/dev-guide/images/dubbo_protocol_header.jpg">&lt;/p>
+&lt;p>当前我们已经提供了 Triple 协议的 Java、Go 语言版本，接下来我们计划陆续提供 Rust、Python、Node.js 等语言的对应实现。&lt;/p></description></item><item><title>Overview: Dubbo2 协议规范</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/reference/protocols/tcp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/overview/reference/protocols/tcp/</guid><description>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/dev/dubbo_protocol_header.png" alt="/dev-guide/images/dubbo_protocol_header.jpg">&lt;/p>
 &lt;h2 id="协议规范-specification">协议规范 Specification&lt;/h2>
 &lt;ul>
 &lt;li>
@@ -491,7 +491,7 @@ Content-Encoding Accept-Encoding Accept Content-Length&lt;/li>
 &lt;li>
 &lt;p>Dubbo 协议没有预留扩展字段，没法新增标识，扩展性不太好，比如新增&lt;code>响应上下文&lt;/code>的功能，只有改协议版本号的方式，但是这样要求客户端和服务端的版本都进行升级，对于分布式场景很不友好。&lt;/p>
 &lt;/li>
-&lt;/ul></description></item><item><title>Overview: HTTP 协议规范</title><link>https://wxbty.github.io/web-site/zh-cn/overview/reference/protocols/http/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/zh-cn/overview/reference/protocols/http/</guid><description>
+&lt;/ul></description></item><item><title>Overview: HTTP 协议规范</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/reference/protocols/http/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/overview/reference/protocols/http/</guid><description>
 &lt;h2 id="什么是-dubbo-http">什么是 Dubbo Http&lt;/h2>
 &lt;p>基于 spring web 和 resteasy 注解编码风格，通过http协议进行服务间调用互通，dubbo protocol扩展实现的协议&lt;/p>
 &lt;h2 id="为什么选择dubbo-http">为什么选择Dubbo Http&lt;/h2>

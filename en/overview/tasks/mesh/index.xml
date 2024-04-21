@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Mesh Deployment Solution</title><link>https://wxbty.github.io/web-site/en/overview/tasks/mesh/</link><description>Recent content in Mesh Deployment Solution on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://wxbty.github.io/web-site/en/overview/tasks/mesh/index.xml" rel="self" type="application/rss+xml"/><item><title>Overview: Dubbo proxy mesh using Envoy &amp; Istio</title><link>https://wxbty.github.io/web-site/en/overview/tasks/mesh/dubbo-mesh/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/overview/tasks/mesh/dubbo-mesh/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Mesh Deployment Solution</title><link>https://wxbty.github.io/dubbo-website/en/overview/tasks/mesh/</link><description>Recent content in Mesh Deployment Solution on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://wxbty.github.io/dubbo-website/en/overview/tasks/mesh/index.xml" rel="self" type="application/rss+xml"/><item><title>Overview: Dubbo proxy mesh using Envoy &amp; Istio</title><link>https://wxbty.github.io/dubbo-website/en/overview/tasks/mesh/dubbo-mesh/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/overview/tasks/mesh/dubbo-mesh/</guid><description>
 &lt;p>By following the steps below, you can easily learn how to develop a Dubbo service that conforms to the Service Mesh architecture, deploy it to Kubernetes, and access Istio&amp;rsquo;s traffic management system. Check here &lt;a href="https://github.com/apache/dubbo-samples/tree/master/3-extensions/registry/dubbo-samples-mesh-k8s">Complete sample source code&lt;/a>&lt;/p>
 &lt;h2 id="1-overall-objective">1 Overall Objective&lt;/h2>
 &lt;ul>
@@ -8,7 +8,7 @@
 &lt;/ul>
 &lt;h2 id="2-basic-process-and-working-principle">2 Basic process and working principle&lt;/h2>
 &lt;p>This example demonstrates how to deploy an application developed by Dubbo under the Istio system to realize Envoy&amp;rsquo;s automatic proxying of Dubbo services. The overall architecture of the example is shown in the figure below.&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/v3/mesh/thinsdk-envoy.png" alt="thinsdk">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/mesh/thinsdk-envoy.png" alt="thinsdk">&lt;/p>
 &lt;p>The steps you will need to complete the example are as follows:&lt;/p>
 &lt;ol>
 &lt;li>Create a Dubbo application ( &lt;a href="https://github.com/apache/dubbo-samples/tree/master/3-extensions/registry/dubbo-samples-mesh-k8s">dubbo-samples-mesh-k8s&lt;/a> )&lt;/li>
@@ -201,7 +201,7 @@ You can specify &lt;code>mvn compile jib:build -Djib.to.auth.username=x -Djib.to
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> provider-port=&lt;span style="color:#2aa198">&amp;#34;20885&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> provided-by=&lt;span style="color:#2aa198">&amp;#34;istio-dubbo-producer&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> provider-namespace=&lt;span style="color:#2aa198">&amp;#34;istio-demo&amp;#34;&lt;/span>&lt;span style="color:#268bd2">/&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Overview: Istio + Proxyless</title><link>https://wxbty.github.io/web-site/en/overview/tasks/mesh/proxyless/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/overview/tasks/mesh/proxyless/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Overview: Istio + Proxyless</title><link>https://wxbty.github.io/dubbo-website/en/overview/tasks/mesh/proxyless/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/overview/tasks/mesh/proxyless/</guid><description>
 &lt;p>Proxyless mode means that Dubbo communicates directly with Istiod, and implements service discovery and service governance capabilities through the xDS protocol.
 In this example, a simple example will be used to demonstrate how to use the Proxyless mode.&lt;/p>
 &lt;p>&lt;a href="https://github.com/apache/dubbo-samples/tree/master/3-extensions/registry/dubbo-samples-xds">Sample Address&lt;/a>&lt;/p>
@@ -223,7 +223,7 @@ In this example, a simple example will be used to demonstrate how to use the Pro
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="3-client-subscription-method">3. Client subscription method&lt;/h3>
 &lt;p>**Because the native xDS protocol cannot support the mapping from interface to application name, it is necessary to configure the &lt;code>providedBy&lt;/code> parameter to mark which application this service comes from. **&lt;/p>
-&lt;p>In the future, we will realize automatic &lt;a href="https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/concepts-and-architecture/service-discovery/">service mapping&lt;/a> relationship acquisition based on the control plane of Dubbo Mesh, and there will be no need for independent configuration parameters at that time. Dubbo can be run under the Mesh system, so stay tuned.&lt;/p>
+&lt;p>In the future, we will realize automatic &lt;a href="https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/concepts-and-architecture/service-discovery/">service mapping&lt;/a> relationship acquisition based on the control plane of Dubbo Mesh, and there will be no need for independent configuration parameters at that time. Dubbo can be run under the Mesh system, so stay tuned.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">@Component&lt;/span>(&lt;span style="color:#2aa198">&amp;#34;annotated Consumer&amp;#34;&lt;/span>)
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">public&lt;/span> &lt;span style="color:#268bd2">class&lt;/span> &lt;span style="color:#268bd2">GreetingServiceConsumer&lt;/span> {
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">@DubboReference&lt;/span>(version &lt;span style="color:#719e07">=&lt;/span> &lt;span style="color:#2aa198">&amp;#34;1.0.0&amp;#34;&lt;/span>, providedBy &lt;span style="color:#719e07">=&lt;/span> &lt;span style="color:#2aa198">&amp;#34;dubbo-samples-xds-provider&amp;#34;&lt;/span>)
@@ -340,7 +340,7 @@ Read the value of &lt;code>CLUSTER_ID&lt;/code> in the environment variable&lt;/
 &lt;li>providedBy&lt;/li>
 &lt;/ol>
 &lt;p>Since the current Dubbo version is limited by the communication model of istio and cannot obtain the application name corresponding to the interface, it is necessary to configure the &lt;code>providedBy&lt;/code> parameter to mark which application the service comes from.
-In the future, we will realize automatic &lt;a href="https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/concepts-and-architecture/service-discovery/">service mapping&lt;/a> relationship acquisition based on the control plane of Dubbo Mesh, and there will be no need for independent configuration parameters at that time. Dubbo can be run under the Mesh system, so stay tuned.&lt;/p>
+In the future, we will realize automatic &lt;a href="https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/concepts-and-architecture/service-discovery/">service mapping&lt;/a> relationship acquisition based on the control plane of Dubbo Mesh, and there will be no need for independent configuration parameters at that time. Dubbo can be run under the Mesh system, so stay tuned.&lt;/p>
 &lt;ol start="4">
 &lt;li>protocol name&lt;/li>
 &lt;/ol>
@@ -366,7 +366,7 @@ Therefore we recommend using the triple protocol (fully compatible with the grpc
 &lt;p>Since the metadata discovered by Dubbo 3 application-level services cannot be obtained from istio, it is necessary to use the service introspection mode. This requires that the port of &lt;code>Dubbo MetadataService&lt;/code> is unified in the whole cluster.&lt;/p>
 &lt;p>Reference configuration:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-properties" data-lang="properties">&lt;span style="display:flex;">&lt;span>dubbo.application.metadataServicePort&lt;span style="color:#719e07">=&lt;/span>&lt;span style="color:#2aa198">20885&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>In the future, we will realize automatic acquisition of &lt;a href="https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/concepts-and-architecture/service-discovery/">service metadata&lt;/a> based on the control plane of Dubbo Mesh, and no independent configuration parameters will be required at that time. Dubbo can be run under the Mesh system, so stay tuned.&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>In the future, we will realize automatic acquisition of &lt;a href="https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/concepts-and-architecture/service-discovery/">service metadata&lt;/a> based on the control plane of Dubbo Mesh, and no independent configuration parameters will be required at that time. Dubbo can be run under the Mesh system, so stay tuned.&lt;/p>
 &lt;ol start="6">
 &lt;li>qosAcceptForeignIp&lt;/li>
 &lt;/ol>

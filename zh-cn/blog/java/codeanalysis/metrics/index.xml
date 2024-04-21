@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – dubbo-metrics 指标模块源码浅析</title><link>https://wxbty.github.io/web-site/zh-cn/blog/java/codeanalysis/metrics/</link><description>Recent content in dubbo-metrics 指标模块源码浅析 on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://wxbty.github.io/web-site/zh-cn/blog/java/codeanalysis/metrics/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: 引言</title><link>https://wxbty.github.io/web-site/zh-cn/blog/2023/04/28/%E5%BC%95%E8%A8%80/</link><pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/zh-cn/blog/2023/04/28/%E5%BC%95%E8%A8%80/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – dubbo-metrics 指标模块源码浅析</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/java/codeanalysis/metrics/</link><description>Recent content in dubbo-metrics 指标模块源码浅析 on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://wxbty.github.io/dubbo-website/zh-cn/blog/java/codeanalysis/metrics/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: 引言</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/2023/04/28/%E5%BC%95%E8%A8%80/</link><pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/blog/2023/04/28/%E5%BC%95%E8%A8%80/</guid><description>
 &lt;h2 id="引言">引言&lt;/h2>
 &lt;p>服务指标统计体系是 Dubbo 可观测能力的重要组成部分。
 dubbo-metrics 指标模块旨在将 dubbo 内部零散的 Metrics 相关类综合到一个单独的模块中，提供一套更加完善、全面、可拓展、解耦合的指标采样-统计-导出解决方案。&lt;/p>
@@ -12,8 +12,8 @@ dubbo-metrics 指标模块旨在将 dubbo 内部零散的 Metrics 相关类综�
 &lt;li>dubbo-metrics-default 接口默认实现包，提供dubbo内部核心指标的监控功能&lt;/li>
 &lt;/ul>
 &lt;p>在设计上，dubbo-metrics 深入应用事件驱动编程思想，总体体现出下图的事件处理链路：&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/blog/metrics-source-blog/metrics-event-struct.png" alt="metrics-event-struct">&lt;/p>
-&lt;p>在拓展上，dubbo-metrics 抽象了一套指标导出接口与抽象实现，可实现兼容多种指标统计监控中心，默认提供了普罗米修斯实现。&lt;/p></description></item><item><title>Blog: 1-指标样本的收集与存储</title><link>https://wxbty.github.io/web-site/zh-cn/blog/2023/04/28/1-%E6%8C%87%E6%A0%87%E6%A0%B7%E6%9C%AC%E7%9A%84%E6%94%B6%E9%9B%86%E4%B8%8E%E5%AD%98%E5%82%A8/</link><pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/zh-cn/blog/2023/04/28/1-%E6%8C%87%E6%A0%87%E6%A0%B7%E6%9C%AC%E7%9A%84%E6%94%B6%E9%9B%86%E4%B8%8E%E5%AD%98%E5%82%A8/</guid><description>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/metrics-source-blog/metrics-event-struct.png" alt="metrics-event-struct">&lt;/p>
+&lt;p>在拓展上，dubbo-metrics 抽象了一套指标导出接口与抽象实现，可实现兼容多种指标统计监控中心，默认提供了普罗米修斯实现。&lt;/p></description></item><item><title>Blog: 1-指标样本的收集与存储</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/2023/04/28/1-%E6%8C%87%E6%A0%87%E6%A0%B7%E6%9C%AC%E7%9A%84%E6%94%B6%E9%9B%86%E4%B8%8E%E5%AD%98%E5%82%A8/</link><pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/blog/2023/04/28/1-%E6%8C%87%E6%A0%87%E6%A0%B7%E6%9C%AC%E7%9A%84%E6%94%B6%E9%9B%86%E4%B8%8E%E5%AD%98%E5%82%A8/</guid><description>
 &lt;h2 id="一指标样本的收集与存储">一、指标样本的收集与存储&lt;/h2>
 &lt;h3 id="指标样本收集">指标样本收集&lt;/h3>
 &lt;p>&lt;strong>指标收集器（Collector）是指标对外导出的入口&lt;/strong>。最终导出到指标统计中心的指标采样实际均直接来源于各个指标采样器。因此，我们将从各个收集器实现开始，分析 dubbo-metrics 模块是如何工作的。&lt;/p>
@@ -29,7 +29,7 @@ dubbo-metrics 指标模块旨在将 dubbo 内部零散的 Metrics 相关类综�
 &lt;p>默认指标收集器的特点是通过内部的指标采样器（MetricsSampler）完成指标事件的处理操作，而不是其它收集器的指标监听器（MetricsListener）&lt;/p>
 &lt;p>直方图指标收集器则负责收集直方图类型的指标。它利用直方图度量寄存器（HistogramMetricRegister）借助 micrometer API 完成直方图样本的采集。直方图类型包括百分位数、服务水平目标、最小预期值、最大预期值、统计数据分布有效期等。&lt;/p>
 &lt;p>&lt;strong>Collector的继承关系：&lt;/strong>&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/blog/metrics-source-blog/collectors.png" alt="collectors">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/metrics-source-blog/collectors.png" alt="collectors">&lt;/p>
 &lt;p>可以看出，每个指标收集器都具有来自 MetricsListener 的监听指标事件的能力。为什么指标收集器本身需要监听指标事件？ 在后文中，我们将讨论指标收集器是如何利用内置的子转发器（SubDispatcher）转发指标事件，并完成计数处理的。&lt;/p>
 &lt;h3 id="指标样本存储">指标样本存储&lt;/h3>
 &lt;p>前文中，我们了解了指标收集的入口是指标收集器（Collector）。那么各个收集器从哪里收集指标样本？&lt;/p>
@@ -56,7 +56,7 @@ dubbo-metrics 指标模块旨在将 dubbo 内部零散的 Metrics 相关类综�
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ...
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>混合指标收集器和数据聚合器之间呈现如下的包含关系：&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/blog/metrics-source-blog/composite-struct.png" alt="composite-struct">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/metrics-source-blog/composite-struct.png" alt="composite-struct">&lt;/p>
 &lt;p>&lt;strong>DefaultMetricsCollector 默认指标采集器：&lt;/strong>&lt;/p>
 &lt;p>它不直接存储采样数据，而是通过收集其下**指标采样器（MetricsSampler）**的样本来完成采样工作。这些采样器包括：&lt;/p>
 &lt;ul>
@@ -72,13 +72,13 @@ dubbo-metrics 指标模块旨在将 dubbo 内部零散的 Metrics 相关类综�
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">private&lt;/span> &lt;span style="color:#268bd2">final&lt;/span> ConcurrentHashMap&lt;span style="color:#719e07">&amp;lt;&lt;/span>MethodMetric, Timer&lt;span style="color:#719e07">&amp;gt;&lt;/span> rt &lt;span style="color:#719e07">=&lt;/span> &lt;span style="color:#719e07">new&lt;/span> ConcurrentHashMap();
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ...
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Timer（计时器）由 micrometer API 提供，常用于统计一分钟内的大量事件。&lt;/p></description></item><item><title>Blog: 2-指标收集器的指标采集流程</title><link>https://wxbty.github.io/web-site/zh-cn/blog/2023/04/28/2-%E6%8C%87%E6%A0%87%E6%94%B6%E9%9B%86%E5%99%A8%E7%9A%84%E6%8C%87%E6%A0%87%E9%87%87%E9%9B%86%E6%B5%81%E7%A8%8B/</link><pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/zh-cn/blog/2023/04/28/2-%E6%8C%87%E6%A0%87%E6%94%B6%E9%9B%86%E5%99%A8%E7%9A%84%E6%8C%87%E6%A0%87%E9%87%87%E9%9B%86%E6%B5%81%E7%A8%8B/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Timer（计时器）由 micrometer API 提供，常用于统计一分钟内的大量事件。&lt;/p></description></item><item><title>Blog: 2-指标收集器的指标采集流程</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/2023/04/28/2-%E6%8C%87%E6%A0%87%E6%94%B6%E9%9B%86%E5%99%A8%E7%9A%84%E6%8C%87%E6%A0%87%E9%87%87%E9%9B%86%E6%B5%81%E7%A8%8B/</link><pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/blog/2023/04/28/2-%E6%8C%87%E6%A0%87%E6%94%B6%E9%9B%86%E5%99%A8%E7%9A%84%E6%8C%87%E6%A0%87%E9%87%87%E9%9B%86%E6%B5%81%E7%A8%8B/</guid><description>
 &lt;h2 id="二指标收集器的指标采集流程">二、指标收集器的指标采集流程&lt;/h2>
 &lt;p>在前文中，我们了解了指标收集器（Collector）最终收集的数据只有三个来源：&lt;/p>
 &lt;ul>
 &lt;li>
 &lt;p>实现自混合指标收集器（CombMetricsCollector） 的元数据指标收集器（MetadataMetricsCollector）和注册中心指标收集器（RegistryMetricsCollector），它们的样本均存储在内置的基本数据聚合器中。具体来说，是基本数据聚合器下的四个子数据聚合器中：&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/blog/metrics-source-blog/composite-struct.png" alt="composite-struct">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/metrics-source-blog/composite-struct.png" alt="composite-struct">&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>&lt;strong>DefaultMetricsCollector 默认指标收集器&lt;/strong>，它的样本不仅来自于指标事件，还来自其下**采样器（Sampler）**中，用于Dubbo核心模块的采样。&lt;/p>
@@ -297,7 +297,7 @@ dubbo-metrics 指标模块旨在将 dubbo 内部零散的 Metrics 相关类综�
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>还有 MetricsServiceListener（服务指标监听器），它和 MetricsApplicationListener 十分类似，提供的是服务层面的指标监听器的通用实现，不再重复分析。&lt;/p>
 &lt;p>&lt;strong>可以用一句话简单的总结这三个 Collector 注册指标监听器的流程 ： Collector 内部的 Mulicaster/Dispatcher 在被 Collector 创建时直接向自己注册已声明的指标监听器。&lt;/strong>&lt;/p>
 &lt;p>至此，我们可以总结出 MetricsEvent 的部分消息转发路径 ：&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/blog/metrics-source-blog/event-dispatch-simple.png" alt="event-dispatch-simple">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/metrics-source-blog/event-dispatch-simple.png" alt="event-dispatch-simple">&lt;/p>
 &lt;h3 id="2dubbo-核心模块的指标采集流程">2，Dubbo 核心模块的指标采集流程&lt;/h3>
 &lt;p>DefaultMetricsCollector（默认指标采集器） 作为指标采集器的默认实现，其主要通过采样器（Sampler）收集dubbo应用核心RPC功能的相关指标。 采样器包括以下几种：&lt;/p>
 &lt;ul>
@@ -307,7 +307,7 @@ dubbo-metrics 指标模块旨在将 dubbo 内部零散的 Metrics 相关类综�
 &lt;/ul>
 &lt;p>&lt;strong>这些采样器内部会存储其负责采样类型指标的样本。由于默认指标采集器同样继承自 CombMetricsCollector，它也同时具有与前文中分析的三大中心指标收集器相似的指标转发流程。&lt;/strong>&lt;/p>
 &lt;p>除了线程池指标采样器，其它两个采样器均实现自简单指标计数采样器（SimpleMetricsCountSampler）。它实现了通用的指标存取操作。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/blog/metrics-source-blog/sampler-struct.png" alt="sampler-struct">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/metrics-source-blog/sampler-struct.png" alt="sampler-struct">&lt;/p>
 &lt;p>简单指标计数采样器内部的指标样本容器：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">public&lt;/span> &lt;span style="color:#268bd2">abstract&lt;/span> &lt;span style="color:#268bd2">class&lt;/span> &lt;span style="color:#268bd2">SimpleMetricsCountSampler&lt;/span>&lt;span style="color:#719e07">&amp;lt;&lt;/span>S, K, M &lt;span style="color:#268bd2">extends&lt;/span> Metric&lt;span style="color:#719e07">&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">implements&lt;/span> MetricsCountSampler&lt;span style="color:#719e07">&amp;lt;&lt;/span>S, K, M&lt;span style="color:#719e07">&amp;gt;&lt;/span> {
@@ -422,7 +422,7 @@ dubbo-metrics 指标模块旨在将 dubbo 内部零散的 Metrics 相关类综�
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">public&lt;/span> &lt;span style="color:#dc322f">boolean&lt;/span> &lt;span style="color:#268bd2">isSupport&lt;/span>(MetricsEvent event) {
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#719e07">return&lt;/span> event &lt;span style="color:#719e07">instanceof&lt;/span> RequestEvent &lt;span style="color:#719e07">||&lt;/span> event &lt;span style="color:#719e07">instanceof&lt;/span> RequestBeforeEvent;
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/blog/metrics-source-blog/default-metrics-collector-struct.png" alt="default-metrics-collector-struct">&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/metrics-source-blog/default-metrics-collector-struct.png" alt="default-metrics-collector-struct">&lt;/p>
 &lt;p>&lt;strong>至此，我们也明确了 Dubbo 应用内部核心模块的相关指标是如何收集的：默认指标收集器除了接受上层指标转发器的指标事件之外，还会通过各种采样器对埋点采样，通过 SubDispatcher 统一转发指标事件，通知注册为它的监听器的其它 Collector 完成采样。&lt;/strong>&lt;/p>
 &lt;h3 id="3-直方图相关指标的采集流程">3， 直方图相关指标的采集流程&lt;/h3>
 &lt;p>直方图指标收集器（HistogramMetricsCollector）也是一个较为特殊的收集器，它主要负责RPC调用响应时间直方图指标这一种指标的收集。&lt;/p>
@@ -447,7 +447,7 @@ dubbo-metrics 指标模块旨在将 dubbo 内部零散的 Metrics 相关类综�
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> timer.record(responseTime, TimeUnit.MILLISECONDS);
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>当接收到事件时，直方图指标收集器会先计算当前调用花费的时间，然后为计时器（Time）添加一条响应时间记录。&lt;/p></description></item><item><title>Blog: 3-指标监听注册梳理</title><link>https://wxbty.github.io/web-site/zh-cn/blog/2023/04/28/3-%E6%8C%87%E6%A0%87%E7%9B%91%E5%90%AC%E6%B3%A8%E5%86%8C%E6%A2%B3%E7%90%86/</link><pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/zh-cn/blog/2023/04/28/3-%E6%8C%87%E6%A0%87%E7%9B%91%E5%90%AC%E6%B3%A8%E5%86%8C%E6%A2%B3%E7%90%86/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>当接收到事件时，直方图指标收集器会先计算当前调用花费的时间，然后为计时器（Time）添加一条响应时间记录。&lt;/p></description></item><item><title>Blog: 3-指标监听注册梳理</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/2023/04/28/3-%E6%8C%87%E6%A0%87%E7%9B%91%E5%90%AC%E6%B3%A8%E5%86%8C%E6%A2%B3%E7%90%86/</link><pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/blog/2023/04/28/3-%E6%8C%87%E6%A0%87%E7%9B%91%E5%90%AC%E6%B3%A8%E5%86%8C%E6%A2%B3%E7%90%86/</guid><description>
 &lt;h2 id="三指标监听注册梳理">三、指标监听注册梳理&lt;/h2>
 &lt;p>在前一章中，我们了解了不同收集器中的指标样本是如何被监听器添加进去的。接下来，我们将归纳指标监听器 的创建位置，及它们对应统计的指标。&lt;/p>
 &lt;p>通过之前的分析，我们已经知道指标 注册事件多播器（RegistryMetricsEventMulticaster）中定义了并绑定了服务注册相关的指标。这种绑定操作同样存在于其它几个简单指标事件多播器（SimpleMetricsEventMulticaster）的几个实现中。&lt;/p>
@@ -567,7 +567,7 @@ dubbo-metrics 指标模块旨在将 dubbo 内部零散的 Metrics 相关类综�
 &lt;p>在之前的分析中，我们知道 MetricsDispatcher 创建了所有 MetricsCollector 拓展，并将它们注册为自己的监听者。&lt;/p>
 &lt;p>因此，当 MetricsEventBus 接收到发布的信息时，它会将信息转发到所有 MetricsCollector 中。对于 CombMetricsCollector 的实现，它们又会调用自己创建的 MetricsEventMulticaster 再次转发消息，到具体指标的监听器。&lt;/p>
 &lt;p>之后，这些监听器就会根据自己的逻辑修改Collector中的指标计数。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/blog/metrics-source-blog/metris-event-dispatch-full.png" alt="image-20230629160012950">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/metrics-source-blog/metris-event-dispatch-full.png" alt="image-20230629160012950">&lt;/p>
 &lt;h3 id="事件发布">事件发布&lt;/h3>
 &lt;p>接下来，我们将寻找指标事件发布的源头。&lt;/p>
 &lt;p>通过前文的分析，我们知道 MetricsEventBus 是所有指标事件发布的入口。具体来说，它有以下的用法：&lt;/p>
@@ -725,7 +725,7 @@ dubbo-metrics 指标模块旨在将 dubbo 内部零散的 Metrics 相关类综�
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> );
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>在前文中，我们提到 MetricsEventBus.post 的第二个参数是实际要进行的业务操作，第三个参数则是根据业务操作返回值判断操作是否成功的逻辑。&lt;/p>
-&lt;p>此处的业务操作是尝试存储目标服务的元数据。执行操作之前，会先发布事件，最终增加 &lt;strong>STORE_PROVIDER_METADATA&lt;/strong> （尝试存储服务元数据次数）的计数。如果产生异常，会增加 &lt;strong>STORE_PROVIDER_METADATA_ERROR&lt;/strong> （存储服务元数据失败） 的计数，否则增加&lt;strong>STORE_PROVIDER_METADATA_SUCCEED&lt;/strong>（存储服务元数据成功） 的计数。&lt;/p></description></item><item><title>Blog: 4-指标转换与导出</title><link>https://wxbty.github.io/web-site/zh-cn/blog/2023/04/28/4-%E6%8C%87%E6%A0%87%E8%BD%AC%E6%8D%A2%E4%B8%8E%E5%AF%BC%E5%87%BA/</link><pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/zh-cn/blog/2023/04/28/4-%E6%8C%87%E6%A0%87%E8%BD%AC%E6%8D%A2%E4%B8%8E%E5%AF%BC%E5%87%BA/</guid><description>
+&lt;p>此处的业务操作是尝试存储目标服务的元数据。执行操作之前，会先发布事件，最终增加 &lt;strong>STORE_PROVIDER_METADATA&lt;/strong> （尝试存储服务元数据次数）的计数。如果产生异常，会增加 &lt;strong>STORE_PROVIDER_METADATA_ERROR&lt;/strong> （存储服务元数据失败） 的计数，否则增加&lt;strong>STORE_PROVIDER_METADATA_SUCCEED&lt;/strong>（存储服务元数据成功） 的计数。&lt;/p></description></item><item><title>Blog: 4-指标转换与导出</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/2023/04/28/4-%E6%8C%87%E6%A0%87%E8%BD%AC%E6%8D%A2%E4%B8%8E%E5%AF%BC%E5%87%BA/</link><pubDate>Fri, 28 Apr 2023 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/blog/2023/04/28/4-%E6%8C%87%E6%A0%87%E8%BD%AC%E6%8D%A2%E4%B8%8E%E5%AF%BC%E5%87%BA/</guid><description>
 &lt;h2 id="四指标转换与导出">四、指标转换与导出&lt;/h2>
 &lt;p>本章主要梳理指标收集完成后，向外部收集器导出的流程。&lt;/p>
 &lt;p>通过之前的分析，我们知道不同类型指标的收集分别由各个 Collector 实现进行。它们底层的 MetricsCollector 接口定义了指标导出的操作。&lt;/p>

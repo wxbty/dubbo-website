@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Traffic Governance Rules</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/</link><description>Recent content in Traffic Governance Rules on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs3-V2: Routing Rules</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/routing-rule/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/routing-rule/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Traffic Governance Rules</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/</link><description>Recent content in Traffic Governance Rules on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs3-V2: Routing Rules</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/routing-rule/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/routing-rule/</guid><description>
 &lt;p>Routing rules play a role in filtering the address of the target server before initiating an RPC call, and the filtered address list will be used as an alternative address for the consumer to finally initiate an RPC call.&lt;/p>
 &lt;ul>
 &lt;li>Conditional routing. Supports configuring routing rules at the granularity of services or consumer applications.&lt;/li>
@@ -201,8 +201,8 @@ A service can only have one whitelist rule, otherwise the two rules will be filt
 &lt;/ol>
 &lt;div class="alert alert-primary" role="alert">
 &lt;h4 class="alert-heading">Prompt&lt;/h4>
-Custom routing reference &lt;a href="https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/reference-manual/spi/description/router/">routing extension&lt;/a>
-&lt;/div></description></item><item><title>Docs3-V2: Configuration Rules</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/config-rule/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/config-rule/</guid><description>
+Custom routing reference &lt;a href="https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/spi/description/router/">routing extension&lt;/a>
+&lt;/div></description></item><item><title>Docs3-V2: Configuration Rules</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/config-rule/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/config-rule/</guid><description>
 &lt;h2 id="override-rules">override rules&lt;/h2>
 &lt;p>Overriding rules is a capability designed by Dubbo to dynamically adjust the behavior of RPC calls without restarting the application. Starting from version 2.7.0, dynamic configuration adjustments are supported at two granularities of &lt;strong>service&lt;/strong> and &lt;strong>application&lt;/strong>.&lt;/p>
 &lt;h3 id="overview">Overview&lt;/h3>
@@ -359,12 +359,12 @@ parameters:
 force: return null
 &amp;hellip;
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
-&lt;/ul></description></item><item><title>Docs3-V2: Mesh Routing Rules</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/</guid><description>
+&lt;/ul></description></item><item><title>Docs3-V2: Mesh Routing Rules</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/</guid><description>
 &lt;h3 id="basic-idea">Basic idea&lt;/h3>
 &lt;p>Based on the routing chain, the Pipeline processing method is adopted, as shown in the following figure:&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/user/route-rule1.png" alt="route-rule1.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/user/route-rule1.png" alt="route-rule1.png">&lt;/p>
 &lt;p>The logic of the routing chain can be simply understood as target = rn(&amp;hellip;r3(r2(r1(src)))). For the internal logic of each router, it can be abstracted as n disjoint address pools addrs-pool-1 &amp;hellip; addrs-pool- n According to the implementation-defined rules, the intersection is taken as the output addrs-out. By analogy, the calculation of the entire routing chain is completed.&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/user/route-rule2.png" alt="route-rule2.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/user/route-rule2.png" alt="route-rule2.png">&lt;/p>
 &lt;p>On the other hand, if router(n) needs to execute fallback logic, then the fallback logic should be determined after router(n)&lt;/p>
 &lt;h3 id="fallback-processing-principle">fallback processing principle&lt;/h3>
 &lt;p>After multiple conditional components between multiple routers, it is easy for the address to be filtered to be empty, so we need to perform fallback processing for this situation to ensure that the business can successfully find a valid address under the premise of correctness.&lt;/p>
@@ -561,7 +561,7 @@ force: return null
 &lt;li>When we write matching conditions, we should follow the principle of moving from specific conditions to broad conditions&lt;/li>
 &lt;/ul>
 &lt;h3 id="assembly-mode-of-routechain-currently-not-implemented">Assembly mode of RouteChain (currently not implemented)&lt;/h3>
-&lt;p>&lt;img src="https://wxbty.github.io/web-site/imgs/user/route-rule3.png" alt="route-rule3.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/user/route-rule3.png" alt="route-rule3.png">&lt;/p>
 &lt;p>We see the above figure, in the routing process, we are the processing method of Pipeline, the Router nodes of Pipeline exist in order, and each Router has a unique corresponding VirtualService and &lt;strong>multiple&lt;/strong> corresponding DestinationRules for description .&lt;/p>
 &lt;p>Take the routing rule configuration stored on Nacos as an example, the format of the configuration is as follows:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">DataId&lt;/span>: Demo.rule.yaml

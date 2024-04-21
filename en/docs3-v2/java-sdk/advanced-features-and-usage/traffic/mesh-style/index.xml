@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Mesh Routing Rules</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/</link><description>Recent content in Mesh Routing Rules on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs3-V2: Dynamic Routing</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/dynamic-rule-deployment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/dynamic-rule-deployment/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Mesh Routing Rules</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/</link><description>Recent content in Mesh Routing Rules on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs3-V2: Dynamic Routing</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/dynamic-rule-deployment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/dynamic-rule-deployment/</guid><description>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">apiVersion&lt;/span>: service.dubbo.apache.org/v1alpha1
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">kind&lt;/span>: VirtualService
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">metadata&lt;/span>:
@@ -67,7 +67,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#268bd2">name&lt;/span>: v2
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">labels&lt;/span>:
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">sigma.ali/mg&lt;/span>: v2-host
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Weight Routing</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/weight-rule-deployment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/weight-rule-deployment/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Weight Routing</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/weight-rule-deployment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/weight-rule-deployment/</guid><description>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">apiVersion&lt;/span>: service.dubbo.apache.org/v1alpha1
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">kind&lt;/span>: VirtualService
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">metadata&lt;/span>:
@@ -105,7 +105,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> - &lt;span style="color:#268bd2">name&lt;/span>: v2
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">labels&lt;/span>:
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">version&lt;/span>: v2
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Use Case</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/demo-rule-deployment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/demo-rule-deployment/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Use Case</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/demo-rule-deployment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/demo-rule-deployment/</guid><description>
 &lt;h3 id="application-services">Application Services&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>com.taobao.hsf.DemoService:1.0.0
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="service-address">service address&lt;/h3>
@@ -352,7 +352,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This result will be used as the output of the next route, repeating the previous actions;&lt;/p>
 &lt;p>If this routing rule has ended, the address of the call will be&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#2aa198">10.0.0.2&lt;/span>:&lt;span style="color:#2aa198">12200&lt;/span>?_p=hessian2&amp;amp;APP=demo&amp;amp;st=na62&amp;amp;v=2.0&amp;amp;_TIMEOUT=3000&amp;amp;_ih2=y&amp;amp;mg=demohost&amp;amp;_CONNECTTIMEOUT=1000&amp;amp;_SERIALIZETYPE=hessian&amp;amp;ut=CENTER
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Blue-Green Deployment</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/blue-green-deployment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/blue-green-deployment/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Blue-Green Deployment</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/blue-green-deployment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/blue-green-deployment/</guid><description>
 &lt;h3 id="scene-description">Scene Description&lt;/h3>
 &lt;p>Describe the current IDC, service deployment, service information, desired effects, etc.&lt;/p>
 &lt;h3 id="operation-process">Operation process&lt;/h3>
@@ -371,7 +371,7 @@
 &lt;li>authentication scheme&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;/ul></description></item><item><title>Docs3-V2: Ab Test</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/ab-testing-deployment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/ab-testing-deployment/</guid><description>
+&lt;/ul></description></item><item><title>Docs3-V2: Ab Test</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/ab-testing-deployment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/ab-testing-deployment/</guid><description>
 &lt;h3 id="scene-description">Scene Description&lt;/h3>
 &lt;p>Describe the current IDC, service deployment, service information, desired effects, etc.&lt;/p>
 &lt;h3 id="operation-process">Operation process&lt;/h3>
@@ -390,7 +390,7 @@
 &lt;li>authentication scheme&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;/ul></description></item><item><title>Docs3-V2: VirtualService</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/virtualservice/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/virtualservice/</guid><description>
+&lt;/ul></description></item><item><title>Docs3-V2: VirtualService</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/virtualservice/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/virtualservice/</guid><description>
 &lt;h3 id="virtualservice">VirtualService&lt;/h3>
 &lt;p>&lt;code>VirtualService&lt;/code> is a rule used to process inbound traffic, that is to say, it is used to describe which inbound traffic applies to this routing rule.&lt;/p>
 &lt;ul>
@@ -1320,7 +1320,7 @@
 &lt;td>NO&lt;/td>
 &lt;/tr>
 &lt;/tbody>
-&lt;/table></description></item><item><title>Docs3-V2: Canary</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/canary-deployment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/canary-deployment/</guid><description>
+&lt;/table></description></item><item><title>Docs3-V2: Canary</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/canary-deployment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/canary-deployment/</guid><description>
 &lt;h3 id="scene-description">Scene Description&lt;/h3>
 &lt;p>Describe the current IDC, service deployment, service information, desired effects, etc.&lt;/p>
 &lt;h3 id="operation-process">Operation process&lt;/h3>
@@ -1339,7 +1339,7 @@
 &lt;li>authentication scheme&lt;/li>
 &lt;/ul>
 &lt;/li>
-&lt;/ul></description></item><item><title>Docs3-V2: DestinationRule</title><link>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/destination-rule/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/web-site/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/destination-rule/</guid><description>
+&lt;/ul></description></item><item><title>Docs3-V2: DestinationRule</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/destination-rule/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/traffic/mesh-style/destination-rule/</guid><description>
 &lt;h3 id="destinationrule">DestinationRule&lt;/h3>
 &lt;p>&lt;code>DestinationRule&lt;/code> is used to process the rules of the target address, and &lt;code>ServiceEntry&lt;/code>, &lt;code>WorkloadEntry&lt;/code> and other definitions related to &lt;code>DestinationRule&lt;/code> are consistent with open source&lt;/p>
 &lt;ul>
