@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Security Notice</title><link>https://wxbty.github.io/en/overview/notices/</link><description>Recent content in Security Notice on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://wxbty.github.io/en/overview/notices/index.xml" rel="self" type="application/rss+xml"/><item><title>Overview: Serialization Security</title><link>https://wxbty.github.io/en/overview/notices/serialization/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/en/overview/notices/serialization/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Security Notice</title><link>https://wxbty.github.io/dubbo-website/en/overview/notices/</link><description>Recent content in Security Notice on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://wxbty.github.io/dubbo-website/en/overview/notices/index.xml" rel="self" type="application/rss+xml"/><item><title>Overview: Serialization Security</title><link>https://wxbty.github.io/dubbo-website/en/overview/notices/serialization/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/overview/notices/serialization/</guid><description>
 &lt;h1 id="overview">Overview&lt;/h1>
 &lt;p>Dubbo supports the extension of serialization protocols. In theory, users can enable any serialization protocol based on this extension mechanism. This brings great flexibility, but at the same time, users must be aware of the hidden security risks.
 Data deserialization is the link most easily exploited by attackers, who use it to perform RCE attacks to steal or destroy server-side data.
@@ -45,7 +45,7 @@ The Dubbo framework itself cannot directly guarantee the security of the target 
 This protocol is secure by default, but requires developers to write IDL files.&lt;/p>
 &lt;p>Triple protocol Wrapper mode allows compatibility with other serialized data, providing good compatibility. However, other protocols may have deserialization security flaws. For the Hessian2 protocol, users with high security attributes should follow the sample code instructions to turn on the whitelist mode. The framework will turn on the blacklist mode by default to intercept malicious calls.&lt;/p>
 &lt;p>If other serialization protocols must be used, a certain degree of security is expected. The Token authentication mechanism should be enabled to prevent unauthenticated and untrusted request sources from threatening Provider security. When turning on the Token authentication mechanism, the authentication function of the registration center should be turned on simultaneously.&lt;/p>
-&lt;p>&lt;a href="https://wxbty.github.io/zh-cn/overview/mannual/java-sdk/advanced-features-and-usage/security/">Reinforcement reference&lt;/a>&lt;/p></description></item><item><title>Overview: RPC Protocol Security</title><link>https://wxbty.github.io/en/overview/notices/protocol/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/en/overview/notices/protocol/</guid><description>
+&lt;p>&lt;a href="https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/java-sdk/advanced-features-and-usage/security/">Reinforcement reference&lt;/a>&lt;/p></description></item><item><title>Overview: RPC Protocol Security</title><link>https://wxbty.github.io/dubbo-website/en/overview/notices/protocol/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/overview/notices/protocol/</guid><description>
 &lt;p>Dubbo supports the extension of the RPC protocol. In theory, users can enable any RPC protocol based on this extension mechanism. This brings great flexibility, but at the same time, users must be aware of the hidden security risks.&lt;/p>
 &lt;p>The serialization protocols provided by the official version of Dubbo 2.7 are as follows:&lt;/p>
 &lt;ul>
@@ -78,7 +78,7 @@ For the Hessian protocol, because it is based on the Hessian serialization mecha
 &lt;li>
 &lt;p>If your application needs to expose public network access, the Dubbo community recommends that you use the Triple protocol and avoid using non-Protobuf mode or services based on Dubbo 3.3 and above that only expose standard application/json format services.&lt;/p>
 &lt;/li>
-&lt;/ol></description></item><item><title>Overview: Registration Center Security</title><link>https://wxbty.github.io/en/overview/notices/registry/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/en/overview/notices/registry/</guid><description>
+&lt;/ol></description></item><item><title>Overview: Registration Center Security</title><link>https://wxbty.github.io/dubbo-website/en/overview/notices/registry/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/overview/notices/registry/</guid><description>
 &lt;p>Dubbo supports the extension of the registration center. In theory, users can enable any registration center based on this extension mechanism. This brings great flexibility, but at the same time, users must be aware of the hidden security risks.&lt;/p>
 &lt;p>The official version of Dubbo 2.7 provides the following registration centers:&lt;/p>
 &lt;ul>
@@ -99,7 +99,7 @@ Therefore, in order to ensure the security of the registration center, Dubbo off
 &lt;ul>
 &lt;li>Enable the authentication mechanism of the registration center, such as Zookeeper&amp;rsquo;s ACL mechanism, Nacos&amp;rsquo; username and password mechanism, etc.&lt;/li>
 &lt;li>Avoid exposing the registration center to the public network environment, and try to deploy the registration center in a trusted intranet environment&lt;/li>
-&lt;/ul></description></item><item><title>Overview: Dubbo Admin Security</title><link>https://wxbty.github.io/en/overview/notices/admin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/en/overview/notices/admin/</guid><description>
+&lt;/ul></description></item><item><title>Overview: Dubbo Admin Security</title><link>https://wxbty.github.io/dubbo-website/en/overview/notices/admin/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/overview/notices/admin/</guid><description>
 &lt;p>In order to facilitate the use of Dubbo, Dubbo officially provides the Dubbo Admin console to facilitate the management of Dubbo applications.&lt;/p>
 &lt;h2 id="risk">Risk&lt;/h2>
 &lt;p>Dubbo Admin has query and call permissions for the entire cluster by default, so it needs to be used with more caution in the online environment.
@@ -134,7 +134,7 @@ In your production environment, be sure to change the default username, password
 &lt;ol>
 &lt;li>Please update the default username, password, and JWT Secret Token during privatized deployment. It is recommended to modify the authentication logic of Dubbo Admin and connect it to your organization&amp;rsquo;s personnel management system.&lt;/li>
 &lt;li>Do not directly expose the Dubbo Admin port to the Internet.&lt;/li>
-&lt;/ol></description></item><item><title>Overview: Log4j vulnerability impact</title><link>https://wxbty.github.io/en/overview/notices/log4j/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/en/overview/notices/log4j/</guid><description>
+&lt;/ol></description></item><item><title>Overview: Log4j vulnerability impact</title><link>https://wxbty.github.io/dubbo-website/en/overview/notices/log4j/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/overview/notices/log4j/</guid><description>
 &lt;p>Recently, the mainstream logging component &lt;a href="https://logging.apache.org/log4j/2.x/">log4j2&lt;/a> broke out &lt;a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-44228">security vulnerability CVE-2021-44228&lt;/a>.&lt;/p>
 &lt;p>The following is a summary of the impact of vulnerability CVE-2021-44228 on the Apache Dubbo framework and user response guidelines.&lt;/p>
 &lt;h2 id="dubbo-scope-of-influence">Dubbo scope of influence&lt;/h2>

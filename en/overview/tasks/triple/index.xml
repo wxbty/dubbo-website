@@ -1,10 +1,10 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Triple Usage Example</title><link>https://wxbty.github.io/en/overview/tasks/triple/</link><description>Recent content in Triple Usage Example on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://wxbty.github.io/en/overview/tasks/triple/index.xml" rel="self" type="application/rss+xml"/><item><title>Overview: Using IDL + Protobuf to define services across languages</title><link>https://wxbty.github.io/en/overview/tasks/triple/idl/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/en/overview/tasks/triple/idl/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Triple Usage Example</title><link>https://wxbty.github.io/dubbo-website/en/overview/tasks/triple/</link><description>Recent content in Triple Usage Example on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://wxbty.github.io/dubbo-website/en/overview/tasks/triple/index.xml" rel="self" type="application/rss+xml"/><item><title>Overview: Using IDL + Protobuf to define services across languages</title><link>https://wxbty.github.io/dubbo-website/en/overview/tasks/triple/idl/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/overview/tasks/triple/idl/</guid><description>
 &lt;p>Service is the core concept in Dubbo. A service represents a set of RPC methods. Service is the basic unit of user-oriented programming and service discovery mechanism. The basic process of Dubbo development is: user-defined RPC service, through agreed configuration
 Declare RPC as a Dubbo service, and then program based on the service API. For the service provider, it provides a specific implementation of the RPC service, while for the service consumer, it uses specific data to initiate a service call.&lt;/p>
 &lt;p>The following describes how to quickly develop Dubbo services from three aspects: defining services, compiling services, configuring and loading services.&lt;/p>
 &lt;p>For specific use cases, please refer to: [dubbo-samples-triple/stub](&lt;a href="https://github.com/apache/dubbo-samples/tree/master/3-extensions/protocol/dubbo-samples-triple/src/main/java">https://github.com/apache/dubbo-samples/tree/master/3-extensions/protocol/dubbo-samples-triple/src/main/java&lt;/a> /org/apache/dubbo/sample/tri/stub);&lt;/p>
 &lt;h2 id="define-the-service">Define the service&lt;/h2>
-&lt;p>Dubbo3 recommends using IDL to define cross-language services. If you are more accustomed to using language-specific service definition methods, please move to &lt;a href="https://wxbty.github.io/en/docs3-v2/">Multi-language SDK&lt;/a> to view.&lt;/p>
+&lt;p>Dubbo3 recommends using IDL to define cross-language services. If you are more accustomed to using language-specific service definition methods, please move to &lt;a href="https://wxbty.github.io/dubbo-website/en/docs3-v2/">Multi-language SDK&lt;/a> to view.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-text" data-lang="text">&lt;span style="display:flex;">&lt;span>syntax = &amp;#34;proto3&amp;#34;;
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>option java_multiple_files = true;
@@ -185,7 +185,7 @@ Basically, the implementation of all languages in Dubbo ensures that the proxy e
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>gxlog.&lt;span style="color:#268bd2">CInfo&lt;/span>(&lt;span style="color:#2aa198">&amp;#34;response result: %v\n&amp;#34;&lt;/span>, user)
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Overview: Pojo Serialization Compatibility Mode</title><link>https://wxbty.github.io/en/overview/tasks/triple/wrap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/en/overview/tasks/triple/wrap/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Overview: Pojo Serialization Compatibility Mode</title><link>https://wxbty.github.io/dubbo-website/en/overview/tasks/triple/wrap/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/overview/tasks/triple/wrap/</guid><description>
 &lt;p>This tutorial will build a simple project from scratch to demonstrate how to use Dubbo Triple based on POJO, and upgrade to the Triple protocol while the application does not change the existing interface definition. **In this mode, Triple is used in the same way as Dubbo protocol. **&lt;/p>
 &lt;p>For specific use cases, please refer to: [dubbo-samples-triple/pojo](&lt;a href="https://github.com/apache/dubbo-samples/tree/master/3-extensions/protocol/dubbo-samples-triple/src/main/java">https://github.com/apache/dubbo-samples/tree/master/3-extensions/protocol/dubbo-samples-triple/src/main/java&lt;/a> /org/apache/dubbo/sample/tri/pojo);&lt;/p>
 &lt;h3 id="precondition">precondition&lt;/h3>
@@ -346,7 +346,7 @@ Basically, the implementation of all languages in Dubbo ensures that the proxy e
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">&amp;lt;artifactId&amp;gt;&lt;/span>protobuf-java&lt;span style="color:#268bd2">&amp;lt;/artifactId&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">&amp;lt;version&amp;gt;&lt;/span>3.19.4&lt;span style="color:#268bd2">&amp;lt;/version&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">&amp;lt;/dependency&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Overview: Streaming communication mode</title><link>https://wxbty.github.io/en/overview/tasks/triple/streaming/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/en/overview/tasks/triple/streaming/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Overview: Streaming communication mode</title><link>https://wxbty.github.io/dubbo-website/en/overview/tasks/triple/streaming/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/overview/tasks/triple/streaming/</guid><description>
 &lt;p>For specific use cases, please refer to: [dubbo-samples-triple/pojo](&lt;a href="https://github.com/apache/dubbo-samples/tree/master/3-extensions/protocol/dubbo-samples-triple/src/main/java">https://github.com/apache/dubbo-samples/tree/master/3-extensions/protocol/dubbo-samples-triple/src/main/java&lt;/a> /org/apache/dubbo/sample/tri/pojo);&lt;/p>
 &lt;h2 id="open-the-new-feature-of-triple---stream-stream">Open the new feature of Triple - Stream (stream)&lt;/h2>
 &lt;p>Stream is a new call type provided by Dubbo3. It is recommended to use stream in the following scenarios:&lt;/p>
@@ -358,11 +358,11 @@ Basically, the implementation of all languages in Dubbo ensures that the proxy e
 &lt;p>Stream is divided into the following three types:&lt;/p>
 &lt;ul>
 &lt;li>SERVER_STREAM (server stream)
-&lt;img src="https://wxbty.github.io/imgs/v3/migration/tri/migrate-server-stream.png" alt="SERVER_STREAM">&lt;/li>
+&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/migration/tri/migrate-server-stream.png" alt="SERVER_STREAM">&lt;/li>
 &lt;li>CLIENT_STREAM (client stream)
-&lt;img src="https://wxbty.github.io/imgs/v3/migration/tri/migrate-client-stream.png" alt="CLIENT_STREAM">&lt;/li>
+&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/migration/tri/migrate-client-stream.png" alt="CLIENT_STREAM">&lt;/li>
 &lt;li>BIDIRECTIONAL_STREAM (bidirectional stream)
-&lt;img src="https://wxbty.github.io/imgs/v3/migration/tri/migrate-bi-stream.png" alt="BIDIRECTIONAL_STREAM">&lt;/li>
+&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/migration/tri/migrate-bi-stream.png" alt="BIDIRECTIONAL_STREAM">&lt;/li>
 &lt;/ul>
 &lt;blockquote>
 &lt;p>Due to the limitations of the &lt;code>java&lt;/code> language, the implementation of BIDIRECTIONAL_STREAM and CLIENT_STREAM is the same.&lt;/p>

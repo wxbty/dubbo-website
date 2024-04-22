@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – 提案</title><link>https://wxbty.github.io/zh-cn/overview/reference/proposals/</link><description>Recent content in 提案 on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://wxbty.github.io/zh-cn/overview/reference/proposals/index.xml" rel="self" type="application/rss+xml"/><item><title>Overview: Rest 协议</title><link>https://wxbty.github.io/zh-cn/overview/reference/proposals/protocol-http/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/overview/reference/proposals/protocol-http/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – 提案</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/reference/proposals/</link><description>Recent content in 提案 on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://wxbty.github.io/dubbo-website/zh-cn/overview/reference/proposals/index.xml" rel="self" type="application/rss+xml"/><item><title>Overview: Rest 协议</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/reference/proposals/protocol-http/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/overview/reference/proposals/protocol-http/</guid><description>
 &lt;p>本文将介绍 Dubbo 的 REST/HTTP 协议设计。&lt;/p>
 &lt;h2 id="restprotocol设计">RestProtocol 设计&lt;/h2>
 &lt;h3 id="原版本dubborest">原版本dubbo rest&lt;/h3>
@@ -563,7 +563,7 @@ return context;
 &lt;p>基于netty实现支持http协议的NettyServer&lt;/p>
 &lt;p>无注解协议定义&lt;/p>
 &lt;p>官网场景补充&lt;/p>
-&lt;h2 id="rest使用说明文档及demo">Rest使用说明文档及demo&lt;/h2></description></item><item><title>Overview: 注册中心、配置中心和元数据中心</title><link>https://wxbty.github.io/zh-cn/overview/reference/proposals/registry-config-meta/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/overview/reference/proposals/registry-config-meta/</guid><description>
+&lt;h2 id="rest使用说明文档及demo">Rest使用说明文档及demo&lt;/h2></description></item><item><title>Overview: 注册中心、配置中心和元数据中心</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/reference/proposals/registry-config-meta/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/overview/reference/proposals/registry-config-meta/</guid><description>
 &lt;h2 id="三中心逻辑架构">三中心逻辑架构&lt;/h2>
 &lt;blockquote>
 &lt;p>本节侧重描述传统模式下的 Dubbo 部署架构，在云原生背景下的部署架构会有些变化，主要体现在基础设施（Kubernetes、Service Mesh等）会承担更多的职责，
@@ -586,7 +586,7 @@ Dubbo 定义了一些中心化组件，这包括：&lt;/p>
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/v3/concepts/threecenters.png" alt="threecenters">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/concepts/threecenters.png" alt="threecenters">&lt;/p>
 &lt;p>上图完整的描述了 Dubbo 微服务组件与各个中心的交互过程。&lt;/p>
 &lt;p>以上三个中心并不是运行 Dubbo 的必要条件，用户完全可以根据自身业务情况决定只启用其中一个或多个，以达到简化部署的目的。通常情况下，所有用户都会以独立的注册中心
 以开始 Dubbo 服务开发，而配置中心、元数据中心则会在微服务演进的过程中逐步的按需被引入进来。&lt;/p>
@@ -604,7 +604,7 @@ Dubbo 定义了一些中心化组件，这包括：&lt;/p>
 &lt;/li>
 &lt;/ul>
 &lt;p>而注册中心并不依赖于配置中心和元数据中心，如下图所示：&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/v3/concepts/centers-registry.png" alt="centers-registry">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/concepts/centers-registry.png" alt="centers-registry">&lt;/p>
 &lt;p>该图中没有部署配置中心和元数据中心，在Dubbo中会默认将注册中心的实例同时作为配置中心和元数据中心，这是Dubbo的默认行为，如果确实不需要配置中心或者元数据中心的能力，可在配置中关闭，在注册中心的配置中有两个配置分别为use-as-config-center和use-as-metadata-center，将配置置为false即可。&lt;/p>
 &lt;h3 id="元数据中心">元数据中心&lt;/h3>
 &lt;p>元数据中心在2.7.x版本开始支持，随着应用级别的服务注册和服务发现在Dubbo中落地，元数据中心也变的越来越重要。在以下几种情况下会需要部署元数据中心：&lt;/p>
@@ -614,11 +614,11 @@ Dubbo 定义了一些中心化组件，这包括：&lt;/p>
 &lt;/ol>
 &lt;p>如果有以上两种需求，都可以选择部署元数据中心，并通过Dubbo的配置来集成该元数据中心。&lt;/p>
 &lt;p>元数据中心并不依赖于注册中心和配置中心，用户可以自由选择是否集成和部署元数据中心，如下图所示：&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/v3/concepts/centers-metadata.png" alt="centers-metadata">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/concepts/centers-metadata.png" alt="centers-metadata">&lt;/p>
 &lt;p>该图中不配备配置中心，意味着可以不需要全局管理配置的能力。该图中不配备注册中心，意味着可能采用了Dubbo mesh的方案，也可能不需要进行服务注册，仅仅接收直连模式的服务调用。&lt;/p>
 &lt;h3 id="配置中心">配置中心&lt;/h3>
 &lt;p>配置中心与其他两大中心不同，它无关于接口级还是应用级，它与接口并没有对应关系，它仅仅与配置数据有关，即使没有部署注册中心和元数据中心，配置中心也能直接被接入到Dubbo应用服务中。在整个部署架构中，整个集群内的实例（无论是Provider还是Consumer）都将会共享该配置中心集群中的配置，如下图所示：
-&lt;img src="https://wxbty.github.io/imgs/v3/concepts/centers-config.png" alt="centers-config">&lt;/p>
+&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/concepts/centers-config.png" alt="centers-config">&lt;/p>
 &lt;p>该图中不配备注册中心，意味着可能采用了Dubbo mesh的方案，也可能不需要进行服务注册，仅仅接收直连模式的服务调用。&lt;/p>
 &lt;p>该图中不配备元数据中心，意味着Consumer可以从Provider暴露的MetadataService获取服务元数据，从而实现RPC调用&lt;/p>
 &lt;h3 id="保证三大中心高可用的部署架构">保证三大中心高可用的部署架构&lt;/h3>
@@ -636,16 +636,16 @@ Dubbo 定义了一些中心化组件，这包括：&lt;/p>
 &lt;/li>
 &lt;/ul>
 &lt;p>拿注册中心举例，下面是一个多活场景的部署架构示意图：&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/v3/concepts/multiple-registry-deployment-architecture.png" alt="multiple-registry-deployment-architecture">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/concepts/multiple-registry-deployment-architecture.png" alt="multiple-registry-deployment-architecture">&lt;/p>
 &lt;h2 id="三中心物理部署架构">三中心物理部署架构&lt;/h2>
 &lt;p>&lt;img src="#" alt="同一集群，承担三个中心职责">&lt;/p>
 &lt;h2 id="不同场景下的推荐使用方式">不同场景下的推荐使用方式&lt;/h2>
 &lt;ul>
 &lt;li>只配置 registry，默认作为 metadata、config-center&lt;/li>
 &lt;li>registry、metadata、config-center 使用不同的集群甚至是不同的扩展实现，此时需要独立配置 metadata 或 config-center&lt;/li>
-&lt;/ul></description></item><item><title>Overview: Dubbo Admin 控制面总体架构设计</title><link>https://wxbty.github.io/zh-cn/overview/reference/proposals/admin/</link><pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/overview/reference/proposals/admin/</guid><description>
+&lt;/ul></description></item><item><title>Overview: Dubbo Admin 控制面总体架构设计</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/reference/proposals/admin/</link><pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/overview/reference/proposals/admin/</guid><description>
 &lt;h2 id="1-dubbo-整体架构">1 Dubbo 整体架构&lt;/h2>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/v3/reference/admin/architecture.png" alt="DubboAdmin架构图.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/reference/admin/architecture.png" alt="DubboAdmin架构图.png">&lt;/p>
 &lt;p>架构上分为：&lt;strong>服务治理抽象控制面&lt;/strong> 和 &lt;strong>Dubbo 数据面&lt;/strong> 。&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>服务治理控制面&lt;/strong>。控制面包含注册中心、流量管控策略、Admin 控制台、Istio、OpenSergo 等组件。&lt;/li>
@@ -669,7 +669,7 @@ Dubbo 定义了一些中心化组件，这包括：&lt;/p>
 &lt;li>&lt;a href="https://cn.dubbo.apache.org/zh-cn/overview/quickstart/rust/">Rust&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h2 id="3-控制面方案">3 控制面方案&lt;/h2>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/v3/reference/admin/architecture-draft.png" alt="Dubbo架构草图.jpeg">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/reference/admin/architecture-draft.png" alt="Dubbo架构草图.jpeg">&lt;/p>
 &lt;h3 id="31-确定-dubbo-微服务治理体系的核心能力">3.1 确定 Dubbo 微服务治理体系的核心能力&lt;/h3>
 &lt;ul>
 &lt;li>服务发现&lt;/li>
@@ -679,7 +679,7 @@ Dubbo 定义了一些中心化组件，这包括：&lt;/p>
 &lt;li>可视化控制台&lt;/li>
 &lt;/ul>
 &lt;h3 id="32-统一服务治理层接入方式">3.2 统一服务治理层接入方式&lt;/h3>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/v3/reference/admin/address-discovery.png" alt="address-discovery.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/reference/admin/address-discovery.png" alt="address-discovery.png">&lt;/p>
 &lt;p>**对于任何微服务部署模式，Dubbo 数据面统一面向 **&lt;code>**dubbo://hopst:ip**&lt;/code>&lt;strong>抽象服务治理控制面编程。&lt;/strong>&lt;/p>
 &lt;p>具体工作流程：&lt;/p>
 &lt;ol>
@@ -693,12 +693,12 @@ Dubbo 定义了一些中心化组件，这包括：&lt;/p>
 &lt;li>传统 Nacos 服务发现与治理模式&lt;/li>
 &lt;li>控制面可按需拉起更多的的组件，如 prometheus 等&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/v3/reference/admin/traditional.png" alt="traditional.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/reference/admin/traditional.png" alt="traditional.png">&lt;/p>
 &lt;h4 id="场景二kubernetes-service">场景二：Kubernetes Service&lt;/h4>
 &lt;ol>
 &lt;li>&lt;strong>Istio 模式&lt;/strong>&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/v3/reference/admin/kubernetes-service.png" alt="kubernetes-service.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/reference/admin/kubernetes-service.png" alt="kubernetes-service.png">&lt;/p>
 &lt;ol start="2">
 &lt;li>&lt;strong>其他对等模式 Nacos/OpenSergo&lt;/strong>&lt;/li>
 &lt;/ol>
@@ -708,17 +708,17 @@ Dubbo 定义了一些中心化组件，这包括：&lt;/p>
 &lt;li>1&lt;/li>
 &lt;li>2&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/v3/reference/admin/multi-cluster-ingress.png" alt="multi-cluster-ingress.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/reference/admin/multi-cluster-ingress.png" alt="multi-cluster-ingress.png">&lt;/p>
 &lt;p>集群处于同一网络空间&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/v3/reference/admin/multi-cluster.png" alt="multi-cluster.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/reference/admin/multi-cluster.png" alt="multi-cluster.png">&lt;/p>
 &lt;h3 id="34-admin-控制面">3.4 Admin 控制面&lt;/h3>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/v3/reference/admin/admin-core-components.png" alt="admin-core-components
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/reference/admin/admin-core-components.png" alt="admin-core-components
 .png">&lt;/p>
 &lt;h3 id="35-其他配套基础设施与工具">3.5 其他配套基础设施与工具&lt;/h3>
 &lt;h4 id="用户控制台-console">用户控制台 Console&lt;/h4>
 &lt;p>交互地址：&lt;a href="https://qedzyx.axshare.com/#id=2pqh0k&amp;amp;p=admin__&amp;amp;g=1">https://qedzyx.axshare.com/#id=2pqh0k&amp;amp;p=admin__&amp;amp;g=1&lt;/a>&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/v3/reference/admin/console-ui.png" alt="console-ui.png">&lt;/p>
-&lt;h4 id="dubboctl--helm">Dubboctl &amp;amp; Helm&lt;/h4></description></item><item><title>Overview: 指标埋点</title><link>https://wxbty.github.io/zh-cn/overview/reference/proposals/metrics/</link><pubDate>Mon, 20 Feb 2023 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/overview/reference/proposals/metrics/</guid><description>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/reference/admin/console-ui.png" alt="console-ui.png">&lt;/p>
+&lt;h4 id="dubboctl--helm">Dubboctl &amp;amp; Helm&lt;/h4></description></item><item><title>Overview: 指标埋点</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/reference/proposals/metrics/</link><pubDate>Mon, 20 Feb 2023 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/overview/reference/proposals/metrics/</guid><description>
 &lt;h1 id="概述">概述&lt;/h1>
 &lt;h2 id="1-指标接入说明">1. 指标接入说明&lt;/h2>
 &lt;h2 id="2-指标体系设计">2. 指标体系设计&lt;/h2>
@@ -735,7 +735,7 @@ Dubbo 定义了一些中心化组件，这包括：&lt;/p>
 &lt;li>使用micrometer，在Collector中使用基本类型代表指标，如Long、Double等，并在dubbo-metrics-api中引入micrometer，由micrometer对内部指标进行转换&lt;/li>
 &lt;/ul>
 &lt;h2 id="4-数据流转">4. 数据流转&lt;/h2>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/docs3-v2/java-sdk/observability/dataflow.png" alt="img.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/docs3-v2/java-sdk/observability/dataflow.png" alt="img.png">&lt;/p>
 &lt;h2 id="5-目标">5. 目标&lt;/h2>
 &lt;p>指标接口将提供一个 MetricsService，该 Service 不仅提供柔性服务所的接口级数据，也提供所有指标的查询方式，其中方法级指标的查询的接口可按如下方式声明&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">public&lt;/span> &lt;span style="color:#268bd2">interface&lt;/span> &lt;span style="color:#268bd2">MetricsService&lt;/span> {
@@ -794,7 +794,7 @@ Dubbo 定义了一些中心化组件，这包括：&lt;/p>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="指标收集">指标收集&lt;/h1>
 &lt;h2 id="1-嵌入位置">1. 嵌入位置&lt;/h2>
 &lt;p>Dubbo 架构图如下
-&lt;img src="https://wxbty.github.io/imgs/docs3-v2/java-sdk/observability/dubbo.png" alt="img.png">&lt;/p>
+&lt;img src="https://wxbty.github.io/dubbo-website/imgs/docs3-v2/java-sdk/observability/dubbo.png" alt="img.png">&lt;/p>
 &lt;p>在 provider 中添加一层 MetricsFilter 重写 invoke 方法嵌入调用链路用于收集指标，用 try-catch-finally 处理，核心代码如下&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">@Activate&lt;/span>(group &lt;span style="color:#719e07">=&lt;/span> PROVIDER, order &lt;span style="color:#719e07">=&lt;/span> &lt;span style="color:#719e07">-&lt;/span>1)
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">public&lt;/span> &lt;span style="color:#268bd2">class&lt;/span> &lt;span style="color:#268bd2">MetricsFilter&lt;/span> &lt;span style="color:#268bd2">implements&lt;/span> Filter, ScopeModelAware {
@@ -1084,7 +1084,7 @@ Dubbo 定义了一些中心化组件，这包括：&lt;/p>
 每次写入指标数据时，会将数据分别写入6个bucket内，每隔两分钟移动一个bucket并且清除原来bucket内的数据
 读取指标时，读取当前current指向的bucket，以达到滑动窗口的效果
 具体如下图所示，实现了当前 bucket 内存储了配置中设置的 bucket 生命周期内的数据，即近期数据
-&lt;img src="https://wxbty.github.io/imgs/docs3-v2/java-sdk/observability/aggre.png" alt="img_1.png">&lt;/p>
+&lt;img src="https://wxbty.github.io/dubbo-website/imgs/docs3-v2/java-sdk/observability/aggre.png" alt="img_1.png">&lt;/p>
 &lt;p>在每个bucket内，使用&lt;strong>TDigest 算法&lt;/strong>计算分位数指标&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;strong>TDigest 算法&lt;/strong>（极端分位精确度高，如p1 p99，中间分位精确度低，如p50），相关资料如下&lt;/p>
@@ -1200,7 +1200,7 @@ Dubbo 定义了一些中心化组件，这包括：&lt;/p>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="可视化展示">可视化展示&lt;/h2>
-&lt;p>目前推荐使用 Prometheus 来进行服务监控，Grafana 来展示指标数据。可以通过案例来快速入门 &lt;a href="../../../tasks/observability/grafana/">Dubbo 可视化监控&lt;/a>。&lt;/p></description></item><item><title>Overview: 自适应负载均衡与限流</title><link>https://wxbty.github.io/zh-cn/overview/reference/proposals/heuristic-flow-control/</link><pubDate>Mon, 30 Jan 2023 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/overview/reference/proposals/heuristic-flow-control/</guid><description>
+&lt;p>目前推荐使用 Prometheus 来进行服务监控，Grafana 来展示指标数据。可以通过案例来快速入门 &lt;a href="../../../tasks/observability/grafana/">Dubbo 可视化监控&lt;/a>。&lt;/p></description></item><item><title>Overview: 自适应负载均衡与限流</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/reference/proposals/heuristic-flow-control/</link><pubDate>Mon, 30 Jan 2023 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/overview/reference/proposals/heuristic-flow-control/</guid><description>
 &lt;h1 id="整体介绍">整体介绍&lt;/h1>
 &lt;p>本文所说的柔性服务主要是指&lt;strong>consumer端的负载均衡&lt;/strong>和&lt;strong>provider端的限流&lt;/strong>两个功能。在之前的dubbo版本中，&lt;/p>
 &lt;ul>
@@ -1219,10 +1219,10 @@ Dubbo 定义了一些中心化组件，这包括：&lt;/p>
 &lt;p>基于以上分析，我们提出了两种新的负载均衡算法。一种是同样基于公平性考虑的单纯 &lt;code>P2C&lt;/code> 算法，另一种是基于自适应的方法 &lt;code>adaptive&lt;/code>，其试图自适应的衡量 provider 端机器的吞吐能力，然后将流量尽可能分配到吞吐能力高的机器上，以提高系统整体的性能。&lt;/p>
 &lt;h4 id="总体效果">总体效果&lt;/h4>
 &lt;p>对于负载均衡部分的有效性实验在两个不同的情况下进行的，分别是提供端机器配置比较均衡和提供端机器配置差距较大的情况。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/overview/reference/proposals/heuristic-flow-control/1675265258687-c3df68a8-80e0-4311-816c-63480494850c.png" alt="image.png">&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/overview/reference/proposals/heuristic-flow-control/1675265271198-5b045ced-8524-42a2-8b34-d7edbbd1f232.png" alt="image.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/overview/reference/proposals/heuristic-flow-control/1675265258687-c3df68a8-80e0-4311-816c-63480494850c.png" alt="image.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/overview/reference/proposals/heuristic-flow-control/1675265271198-5b045ced-8524-42a2-8b34-d7edbbd1f232.png" alt="image.png">&lt;/p>
 &lt;h4 id="使用方法">使用方法&lt;/h4>
-&lt;p>&lt;a href="https://wxbty.github.io/zh-cn/overview/mannual/java-sdk/advanced-features-and-usage/performance/loadbalance">Dubbo Java 实现的使用方法&lt;/a> 与原本的负载均衡方法相同。只需要在consumer端将&amp;quot;loadbalance&amp;quot;设置为&amp;quot;p2c&amp;quot;或者&amp;quot;adaptive&amp;quot;即可。&lt;/p>
+&lt;p>&lt;a href="https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/java-sdk/advanced-features-and-usage/performance/loadbalance">Dubbo Java 实现的使用方法&lt;/a> 与原本的负载均衡方法相同。只需要在consumer端将&amp;quot;loadbalance&amp;quot;设置为&amp;quot;p2c&amp;quot;或者&amp;quot;adaptive&amp;quot;即可。&lt;/p>
 &lt;h4 id="代码结构">代码结构&lt;/h4>
 &lt;p>负载均衡部分的算法实现只需要在原本负载均衡框架内继承 LoadBalance接口即可。&lt;/p>
 &lt;h3 id="原理介绍">原理介绍&lt;/h3>
@@ -1238,7 +1238,7 @@ Dubbo 定义了一些中心化组件，这包括：&lt;/p>
 &lt;ol>
 &lt;li>
 &lt;p>cpuLoad
-&lt;img src="https://wxbty.github.io/imgs/overview/reference/proposals/heuristic-flow-control/26808016bc7f1ee83ab425e308074f17.svg" alt="img">。该指标在provider端机器获得，并通过invocation的attachment传递给consumer端。&lt;/p>
+&lt;img src="https://wxbty.github.io/dubbo-website/imgs/overview/reference/proposals/heuristic-flow-control/26808016bc7f1ee83ab425e308074f17.svg" alt="img">。该指标在provider端机器获得，并通过invocation的attachment传递给consumer端。&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>rt
@@ -1262,11 +1262,11 @@ currentTime为最后一次计算load时的时间，初始化为currentProviderTi
 &lt;/li>
 &lt;li>
 &lt;p>multiple
-&lt;img src="https://wxbty.github.io/imgs/overview/reference/proposals/heuristic-flow-control/b60f036bd026b92129df8a6476922cc8.svg" alt="img">&lt;/p>
+&lt;img src="https://wxbty.github.io/dubbo-website/imgs/overview/reference/proposals/heuristic-flow-control/b60f036bd026b92129df8a6476922cc8.svg" alt="img">&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>lastLatency
-&lt;img src="https://wxbty.github.io/imgs/overview/reference/proposals/heuristic-flow-control/f2abbc771049cf4f3e492e93a258d699.svg" alt="img">&lt;img src="https://wxbty.github.io/imgs/overview/reference/proposals/heuristic-flow-control/8fb1af970b995232ebed2764a5706aab.svg" alt="img">&lt;/p>
+&lt;img src="https://wxbty.github.io/dubbo-website/imgs/overview/reference/proposals/heuristic-flow-control/f2abbc771049cf4f3e492e93a258d699.svg" alt="img">&lt;img src="https://wxbty.github.io/dubbo-website/imgs/overview/reference/proposals/heuristic-flow-control/8fb1af970b995232ebed2764a5706aab.svg" alt="img">&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>beta
@@ -1274,12 +1274,12 @@ currentTime为最后一次计算load时的时间，初始化为currentProviderTi
 &lt;/li>
 &lt;li>
 &lt;p>ewma
-lastLatency的平滑值&lt;img src="https://wxbty.github.io/imgs/overview/reference/proposals/heuristic-flow-control/c26fdbae56f3a06c46434ae91185a3d6.svg" alt="img">&lt;/p>
+lastLatency的平滑值&lt;img src="https://wxbty.github.io/dubbo-website/imgs/overview/reference/proposals/heuristic-flow-control/c26fdbae56f3a06c46434ae91185a3d6.svg" alt="img">&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>inflight
 inflight为consumer端还未返回的请求的数量。
-&lt;img src="https://wxbty.github.io/imgs/overview/reference/proposals/heuristic-flow-control/f429c4726dec484e70ee73e6a37c88dd.svg" alt="img">&lt;/p>
+&lt;img src="https://wxbty.github.io/dubbo-website/imgs/overview/reference/proposals/heuristic-flow-control/f429c4726dec484e70ee73e6a37c88dd.svg" alt="img">&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>load
@@ -1287,7 +1287,7 @@ inflight为consumer端还未返回的请求的数量。
 否则,&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/overview/reference/proposals/heuristic-flow-control/0f56746b3643dc3ed0e019c24ad5f377.svg" alt="img">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/overview/reference/proposals/heuristic-flow-control/0f56746b3643dc3ed0e019c24ad5f377.svg" alt="img">&lt;/p>
 &lt;h5 id="算法实现">算法实现&lt;/h5>
 &lt;p>依然是基于P2C算法。&lt;/p>
 &lt;ol>
@@ -1306,10 +1306,10 @@ inflight为consumer端还未返回的请求的数量。
 &lt;h3 id="使用介绍-1">使用介绍&lt;/h3>
 &lt;h4 id="总体效果-1">总体效果&lt;/h4>
 &lt;p>自适应限流部分的有效性实验我们在提供端机器配置尽可能大的情况下进行，并且为了凸显效果，在实验中我们将单次请求的复杂度提高，将超时时间尽可能设置的大，并且开启消费端的重试功能。
-&lt;img src="https://wxbty.github.io/imgs/overview/reference/proposals/heuristic-flow-control/1675267798831-3da99681-577f-4e5a-b122-b87c8aba7299.png" alt="image.png">&lt;/p>
+&lt;img src="https://wxbty.github.io/dubbo-website/imgs/overview/reference/proposals/heuristic-flow-control/1675267798831-3da99681-577f-4e5a-b122-b87c8aba7299.png" alt="image.png">&lt;/p>
 &lt;h4 id="使用方法-1">使用方法&lt;/h4>
 &lt;p>要确保服务端存在多个节点，并且消费端开启重试策略的前提下，限流功能才能更好的发挥作用。&lt;/p>
-&lt;p>&lt;a href="https://wxbty.github.io/zh-cn/overview/mannual/java-sdk/advanced-features-and-usage/performance/loadbalance">Dubbo Java 实现的自适应限流开启方法&lt;/a> 与静态的最大并发值设置类似，只需在provider端将&amp;quot;flowcontrol&amp;quot;设置为&amp;quot;autoConcurrencyLimier&amp;quot;或者&amp;quot;heuristicSmoothingFlowControl&amp;quot;即可。&lt;/p>
+&lt;p>&lt;a href="https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/java-sdk/advanced-features-and-usage/performance/loadbalance">Dubbo Java 实现的自适应限流开启方法&lt;/a> 与静态的最大并发值设置类似，只需在provider端将&amp;quot;flowcontrol&amp;quot;设置为&amp;quot;autoConcurrencyLimier&amp;quot;或者&amp;quot;heuristicSmoothingFlowControl&amp;quot;即可。&lt;/p>
 &lt;h4 id="代码结构-1">代码结构&lt;/h4>
 &lt;ol>
 &lt;li>FlowControlFilter：在provider端的filter负责根据限流算法的结果来对provider端进行限流功能。&lt;/li>
@@ -1347,7 +1347,7 @@ noLoadLatency是单纯处理任务的延时，不包括排队时间。这是服�
 &lt;li>
 &lt;p>maxConcurrency
 计算得到的当前服务提供端的最大并发值。
-&lt;img src="https://wxbty.github.io/imgs/overview/reference/proposals/heuristic-flow-control/f40e48ebdb49648cf942714609808c52.svg" alt="img">&lt;/p>
+&lt;img src="https://wxbty.github.io/dubbo-website/imgs/overview/reference/proposals/heuristic-flow-control/f40e48ebdb49648cf942714609808c52.svg" alt="img">&lt;/p>
 &lt;/li>
 &lt;/ol>
 &lt;h5 id="算法实现-1">算法实现&lt;/h5>
@@ -1390,11 +1390,11 @@ exploreRatio=max(MinExploreRatio,exploreRatio-0.02)&lt;/p>
 &lt;li>
 &lt;p>maxQPS
 窗口周期内QPS的最大值。
-&lt;img src="https://wxbty.github.io/imgs/overview/reference/proposals/heuristic-flow-control/d5cf045bc17267befc176f3d76273267.svg" alt="img">&lt;/p>
+&lt;img src="https://wxbty.github.io/dubbo-website/imgs/overview/reference/proposals/heuristic-flow-control/d5cf045bc17267befc176f3d76273267.svg" alt="img">&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>noLoadLatency
-&lt;img src="https://wxbty.github.io/imgs/overview/reference/proposals/heuristic-flow-control/8c700211f5c7a13403e3088df9cd9f43.svg" alt="img">&lt;/p>
+&lt;img src="https://wxbty.github.io/dubbo-website/imgs/overview/reference/proposals/heuristic-flow-control/8c700211f5c7a13403e3088df9cd9f43.svg" alt="img">&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>halfSampleIntervalMs
@@ -1403,12 +1403,12 @@ exploreRatio=max(MinExploreRatio,exploreRatio-0.02)&lt;/p>
 &lt;li>
 &lt;p>resetLatencyUs
 下一次重置所有值的时间戳，这里的重置包括窗口内值和noLoadLatency。单位是微秒。初始为0.
-&lt;img src="https://wxbty.github.io/imgs/overview/reference/proposals/heuristic-flow-control/1af4a6134ede96985302ee8a27f93df7.svg" alt="img">&lt;/p>
+&lt;img src="https://wxbty.github.io/dubbo-website/imgs/overview/reference/proposals/heuristic-flow-control/1af4a6134ede96985302ee8a27f93df7.svg" alt="img">&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>remeasureStartUs
 下一次重置窗口的开始时间。
-&lt;img src="https://wxbty.github.io/imgs/overview/reference/proposals/heuristic-flow-control/c7da904b9a4c890456499b09d01938d3.svg" alt="img">&lt;/p>
+&lt;img src="https://wxbty.github.io/dubbo-website/imgs/overview/reference/proposals/heuristic-flow-control/c7da904b9a4c890456499b09d01938d3.svg" alt="img">&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>startSampleTimeUs
@@ -1437,12 +1437,12 @@ exploreRatio=max(MinExploreRatio,exploreRatio-0.02)&lt;/p>
 &lt;li>
 &lt;p>qps
 在该时间窗口内的qps值。
-&lt;img src="https://wxbty.github.io/imgs/overview/reference/proposals/heuristic-flow-control/c0e8b30fc1ecf9438bc2d574fb3da8b6.svg" alt="img">&lt;/p>
+&lt;img src="https://wxbty.github.io/dubbo-website/imgs/overview/reference/proposals/heuristic-flow-control/c0e8b30fc1ecf9438bc2d574fb3da8b6.svg" alt="img">&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>avgLatency
 窗口内的平均latency。
-&lt;img src="https://wxbty.github.io/imgs/overview/reference/proposals/heuristic-flow-control/3a3acfdb05be7d3985835d43e492d3b9.svg" alt="img">&lt;/p>
+&lt;img src="https://wxbty.github.io/dubbo-website/imgs/overview/reference/proposals/heuristic-flow-control/3a3acfdb05be7d3985835d43e492d3b9.svg" alt="img">&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>maxConcurrency
@@ -1451,7 +1451,7 @@ exploreRatio=max(MinExploreRatio,exploreRatio-0.02)&lt;/p>
 &lt;li>
 &lt;p>nextMaxConcurrency
 当前窗口计算出的下一个周期的最大并发值。
-&lt;img src="https://wxbty.github.io/imgs/overview/reference/proposals/heuristic-flow-control/09852cc0ef125b43a37719796cb8baae.svg" alt="img">&lt;/p>
+&lt;img src="https://wxbty.github.io/dubbo-website/imgs/overview/reference/proposals/heuristic-flow-control/09852cc0ef125b43a37719796cb8baae.svg" alt="img">&lt;/p>
 &lt;/li>
 &lt;/ol>
 &lt;h5 id="littles-law">Little&amp;rsquo;s Law&lt;/h5>
@@ -1465,14 +1465,14 @@ exploreRatio=max(MinExploreRatio,exploreRatio-0.02)&lt;/p>
 &lt;p>AutoConcurrencyLimier是基于窗口的。每当窗口内积累了一定量的采样数据时，才利用窗口内的数据来更新得到maxConcurrency。
 其次，利用exploreRatio来对剩余的容量进行探索。&lt;/p>
 &lt;p>另外，每隔一段时间都会自动缩小max_concurrency并持续一段时间，以处理noLoadLatency上涨的情况。因为估计noLoadLatency时必须先让服务处于低负载的状态，因此对maxConcurrency的缩小是难以避免的。&lt;/p>
-&lt;p>由于 max_concurrency &amp;lt; concurrency 时，服务会拒绝掉所有的请求，限流算法将 &amp;ldquo;排空所有的经历过排队的等待请求的时间&amp;rdquo; 设置为 2*latency，以确保 minLatency 的样本绝大部分时没有经过排队等待的。&lt;/p></description></item><item><title>Overview: Dubbo3 应用级服务发现设计</title><link>https://wxbty.github.io/zh-cn/overview/reference/proposals/service-discovery/</link><pubDate>Mon, 30 Jan 2023 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/overview/reference/proposals/service-discovery/</guid><description>
+&lt;p>由于 max_concurrency &amp;lt; concurrency 时，服务会拒绝掉所有的请求，限流算法将 &amp;ldquo;排空所有的经历过排队的等待请求的时间&amp;rdquo; 设置为 2*latency，以确保 minLatency 的样本绝大部分时没有经过排队等待的。&lt;/p></description></item><item><title>Overview: Dubbo3 应用级服务发现设计</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/reference/proposals/service-discovery/</link><pubDate>Mon, 30 Jan 2023 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/overview/reference/proposals/service-discovery/</guid><description>
 &lt;h2 id="objective">Objective&lt;/h2>
 &lt;ul>
 &lt;li>显著降低服务发现过程的资源消耗，包括提升注册中心容量上限、降低消费端地址解析资源占用等，使得 Dubbo3 框架能够支持更大规模集群的服务治理，实现无限水平扩容。&lt;/li>
 &lt;li>适配底层基础设施服务发现模型，如 Kubernetes、Service Mesh 等。&lt;/li>
 &lt;/ul>
 &lt;h2 id="background">Background&lt;/h2>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/proposals/discovery/arc.png" alt="interface-arc">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/proposals/discovery/arc.png" alt="interface-arc">&lt;/p>
 &lt;p>我们从 Dubbo 最经典的工作原理图说起，Dubbo 从设计之初就内置了服务地址发现的能力，Provider 注册地址到注册中心，Consumer 通过订阅实时获取注册中心的地址更新，在收到地址列表后，consumer 基于特定的负载均衡策略发起对 provider 的 RPC 调用。&lt;/p>
 &lt;p>在这个过程中：&lt;/p>
 &lt;ul>
@@ -1480,11 +1480,11 @@ exploreRatio=max(MinExploreRatio,exploreRatio-0.02)&lt;/p>
 &lt;li>注册中心通过这个 key 对 provider 实例地址进行聚合；&lt;/li>
 &lt;li>Consumer 通过同样的 key 从注册中心订阅，以便及时收到聚合后的地址列表；&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/proposals/discovery/interface-data1.png" alt="interface-data1">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/proposals/discovery/interface-data1.png" alt="interface-data1">&lt;/p>
 &lt;p>这里，我们对接口级地址发现的内部数据结构进行详细分析。&lt;/p>
 &lt;p>首先，看右下角 provider 实例内部的数据与行为。Provider 部署的应用中通常会有多个 Service，也就是 Dubbo2 中的服务，每个 service 都可能会有其独有的配置，我们所讲的 service 服务发布的过程，其实就是基于这个服务配置生成地址 URL 的过程，生成的地址数据如图所示；同样的，其他服务也都会生成地址。&lt;/p>
 &lt;p>然后，看一下注册中心的地址数据存储结构，注册中心以 service 服务名为数据划分依据，将一个服务下的所有地址数据都作为子节点进行聚合，子节点的内容就是实际可访问的ip地址，也就是我们 Dubbo 中 URL，格式就是刚才 provider 实例生成的。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/proposals/discovery/interface-data2.png" alt="interface-data2">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/proposals/discovery/interface-data2.png" alt="interface-data2">&lt;/p>
 &lt;p>这里把 URL 地址数据划分成了几份：&lt;/p>
 &lt;ul>
 &lt;li>首先是实例可访问地址，主要信息包含 ip port，是消费端将基于这条数据生成 tcp 网络链接，作为后续 RPC 数据的传输载体&lt;/li>
@@ -1499,7 +1499,7 @@ exploreRatio=max(MinExploreRatio,exploreRatio-0.02)&lt;/p>
 &lt;li>得益于 1 与 2，Dubbo 实现了支持应用、RPC 服务、方法粒度的服务治理能力&lt;/li>
 &lt;/ul>
 &lt;p>这就是一直以来 Dubbo2 在易用性、服务治理功能性、可扩展性上强于很多服务框架的真正原因。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/proposals/discovery/interface-defect.png" alt="interface-defect">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/proposals/discovery/interface-defect.png" alt="interface-defect">&lt;/p>
 &lt;p>一个事物总是有其两面性，Dubbo2 地址模型带来易用性和强大功能的同时，也给整个架构的水平可扩展性带来了一些限制。这个问题在普通规模的微服务集群下是完全感知不到的，而随着集群规模的增长，当整个集群内应用、机器达到一定数量时，整个集群内的各个组件才开始遇到规模瓶颈。在总结包括阿里巴巴、工商银行等多个典型的用户在生产环境特点后，我们总结出以下两点突出问题（如图中红色所示）：&lt;/p>
 &lt;ul>
 &lt;li>首先，注册中心集群容量达到上限阈值。由于所有的 URL 地址数据都被发送到注册中心，注册中心的存储容量达到上限，推送效率也随之下降。&lt;/li>
@@ -1512,23 +1512,23 @@ exploreRatio=max(MinExploreRatio,exploreRatio-0.02)&lt;/p>
 &lt;li>从服务角度。10 条唯一的服务元数据，被放大 100 倍&lt;/li>
 &lt;/ul>
 &lt;h2 id="proposal">Proposal&lt;/h2>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/proposals/discovery/app-principle.png" alt="app-principle">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/proposals/discovery/app-principle.png" alt="app-principle">&lt;/p>
 &lt;p>面对这个问题，在 Dubbo3 架构下，我们不得不重新思考两个问题：&lt;/p>
 &lt;ul>
 &lt;li>如何在保留易用性、功能性的同时，重新组织 URL 地址数据，避免冗余数据的出现，让 Dubbo3 能支撑更大规模集群水平扩容？&lt;/li>
 &lt;li>如何在地址发现层面与其他的微服务体系如 Kubernetes、Spring Cloud 打通？&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/proposals/discovery/app-data1.png" alt="app-data1">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/proposals/discovery/app-data1.png" alt="app-data1">&lt;/p>
 &lt;p>Dubbo3 的应用级服务发现方案设计本质上就是围绕以上两个问题展开。其基本思路是：地址发现链路上的聚合元素也就是我们之前提到的 Key 由服务调整为应用，这也是其名称叫做应用级服务发现的由来；另外，通过注册中心同步的数据内容上做了大幅精简，只保留最核心的 ip、port 地址数据。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/proposals/discovery/app-data2.png" alt="app-data2">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/proposals/discovery/app-data2.png" alt="app-data2">&lt;/p>
 &lt;p>这是升级之后应用级地址发现的内部数据结构进行详细分析。
 对比之前接口级的地址发现模型，我们主要关注橙色部分的变化。首先，在 provider 实例这一侧，相比于之前每个 RPC Service 注册一条地址数据，一个 provider 实例只会注册一条地址到注册中心；而在注册中心这一侧，地址以应用名为粒度做聚合，应用名节点下是精简过后的 provider 实例地址；&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/proposals/discovery/app-metadataservice.png" alt="app-metadataservice">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/proposals/discovery/app-metadataservice.png" alt="app-metadataservice">&lt;/p>
 &lt;p>应用级服务发现的上述调整，同时实现了地址单条数据大小和总数量的下降，但同时也带来了新的挑战：我们之前 Dubbo2 强调的易用性和功能性的基础损失了，因为元数据的传输被精简掉了，如何精细的控制单个服务的行为变得无法实现。&lt;/p>
 &lt;p>针对这个问题，Dubbo3 的解法是引入一个内置的 MetadataService 元数据服务，由中心化推送转为 Consumer 到 Provider 的点对点拉取，在这个模式下，元数据传输的数据量将不在是一个问题，因此可以在元数据中扩展出更多的参数、暴露更多的治理数据。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/proposals/discovery/app-workflow.png" alt="app-metadataservice">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/proposals/discovery/app-workflow.png" alt="app-metadataservice">&lt;/p>
 &lt;p>这里我们个重点看消费端 Consumer 的地址订阅行为，消费端从分两步读取地址数据，首先是从注册中心收到精简后的地址，随后通过调用 MetadataService 元数据服务，读取对端的元数据信息。在收到这两部分数据之后，消费端会完成地址数据的聚合，最终在运行态还原出类似 Dubbo2 的 URL 地址格式。因此从最终结果而言，应用级地址模型同时兼顾了地址传输层面的性能与运行层面的功能性。&lt;/p>
-&lt;p>以上就是的应用级服务发现背景、工作原理部分的所有内容，接下来我们看一下饿了么升级到 Dubbo3 尤其是应用级服务发现的过程。&lt;/p></description></item><item><title>Overview: Triple协议Http标准能力增强-多Content-Type支持</title><link>https://wxbty.github.io/zh-cn/overview/reference/proposals/support-more-content-types/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/overview/reference/proposals/support-more-content-types/</guid><description>
+&lt;p>以上就是的应用级服务发现背景、工作原理部分的所有内容，接下来我们看一下饿了么升级到 Dubbo3 尤其是应用级服务发现的过程。&lt;/p></description></item><item><title>Overview: Triple协议Http标准能力增强-多Content-Type支持</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/reference/proposals/support-more-content-types/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/overview/reference/proposals/support-more-content-types/</guid><description>
 &lt;h3 id="triple协议http标准能力增强-多content-type支持">&lt;strong>Triple协议Http标准能力增强-多Content-Type支持&lt;/strong>&lt;/h3>
 &lt;blockquote>
 &lt;p>本文主要介绍Triple对更多HTTP标准Content-Type的支持方式，以及服务该如何接收这些请求。&lt;/p>

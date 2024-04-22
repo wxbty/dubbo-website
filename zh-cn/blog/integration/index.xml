@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – 生态集成</title><link>https://wxbty.github.io/zh-cn/blog/integration/</link><description>Recent content in 生态集成 on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://wxbty.github.io/zh-cn/blog/integration/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: 微服务最佳实践，零改造实现 Spring Cloud &amp; Apache Dubbo 互通</title><link>https://wxbty.github.io/zh-cn/blog/2023/10/07/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%E9%9B%B6%E6%94%B9%E9%80%A0%E5%AE%9E%E7%8E%B0-spring-cloud-apache-dubbo-%E4%BA%92%E9%80%9A/</link><pubDate>Sat, 07 Oct 2023 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/blog/2023/10/07/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%E9%9B%B6%E6%94%B9%E9%80%A0%E5%AE%9E%E7%8E%B0-spring-cloud-apache-dubbo-%E4%BA%92%E9%80%9A/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – 生态集成</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/integration/</link><description>Recent content in 生态集成 on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://wxbty.github.io/dubbo-website/zh-cn/blog/integration/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: 微服务最佳实践，零改造实现 Spring Cloud &amp; Apache Dubbo 互通</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/2023/10/07/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%E9%9B%B6%E6%94%B9%E9%80%A0%E5%AE%9E%E7%8E%B0-spring-cloud-apache-dubbo-%E4%BA%92%E9%80%9A/</link><pubDate>Sat, 07 Oct 2023 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/blog/2023/10/07/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%E9%9B%B6%E6%94%B9%E9%80%A0%E5%AE%9E%E7%8E%B0-spring-cloud-apache-dubbo-%E4%BA%92%E9%80%9A/</guid><description>
 &lt;p>&lt;strong>本文以实际项目和代码为示例，一步一步演示如何以最低成本实现 Apache Dubbo 体系与 Spring Cloud 体系的互通，进而实现不同微服务体系的混合部署、迁移等，帮助您解决实际架构及业务问题。&lt;/strong>&lt;/p>
 &lt;h2 id="背景与目标">背景与目标&lt;/h2>
 &lt;p>如果你在微服务开发过程中正面临以下一些业务场景需要解决，那么这篇文章可以帮到您：&lt;/p>
@@ -7,19 +7,19 @@
 &lt;li>您已经有一套基于 Spring Cloud 构建的微服务体系，而后又构建了一套 Dubbo 体系的微服务，你想两套体系共存，因此现在两边都需要调用到对方发布的服务。也就是 Dubbo 应用作为消费方要调用到 Spring Cloud 发布的 HTTP 接口，Dubbo 应用作为提供方还能发布 HTTP 接口给 Spring Cloud 调用&lt;/li>
 &lt;li>出于一些历史原因，你正规划从一个微服务体系迁移到另外一个微服务体系，前提条件是要保证中间过程的平滑迁移。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/2023/9/springcloud/img.png" alt="image.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/2023/9/springcloud/img.png" alt="image.png">&lt;/p>
 &lt;p>对于以上几个场景，我们都可以借助 Dubbo3 内置的 REST 编程范式支持实现，这让 Dubbo 既可以作为消费方调用 HTTP 接口的服务，又可以作为提供方对外发布 REST 风格的 HTTP 服务，同时整个编码过程支持业界常用的 REST 编程范式（如 JAX-RS、Spring MVC 等），因此可以做到基本不改动任何代码的情况下实现 Dubbo 与 Spring Cloud 体系的互相调用。&lt;/p>
 &lt;ul>
 &lt;li>关于这一部分更多的设计与理论阐述请参见这里的 &lt;a href="https://dubbo.apache.org/zh-cn/blog/2023/01/05/dubbo-%E8%BF%9E%E6%8E%A5%E5%BC%82%E6%9E%84%E5%BE%AE%E6%9C%8D%E5%8A%A1%E4%BD%93%E7%B3%BB-%E5%A4%9A%E5%8D%8F%E8%AE%AE%E5%A4%9A%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/">博客文章&lt;/a>。&lt;/li>
-&lt;li>关于 Dubbo REST 的更多配置方式请参见 &lt;a href="https://wxbty.github.io/zh-cn/overview/mannual/java-sdk/reference-manual/protocol/rest/">rest 使用参考手册&lt;/a>&lt;/li>
+&lt;li>关于 Dubbo REST 的更多配置方式请参见 &lt;a href="https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/java-sdk/reference-manual/protocol/rest/">rest 使用参考手册&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;h2 id="示例一dubbo-调用-spring-cloud">示例一：Dubbo 调用 Spring Cloud&lt;/h2>
 &lt;p>在已经有一套 Spring Cloud 微服务体系的情况下，演示如何使用 Dubbo 调用 Spring Cloud 服务（包含自动的地址发现与协议传输）。在注册中心方面，本示例使用 Nacos 作为注册中心，对于 Zookeeper、Consul 等两种体系都支持的注册中心同样适用。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/2023/9/springcloud/img_1.png" alt="dubbo-call-spring-cloud">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/2023/9/springcloud/img_1.png" alt="dubbo-call-spring-cloud">&lt;/p>
 &lt;p>设想你已经有一套 Spring Cloud 的微服务体系，现在我们将引入 Dubbo 框架，让 Dubbo 应用能够正常的调用到 Spring Cloud 发布的服务。本示例完整源码请参见 &lt;a href="https://github.com/apache/dubbo-samples/tree/master/2-advanced/dubbo-samples-springcloud/dubbo-call-sc">samples/dubbo-call-sc&lt;/a>。&lt;/p>
 &lt;h3 id="启动-spring-cloud-server">启动 Spring Cloud Server&lt;/h3>
 &lt;p>示例中 Spring Cloud 应用的结构如下&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/2023/9/springcloud/img_2.png" alt="springcloud-server.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/2023/9/springcloud/img_2.png" alt="springcloud-server.png">&lt;/p>
 &lt;p>应用配置文件如下：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">server&lt;/span>:
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">port&lt;/span>: &lt;span style="color:#2aa198">8099&lt;/span>
@@ -41,7 +41,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>启动 &lt;code>SpringCloudApplication&lt;/code>，通过 cURL 或浏览器访问 &lt;code>http://localhost:8099/users/list&lt;/code> 可以测试应用启动成功。&lt;/p>
 &lt;h3 id="使用-dubbo-client-调用服务">使用 Dubbo Client 调用服务&lt;/h3>
 &lt;p>Dubbo client 也是一个标准的 Dubbo 应用，项目基本结构如下：&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/2023/9/springcloud/img_3.png" alt="dubbo-consumer.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/2023/9/springcloud/img_3.png" alt="dubbo-consumer.png">&lt;/p>
 &lt;p>其中，一个比较关键的是如下接口定义（正常情况下，以下接口可以直接从原有的 Spring Cloud client 应用中原样拷贝过来即可，无需做任何修改）。&lt;/p>
 &lt;blockquote>
 &lt;p>如果之前没有基于 OpenFeign 的 Spring Cloud 消费端应用，那么就需要自行定义一个接口，此时不一定要使用 OpenFeign 注解，使用 Spring MVC 标准注解即可。&lt;/p>
@@ -59,11 +59,11 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>通过 &lt;code>DubboConsumerApplication&lt;/code> 启动 Dubbo 应用，验证可以成功调用到 Spring Cloud 服务。&lt;/p>
 &lt;h2 id="示例二spring-cloud-调用-dubbo">示例二：Spring Cloud 调用 Dubbo&lt;/h2>
 &lt;p>在接下来的示例中，我们将展示如何将 Dubbo server 发布的服务开放给 Spring Cloud client 调用。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/2023/9/springcloud/img_4.png" alt="spring-cloud-call-dubbo">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/2023/9/springcloud/img_4.png" alt="spring-cloud-call-dubbo">&lt;/p>
 &lt;p>示例的相关源码在 &lt;a href="https://github.com/apache/dubbo-samples/tree/master/2-advanced/dubbo-samples-springcloud/sc-call-dubbo">samples/sc-call-dubbo&lt;/a>&lt;/p>
 &lt;h3 id="启动-dubbo-server">启动 Dubbo Server&lt;/h3>
 &lt;p>Dubbo server 应用的代码结构非常简单，是一个典型的 Dubbo 应用。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/2023/9/springcloud/img_5.png" alt="dubbo-server.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/2023/9/springcloud/img_5.png" alt="dubbo-server.png">&lt;/p>
 &lt;p>相比于普通的 Dubbo 服务定义，我们要在接口上加上如下标准 Spring MVC 注解：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">@RestController&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">@RequestMapping&lt;/span>(&lt;span style="color:#2aa198">&amp;#34;/users&amp;#34;&lt;/span>)
@@ -90,7 +90,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>启动 Dubbo 应用，此时访问以下地址可以验证服务运行正常：&lt;code>http://localhost:8090/users/list&lt;/code>&lt;/p>
 &lt;h3 id="使用-spring-cloud-调用-dubbo">使用 Spring Cloud 调用 Dubbo&lt;/h3>
 &lt;p>使用 OpenFeign 开发一个标准的 Spring Cloud 应用，即可调用以上发布的 Dubbo 服务，项目代码结构如下：&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/2023/9/springcloud/img_6.png" alt="springcloud-consumer.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/2023/9/springcloud/img_6.png" alt="springcloud-consumer.png">&lt;/p>
 &lt;p>其中，我们定义了一个 OpenFeign 接口，用于调用上面发布的 Dubbo rest 服务。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">@FeignClient&lt;/span>(name &lt;span style="color:#719e07">=&lt;/span> &lt;span style="color:#2aa198">&amp;#34;dubbo-provider-for-spring-cloud&amp;#34;&lt;/span>)
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">public&lt;/span> &lt;span style="color:#268bd2">interface&lt;/span> &lt;span style="color:#268bd2">UserServiceFeign&lt;/span> {
@@ -128,7 +128,7 @@
 &lt;/ul>
 &lt;h3 id="为-dubbo-server-发布更多的服务">为 Dubbo Server 发布更多的服务&lt;/h3>
 &lt;p>我们可以利用 Dubbo 的多协议发布机制，为一些服务配置多协议发布。接下来，我们就为上面提到的 Dubbo server 服务增加 dubbo tcp 协议发布，从而达到以下部署效果，让这个 Dubbo 应用同时服务 Dubbo 微服务体系和 Spring Cloud 微服务体系。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/2023/9/springcloud/img_7.png" alt="dubbo-multiple-protocols.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/2023/9/springcloud/img_7.png" alt="dubbo-multiple-protocols.png">&lt;/p>
 &lt;p>为了实现这个效果，我们只需要在配置中增加多协议配置即可：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">dubbo&lt;/span>:
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">protocols&lt;/span>:
@@ -143,10 +143,10 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">public&lt;/span> &lt;span style="color:#268bd2">class&lt;/span> &lt;span style="color:#268bd2">UserServiceImpl&lt;/span> &lt;span style="color:#268bd2">implements&lt;/span> UserService {}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>这样，我们就成功的将 UserService 服务以 dubbo 和 rest 两种协议发布了出去（多端口多协议的方式），dubbo 协议为 Dubbo 体系服务，rest 协议为 Spring Cloud 体系服务。&lt;/p>
 &lt;blockquote>
-&lt;p>**注意：**Dubbo 为多协议发布提供了单端口、多端口两种方式，这样的灵活性对于不同部署环境下的服务会有比较大的帮助。在确定您需要的多协议发布方式前，请提仔细阅读以下 &lt;a href="https://wxbty.github.io/zh-cn/overview/mannual/java-sdk/advanced-features-and-usage/service/multi-protocols">多协议配置&lt;/a> 文档。&lt;/p>
+&lt;p>**注意：**Dubbo 为多协议发布提供了单端口、多端口两种方式，这样的灵活性对于不同部署环境下的服务会有比较大的帮助。在确定您需要的多协议发布方式前，请提仔细阅读以下 &lt;a href="https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/java-sdk/advanced-features-and-usage/service/multi-protocols">多协议配置&lt;/a> 文档。&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="总结">总结&lt;/h2>
-&lt;p>基于 Dubbo 的 rest 编程范式、多协议发布等特性，可以帮助你轻松的实现从 Dubbo 到 Spring Cloud 或者从 Spring Cloud 到 Dubbo 的平滑迁移（无改造成本），同时也可以实现 Dubbo 与 Spring Cloud 两套体系的共存。&lt;/p></description></item><item><title>Blog: 走向 Native 化：Spring&amp;Dubbo AOT 技术示例与原理讲解</title><link>https://wxbty.github.io/zh-cn/blog/2023/06/28/%E8%B5%B0%E5%90%91-native-%E5%8C%96springdubbo-aot-%E6%8A%80%E6%9C%AF%E7%A4%BA%E4%BE%8B%E4%B8%8E%E5%8E%9F%E7%90%86%E8%AE%B2%E8%A7%A3/</link><pubDate>Wed, 28 Jun 2023 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/blog/2023/06/28/%E8%B5%B0%E5%90%91-native-%E5%8C%96springdubbo-aot-%E6%8A%80%E6%9C%AF%E7%A4%BA%E4%BE%8B%E4%B8%8E%E5%8E%9F%E7%90%86%E8%AE%B2%E8%A7%A3/</guid><description>
+&lt;p>基于 Dubbo 的 rest 编程范式、多协议发布等特性，可以帮助你轻松的实现从 Dubbo 到 Spring Cloud 或者从 Spring Cloud 到 Dubbo 的平滑迁移（无改造成本），同时也可以实现 Dubbo 与 Spring Cloud 两套体系的共存。&lt;/p></description></item><item><title>Blog: 走向 Native 化：Spring&amp;Dubbo AOT 技术示例与原理讲解</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/2023/06/28/%E8%B5%B0%E5%90%91-native-%E5%8C%96springdubbo-aot-%E6%8A%80%E6%9C%AF%E7%A4%BA%E4%BE%8B%E4%B8%8E%E5%8E%9F%E7%90%86%E8%AE%B2%E8%A7%A3/</link><pubDate>Wed, 28 Jun 2023 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/blog/2023/06/28/%E8%B5%B0%E5%90%91-native-%E5%8C%96springdubbo-aot-%E6%8A%80%E6%9C%AF%E7%A4%BA%E4%BE%8B%E4%B8%8E%E5%8E%9F%E7%90%86%E8%AE%B2%E8%A7%A3/</guid><description>
 &lt;p>Java 应用在云计算时代面临“冷启动”慢、内存占用高、预热时间长等问题，无法很好的适应 Serverless 等云上部署模式，GraalVM 通过静态编译、打包等技术在很大程度上解决了这些问题，同时针对 GraalVM 的一些使用限制，Spring 和 Dubbo 等主流框架也都提供了相应的 AOT 解决方案。&lt;/p>
 &lt;p>本文我们将详细分析 Java 应用在云时代面临的挑战，GraalVM Native Image 是如何解决这些问题，GraalVM 的基本概念与工作原理，最后我们通过一个 Spring6 + Dubbo3 的微服务应用示例演示了如何将一个普通微服务应用进行静态化打包。&lt;/p>
 &lt;p>本文主要分为以下四个部分展开&lt;/p>
@@ -158,9 +158,9 @@
 &lt;/ol>
 &lt;h2 id="java-应用在云时代所面临的挑战">Java 应用在云时代所面临的挑战&lt;/h2>
 &lt;p>首先，我们先看一下云计算时代的应用特点，以及 Java 在云时代所面临的挑战。从各个统计机构给出的数据来看，Java 语言仍然是当今最受开发者欢迎的编程语言之一，仅次于一些脚本开发语言。使用 Java 语言可以非常高效的开发业务应用，丰富的生态使得 Java 具有非常高的开发和运行效率，有无数的应用基于 Java 语言开发。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/2023/6/graalvm/language-rank.png" alt="image.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/2023/6/graalvm/language-rank.png" alt="image.png">&lt;/p>
 &lt;p>但在来到云计算时代，Java 应用的部署和运行开始面临非常多的问题。我们以Serverless为例，Serverless是云上的一种越来越主流的部署模式，它让开发者更专注业务逻辑、通过快速弹性等帮助解决资源问题，根据最新的一些数据，Java在所有云计算厂商的 Serverless 运行时中所占比例并不高，远远不能和它在传统应用开发中所占的比例相匹配。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/2023/6/graalvm/serverless-lang-rank.png" alt="image.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/2023/6/graalvm/serverless-lang-rank.png" alt="image.png">&lt;/p>
 &lt;p>出现这样的原因，主要是Java应用不能很好的满足Serverless场景的几个关键要求。&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>首先是启动速度问题，Java 冷启动的耗时是比较长的&lt;/strong>。这对于Serverless需要快速弹起的场景是一个非常大的挑战，因为 Java 应用的拉起时间可能是秒、数十秒级别的；&lt;/li>
@@ -178,13 +178,13 @@
 &lt;li>首先，&lt;strong>GraalVM 是一个完整的 JDK 发行版本&lt;/strong>，从这一点它是与 OpenJDK 对等的，可以运行任何面向jvm的语言开发的应用；&lt;/li>
 &lt;li>其次，&lt;strong>GraalVM提供了 Native Image 打包技术&lt;/strong>，这可以将应用打包为可以独立运行的二进制包，这个包是自包含的、可脱离 JVM 运行的应用程序。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/2023/6/graalvm/graalvm-compilation.png" alt="image.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/2023/6/graalvm/graalvm-compilation.png" alt="image.png">&lt;/p>
 &lt;p>如上图所示，GraalVM 编译器提供了 JIT 和 AOT 两种模式。&lt;/p>
 &lt;ul>
 &lt;li>对于 JIT 而言，我们都知道Java类会被编译为 .class 格式的文件，这里编译后就是 jvm 识别的字节码，在 Java 应用运行的过程中，而 JIT 编译器又将一些热点路径上的字节码编译为机器码，已实现更快的执行速度；&lt;/li>
 &lt;li>对于 AOT 模式来说，它直接在编译期间就将字节码转换为机器码，直接省去了运行时对jvm的依赖，由于省去了 jvm 加载和字节码运行期预热的时间，AOT 编译和打包的程序具有非常高的运行时效率。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/2023/6/graalvm/graalvm-compilation2.png" alt="image.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/2023/6/graalvm/graalvm-compilation2.png" alt="image.png">&lt;/p>
 &lt;p>总的来说，JIT 使得应用可以具备更高的极限处理能力，可以降低请求的最大延迟这一关键指标；而 AOT 则可以进一步的提升应用的冷启动速度、具有更小的二进制包提及、在运行态需要更少的内存等资源。&lt;/p>
 &lt;h2 id="什么是-native-image">什么是 Native Image？&lt;/h2>
 &lt;p>我们上面多次提到 GraalVM 中 Native Image 概念，Native Image 是一项将 Java 代码编译打包为可执行二进制程序的技术，打出的包中仅包含运行期所需要的代码，包括应用自身代码、标准依赖包、 语言运行时、JDK 库关联的静态代码。这个包的运行不再需要 jvm 环境，当然它是和具体的机器环境相绑定的，需要为不同的机器环境单独打包。 Native Image 有这里列出来的一系列特点：&lt;/p>
@@ -195,11 +195,11 @@
 &lt;li>可打包为更轻量的二进制包，让部署速度更快更高效&lt;/li>
 &lt;li>安全程度更高&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/2023/6/graalvm/graalvm-advantages.png" alt="image.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/2023/6/graalvm/graalvm-advantages.png" alt="image.png">&lt;/p>
 &lt;p>总结起来就是这里的关键几项：更快的启动速度、更少的资源占用、更小的安全漏洞风险、更紧凑的二进制包体积。解决 Java 应用在 Sererless 等云计算应用场景中面临的突出问题。&lt;/p>
 &lt;h2 id="graalvm-native-image-的基本原理与使用">GraalVM Native Image 的基本原理与使用&lt;/h2>
 &lt;p>接下来，我们看一下 GraalVM 的基本使用方式，首先，需要安装 native-image 需要的相关基础依赖，根据不同的操作系统环境会有所差异，接下来可以使用 GraalVM JDK 下载器下载 native-image。都安装好之后，第二步，就可以使用 native-image 命令编译和打包 Java 应用了，输入可以是 class 文件、jar文件、Java模块等，最终打包为一个可独立运行的可执行文件，比如这里的 HelloWorld。另外，GraalVM 也提供了对应的 Maven和Gradle构建工具插件，让打包过程更容易。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/2023/6/graalvm/graalvm-principal.png" alt="image.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/2023/6/graalvm/graalvm-principal.png" alt="image.png">&lt;/p>
 &lt;p>GraalVM 基于叫做 “closed world assumption” 即封闭世界假设的概念，要求在编译期间程序的所有运行时资源和行为即能被完全确定下来。图中是具体的 AOT 编译和打包过程，左侧应用代码、仓库、jdk等全部作为输入，GraalVM以 main 为入口，扫描所有可触达的代码与执行路径，在处理过程中可能会涉及到一些前置初始化动作，最终 AOT 编译的机器码和一些初始化资源等状态数据，被打包为可执行的 Native 包。&lt;/p>
 &lt;p>相比于传统的 JVM 部署模式，GraalVM Native Image 模式带来的非常大的不同。&lt;/p>
 &lt;ul>
@@ -214,15 +214,15 @@
 &lt;ol>
 &lt;li>编码方式上，比如这里反射的编码方式，可以让 GraalVM 通过代码分析计算 Metadata&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/2023/6/graalvm/metadata-1.png" alt="image.png">&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/2023/6/graalvm/metadata-2.png" alt="image.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/2023/6/graalvm/metadata-1.png" alt="image.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/2023/6/graalvm/metadata-2.png" alt="image.png">&lt;/p>
 &lt;ol start="2">
 &lt;li>另一个示例是提供额外的 json 配置文件并放在指定的目录 META-INF/native-image/&amp;lt;group.id&amp;gt;/&amp;lt;artifact.id&amp;gt; 下。&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/2023/6/graalvm/metadata-3.png" alt="image.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/2023/6/graalvm/metadata-3.png" alt="image.png">&lt;/p>
 &lt;h2 id="aot-processing">AOT Processing&lt;/h2>
 &lt;p>Java 应用或框架中的反射等动态特性的使用是影响 GraalVM 使用的障碍，而大量的框架都存在这个限制，如果都要求应用或者开发者提供 Metadata 配置的话将会是一项非常有挑战的任务，因此，Spring 和 Dubbo 等框架都在 AOT Compilation 即 AOT 编译之前引入了 AOT Processing 即 AOT 预处理的过程，AOT Processing 用来完成自动化的 Metadata 采集，并将 Metadata 提供给 AOT 编译器使用。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/2023/6/graalvm/aot.png" alt="image.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/2023/6/graalvm/aot.png" alt="image.png">&lt;/p>
 &lt;p>AOT 编译机制是对所有 Java 应用通用的，但相比于 AOT 编译，AOT Processing 采集 Metadata 的过程是每个框架都不同的，因为每个框架对于反射、动态代理等都有自己的用法。
 我们以一个典型的 Spring + Dubbo 的微服务应用为例，要实现这个应用的静态化打包，这里涉及到 Spring、Dubbo 以及一众第三方依赖的 Metadata 处理过程。&lt;/p>
 &lt;ul>
@@ -238,7 +238,7 @@
 &lt;li>在构建阶段生成动态代理相关代码&lt;/li>
 &lt;li>关于一些反射等使用的 JSON 元数据文件&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/2023/6/graalvm/spring-aot.png" alt="image.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/2023/6/graalvm/spring-aot.png" alt="image.png">&lt;/p>
 &lt;h3 id="dubbo-aot">Dubbo AOT&lt;/h3>
 &lt;p>Dubbo AOT 做的事情与 Spring AOT 非常类似，只不过 Dubbo AOT 是专门针对 Dubbo 框架特有的使用方式进行预处理，这包括：&lt;/p>
 &lt;ul>
@@ -246,8 +246,8 @@
 &lt;li>一些反射使用的 JSON 配置文件生成&lt;/li>
 &lt;li>RPC 代理类代码生成&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/2023/6/graalvm/dubbo-aot-1.png" alt="image.png">&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/2023/6/graalvm/dubbo-aot-2.png" alt="image.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/2023/6/graalvm/dubbo-aot-1.png" alt="image.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/2023/6/graalvm/dubbo-aot-2.png" alt="image.png">&lt;/p>
 &lt;h2 id="spring6--dubbo3-示例演示">Spring6 + Dubbo3 示例演示&lt;/h2>
 &lt;p>接下来，我们通过一个 Spring6 + Dubbo3 的示例微服务应用，演示如何使用 Spring AOT、Dubbo AOT 等，来实现应用的 Native Image 打包。&lt;/p>
 &lt;p>完整的代码示例可在这里下载：&lt;a href="https://github.com/apache/dubbo-samples/tree/master/2-advanced/dubbo-samples-native-image-registry">dubbo-samples-native-image&lt;/a>&lt;/p>
@@ -258,8 +258,8 @@
 &lt;/ol>
 &lt;h3 id="第二步创建项目">第二步：创建项目&lt;/h3>
 &lt;p>这个示例应用就是普通的、常见的微服务应用，我们使用 SpringBoot3 进行应用配置开发，使用 Dubbo3 定义并发布 RPC 服务；应用构建工具使用 Maven。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/2023/6/graalvm/demo-1.png" alt="image.png">&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/2023/6/graalvm/demo-2.png" alt="image.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/2023/6/graalvm/demo-1.png" alt="image.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/2023/6/graalvm/demo-2.png" alt="image.png">&lt;/p>
 &lt;h3 id="第三步配置-maven-插件">第三步：配置 Maven 插件&lt;/h3>
 &lt;p>重点是增加 spring-boot-maven-plugin、native-maven-plugin、dubbo-maven-plugin 三个插件配置，开启 AOT 处理过程，修改dubbo-maven-plugin中的mainClass为所需的启动类全路径。（其中API使用方式无需添加spring-boot-maven-plugin依赖。）&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">&amp;lt;profiles&amp;gt;&lt;/span>
@@ -379,7 +379,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="第七步执行二进制文件即可">第七步：执行二进制文件即可&lt;/h3>
 &lt;p>二进制文件在 target/ 目录下，一般以工程名称为二进制包的名称，比如 target/native-demo&lt;/p>
 &lt;h2 id="总结">总结&lt;/h2>
-&lt;p>GraalVM 技术为 Java 在云计算时代的应用带来了新的变革，帮助解决了 Java 应用启动慢、资源占用，但同时我们也看到了 GraalVM 的使用也存在一些限制，因此 Spring6、SpringBoot3、Dubbo3 都提供了相应的 Native 解决方案。 Apache Dubbo 社区接下来将在周边生态组件等推进整体的 Native 静态化。&lt;/p></description></item><item><title>Blog: 如何通过 Higress 网关代理 Dubbo 服务</title><link>https://wxbty.github.io/zh-cn/blog/2023/04/01/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87-higress-%E7%BD%91%E5%85%B3%E4%BB%A3%E7%90%86-dubbo-%E6%9C%8D%E5%8A%A1/</link><pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/blog/2023/04/01/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87-higress-%E7%BD%91%E5%85%B3%E4%BB%A3%E7%90%86-dubbo-%E6%9C%8D%E5%8A%A1/</guid><description>
+&lt;p>GraalVM 技术为 Java 在云计算时代的应用带来了新的变革，帮助解决了 Java 应用启动慢、资源占用，但同时我们也看到了 GraalVM 的使用也存在一些限制，因此 Spring6、SpringBoot3、Dubbo3 都提供了相应的 Native 解决方案。 Apache Dubbo 社区接下来将在周边生态组件等推进整体的 Native 静态化。&lt;/p></description></item><item><title>Blog: 如何通过 Higress 网关代理 Dubbo 服务</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/2023/04/01/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87-higress-%E7%BD%91%E5%85%B3%E4%BB%A3%E7%90%86-dubbo-%E6%9C%8D%E5%8A%A1/</link><pubDate>Sat, 01 Apr 2023 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/blog/2023/04/01/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87-higress-%E7%BD%91%E5%85%B3%E4%BB%A3%E7%90%86-dubbo-%E6%9C%8D%E5%8A%A1/</guid><description>
 &lt;h1 id="higress-对接-dubbo-服务">Higress 对接 Dubbo 服务&lt;/h1>
 &lt;p>Higress提供了从HTTP协议到Dubbo协议进行转换的功能，用户通过配置协议转换，可以将一个Dubbo服务以HTTP接口暴露出来，从而用HTTP请求实现对Dubbo接口的调用。本文将通过一个示例来介绍如何用Higress配置HTTP到Dubbo的协议转换。该示例会引导您轻松地部署一个Nacos server和一个Dubbo服务，然后通过Ingress将HTTP请求转发到注册在Nacos上的Dubbo服务，并通过Higress的协议转换能力完成对Dubbo服务的HTTP调用。&lt;/p>
 &lt;h2 id="前提条件">前提条件&lt;/h2>
@@ -617,13 +617,13 @@
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">$curl&lt;/span> &lt;span style="color:#2aa198">&amp;#34;localhost/dubbo/hello?p=abc&amp;#34;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#719e07">{&lt;/span>&lt;span style="color:#2aa198">&amp;#34;result&amp;#34;&lt;/span>:&lt;span style="color:#2aa198">&amp;#34;Service [name :demoService , port : 20880] sayName(\&amp;#34;abc\&amp;#34;) : Hello,abc&amp;#34;&lt;/span>&lt;span style="color:#719e07">}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="配置参考">配置参考&lt;/h2>
-&lt;p>EnvoyFilter的相关配置项参考&lt;a href="https://higress.io/zh-cn/docs/user/dubbo-envoyfilter">HTTP转Dubbo配置说明&lt;/a>&lt;/p></description></item><item><title>Blog: 如何通过 Apache ShenYu 网关代理 Dubbo 服务</title><link>https://wxbty.github.io/zh-cn/blog/2022/05/04/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87-apache-shenyu-%E7%BD%91%E5%85%B3%E4%BB%A3%E7%90%86-dubbo-%E6%9C%8D%E5%8A%A1/</link><pubDate>Wed, 04 May 2022 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/blog/2022/05/04/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87-apache-shenyu-%E7%BD%91%E5%85%B3%E4%BB%A3%E7%90%86-dubbo-%E6%9C%8D%E5%8A%A1/</guid><description>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/shenyu-dubbo/ApacheShenYu-Dubbo-zh.png" alt="img">&lt;/p>
+&lt;p>EnvoyFilter的相关配置项参考&lt;a href="https://higress.io/zh-cn/docs/user/dubbo-envoyfilter">HTTP转Dubbo配置说明&lt;/a>&lt;/p></description></item><item><title>Blog: 如何通过 Apache ShenYu 网关代理 Dubbo 服务</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/2022/05/04/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87-apache-shenyu-%E7%BD%91%E5%85%B3%E4%BB%A3%E7%90%86-dubbo-%E6%9C%8D%E5%8A%A1/</link><pubDate>Wed, 04 May 2022 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/blog/2022/05/04/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87-apache-shenyu-%E7%BD%91%E5%85%B3%E4%BB%A3%E7%90%86-dubbo-%E6%9C%8D%E5%8A%A1/</guid><description>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/shenyu-dubbo/ApacheShenYu-Dubbo-zh.png" alt="img">&lt;/p>
 &lt;h2 id="1-介绍">1. 介绍&lt;/h2>
 &lt;ul>
 &lt;li>Apache ShenYu&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/shenyu-dubbo/shenyu.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/shenyu-dubbo/shenyu.png" alt="img">&lt;/p>
 &lt;p>&lt;a href="https://shenyu.apache.org/zh/docs/index">Apache ShenYu(Incubating)&lt;/a> 是一个异步的，高性能的，跨语言的，响应式的 &lt;code>API&lt;/code> 网关。兼容各种主流框架体系，支持热插拔，用户可以定制化开发，满足用户各种场景的现状和未来需求，经历过大规模场景的锤炼。&lt;/p>
 &lt;p>2021年5月，&lt;code>ShenYu&lt;/code>捐献给 &lt;code>Apache&lt;/code> 软件基金会，Apache 基金会全票通过，顺利进入孵化器。&lt;/p>
 &lt;ul>
@@ -634,7 +634,7 @@
 &lt;p>本小节介绍如何将&lt;code>Dubbo&lt;/code>服务接入到&lt;code>ShenYu&lt;/code>网关，您可以直接在工程下找到本小节的&lt;a href="https://github.com/apache/shenyu/tree/master/shenyu-examples/shenyu-examples-dubbo">示例代码&lt;/a> 。&lt;/p>
 &lt;h3 id="21-启动shenyu-admin">2.1 启动shenyu-admin&lt;/h3>
 &lt;p>&lt;code>shenyu-admin&lt;/code>是&lt;code>Apache ShenYu&lt;/code>后台管理系统， 启动的方式有多种，本文通过 &lt;code>[本地部署](https://shenyu.apache.org/zh/docs/deployment/deployment-local)&lt;/code> 的方式启动。启动成功后，需要在基础配置&lt;code>-&amp;gt;&lt;/code>插件管理中，把&lt;code>dubbo&lt;/code> 插件设置为开启，并设置你的注册地址，请确保注册中心已经开启。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/shenyu-dubbo/dubbo-enable-zh.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/shenyu-dubbo/dubbo-enable-zh.png" alt="img">&lt;/p>
 &lt;h3 id="22-启动shenyu网关">2.2 启动shenyu网关&lt;/h3>
 &lt;p>在这里通过 &lt;a href="https://github.com/apache/incubator-shenyu/tree/master/shenyu-bootstrap">源码&lt;/a> 的方式启动，直接运行&lt;code>shenyu-bootstrap&lt;/code>中的&lt;code>ShenyuBootstrapApplication&lt;/code>。&lt;/p>
 &lt;p>在启动前，请确保网关已经引入相关依赖。如果客户端是&lt;code>apache dubbo&lt;/code>，注册中心使用&lt;code>zookeeper&lt;/code>，请参考如下配置：&lt;/p>
@@ -730,11 +730,11 @@
 &lt;h3 id="24-调用dubbo服务">2.4 调用dubbo服务&lt;/h3>
 &lt;p>&lt;code>shenyu-examples-dubbo&lt;/code>项目成功启动之后会自动把加 &lt;code>@ShenyuDubboClient&lt;/code> 注解的接口方法注册到网关。&lt;/p>
 &lt;p>打开 &lt;code>插件列表 -&amp;gt; Proxy -&amp;gt; dubbo&lt;/code> 可以看到插件规则配置列表：&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/shenyu-dubbo/dubbo-service-list-zh.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/shenyu-dubbo/dubbo-service-list-zh.png" alt="img">&lt;/p>
 &lt;p>注册成功的选择器信息：&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/shenyu-dubbo/dubbo-selector-zh.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/shenyu-dubbo/dubbo-selector-zh.png" alt="img">&lt;/p>
 &lt;p>注册成功的规则信息：&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/shenyu-dubbo/dubbo-rule-zh.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/shenyu-dubbo/dubbo-rule-zh.png" alt="img">&lt;/p>
 &lt;blockquote>
 &lt;p>选择器和规则是 &lt;code>Apache ShenYu&lt;/code> 网关中最灵魂的东西。掌握好它，你可以对任何流量进行管理。对应为选择器与规则里面的匹配条件(conditions)，根据不同的流量筛选规则，我们可以处理各种复杂的场景。流量筛选可以从&lt;code>Header&lt;/code>, &lt;code>URI&lt;/code>, &lt;code>Query&lt;/code>, &lt;code>Cookie&lt;/code> 等等Http请求获取数据。&lt;/p>
 &lt;p>然后可以采用 &lt;code>Match&lt;/code>，&lt;code>=&lt;/code>，&lt;code>Regex&lt;/code>，&lt;code>Groovy&lt;/code>，&lt;code>Exclude&lt;/code>等匹配方式，匹配出你所预想的数据。多组匹配添加可以使用&lt;code>And/Or&lt;/code>的匹配策略。&lt;/p>
@@ -762,12 +762,12 @@
 &lt;p>将应用客户端接入到&lt;code>Apache ShenYu&lt;/code>网关是通过注册中心来实现的，涉及到客户端注册和服务端同步数据。注册中心支持&lt;code>Http&lt;/code>、&lt;code>Zookeeper&lt;/code>、&lt;code>Etcd&lt;/code>、&lt;code>Consul&lt;/code>和&lt;code>Nacos&lt;/code>。默认是通过&lt;code>Http&lt;/code>方式注册。&lt;/p>
 &lt;p>客户端接入的相关配置请参考 &lt;code>[客户端接入配置](https://shenyu.apache.org/zh/docs/user-guide/register-center-access)&lt;/code> 。&lt;/p>
 &lt;h4 id="311-客户端注册">3.1.1 客户端注册&lt;/h4>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/shenyu-dubbo/register-client.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/shenyu-dubbo/register-client.png" alt="img">&lt;/p>
 &lt;p>在你的微服务配置中声明注册中心客户端类型，如&lt;code>Http&lt;/code>或&lt;code>Zookeeper&lt;/code>。
 应用程序启动时使用&lt;code>SPI&lt;/code>方式加载并初始化对应注册中心客户端，通过实现&lt;code>Spring Bean&lt;/code>相关的后置处理器接口，在其中获取需要进行注册的服务接口信息，将获取的信息放入&lt;code>Disruptor&lt;/code>中。&lt;/p>
 &lt;p>注册中心客户端从&lt;code>Disruptor&lt;/code>中读取数据，并将接口信息注册到&lt;code>shenyu-admin&lt;/code>，&lt;code>Disruptor&lt;/code>在其中起数据与操作解耦的作用，利于扩展。&lt;/p>
 &lt;h4 id="312-服务端注册">3.1.2 服务端注册&lt;/h4>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/shenyu-dubbo/register-server.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/shenyu-dubbo/register-server.png" alt="img">&lt;/p>
 &lt;p>在&lt;code>shenyu-admin&lt;/code>配置中声明注册中心服务端类型，如&lt;code>Http&lt;/code>或&lt;code>Zookeeper&lt;/code>。当&lt;code>shenyu-admin&lt;/code>启动时，读取配置类型，加载并初始化对应的注册中心服务端，注册中心服务端收到&lt;code>shenyu-client&lt;/code>注册的接口信息后，将其放入&lt;code>Disruptor&lt;/code>中，然后会触发注册处理逻辑，将服务接口信息更新并发布同步事件。&lt;/p>
 &lt;p>&lt;code>Disruptor&lt;/code>在其中起到数据与操作解耦，利于扩展。如果注册请求过多，导致注册异常，也有数据缓冲作用。&lt;/p>
 &lt;h3 id="32-数据同步原理">3.2 数据同步原理&lt;/h3>
@@ -785,7 +785,7 @@
 &lt;/ul>
 &lt;h4 id="322-数据同步原理分析">3.2.2 数据同步原理分析&lt;/h4>
 &lt;p>下图展示了 &lt;code>Apache ShenYu&lt;/code> 数据同步的流程，&lt;code>Apache ShenYu&lt;/code> 网关在启动时，会从配置服务同步配置数据，并且支持推拉模式获取配置变更信息，然后更新本地缓存。管理员可以在管理后台（&lt;code>shenyu-admin&lt;/code>），变更用户权限、规则、插件、流量配置，通过推拉模式将变更信息同步给 &lt;code>Apache ShenYu&lt;/code> 网关，具体是 &lt;code>push&lt;/code> 模式，还是 &lt;code>pull&lt;/code> 模式取决于使用哪种同步方式。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/shenyu-dubbo/data-sync.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/shenyu-dubbo/data-sync.png" alt="img">&lt;/p>
 &lt;p>在最初的版本中，配置服务依赖 &lt;code>Zookeeper&lt;/code> 实现，管理后台将变更信息 &lt;code>push&lt;/code> 给网关。而现在可以支持 &lt;code>WebSocket&lt;/code>、&lt;code>Http长轮询&lt;/code>、&lt;code>Zookeeper&lt;/code>、&lt;code>Nacos&lt;/code>、&lt;code>Etcd&lt;/code> 和 &lt;code>Consul&lt;/code>，通过在配置文件中设置 &lt;code>shenyu.sync.${strategy}&lt;/code> 指定对应的同步策略，默认使用 &lt;code>webosocket&lt;/code> 同步策略，可以做到秒级数据同步。但是，有一点需要注意的是，&lt;code>Apache ShenYu&lt;/code>网关 和 &lt;code>shenyu-admin&lt;/code> 必须使用相同的同步策略。&lt;/p>
 &lt;p>如下图所示，&lt;code>shenyu-admin&lt;/code> 在用户发生配置变更之后，会通过 &lt;code>EventPublisher&lt;/code> 发出配置变更通知，由 &lt;code>EventDispatcher&lt;/code> 处理该变更通知，然后根据配置的同步策略(&lt;code>http、weboscket、zookeeper、naocs、etcd、consul&lt;/code>)，将配置发送给对应的事件处理器。&lt;/p>
 &lt;ul>
@@ -806,7 +806,7 @@
 &lt;li>处理注册信息&lt;/li>
 &lt;/ul>
 &lt;p>客户端通过注册中心注册的元数据和&lt;code>URI&lt;/code>数据，在&lt;code>shenyu-admin&lt;/code>端进行处理，负责存储到数据库和同步给&lt;code>shenyu&lt;/code>网关。&lt;code>Dubbo&lt;/code>插件的客户端注册处理逻辑在&lt;code>ShenyuClientRegisterDubboServiceImpl&lt;/code>中。继承关系如下：&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/shenyu-dubbo/ShenyuClientRegisterDubboServiceImpl.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/shenyu-dubbo/ShenyuClientRegisterDubboServiceImpl.png" alt="img">&lt;/p>
 &lt;ul>
 &lt;li>ShenyuClientRegisterService：客户端注册服务，顶层接口；&lt;/li>
 &lt;li>FallbackShenyuClientRegisterService：注册失败，提供重试操作；&lt;/li>
@@ -815,7 +815,7 @@
 &lt;/ul>
 &lt;p>注册信息包括选择器，规则和元数据。&lt;/p>
 &lt;p>整体的&lt;code>dubbo&lt;/code>服务注册流程如下：&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/shenyu-dubbo/dubbo-register-zh.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/shenyu-dubbo/dubbo-register-zh.png" alt="img">&lt;/p>
 &lt;h4 id="332-数据同步流程">3.3.2 数据同步流程&lt;/h4>
 &lt;ul>
 &lt;li>admin更新数据&lt;/li>
@@ -833,10 +833,10 @@
 &lt;p>在通用插件数据订阅者&lt;code>CommonPluginDataSubscriber&lt;/code>，负责处理所有插件、选择器和规则信息&lt;/p>
 &lt;p>将数据保存到网关的内存中，&lt;code>BaseDataCache&lt;/code>是最终缓存数据的类，通过单例模式实现。选择器数据就存到了&lt;code>SELECTOR_MAP&lt;/code>这个&lt;code>Map&lt;/code>中。在后续使用的时候，也是从这里拿数据。&lt;/p>
 &lt;p>上述逻辑用流程图表示如下：&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/shenyu-dubbo/data-sync-seq-zh.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/shenyu-dubbo/data-sync-seq-zh.png" alt="img">&lt;/p>
 &lt;h4 id="333-服务调用流程">3.3.3 服务调用流程&lt;/h4>
 &lt;p>在&lt;code>Dubbo&lt;/code>插件体系中，类继承关系如下：&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/shenyu-dubbo/ApacheDubboPlugin.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/shenyu-dubbo/ApacheDubboPlugin.png" alt="img">&lt;/p>
 &lt;blockquote>
 &lt;p>ShenyuPlugin：顶层接口，定义接口方法；&lt;/p>
 &lt;p>AbstractShenyuPlugin：抽象类，实现插件共有逻辑；&lt;/p>
@@ -876,7 +876,7 @@
 &lt;li>org.apache.shenyu.plugin.response.ResponsePlugin#execute()&lt;/li>
 &lt;/ul>
 &lt;p>最后被执行的是&lt;code>ResponsePlugin&lt;/code> ，它统一处理网关的响应结果信息。处理类型由&lt;code>MessageWriter&lt;/code>决定，类继承关系如下：&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/shenyu-dubbo/MessageWriter.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/shenyu-dubbo/MessageWriter.png" alt="img">&lt;/p>
 &lt;blockquote>
 &lt;p>MessageWriter：接口，定义消息处理方法；&lt;/p>
 &lt;p>NettyClientMessageWriter：处理&lt;code>Netty&lt;/code>调用结果；&lt;/p>
@@ -889,7 +889,7 @@
 &lt;/ul>
 &lt;p>在&lt;code>writeWith()&lt;/code>方法中处理响应结果，获取结果或处理异常。&lt;/p>
 &lt;p>分析至此，关于&lt;code>Dubbo&lt;/code>插件的源码分析就完成了，分析流程图如下：&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/shenyu-dubbo/dubbo-execute-zh.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/shenyu-dubbo/dubbo-execute-zh.png" alt="img">&lt;/p>
 &lt;h2 id="4-小结">4. 小结&lt;/h2>
 &lt;p>本文从实际案例出发，由浅入深分析了&lt;code>ShenYu&lt;/code>网关对Dubbo服务的代理过程。涉及到的主要知识点如下：&lt;/p>
 &lt;ul>
@@ -899,13 +899,13 @@
 &lt;li>通过&lt;code>springboot starter&lt;/code>即可引入不同的注册中心和数同步方式，扩展性很好；&lt;/li>
 &lt;li>通过&lt;code>admin&lt;/code>支持规则热更新，方便流量管控；&lt;/li>
 &lt;li>&lt;code>Disruptor&lt;/code>队列是为了数据与操作解耦，以及数据缓冲。&lt;/li>
-&lt;/ul></description></item><item><title>Blog: 从原理到操作，让你在 Apache APISIX 中代理 Dubbo 服务更便捷</title><link>https://wxbty.github.io/zh-cn/blog/2022/01/18/%E4%BB%8E%E5%8E%9F%E7%90%86%E5%88%B0%E6%93%8D%E4%BD%9C%E8%AE%A9%E4%BD%A0%E5%9C%A8-apache-apisix-%E4%B8%AD%E4%BB%A3%E7%90%86-dubbo-%E6%9C%8D%E5%8A%A1%E6%9B%B4%E4%BE%BF%E6%8D%B7/</link><pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/blog/2022/01/18/%E4%BB%8E%E5%8E%9F%E7%90%86%E5%88%B0%E6%93%8D%E4%BD%9C%E8%AE%A9%E4%BD%A0%E5%9C%A8-apache-apisix-%E4%B8%AD%E4%BB%A3%E7%90%86-dubbo-%E6%9C%8D%E5%8A%A1%E6%9B%B4%E4%BE%BF%E6%8D%B7/</guid><description>
+&lt;/ul></description></item><item><title>Blog: 从原理到操作，让你在 Apache APISIX 中代理 Dubbo 服务更便捷</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/2022/01/18/%E4%BB%8E%E5%8E%9F%E7%90%86%E5%88%B0%E6%93%8D%E4%BD%9C%E8%AE%A9%E4%BD%A0%E5%9C%A8-apache-apisix-%E4%B8%AD%E4%BB%A3%E7%90%86-dubbo-%E6%9C%8D%E5%8A%A1%E6%9B%B4%E4%BE%BF%E6%8D%B7/</link><pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/blog/2022/01/18/%E4%BB%8E%E5%8E%9F%E7%90%86%E5%88%B0%E6%93%8D%E4%BD%9C%E8%AE%A9%E4%BD%A0%E5%9C%A8-apache-apisix-%E4%B8%AD%E4%BB%A3%E7%90%86-dubbo-%E6%9C%8D%E5%8A%A1%E6%9B%B4%E4%BE%BF%E6%8D%B7/</guid><description>
 &lt;h2 id="背景">背景&lt;/h2>
-&lt;p>&lt;a href="https://wxbty.github.io/zh-cn/">Apache Dubbo&lt;/a> 是由阿里巴巴开源并捐赠给 Apache 的微服务开发框架，它提供了 RPC 通信与微服务治理两大关键能力。不仅经过了阿里电商场景中海量流量的验证，也在国内的技术公司中被广泛落地。&lt;/p>
+&lt;p>&lt;a href="https://wxbty.github.io/dubbo-website/zh-cn/">Apache Dubbo&lt;/a> 是由阿里巴巴开源并捐赠给 Apache 的微服务开发框架，它提供了 RPC 通信与微服务治理两大关键能力。不仅经过了阿里电商场景中海量流量的验证，也在国内的技术公司中被广泛落地。&lt;/p>
 &lt;p>在实际应用场景中，Apache Dubbo 一般会作为后端系统间 RPC 调用的实现框架，当需要提供 HTTP 接口给到前端时，会通过一个「胶水层」将 Dubbo Service 包装成 HTTP 接口，再交付到前端系统。&lt;/p>
 &lt;p>&lt;a href="https://apisix.apache.org/">Apache APISIX&lt;/a> 是 Apache 软件基金会的顶级开源项目，也是当前最活跃的开源网关项目。作为一个动态、实时、高性能的开源 API 网关，Apache APISIX 提供了负载均衡、动态上游、灰度发布、服务熔断、身份认证、可观测性等丰富的流量管理功能。&lt;/p>
 &lt;p>得益于 Apache Dubbo 的应用场景优势，Apache APISIX 基于开源项目 tengine/mod_dubbo 模块为 Apache Dubbo 服务配备了HTTP 网关能力。通过 dubbo-proxy 插件，可以轻松地将 Dubbo Service 发布为 HTTP 服务。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/apisix-plugin/1.png" alt="架构图">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/apisix-plugin/1.png" alt="架构图">&lt;/p>
 &lt;h2 id="如何使用">如何使用&lt;/h2>
 &lt;h3 id="入门篇安装使用">入门篇：安装使用&lt;/h3>
 &lt;blockquote>
@@ -1078,7 +1078,7 @@
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#2aa198">}&amp;#39;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="总结">总结&lt;/h2>
 &lt;p>本文为大家介绍了如何借助 Apache APISIX 实现 Dubbo Service 的代理，通过引入 &lt;code>dubbo-proxy&lt;/code> 插件便可为 Dubbo 框架的后端系统构建更简单更高效的流量链路。&lt;/p>
-&lt;p>希望通过上述操作步骤和用例场景分享，能为大家在相关场景的使用提供借鉴思路。更多关于 &lt;code>dubbo-proxy&lt;/code> 插件的介绍与使用可参考&lt;a href="https://apisix.apache.org/docs/apisix/plugins/dubbo-proxy/">官方文档&lt;/a>。&lt;/p></description></item><item><title>Blog: 使用Apache Skywalking (Incubator) 做分布式跟踪</title><link>https://wxbty.github.io/zh-cn/blog/2019/08/11/%E4%BD%BF%E7%94%A8apache-skywalking-incubator-%E5%81%9A%E5%88%86%E5%B8%83%E5%BC%8F%E8%B7%9F%E8%B8%AA/</link><pubDate>Sun, 11 Aug 2019 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/blog/2019/08/11/%E4%BD%BF%E7%94%A8apache-skywalking-incubator-%E5%81%9A%E5%88%86%E5%B8%83%E5%BC%8F%E8%B7%9F%E8%B8%AA/</guid><description>
+&lt;p>希望通过上述操作步骤和用例场景分享，能为大家在相关场景的使用提供借鉴思路。更多关于 &lt;code>dubbo-proxy&lt;/code> 插件的介绍与使用可参考&lt;a href="https://apisix.apache.org/docs/apisix/plugins/dubbo-proxy/">官方文档&lt;/a>。&lt;/p></description></item><item><title>Blog: 使用Apache Skywalking (Incubator) 做分布式跟踪</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/2019/08/11/%E4%BD%BF%E7%94%A8apache-skywalking-incubator-%E5%81%9A%E5%88%86%E5%B8%83%E5%BC%8F%E8%B7%9F%E8%B8%AA/</link><pubDate>Sun, 11 Aug 2019 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/blog/2019/08/11/%E4%BD%BF%E7%94%A8apache-skywalking-incubator-%E5%81%9A%E5%88%86%E5%B8%83%E5%BC%8F%E8%B7%9F%E8%B8%AA/</guid><description>
 &lt;h2 id="apache-skywalkingincubator简介">Apache Skywalking(Incubator)简介&lt;/h2>
 &lt;p>&lt;a href="https://github.com/apache/skywalking">Apache Skywalking(Incubator)&lt;/a> 专门为微服务架构和云原生架构系统而设计并且支持分布式链路追踪的APM系统。&lt;a href="https://github.com/apache/skywalking">Apache Skywalking(Incubator)&lt;/a>通过加载探针的方式收集应用调用链路信息，并对采集的调用链路信息进行分析，生成应用间关系和服务间关系以及服务指标。&lt;a href="https://github.com/apache/skywalking">Apache Skywalking (Incubating)&lt;/a>目前支持多种语言，其中包括&lt;a href="https://github.com/apache/skywalking">Java&lt;/a>，&lt;a href="https://github.com/OpenSkywalking/skywalking-netcore">.Net Core&lt;/a>，&lt;a href="https://github.com/OpenSkywalking/skywalking-nodejs">Node.js&lt;/a>和&lt;a href="https://github.com/SkyAPM/go2sky">Go&lt;/a>语言。&lt;/p>
 &lt;p>目前Skywalking已经支持从6个可视化维度剖析分布式系统的运行情况。总览视图是应用和组件的全局视图，其中包括组件和应用数量，应用的告警波动，慢服务列表以及应用吞吐量；拓扑图从应用依赖关系出发，展现整个应用的拓扑关系；应用视图则是从单个应用的角度，展现应用的上下游关系，TopN的服务和服务器，JVM的相关信息以及对应的主机信息。服务视图关注单个服务入口的运行情况以及此服务的上下游依赖关系，依赖度，帮助用户针对单个服务的优化和监控；调用链展现了调用的单次请求经过的所有埋点以及每个埋点的执行时长；告警视图根据配置阈值针对应用、服务器、服务进行实时告警。&lt;/p>
@@ -1159,24 +1159,24 @@
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>curl http://localhost:8080/sayHello/test
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="skywalking监控截图">Skywalking监控截图：&lt;/h2>
 &lt;h3 id="首页">首页&lt;/h3>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/skywalking-dashboard.png" alt="/admin-guide/images/skywalking-dashboard.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/skywalking-dashboard.png" alt="/admin-guide/images/skywalking-dashboard.png">&lt;/p>
 &lt;h3 id="拓扑图">拓扑图&lt;/h3>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/skywalking-topology.png" alt="/admin-guide/images/skywalking-topology.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/skywalking-topology.png" alt="/admin-guide/images/skywalking-topology.png">&lt;/p>
 &lt;h3 id="应用视图">应用视图&lt;/h3>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/skywalking-application.png" alt="/admin-guide/images/skywalking-application.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/skywalking-application.png" alt="/admin-guide/images/skywalking-application.png">&lt;/p>
 &lt;p>JVM信息
-&lt;img src="https://wxbty.github.io/imgs/blog/skywalking-application_instance.png" alt="/admin-guide/images/skywalking-application_instance.png">&lt;/p>
+&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/skywalking-application_instance.png" alt="/admin-guide/images/skywalking-application_instance.png">&lt;/p>
 &lt;h3 id="服务视图">服务视图&lt;/h3>
 &lt;p>服务消费端：
-&lt;img src="https://wxbty.github.io/imgs/blog/skywalking-service-consumer.png" alt="/admin-guide/images/skywalking-service-consumer.png">&lt;/p>
+&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/skywalking-service-consumer.png" alt="/admin-guide/images/skywalking-service-consumer.png">&lt;/p>
 &lt;p>服务提供端：
-&lt;img src="https://wxbty.github.io/imgs/blog/skywalking-service-provider.png" alt="/admin-guide/images/skywalking-service-provider.png">&lt;/p>
+&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/skywalking-service-provider.png" alt="/admin-guide/images/skywalking-service-provider.png">&lt;/p>
 &lt;h3 id="trace视图">Trace视图&lt;/h3>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/skywalking-trace.png" alt="/admin-guide/images/skywalking-trace.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/skywalking-trace.png" alt="/admin-guide/images/skywalking-trace.png">&lt;/p>
 &lt;p>Span信息：
-&lt;img src="https://wxbty.github.io/imgs/blog/skywalking-span-Info.png" alt="/admin-guide/images/skywalking-span-Info.png">&lt;/p>
+&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/skywalking-span-Info.png" alt="/admin-guide/images/skywalking-span-Info.png">&lt;/p>
 &lt;h3 id="告警视图">告警视图&lt;/h3>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/skywalking-alarm.png" alt="/admin-guide/images/skywalking-alarm.png">&lt;/p></description></item><item><title>Blog: 当Dubbo遇上Arthas：排查问题的实践</title><link>https://wxbty.github.io/zh-cn/blog/2019/02/02/%E5%BD%93dubbo%E9%81%87%E4%B8%8Aarthas%E6%8E%92%E6%9F%A5%E9%97%AE%E9%A2%98%E7%9A%84%E5%AE%9E%E8%B7%B5/</link><pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/blog/2019/02/02/%E5%BD%93dubbo%E9%81%87%E4%B8%8Aarthas%E6%8E%92%E6%9F%A5%E9%97%AE%E9%A2%98%E7%9A%84%E5%AE%9E%E8%B7%B5/</guid><description>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/skywalking-alarm.png" alt="/admin-guide/images/skywalking-alarm.png">&lt;/p></description></item><item><title>Blog: 当Dubbo遇上Arthas：排查问题的实践</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/2019/02/02/%E5%BD%93dubbo%E9%81%87%E4%B8%8Aarthas%E6%8E%92%E6%9F%A5%E9%97%AE%E9%A2%98%E7%9A%84%E5%AE%9E%E8%B7%B5/</link><pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/blog/2019/02/02/%E5%BD%93dubbo%E9%81%87%E4%B8%8Aarthas%E6%8E%92%E6%9F%A5%E9%97%AE%E9%A2%98%E7%9A%84%E5%AE%9E%E8%B7%B5/</guid><description>
 &lt;p>Apache Dubbo是Alibaba开源的高性能RPC框架，在国内有非常多的用户。&lt;/p>
 &lt;ul>
 &lt;li>Github: &lt;a href="https://github.com/apache/dubbo">https://github.com/apache/dubbo&lt;/a>&lt;/li>
@@ -1452,7 +1452,7 @@
 &lt;p>只要充分发挥想像力，组合Arthas里的各种命令，可以发挥出神奇的效果。&lt;/p>
 &lt;h2 id="总结">总结&lt;/h2>
 &lt;p>本篇文章来自杭州Dubbo Meetup的分享《当DUBBO遇上Arthas - 排查问题的实践》，希望对大家线上排查Dubbo问题有帮助。&lt;/p>
-&lt;p>分享的PDF可以在 &lt;a href="https://github.com/alibaba/arthas/issues/327">https://github.com/alibaba/arthas/issues/327&lt;/a> 里下载。&lt;/p></description></item><item><title>Blog: 如何使用Seata保证Dubbo微服务间的一致性</title><link>https://wxbty.github.io/zh-cn/blog/2019/01/17/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8seata%E4%BF%9D%E8%AF%81dubbo%E5%BE%AE%E6%9C%8D%E5%8A%A1%E9%97%B4%E7%9A%84%E4%B8%80%E8%87%B4%E6%80%A7/</link><pubDate>Thu, 17 Jan 2019 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/blog/2019/01/17/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8seata%E4%BF%9D%E8%AF%81dubbo%E5%BE%AE%E6%9C%8D%E5%8A%A1%E9%97%B4%E7%9A%84%E4%B8%80%E8%87%B4%E6%80%A7/</guid><description>
+&lt;p>分享的PDF可以在 &lt;a href="https://github.com/alibaba/arthas/issues/327">https://github.com/alibaba/arthas/issues/327&lt;/a> 里下载。&lt;/p></description></item><item><title>Blog: 如何使用Seata保证Dubbo微服务间的一致性</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/2019/01/17/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8seata%E4%BF%9D%E8%AF%81dubbo%E5%BE%AE%E6%9C%8D%E5%8A%A1%E9%97%B4%E7%9A%84%E4%B8%80%E8%87%B4%E6%80%A7/</link><pubDate>Thu, 17 Jan 2019 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/blog/2019/01/17/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8seata%E4%BF%9D%E8%AF%81dubbo%E5%BE%AE%E6%9C%8D%E5%8A%A1%E9%97%B4%E7%9A%84%E4%B8%80%E8%87%B4%E6%80%A7/</guid><description>
 &lt;h2 id="案例">案例&lt;/h2>
 &lt;p>用户采购商品业务，整个业务包含3个微服务:&lt;/p>
 &lt;ul>
@@ -1461,7 +1461,7 @@
 &lt;li>账户服务: 用户账户金额扣减。&lt;/li>
 &lt;/ul>
 &lt;h3 id="业务结构图">业务结构图&lt;/h3>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/fescar/fescar-1.png" alt="Architecture">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/fescar/fescar-1.png" alt="Architecture">&lt;/p>
 &lt;h3 id="storageservice">StorageService&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">public&lt;/span> &lt;span style="color:#268bd2">interface&lt;/span> &lt;span style="color:#268bd2">StorageService&lt;/span> {
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
@@ -1537,7 +1537,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="seata-分布式事务解决方案">Seata 分布式事务解决方案&lt;/h2>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/fescar/fescar-2.png" alt="undefined">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/fescar/fescar-2.png" alt="undefined">&lt;/p>
 &lt;p>此处仅仅需要一行注解 &lt;code>@GlobalTransactional&lt;/code> 写在业务发起方的方法上:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">@GlobalTransactional&lt;/span>
@@ -1634,7 +1634,7 @@ dubbo-storage-service.xml&lt;/p>
 &lt;ul>
 &lt;li>Seata: &lt;a href="https://github.com/seata/seata">https://github.com/seata/seata&lt;/a>&lt;/li>
 &lt;li>Seata Samples : &lt;a href="https://github.com/seata/seata-samples">https://github.com/seata/seata-samples&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Blog: 新版 Dubbo Admin 介绍</title><link>https://wxbty.github.io/zh-cn/blog/2019/01/07/%E6%96%B0%E7%89%88-dubbo-admin-%E4%BB%8B%E7%BB%8D/</link><pubDate>Mon, 07 Jan 2019 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/blog/2019/01/07/%E6%96%B0%E7%89%88-dubbo-admin-%E4%BB%8B%E7%BB%8D/</guid><description>
+&lt;/ul></description></item><item><title>Blog: 新版 Dubbo Admin 介绍</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/2019/01/07/%E6%96%B0%E7%89%88-dubbo-admin-%E4%BB%8B%E7%BB%8D/</link><pubDate>Mon, 07 Jan 2019 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/blog/2019/01/07/%E6%96%B0%E7%89%88-dubbo-admin-%E4%BB%8B%E7%BB%8D/</guid><description>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>github: https://github.com/apache/dubbo-ops
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Dubbo Admin之前的版本过于老旧，也长期疏于维护，因此在去年年中的时候，对该项目进行了一次重构，项目结构上的变化如下：&lt;/p>
 &lt;ul>
@@ -1658,13 +1658,13 @@ dubbo-storage-service.xml&lt;/p>
 &lt;p>功能上，主要延续了之前版本的功能，包括服务查询和服务治理，2.7版本在服务治理的功能上有了很大的改进，这些改进也大部分都会以Dubbo Admin作为入口来体现。&lt;/p>
 &lt;h3 id="标签路由">标签路由&lt;/h3>
 &lt;p>标签路由是Dubbo2.7引入的新功能，配置以应用作为维度，给不同的服务器打上不同名字的标签，配置如下图所示：&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/admin/route.jpg" alt="tag">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/admin/route.jpg" alt="tag">&lt;/p>
 &lt;p>调用的时候，客户端可以通过&lt;code>setAttachment&lt;/code>的方式，来设置不同的标签名称，比如本例中，&lt;code>setAttachment(tag1)&lt;/code>，客户端的选址范围就在如图所示的三台机器中，可以通过这种方式来实现流量隔离，灰度发布等功能。&lt;/p>
 &lt;h3 id="应用级别的服务治理">应用级别的服务治理&lt;/h3>
 &lt;p>在Dubbo2.6及更早版本中，所有的服务治理规则都只针对服务粒度，如果要把某条规则作用到应用粒度上，需要为应用下的所有服务配合相同的规则，变更，删除的时候也需要对应的操作，这样的操作很不友好，因此Dubbo2.7版本中增加了应用粒度的服务治理操作，对于条件路由(包括黑白名单)，动态配置(包括权重，负载均衡)都可以做应用级别的配置：&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/admin/conditionRoute.jpg" alt="condition">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/admin/conditionRoute.jpg" alt="condition">&lt;/p>
 &lt;p>上图是条件路由的配置，可以按照应用名，服务名两个维度来填写，也可以按照这两个维度来查询。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/admin/weight.jpg" alt="weight">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/admin/weight.jpg" alt="weight">&lt;/p>
 &lt;p>条件路由，标签路由和动态配置都采用了&lt;code>yaml&lt;/code>格式的文本编写，其他的规则配置还是采用了表单的形式。&lt;/p>
 &lt;h4 id="关于兼容性">关于兼容性&lt;/h4>
 &lt;p>Dubbo2.6到Dubbo2.7，服务治理发生了比较大的变化，Dubbo Admin兼容两个版本的用法：&lt;/p>
@@ -1679,25 +1679,25 @@ dubbo-storage-service.xml&lt;/p>
 &lt;ul>
 &lt;li>全局配置：&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/admin/config.jpg" alt="config">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/admin/config.jpg" alt="config">&lt;/p>
 &lt;p>全局配置里可以指定注册中心，元数据中心的地址，服务端和客户端的超时时间等，这些配置在全局内生效。除了配置写入，也可以用来查看。如果使用zookeeper作为注册中心和元数据中心，还可以看到配置文件所在位置的目录结构。&lt;/p>
 &lt;ul>
 &lt;li>应用， 服务配置&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/admin/appConfig.jpg" alt="appConfig">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/admin/appConfig.jpg" alt="appConfig">&lt;/p>
 &lt;p>应用级别的配置可以为应用或者应用内的服务指定配置，在服务维度上，需要区分提供者和消费者。&lt;code>dubbo.reference.{serviceName}&lt;/code>表示作为该服务消费者的配置，&lt;code>dubbo.provider.{servcieName}&lt;/code>表示作为该服务提供者的配置。优先级服务 &amp;gt; 应用 &amp;gt; 全局。其中注册中心和元数据中心的地址，只能在全局配置中指定，这也是Dubbo2.7中推荐的使用方式。&lt;/p>
 &lt;h3 id="元数据和服务测试">元数据和服务测试&lt;/h3>
 &lt;p>元数据是Dubbo2.7中新引入的元素，主要的使用场景就在Dubbo Admin中，主要体现在两个地方：&lt;/p>
 &lt;ul>
 &lt;li>服务详情展示：&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/admin/metadata.jpg" alt="metadata">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/admin/metadata.jpg" alt="metadata">&lt;/p>
 &lt;p>跟之前版本相比，Dubbo2.7中增加了对服务方法完整签名的记录，因此服务详情中也增加了方法信息的详情，可以看到方法名，方法参数列表以及返回值信息。&lt;/p>
 &lt;ul>
 &lt;li>服务测试：&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/admin/test.jpg" alt="test">&lt;/p>
-&lt;p>更重要的，元数据为服务测试提供了数据基础，可以在页面上调用真实的服务提供者，方便测试，也不需要为了调用服务去搭建一套Dubbo环境以及编写消费端代码。&lt;/p></description></item><item><title>Blog: Dubbo 在瓜子二手车的实践</title><link>https://wxbty.github.io/zh-cn/blog/2019/01/05/dubbo-%E5%9C%A8%E7%93%9C%E5%AD%90%E4%BA%8C%E6%89%8B%E8%BD%A6%E7%9A%84%E5%AE%9E%E8%B7%B5/</link><pubDate>Sat, 05 Jan 2019 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/blog/2019/01/05/dubbo-%E5%9C%A8%E7%93%9C%E5%AD%90%E4%BA%8C%E6%89%8B%E8%BD%A6%E7%9A%84%E5%AE%9E%E8%B7%B5/</guid><description>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/admin/test.jpg" alt="test">&lt;/p>
+&lt;p>更重要的，元数据为服务测试提供了数据基础，可以在页面上调用真实的服务提供者，方便测试，也不需要为了调用服务去搭建一套Dubbo环境以及编写消费端代码。&lt;/p></description></item><item><title>Blog: Dubbo 在瓜子二手车的实践</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/2019/01/05/dubbo-%E5%9C%A8%E7%93%9C%E5%AD%90%E4%BA%8C%E6%89%8B%E8%BD%A6%E7%9A%84%E5%AE%9E%E8%B7%B5/</link><pubDate>Sat, 05 Jan 2019 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/blog/2019/01/05/dubbo-%E5%9C%A8%E7%93%9C%E5%AD%90%E4%BA%8C%E6%89%8B%E8%BD%A6%E7%9A%84%E5%AE%9E%E8%B7%B5/</guid><description>
 &lt;h2 id="前言">前言&lt;/h2>
 &lt;p>  随着瓜子业务的不断发展，系统规模在逐渐扩大，目前在瓜子的私有云上已经运行着数百个dubbo应用，上千个dubbo实例。瓜子各部门业务迅速发展，版本没有来得及统一，各个部门都有自己的用法。随着第二机房的建设，dubbo版本统一的需求变得越发迫切。几个月前，公司发生了一次与dubbo相关的生产事故，成为了公司dubbo版本升级的诱因。&lt;/p>
 &lt;p>  接下来，我会从这次事故开始，讲讲我们这段时间所做的dubbo版本升级的历程以及dubbo后续多机房的方案。&lt;/p>
@@ -1856,7 +1856,7 @@ dubbo2.7.3默认开启qos功能，导致一些混部在物理机的dubbo服务�
 &lt;li>consumer调用provider时，读取环境变量中的机房标志信息，根据路由策略优先调用具有相同标志信息的provider。&lt;/li>
 &lt;/ol>
 &lt;p>  针对以上逻辑，我们简单实现了dubbo通过环境变量进行路由的功能，并向社区提交了pr。
-  dubbo通过环境变量路由pr: &lt;a href="https://github.com/apache/dubbo/pull/5348">https://github.com/apache/dubbo/pull/5348&lt;/a>&lt;/p></description></item><item><title>Blog: Dubbo 融合 Nacos 成为注册中心</title><link>https://wxbty.github.io/zh-cn/blog/2018/11/07/dubbo-%E8%9E%8D%E5%90%88-nacos-%E6%88%90%E4%B8%BA%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/</link><pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/blog/2018/11/07/dubbo-%E8%9E%8D%E5%90%88-nacos-%E6%88%90%E4%B8%BA%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/</guid><description>
+  dubbo通过环境变量路由pr: &lt;a href="https://github.com/apache/dubbo/pull/5348">https://github.com/apache/dubbo/pull/5348&lt;/a>&lt;/p></description></item><item><title>Blog: Dubbo 融合 Nacos 成为注册中心</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/2018/11/07/dubbo-%E8%9E%8D%E5%90%88-nacos-%E6%88%90%E4%B8%BA%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/</link><pubDate>Wed, 07 Nov 2018 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/blog/2018/11/07/dubbo-%E8%9E%8D%E5%90%88-nacos-%E6%88%90%E4%B8%BA%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/</guid><description>
 &lt;p>Nacos 作为 Dubbo 生态系统中重要的注册中心实现，其中 &lt;a href="https://github.com/apache/dubbo/tree/master/dubbo-registry/dubbo-registry-nacos">&lt;code>dubbo-registry-nacos&lt;/code>&lt;/a> 则是 Dubbo 融合 Nacos 注册中心的实现。&lt;/p>
 &lt;h2 id="预备工作">预备工作&lt;/h2>
 &lt;p>当您将 &lt;a href="https://github.com/apache/dubbo/tree/master/dubbo-registry/dubbo-registry-nacos">&lt;code>dubbo-registry-nacos&lt;/code>&lt;/a> 整合到您的 Dubbo 工程之前，请确保后台已经启动 Nacos 服务。如果您尚且不熟悉 Nacos 的基本使用的话，可先行参考 &lt;a href="https://nacos.io/en-us/docs/quick-start.html">Nacos 快速入门&lt;/a>：https://nacos.io/en-us/docs/quick-start.html。建议使用 Nacos &lt;code>0.6.1&lt;/code> 以上的版本。&lt;/p>
@@ -1918,9 +1918,9 @@ dubbo2.7.3默认开启qos功能，导致一些混部在物理机的dubbo服务�
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>dubbo.registry.address &lt;span style="color:#719e07">=&lt;/span> &lt;span style="color:#2aa198">nacos://10.20.153.10:8848&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>...
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>随后，重启您的 Dubbo 应用，Dubbo 的服务提供和消费信息在 Nacos 控制台中可以显示：&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/dubbo-registry-nacos-1.png" alt="image-20181213103845976">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/dubbo-registry-nacos-1.png" alt="image-20181213103845976">&lt;/p>
 &lt;p>如图所示，服务名前缀为 &lt;code>providers:&lt;/code> 的信息为服务提供者的元信息，&lt;code>consumers:&lt;/code> 则代表服务消费者的元信息。点击“&lt;strong>详情&lt;/strong>”可查看服务状态详情：&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/dubbo-registry-nacos-2.png" alt="image-20181213104145998">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/dubbo-registry-nacos-2.png" alt="image-20181213104145998">&lt;/p>
 &lt;p>如果您正在使用 Spring XML 配置文件装配 Dubbo 注册中心的话，请参考下一节。&lt;/p>
 &lt;h3 id="spring-xml-配置文件">Spring XML 配置文件&lt;/h3>
 &lt;p>同样，假设您 Dubbo 应用的使用 Zookeeper 作为注册中心，并且其服务器 IP 地址为：&lt;code>10.20.153.10&lt;/code>，并且装配 Spring Bean 在 XML 文件中，如下所示：&lt;/p>
@@ -1952,7 +1952,7 @@ dubbo2.7.3默认开启qos功能，导致一些混部在物理机的dubbo服务�
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ...
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;/beans&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>重启 Dubbo 应用后，您同样也能发现服务提供方和消费方的注册元信息呈现在 Nacos 控制台中：&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/dubbo-registry-nacos-3.png" alt="image-20181213113049185">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/dubbo-registry-nacos-3.png" alt="image-20181213113049185">&lt;/p>
 &lt;p>您是否绝对配置或切换 Nacos 注册中心超级 Easy 呢？如果您仍旧意犹未尽或者不甚明白的话，可参考以下完整的示例。&lt;/p>
 &lt;h2 id="完整示例">完整示例&lt;/h2>
 &lt;p>以上图片中的元数据源于 Dubbo Spring 注解驱动示例以及 Dubbo Spring XML 配置驱动示例，下面将分别介绍两者，您可以选择自己偏好的编程模型。在正式讨论之前，先来介绍两者的预备工作，因为它们皆依赖 Java 服务接口和实现。同时，&lt;strong>请确保本地（&lt;code>127.0.0.1&lt;/code>）环境已启动 Nacos 服务&lt;/strong>。&lt;/p>
@@ -2106,7 +2106,7 @@ dubbo2.7.3默认开启qos功能，导致一些混部在物理机的dubbo服务�
 &lt;p>&lt;code>@PostConstruct&lt;/code> 部分代码则说明当 &lt;code>DemoServiceConsumerBootstrap&lt;/code> Bean 初始化时，执行十次 Dubbo 远程方法调用。&lt;/p>
 &lt;h4 id="运行注解驱动示例">运行注解驱动示例&lt;/h4>
 &lt;p>在本地启动两次 &lt;code>DemoServiceProviderBootstrap&lt;/code>，注册中心将出现两个健康服务：&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/dubbo-registry-nacos-4.png" alt="image-20181213123909636">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/dubbo-registry-nacos-4.png" alt="image-20181213123909636">&lt;/p>
 &lt;p>再运行 &lt;code>DemoServiceConsumerBootstrap&lt;/code>，运行结果如下：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>Service [name :demoService , port : 20880] sayName(&amp;#34;小马哥（mercyblitz）&amp;#34;) : Hello,小马哥（mercyblitz）
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Service [name :demoService , port : 20881] sayName(&amp;#34;小马哥（mercyblitz）&amp;#34;) : Hello,小马哥（mercyblitz）
@@ -2220,7 +2220,7 @@ dubbo2.7.3默认开启qos功能，导致一些混部在物理机的dubbo服务�
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="运行-xml-配置驱动示例">运行 XML 配置驱动示例&lt;/h4>
 &lt;p>同样地，先启动两个 &lt;code>DemoServiceProviderXmlBootstrap&lt;/code> 引导类，观察 Nacos 注册中心服务提供者变化：&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/dubbo-registry-nacos-5.png" alt="image-20181213125527201">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/dubbo-registry-nacos-5.png" alt="image-20181213125527201">&lt;/p>
 &lt;p>XML 配置驱动的服务版本为 &lt;code>2.0.0&lt;/code>，因此注册服务无误。&lt;/p>
 &lt;p>再运行服务消费者引导类 &lt;code>DemoServiceConsumerXmlBootstrap&lt;/code>，观察控制台输出内容：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>Service [name :null , port : 20882] sayName(&amp;#34;小马哥（mercyblitz）&amp;#34;) : Hello,小马哥（mercyblitz）
@@ -2239,7 +2239,7 @@ dubbo2.7.3默认开启qos功能，导致一些混部在物理机的dubbo服务�
 &lt;li>Apache Dubbo：https://github.com/apache/dubbo&lt;/li>
 &lt;li>Dubbo Nacos Registry：https://github.com/apache/dubbo/tree/master/dubbo-registry/dubbo-registry-nacos&lt;/li>
 &lt;li>Alibaba Nacos：https://github.com/alibaba/nacos&lt;/li>
-&lt;/ul></description></item><item><title>Blog: Spring应用快速集成Dubbo + Hystrix</title><link>https://wxbty.github.io/zh-cn/blog/2018/08/22/spring%E5%BA%94%E7%94%A8%E5%BF%AB%E9%80%9F%E9%9B%86%E6%88%90dubbo--hystrix/</link><pubDate>Wed, 22 Aug 2018 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/blog/2018/08/22/spring%E5%BA%94%E7%94%A8%E5%BF%AB%E9%80%9F%E9%9B%86%E6%88%90dubbo--hystrix/</guid><description>
+&lt;/ul></description></item><item><title>Blog: Spring应用快速集成Dubbo + Hystrix</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/2018/08/22/spring%E5%BA%94%E7%94%A8%E5%BF%AB%E9%80%9F%E9%9B%86%E6%88%90dubbo--hystrix/</link><pubDate>Wed, 22 Aug 2018 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/blog/2018/08/22/spring%E5%BA%94%E7%94%A8%E5%BF%AB%E9%80%9F%E9%9B%86%E6%88%90dubbo--hystrix/</guid><description>
 &lt;h2 id="背景">背景&lt;/h2>
 &lt;p>Hystrix 旨在通过控制那些访问远程系统、服务和第三方库的节点，从而对延迟和故障提供更强大的容错能力。Hystrix具备拥有回退机制和断路器功能的线程和信号隔离，请求缓存和请求打包，以及监控和配置等功能。&lt;/p>
 &lt;p>Dubbo是Alibaba开源的，目前国内最流行的java rpc框架。&lt;/p>
@@ -2395,7 +2395,7 @@ dubbo2.7.3默认开启qos功能，导致一些混部在物理机的dubbo服务�
 &lt;li>&lt;a href="https://github.com/apache/dubbo">https://github.com/apache/dubbo&lt;/a>&lt;/li>
 &lt;li>&lt;a href="http://start.dubbo.io/">http://start.dubbo.io/&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://cloud.spring.io/spring-cloud-netflix/single/spring-cloud-netflix.html#_circuit_breaker_hystrix_clients">https://cloud.spring.io/spring-cloud-netflix/single/spring-cloud-netflix.html#_circuit_breaker_hystrix_clients&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Blog: 从跨语言调用到dubbo2.js</title><link>https://wxbty.github.io/zh-cn/blog/2018/08/14/%E4%BB%8E%E8%B7%A8%E8%AF%AD%E8%A8%80%E8%B0%83%E7%94%A8%E5%88%B0dubbo2.js/</link><pubDate>Tue, 14 Aug 2018 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/blog/2018/08/14/%E4%BB%8E%E8%B7%A8%E8%AF%AD%E8%A8%80%E8%B0%83%E7%94%A8%E5%88%B0dubbo2.js/</guid><description>
+&lt;/ul></description></item><item><title>Blog: 从跨语言调用到dubbo2.js</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/2018/08/14/%E4%BB%8E%E8%B7%A8%E8%AF%AD%E8%A8%80%E8%B0%83%E7%94%A8%E5%88%B0dubbo2.js/</link><pubDate>Tue, 14 Aug 2018 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/blog/2018/08/14/%E4%BB%8E%E8%B7%A8%E8%AF%AD%E8%A8%80%E8%B0%83%E7%94%A8%E5%88%B0dubbo2.js/</guid><description>
 &lt;blockquote>
 &lt;p>&lt;a href="https://github.com/dubbo/dubbo2.js">dubbo2.js&lt;/a> 是 &lt;a href="https://www.qianmi.com/">千米网&lt;/a> 贡献给 dubbo 社区的一款 nodejs dubbo 客户端，它提供了 nodejs 对原生 dubbo 协议的支持，使得 nodejs 和 java 这两种异构语言的 rpc 调用变得便捷，高效。&lt;/p>
 &lt;/blockquote>
@@ -2419,7 +2419,7 @@ dubbo2.7.3默认开启qos功能，导致一些混部在物理机的dubbo服务�
 &lt;p>这也关键的选型因素。我们做出的第一个尝试，便是在 RPC 协议上下功夫。&lt;/p>
 &lt;h2 id="通用协议的跨语言支持">通用协议的跨语言支持&lt;/h2>
 &lt;h3 id="springmvc的美好时代">springmvc的美好时代&lt;/h3>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/springmvc.png" alt="springmvc">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/springmvc.png" alt="springmvc">&lt;/p>
 &lt;p>在没有实现真正的跨语言调用之前，想要实现“跨语言”大多数方案是使用 http 协议做一层转换，最常见的手段莫过于借助 springmvc 提供的 controller/restController，间接调用 dubbo provider。这种方案的优势和劣势显而易见&lt;/p>
 &lt;ul>
 &lt;li>优势是简单，是最通俗的解决方案。&lt;/li>
@@ -2436,15 +2436,15 @@ dubbo2.7.3默认开启qos功能，导致一些混部在物理机的dubbo服务�
 &lt;h3 id="定制协议的跨语言支持">定制协议的跨语言支持&lt;/h3>
 &lt;p>微服务框架所谓的协议(protocol)可以简单理解为：报文格式和序列化方案。服务治理框架一般都提供了众多的协议配置项供使用者选择，除去上述两种通用协议，还存在一些定制化的协议，如 dubbo 框架的默认协议：dubbo 协议以及 motan 框架提供的跨语言协议：motan2。&lt;/p>
 &lt;h4 id="motan2协议的跨语言支持">motan2协议的跨语言支持&lt;/h4>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/motan-protocol.png" alt="motan2">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/motan-protocol.png" alt="motan2">&lt;/p>
 &lt;p>motan2 协议被设计用来满足跨语言的需求主要体现在两个细节中—MetaData 和 motan-go。在最初的 motan 协议中，协议报文仅由 Header+Body 组成，这样导致 path，param，group 等存储在 Body 中的数据需要反序列得到，这对异构语言来说是很不友好的，所以在 motan2 中修改了协议的组成；weibo 开源了 &lt;a href="https://github.com/weibocom/motan-go/">motan-go&lt;/a> ，&lt;a href="https://github.com/weibocom/motan-php">motan-php&lt;/a>，&lt;a href="https://github.com/weibocom/motan-openresty">motan-openresty&lt;/a> ,并借助于 motan-go 充当了 agent 这一翻译官的角色，使用 simple 序列化方案来序列化协议报文的 Body 部分（simple 序列化是一种较弱的序列化方案）。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/motan-agent.png" alt="agent">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/motan-agent.png" alt="agent">&lt;/p>
 &lt;p>仔细揣摩下可以发现这么做和双协议的配置区别并不是大，只不过这里的 agent 是隐式存在的，与主服务共生。明显的区别在于 agent 方案中异构语言并不直接交互。&lt;/p>
 &lt;h4 id="dubbo协议的跨语言支持">dubbo协议的跨语言支持&lt;/h4>
 &lt;p>dubbo 协议设计之初只考虑到了常规的 rpc 调用场景，它并不是为跨语言而设计，但跨语言支持从来不是只有支持、不支持两种选择，而是要按难易&lt;/p>
 &lt;p>程度来划分。是的，dubbo 协议的跨语言调用可能并不好做，但并非无法实现。千米网便实现了这一点，nodejs 构建的前端业务是异构语言的主战场，最终实现了 dubbo2.js，打通了 nodejs 和原生 dubbo 协议。作为本文第二部分的核心内容，重点介绍下我们使用 dubbo2.js 干了什么事。&lt;/p>
 &lt;h5 id="dubbo协议报文格式">Dubbo协议报文格式&lt;/h5>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/dubbo-protocol.png" alt="dubbo协议">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/dubbo-protocol.png" alt="dubbo协议">&lt;/p>
 &lt;p>dubbo协议报文消息头详解：&lt;/p>
 &lt;ul>
 &lt;li>magic：类似java字节码文件里的魔数，用来判断是不是 dubbo 协议的数据包。魔数是常量 0xdabb&lt;/li>
@@ -2595,15 +2595,15 @@ dubbo2.7.3默认开启qos功能，导致一些混部在物理机的dubbo服务�
 &lt;li>dubbo 接口自动生成&lt;/li>
 &lt;/ul>
 &lt;h2 id="更多细节">更多细节&lt;/h2>
-&lt;p>本文中的示例代码，提供在此处，&lt;a href="https://github.com/dubbo/dubbo2.js">https://github.com/dubbo/dubbo2.js&lt;/a> 。如果你对 dubbo 协议不甚了解，想要理解它的工作原理，项目中提供了一个子 moudle — java-socket-consumer，使用面向过程的思路实现了 java-socket-consumer，完成了原生 socket 发送 dubbo 协议报文，完成方法调用，并获取响应的全流程。&lt;/p></description></item><item><title>Blog: 在 Dubbo 应用中使用 Zookeeper</title><link>https://wxbty.github.io/zh-cn/blog/2018/08/07/%E5%9C%A8-dubbo-%E5%BA%94%E7%94%A8%E4%B8%AD%E4%BD%BF%E7%94%A8-zookeeper/</link><pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/blog/2018/08/07/%E5%9C%A8-dubbo-%E5%BA%94%E7%94%A8%E4%B8%AD%E4%BD%BF%E7%94%A8-zookeeper/</guid><description>
+&lt;p>本文中的示例代码，提供在此处，&lt;a href="https://github.com/dubbo/dubbo2.js">https://github.com/dubbo/dubbo2.js&lt;/a> 。如果你对 dubbo 协议不甚了解，想要理解它的工作原理，项目中提供了一个子 moudle — java-socket-consumer，使用面向过程的思路实现了 java-socket-consumer，完成了原生 socket 发送 dubbo 协议报文，完成方法调用，并获取响应的全流程。&lt;/p></description></item><item><title>Blog: 在 Dubbo 应用中使用 Zookeeper</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/2018/08/07/%E5%9C%A8-dubbo-%E5%BA%94%E7%94%A8%E4%B8%AD%E4%BD%BF%E7%94%A8-zookeeper/</link><pubDate>Tue, 07 Aug 2018 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/blog/2018/08/07/%E5%9C%A8-dubbo-%E5%BA%94%E7%94%A8%E4%B8%AD%E4%BD%BF%E7%94%A8-zookeeper/</guid><description>
 &lt;h2 id="zookeeper-介绍">Zookeeper 介绍&lt;/h2>
 &lt;h3 id="基本概念">基本概念&lt;/h3>
 &lt;p>在现代的分布式应用中，往往会出现节点和节点之间的协调问题，其中就包括了：选主、集群管理、分布式锁、分布式配置管理、统一命名服务、状态同步等诉求。&lt;a href="https://zookeeper.apache.org">Apache Zookeeper&lt;/a>，正如它的名字所暗示的那样，&lt;em>动物园管理员&lt;/em>，就是为了解决这些诉求的一个分布式协调服务框架。&lt;/p>
 &lt;p>为了保证高可用，ZooKeeper 本身也可以部署成集群模式，称之为 &lt;em>ZooKeeper ensemble&lt;/em>。ZooKeeper 集群中始终确保其中的一台为 leader 的角色，并通过 &lt;em>ZAB (Zookeeper Atomic Broadcast Protocol) &lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/em> 协议确保所有节点上的信息的一致。客户端可以访问集群中的任何一台进行读写操作，而不用担心数据出现不一致的现象。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/zk-emsemble.png" alt="Diagram shows client-server architecture of ZooKeeper">
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/zk-emsemble.png" alt="Diagram shows client-server architecture of ZooKeeper">
 &lt;em>Image Credit : ebook -Zookeeper-Distributed Process Coordination from O&amp;rsquo;Reilly&lt;/em>&lt;/p>
 &lt;p>Zookeeper 中的数据存储方式与传统的 UNIX 文件系统相似，节点按照树状结构来组织，其中，节点被称之为 &lt;em>znodes (ZooKeeper data nodes)&lt;/em>&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/zk-tree.png" alt="zk-tree">
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/zk-tree.png" alt="zk-tree">
 &lt;em>Image Credit : ebook -Zookeeper-Distributed Process Coordination from O&amp;rsquo;Reilly&lt;/em>&lt;/p>
 &lt;h3 id="基本用法">基本用法&lt;/h3>
 &lt;p>可以通过直接下载的方式 &lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>安装并运行 Zookeeper ，在 Mac 上也可以通过 Homebrew &lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup> &lt;code>brew install zookeeper&lt;/code> 来安装，考虑到通用性，本文采用 docker 的方式来运行 Zookeeper。如果没有安装 docker，请先准备好 docker 环境 &lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup>。&lt;/p>
@@ -2676,7 +2676,7 @@ dubbo2.7.3默认开启qos功能，导致一些混部在物理机的dubbo服务�
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>world
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="在-dubbo-中使用-zookeeper">在 Dubbo 中使用 Zookeeper&lt;/h2>
 &lt;p>Dubbo 使用 Zookeeper 用于服务的注册发现和配置管理，在 Zookeeper 中数据的组织由下图所示：&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/dubbo-in-zk.jpg" alt="dubbo-in-zk">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/dubbo-in-zk.jpg" alt="dubbo-in-zk">&lt;/p>
 &lt;p>首先，所有 Dubbo 相关的数据都组织在 &lt;code>/dubbo&lt;/code> 的根节点下。&lt;/p>
 &lt;p>二级目录是服务名，如 &lt;code>com.foo.BarService&lt;/code>。&lt;/p>
 &lt;p>三级目录有两个子节点，分别是 &lt;code>providers&lt;/code> 和 &lt;code>consumers&lt;/code>，表示该服务的提供者和消费者。&lt;/p>
@@ -2819,12 +2819,12 @@ dubbo2.7.3默认开启qos功能，导致一些混部在物理机的dubbo服务�
 &lt;p>&lt;a href="https://www.docker.com/community-edition">https://www.docker.com/community-edition&lt;/a>&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/div></description></item><item><title>Blog: Sentinel 为 Dubbo 服务保驾护航</title><link>https://wxbty.github.io/zh-cn/blog/2018/07/27/sentinel-%E4%B8%BA-dubbo-%E6%9C%8D%E5%8A%A1%E4%BF%9D%E9%A9%BE%E6%8A%A4%E8%88%AA/</link><pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/blog/2018/07/27/sentinel-%E4%B8%BA-dubbo-%E6%9C%8D%E5%8A%A1%E4%BF%9D%E9%A9%BE%E6%8A%A4%E8%88%AA/</guid><description>
+&lt;/div></description></item><item><title>Blog: Sentinel 为 Dubbo 服务保驾护航</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/2018/07/27/sentinel-%E4%B8%BA-dubbo-%E6%9C%8D%E5%8A%A1%E4%BF%9D%E9%A9%BE%E6%8A%A4%E8%88%AA/</link><pubDate>Fri, 27 Jul 2018 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/blog/2018/07/27/sentinel-%E4%B8%BA-dubbo-%E6%9C%8D%E5%8A%A1%E4%BF%9D%E9%A9%BE%E6%8A%A4%E8%88%AA/</guid><description>
 &lt;p>在复杂的生产环境下可能部署着成千上万的 Dubbo 服务实例，流量持续不断地进入，服务之间进行相互调用。但是分布式系统中可能会因流量激增、系统负载过高、网络延迟等一系列问题，导致某些服务不可用，如果不进行相应的控制可能导致级联故障，影响服务的可用性，因此如何对流量进行合理的控制，成为保障服务稳定性的关键。&lt;/p>
 &lt;p>&lt;a href="https://github.com/alibaba/Sentinel">Sentinel&lt;/a> 是阿里中间件团队开源的，面向分布式服务架构的轻量级流量控制产品，主要以流量为切入点，从&lt;strong>流量控制&lt;/strong>、&lt;strong>熔断降级&lt;/strong>、&lt;strong>系统负载保护&lt;/strong>等多个维度来帮助用户保护服务的稳定性。本文将基于 Dubbo，看看 Sentinel 是如何进行流量控制的，并且提供 Dubbo 整合 Sentinel 的最佳实践。&lt;/p>
 &lt;h2 id="快速接入-sentinel">快速接入 Sentinel&lt;/h2>
 &lt;p>Sentinel 意为&lt;strong>哨兵&lt;/strong>，这个命名形象的诠释了 Sentinel 在分布式系统中的工作角色和重要性。以 Sentinel 在 Dubbo 生态系统中的作用为例，Dubbo 的核心模块包括注册中心、服务提供方、服务消费方（服务调用方）和监控四个模块。Sentinel 通过对服务提供方和服务消费方的限流来进一步提升服务的可用性。接下来我们看看 Sentinel 对服务提供方和服务消费方限流的技术实现方式。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/architecture.png" alt="Dubbo Arch">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/architecture.png" alt="Dubbo Arch">&lt;/p>
 &lt;p>Sentinel 提供了与 Dubbo 适配的模块 – &lt;a href="https://github.com/dubbo/dubbo-sentinel-support">Sentinel Dubbo Adapter&lt;/a>，包括针对服务提供方的过滤器和服务消费方的过滤器（Filter）。使用时我们只需引入以下模块（以 Maven 为例）：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;dependency&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">&amp;lt;groupId&amp;gt;&lt;/span>com.alibaba.csp&lt;span style="color:#268bd2">&amp;lt;/groupId&amp;gt;&lt;/span>
@@ -2854,7 +2854,7 @@ dubbo2.7.3默认开启qos功能，导致一些混部在物理机的dubbo服务�
 &lt;ul>
 &lt;li>&lt;strong>单台设备监控&lt;/strong>：当在机器列表中看到您的机器，就代表着已经成功接入控制台，可以查看单台设备的设备名称、IP地址、端口号、健康状态和心跳时间等信息。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/2018/07/27/sentinel/machinediscover.png" alt="Discovery">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/2018/07/27/sentinel/machinediscover.png" alt="Discovery">&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>链路监控&lt;/strong>：簇点链路实时的去拉取指定客户端资源的运行情况，它提供了两种展示模式，一种用书状结构展示资源的调用链路；另外一种则不区分调用链路展示资源的运行情况。通过链路监控，可以查看到每个资源的流控和降级的历史状态。&lt;/li>
 &lt;/ul>
@@ -2867,19 +2867,19 @@ dubbo2.7.3默认开启qos功能，导致一些混部在物理机的dubbo服务�
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
-&lt;td style="text-align:center">&lt;img src="https://wxbty.github.io/imgs/blog/2018/07/27/sentinel/resourceTree.png" alt="resourceTree">&lt;/td>
-&lt;td style="text-align:left">&lt;img src="https://wxbty.github.io/imgs/blog/2018/07/27/sentinel/sentine_dashboard.gif" alt="cluster">&lt;/td>
+&lt;td style="text-align:center">&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/2018/07/27/sentinel/resourceTree.png" alt="resourceTree">&lt;/td>
+&lt;td style="text-align:left">&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/2018/07/27/sentinel/sentine_dashboard.gif" alt="cluster">&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
 &lt;ul>
 &lt;li>&lt;strong>聚合监控&lt;/strong>：同一个服务下的所有机器的簇点信息会被汇总，实现实时监控，精确度达秒级。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/sentinel-dashboard-metrics.png" alt="秒级实时监控">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/sentinel-dashboard-metrics.png" alt="秒级实时监控">&lt;/p>
 &lt;ul>
 &lt;li>&lt;strong>规则配置&lt;/strong>：可以查看已有的限流、降级和系统保护规则，并实时地进行配置。&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/sentinel-dashboard-view-rules.png" alt="规则配置">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/sentinel-dashboard-view-rules.png" alt="规则配置">&lt;/p>
 &lt;h2 id="sentinel-基于-dubbo-的最佳实践">Sentinel 基于 Dubbo 的最佳实践&lt;/h2>
 &lt;blockquote>
 &lt;p>具体 Demo 代码请见 &lt;a href="https://github.com/alibaba/Sentinel/tree/master/sentinel-demo/sentinel-demo-dubbo">sentinel-demo-dubbo&lt;/a>。&lt;/p>
@@ -2910,7 +2910,7 @@ dubbo2.7.3默认开启qos功能，导致一些混部在物理机的dubbo服务�
 &lt;h4 id="服务降级">服务降级&lt;/h4>
 &lt;p>当服务依赖于多个下游服务，而某个下游服务调用非常慢时，会严重影响当前服务的调用。这里我们可以利用 Sentinel 熔断降级的功能，为调用端配置基于平均 RT 的&lt;a href="https://github.com/alibaba/Sentinel/wiki/%E7%86%94%E6%96%AD%E9%99%8D%E7%BA%A7">降级规则&lt;/a>。这样当调用链路中某个服务调用的平均 RT 升高，在一定的次数内超过配置的 RT 阈值，Sentinel 就会对此调用资源进行降级操作，接下来的调用都会立刻拒绝，直到过了一段设定的时间后才恢复，从而保护服务不被调用端短板所影响。同时可以配合 fallback 功能使用，在被降级的时候提供相应的处理逻辑。&lt;/p>
 &lt;h3 id="fallback">Fallback&lt;/h3>
-&lt;p>从 0.1.1 版本开始，Sentinel Dubbo Adapter 还支持配置全局的 fallback 函数，可以在 Dubbo 服务被限流/降级/负载保护的时候进行相应的 fallback 处理。用户只需要实现自定义的 &lt;a href="https://github.com/alibaba/Sentinel/blob/master/sentinel-adapter/sentinel-dubbo-adapter/src/main/java/com/alibaba/csp/sentinel/adapter/dubbo/fallback/DubboFallback.java">&lt;code>DubboFallback&lt;/code>&lt;/a> 接口，并通过 &lt;code>DubboFallbackRegistry&lt;/code> 注册即可。默认情况会直接将 &lt;code>BlockException&lt;/code> 包装后抛出。同时，我们还可以配合 &lt;a href="https://wxbty.github.io/zh-cn/docsv2.7/user/examples/local-mock/">Dubbo 的 fallback 机制&lt;/a> 来为降级的服务提供替代的实现。&lt;/p>
+&lt;p>从 0.1.1 版本开始，Sentinel Dubbo Adapter 还支持配置全局的 fallback 函数，可以在 Dubbo 服务被限流/降级/负载保护的时候进行相应的 fallback 处理。用户只需要实现自定义的 &lt;a href="https://github.com/alibaba/Sentinel/blob/master/sentinel-adapter/sentinel-dubbo-adapter/src/main/java/com/alibaba/csp/sentinel/adapter/dubbo/fallback/DubboFallback.java">&lt;code>DubboFallback&lt;/code>&lt;/a> 接口，并通过 &lt;code>DubboFallbackRegistry&lt;/code> 注册即可。默认情况会直接将 &lt;code>BlockException&lt;/code> 包装后抛出。同时，我们还可以配合 &lt;a href="https://wxbty.github.io/dubbo-website/zh-cn/docsv2.7/user/examples/local-mock/">Dubbo 的 fallback 机制&lt;/a> 来为降级的服务提供替代的实现。&lt;/p>
 &lt;h2 id="sentinel-与-hystrix-的比较">Sentinel 与 Hystrix 的比较&lt;/h2>
 &lt;p>目前业界常用的熔断降级/隔离的库是 Netflix 的 &lt;a href="https://github.com/Netflix/Hystrix">Hystrix&lt;/a>，那么 Sentinel 与 Hystrix 有什么异同呢？Hystrix 的关注点在于以 &lt;em>隔离&lt;/em> 和 &lt;em>熔断&lt;/em> 为主的容错机制，而 Sentinel 的侧重点在于多样化的流量控制、熔断降级、系统负载保护、实时监控和控制台，可以看到解决的问题还是有比较大的不同的。&lt;/p>
 &lt;p>Hystrix 采用命令模式封装资源调用逻辑，并且资源的定义与隔离规则是强依赖的，即在创建 HystrixCommand 的时候就要指定隔离规则（因其执行模型依赖于隔离模式）。Sentinel 的设计更为简单，不关注资源是如何执行的，资源的定义与规则的配置相分离。用户可以先定义好资源，然后在需要的时候配置规则即可。Sentinel 的原则非常简单：根据对应资源配置的规则来为资源执行相应的限流/降级/负载保护策略，若规则未配置则仅进行统计。从 0.1.1 版本开始，Sentinel 还引入了&lt;a href="https://github.com/alibaba/Sentinel/wiki/%E6%B3%A8%E8%A7%A3%E6%94%AF%E6%8C%81">注解支持&lt;/a>，可以更方便地定义资源。&lt;/p>
@@ -2918,7 +2918,7 @@ dubbo2.7.3默认开启qos功能，导致一些混部在物理机的dubbo服务�
 &lt;p>Hystrix 熔断降级功能采用熔断器模式，在某个服务失败比率高时自动进行熔断。Sentinel 的熔断降级功能更为通用，支持平均响应时间与失败比率两个指标。Sentinel 还提供各种调用链路关系和流量控制效果支持，同时还可以根据系统负载去实时地调整流量来保护系统，应用场景更为丰富。同时，Sentinel 还提供了实时的监控 API 和控制台，可以方便用户快速了解目前系统的状态，对服务的稳定性了如指掌。&lt;/p>
 &lt;p>更详细的对比请参见 &lt;a href="https://github.com/alibaba/Sentinel/wiki/Sentinel-%E4%B8%8E-Hystrix-%E7%9A%84%E5%AF%B9%E6%AF%94">Sentinel 与 Hystrix 的对比&lt;/a>。&lt;/p>
 &lt;h2 id="总结">总结&lt;/h2>
-&lt;p>以上介绍的只是 Sentinel 的一个最简单的场景 —— 限流。Sentinel 还可以处理更复杂的各种情况，比如超时熔断、冷启动、请求匀速等。可以参考 &lt;a href="https://github.com/alibaba/Sentinel/wiki/%E4%B8%BB%E9%A1%B5">Sentinel 文档&lt;/a>，更多的场景等待你去挖掘！&lt;/p></description></item><item><title>Blog: 使用Pinpoint做分布式跟踪</title><link>https://wxbty.github.io/zh-cn/blog/2018/07/12/%E4%BD%BF%E7%94%A8pinpoint%E5%81%9A%E5%88%86%E5%B8%83%E5%BC%8F%E8%B7%9F%E8%B8%AA/</link><pubDate>Thu, 12 Jul 2018 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/blog/2018/07/12/%E4%BD%BF%E7%94%A8pinpoint%E5%81%9A%E5%88%86%E5%B8%83%E5%BC%8F%E8%B7%9F%E8%B8%AA/</guid><description>
+&lt;p>以上介绍的只是 Sentinel 的一个最简单的场景 —— 限流。Sentinel 还可以处理更复杂的各种情况，比如超时熔断、冷启动、请求匀速等。可以参考 &lt;a href="https://github.com/alibaba/Sentinel/wiki/%E4%B8%BB%E9%A1%B5">Sentinel 文档&lt;/a>，更多的场景等待你去挖掘！&lt;/p></description></item><item><title>Blog: 使用Pinpoint做分布式跟踪</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/2018/07/12/%E4%BD%BF%E7%94%A8pinpoint%E5%81%9A%E5%88%86%E5%B8%83%E5%BC%8F%E8%B7%9F%E8%B8%AA/</link><pubDate>Thu, 12 Jul 2018 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/blog/2018/07/12/%E4%BD%BF%E7%94%A8pinpoint%E5%81%9A%E5%88%86%E5%B8%83%E5%BC%8F%E8%B7%9F%E8%B8%AA/</guid><description>
 &lt;p>在使用Dubbo进行服务化或者整合应用后，假设某个服务后台日志显示有异常，这个服务又被多个应用调用的情况下，我们通常很难判断是哪个应用调用的，问题的起因是什么，因此我们需要一套分布式跟踪系统来快速定位问题，Pinpoint可以帮助我们快速定位问题（当然，解决方案也不止这一种）。&lt;/p>
 &lt;h2 id="什么是pinpoint">什么是Pinpoint&lt;/h2>
 &lt;blockquote>
@@ -3277,26 +3277,26 @@ dubbo2.7.3默认开启qos功能，导致一些混部在物理机的dubbo服务�
 &lt;p>&lt;code>http://localhost:8080/sayHello?name=ABC&lt;/code>&lt;/p>
 &lt;h2 id="使用pinpoint快速定位问题">使用Pinpoint快速定位问题&lt;/h2>
 &lt;h3 id="首页">首页&lt;/h3>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/pinpoint-home.png" alt="/admin-guide/images/pinpoint-home.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/pinpoint-home.png" alt="/admin-guide/images/pinpoint-home.png">&lt;/p>
 &lt;blockquote>
 &lt;p>这里的用户请求是请求DubboProvider数量的双倍，原因是记录了favicon.ico图标请求导致的&lt;/p>
 &lt;/blockquote>
 &lt;h3 id="调用树">调用树&lt;/h3>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/pinpoint-calltree.png" alt="/admin-guide/images/pinpoint-calltree.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/pinpoint-calltree.png" alt="/admin-guide/images/pinpoint-calltree.png">&lt;/p>
 &lt;h3 id="深入跟踪">深入跟踪&lt;/h3>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/pinpoint-mixedview.png" alt="/admin-guide/images/pinpoint-mixedview.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/pinpoint-mixedview.png" alt="/admin-guide/images/pinpoint-mixedview.png">&lt;/p>
 &lt;h3 id="其他">其他&lt;/h3>
-&lt;p>示例简单的模拟了Dubbo的提供和调用，并没有进行数据库等其他中间件的应用，详细使用请参照Pinpoint文档。&lt;/p></description></item><item><title>Blog: 在 Dubbo 中使用 Zipkin</title><link>https://wxbty.github.io/zh-cn/blog/2018/06/17/%E5%9C%A8-dubbo-%E4%B8%AD%E4%BD%BF%E7%94%A8-zipkin/</link><pubDate>Sun, 17 Jun 2018 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/blog/2018/06/17/%E5%9C%A8-dubbo-%E4%B8%AD%E4%BD%BF%E7%94%A8-zipkin/</guid><description>
+&lt;p>示例简单的模拟了Dubbo的提供和调用，并没有进行数据库等其他中间件的应用，详细使用请参照Pinpoint文档。&lt;/p></description></item><item><title>Blog: 在 Dubbo 中使用 Zipkin</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/2018/06/17/%E5%9C%A8-dubbo-%E4%B8%AD%E4%BD%BF%E7%94%A8-zipkin/</link><pubDate>Sun, 17 Jun 2018 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/blog/2018/06/17/%E5%9C%A8-dubbo-%E4%B8%AD%E4%BD%BF%E7%94%A8-zipkin/</guid><description>
 &lt;p>随着业务的发展，应用的规模不断的扩大，传统的应用架构无法满足诉求，服务化架构改造势在必行，以 Dubbo 为代表的分布式服务框架成为了服务化改造架构中的基石。随着微服务理念逐渐被大众接受，应用进一步向更细粒度拆分，并且，不同的应用由不同的开发团队独立负责，整个分布式系统变得十分复杂。没有人能够清晰及时的知道当前系统整体的依赖关系。当出现问题时，也无法及时知道具体是链路上的哪个环节出了问题。&lt;/p>
 &lt;p>在这个背景下，Google 发表了 &lt;a href="https://ai.google/research/pubs/pub36356">Dapper&lt;/a> 的论文，描述了如何通过一个分布式追踪系统解决上述问题。基于该论文，各大互联网公司实现并部署了自己的分布式追踪系统，其中比较出名的有阿里巴巴的 EagleEye。本文中提到的 Zipkin 是 Twitter 公司开源的分布式追踪系统。下面会详细介绍如何在 Dubbo 中使用 Zipkin 来实现分布式追踪。&lt;/p>
 &lt;h2 id="zipkin-简介">Zipkin 简介&lt;/h2>
 &lt;p>Zipkin 是基于 &lt;a href="https://ai.google/research/pubs/pub36356">Dapper&lt;/a> 论文实现，由 Twitter 开源的分布式追踪系统，通过收集分布式服务执行时间的信息来达到追踪服务调用链路、以及分析服务执行延迟等目的。&lt;/p>
 &lt;h3 id="zipkin-架构">Zipkin 架构&lt;/h3>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/zipkin-architecture.png" alt="Zipkin architecture">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/zipkin-architecture.png" alt="Zipkin architecture">&lt;/p>
 &lt;p>Collector 收集器、Storage 存储、API、UI 用户界面等几部分构成了 Zipkin Server 部分，对应于 GitHub 上 &lt;a href="https://github.com/openzipkin/zipkin">openzipkin/zipkin&lt;/a> 这个项目。而收集应用中调用的耗时信息并将其上报的组件与应用共生，并拥有各个语言的实现版本，其中 Java 的实现是 GitHub 上 &lt;a href="https://github.com/openzipkin/brave">openzipkin/brave&lt;/a>。除了 Java 客户端实现之外，openzipkin 还提供了许多其他语言的实现，其中包括了 go、php、JavaScript、.net、ruby 等，具体列表可以参阅 Zipkin 的 &lt;a href="https://zipkin.io/pages/tracers_instrumentation.html">Exiting instrumentations&lt;/a>。&lt;/p>
 &lt;h3 id="zipkin-的工作过程">Zipkin 的工作过程&lt;/h3>
 &lt;p>当用户发起一次调用时，Zipkin 的客户端会在入口处为整条调用链路生成一个全局唯一的 trace id，并为这条链路中的每一次分布式调用生成一个 span id。span 与 span 之间可以有父子嵌套关系，代表分布式调用中的上下游关系。span 和 span 之间可以是兄弟关系，代表当前调用下的两次子调用。一个 trace 由一组 span 组成，可以看成是由 trace 为根节点，span 为若干个子节点的一棵树。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/trace-sample.png" alt="Related image">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/trace-sample.png" alt="Related image">&lt;/p>
 &lt;p>Span 由调用边界来分隔，在 Zipkin 中，调用边界由以下四个 annotation 来表示：&lt;/p>
 &lt;ul>
 &lt;li>cs - Clent Sent 客户端发送了请求&lt;/li>
@@ -3312,7 +3312,7 @@ dubbo2.7.3默认开启qos功能，导致一些混部在物理机的dubbo服务�
 &lt;li>cr - cs 代表了一次调用的整体耗时&lt;/li>
 &lt;/ul>
 &lt;p>Zipkin 会将 trace 相关的信息在调用链路上传递，并在每个调用边界结束时异步的把当前调用的耗时信息上报给 Zipkin Server。Zipkin Server 在收到 trace 信息后，将其存储起来，Zipkin 支持的存储类型有 inMemory、MySql、Cassandra、以及 ElasticsSearch 几种方式。随后 Zipkin 的 Web UI 会通过 API 访问的方式从存储中将 trace 信息提取出来分析并展示，如下图所示：&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/zipkin-web-screenshot.png" alt="Web interface screenshot">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/zipkin-web-screenshot.png" alt="Web interface screenshot">&lt;/p>
 &lt;h2 id="在-dubbo-中使用">在 Dubbo 中使用&lt;/h2>
 &lt;p>由于 &lt;a href="https://github.com/openzipkin/brave">Brave&lt;/a> 对 Dubbo 已经主动做了支持，在 Dubbo 中集成基于 Zipkin 的链路追踪变的十分简单。下面会按照 Brave 中关于 &lt;a href="https://github.com/openzipkin/brave/blob/master/instrumentation/dubbo/README.md">Dubbo RPC 支持的指引&lt;/a>来说明如何在 Dubbo 中使用 Zipkin。&lt;/p>
 &lt;h3 id="安装-zipkin-server">安装 Zipkin Server&lt;/h3>
@@ -3741,7 +3741,7 @@ dubbo2.7.3默认开启qos功能，导致一些混部在物理机的dubbo服务�
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
 &lt;/ol>
 &lt;p>完成之后的工程的目录结构如下：&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/zipkin-dubbo-project.png" alt="zipkin dubbo project structure">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/zipkin-dubbo-project.png" alt="zipkin dubbo project structure">&lt;/p>
 &lt;h3 id="运行">运行&lt;/h3>
 &lt;p>现在让我们把整个链路运行起来，看看 Zipkin 链路追踪的效果。&lt;/p>
 &lt;h4 id="启动-zookeeper-server">启动 Zookeeper Server&lt;/h4>
@@ -3765,9 +3765,9 @@ dubbo2.7.3默认开启qos功能，导致一些混部在物理机的dubbo服务�
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>执行成功后，客户端会在终端上输出 “greeting, hello, world”。&lt;/p>
 &lt;h4 id="链路追踪">链路追踪&lt;/h4>
 &lt;p>打开浏览器访问 &amp;ldquo;http://localhost:9411&amp;rdquo; 并通过 &amp;ldquo;Find Traces&amp;rdquo; 按钮来搜索，可以找到刚刚调用的链路追踪，效果如下图所示：&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/zipkin-trace.png" alt="zipkin trace">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/zipkin-trace.png" alt="zipkin trace">&lt;/p>
 &lt;p>还可以进一步的选择每一个 span 来查看本次调用边界内的详情，比如，hello-service 这个 span 的详情如下：&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/zipkin-span.png" alt="zipkin span">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/zipkin-span.png" alt="zipkin span">&lt;/p>
 &lt;h2 id="总结">总结&lt;/h2>
 &lt;p>本文介绍了链路追踪的基本概念以及 Zipkin 的基本用法，然后用 Dubbo 构建了一条最简单的调用链路，并引入了 Zipkin 做全链路追踪。由于 Zipkin 对 Dubbo 做了很好的支持，整个集成的过程还是十分简单明了的。&lt;/p>
 &lt;p>Zipkin 对 Dubbo 的支持是构建在 Dubbo 的 filter 扩展机制上的，有兴趣的读者可以通过 &lt;a href="https://github.com/openzipkin/brave/blob/master/instrumentation/dubbo/src/main/java/brave/dubbo/TracingFilter.java">https://github.com/openzipkin/brave/blob/master/instrumentation/dubbo/src/main/java/brave/dubbo/TracingFilter.java&lt;/a> 了解其实现细节。&lt;/p>

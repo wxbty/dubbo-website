@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – 注册中心</title><link>https://wxbty.github.io/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/</link><description>Recent content in 注册中心 on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://wxbty.github.io/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/index.xml" rel="self" type="application/rss+xml"/><item><title>Overview: 了解注册中心</title><link>https://wxbty.github.io/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/desc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/desc/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – 注册中心</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/</link><description>Recent content in 注册中心 on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/index.xml" rel="self" type="application/rss+xml"/><item><title>Overview: 了解注册中心</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/desc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/desc/</guid><description>
 &lt;h2 id="什么是注册中心">什么是注册中心&lt;/h2>
 &lt;p>所谓的注册中心，可以简单的理解为手机的通讯录。通讯录的目的是方便我们记录朋友、同事、家人等联系方式。一般的存储方式格式都是：姓名&amp;ndash;联系方式，当我们需要联系某个人时，打开我们的通讯，找到他的名字，拨打电话。&lt;/p>
 &lt;p>注册中心要做的事情，也是类似的。它记录了服务和服务地址的映射关系。在分布式架构中，服务会注册到这里，当服务需要调用其它服务时，就到这里找到服务的地址，进行调用。&lt;/p>
@@ -27,7 +27,7 @@
 &lt;p>官网：https://zookeeper.apache.org/&lt;/p>
 &lt;h3 id="polaris">Polaris&lt;/h3>
 &lt;p>北极星是腾讯开源的服务治理平台，致力于解决分布式和微服务架构中的服务管理、流量管理、配置管理、故障容错和可观测性问题，针对不同的技术栈和环境提供服务治理的标准方案和最佳实践。下面介绍北极星的应用场景、功能特性、系统组件和常见问题。&lt;/p>
-&lt;p>官网：https://polarismesh.cn/&lt;/p></description></item><item><title>Overview: 应用级服务发现</title><link>https://wxbty.github.io/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/service-discovery/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/service-discovery/</guid><description>
+&lt;p>官网：https://polarismesh.cn/&lt;/p></description></item><item><title>Overview: 应用级服务发现</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/service-discovery/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/service-discovery/</guid><description>
 &lt;p>参考文章&lt;a href="https://baijiahao.baidu.com/s?id=1669266413887039723&amp;amp;wfr=spider&amp;amp;for=pc">&lt;strong>《Dubbo 迈出云原生重要一步 应用级服务发现解析》&lt;/strong>&lt;/a>&lt;/p>
 &lt;p>参考仓库：&lt;a href="https://github.com/apache/dubbo-go-samples/tree/45a0d843b54e4922c240900e63516176cc7da4f6/registry/servicediscovery">dubbo-go-samples/registry/serivcediscovery&lt;/a>&lt;/p>
 &lt;h2 id="配置方案">配置方案&lt;/h2>
@@ -68,7 +68,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">services&lt;/span>:
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">GreeterProvider&lt;/span>:
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">interface&lt;/span>: com.apache.dubbo.sample.basic.IGreeter
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>相比于常规配置，定义好registry-type: service, 并且定义好元数据中心后，将会使用应用级服务注册/服务发现。&lt;/p></description></item><item><title>Overview: 注册中心配置</title><link>https://wxbty.github.io/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/registry/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/registry/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>相比于常规配置，定义好registry-type: service, 并且定义好元数据中心后，将会使用应用级服务注册/服务发现。&lt;/p></description></item><item><title>Overview: 注册中心配置</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/registry/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/registry/</guid><description>
 &lt;p>参考samples &lt;a href="https://github.com/apache/dubbo-go-samples/tree/f7febed9d686cb940ea55d34b5baa567d7574a44/registry">dubbo-go-samples/registry&lt;/a>&lt;/p>
 &lt;h2 id="registry-注册中心配置">Registry 注册中心配置&lt;/h2>
 &lt;ul>
@@ -160,7 +160,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">services&lt;/span>:
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">GreeterProvider&lt;/span>:
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">interface&lt;/span>: com.apache.dubbo.sample.basic.IGreeter
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Overview: 使用 Nacos 作为注册中心</title><link>https://wxbty.github.io/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/nacos-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/nacos-2/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Overview: 使用 Nacos 作为注册中心</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/nacos-2/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/nacos-2/</guid><description>
 &lt;h2 id="1-准备工作">1. 准备工作&lt;/h2>
 &lt;ul>
 &lt;li>dubbo-go cli 工具和依赖工具已安装&lt;/li>
@@ -209,7 +209,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
 &lt;/ul>
 &lt;h2 id="4-更多支持的注册中心">4. 更多支持的注册中心&lt;/h2>
-&lt;p>参考 &lt;a href="https://github.com/apache/dubbo-go-samples/tree/f7febed9d686cb940ea55d34b5baa567d7574a44/registry">dubbo-go-samples/registry&lt;/a>&lt;/p></description></item><item><title>Overview: 使用 Nacos 作为注册中心</title><link>https://wxbty.github.io/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/nacos/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/nacos/</guid><description>
+&lt;p>参考 &lt;a href="https://github.com/apache/dubbo-go-samples/tree/f7febed9d686cb940ea55d34b5baa567d7574a44/registry">dubbo-go-samples/registry&lt;/a>&lt;/p></description></item><item><title>Overview: 使用 Nacos 作为注册中心</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/nacos/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/nacos/</guid><description>
 &lt;h2 id="1-准备工作">1. 准备工作&lt;/h2>
 &lt;ul>
 &lt;li>dubbo-go cli 工具和依赖工具已安装&lt;/li>
@@ -318,7 +318,7 @@ CallUserStruct参数定义：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>=======================
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>req:&amp;amp;main.CallUserStruct{ID:&amp;#34;A000&amp;#34;, Male:true, SubInfo:main.SubInfo{SubID:&amp;#34;A001&amp;#34;, SubMale:false, SubAge:18}}
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>=======================
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>可见接收到了来自cli的数据&lt;/p></description></item><item><title>Overview: 使用 Zookeeper 作为注册中心</title><link>https://wxbty.github.io/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/zookeeper/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/zookeeper/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>可见接收到了来自cli的数据&lt;/p></description></item><item><title>Overview: 使用 Zookeeper 作为注册中心</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/zookeeper/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/zookeeper/</guid><description>
 &lt;h2 id="1-准备工作">1. 准备工作&lt;/h2>
 &lt;ul>
 &lt;li>dubbo-go cli 工具和依赖工具已安装&lt;/li>
@@ -392,7 +392,7 @@ CallUserStruct参数定义：&lt;/p>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;/li>
 &lt;/ul>
 &lt;h2 id="4-更多支持的注册中心">4. 更多支持的注册中心&lt;/h2>
-&lt;p>参考 &lt;a href="https://github.com/apache/dubbo-go-samples/tree/f7febed9d686cb940ea55d34b5baa567d7574a44/registry">dubbo-go-samples/registry&lt;/a>&lt;/p></description></item><item><title>Overview: 使用 Polaris 作为注册中心</title><link>https://wxbty.github.io/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/polaris/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/polaris/</guid><description>
+&lt;p>参考 &lt;a href="https://github.com/apache/dubbo-go-samples/tree/f7febed9d686cb940ea55d34b5baa567d7574a44/registry">dubbo-go-samples/registry&lt;/a>&lt;/p></description></item><item><title>Overview: 使用 Polaris 作为注册中心</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/polaris/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/polaris/</guid><description>
 &lt;h2 id="1准备工作">1.准备工作&lt;/h2>
 &lt;ul>
 &lt;li>
@@ -427,7 +427,7 @@ CallUserStruct参数定义：&lt;/p>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>当看到以下日志时即表示 go-client 成功发现 go-server 并发起了 RPC 调用&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>INFO cmd/main.go:75 response: &amp;amp;{A001 Alex Stocks 18 2022-11-19 12:52:38.092 +0800 CST}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="3使用polaris作为注册中心">3.使用Polaris作为注册中心&lt;/h2>
-&lt;p>相关源码：&lt;a href="https://github.com/apache/dubbo-go-samples/tree/f7febed9d686cb940ea55d34b5baa567d7574a44/polaris/registry">示例源码&lt;/a>&lt;/p></description></item><item><title>Overview: 多注册中心</title><link>https://wxbty.github.io/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/multi_registry/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/multi_registry/</guid><description>
+&lt;p>相关源码：&lt;a href="https://github.com/apache/dubbo-go-samples/tree/f7febed9d686cb940ea55d34b5baa567d7574a44/polaris/registry">示例源码&lt;/a>&lt;/p></description></item><item><title>Overview: 多注册中心</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/multi_registry/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/multi_registry/</guid><description>
 &lt;p>一个 Dubbo-go 应用可以配置的多个接口维度的注册中心。&lt;/p>
 &lt;h2 id="1-准备工作">1. 准备工作&lt;/h2>
 &lt;ul>

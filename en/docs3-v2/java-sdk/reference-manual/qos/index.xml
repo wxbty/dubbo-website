@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – QOS Operation Manual</title><link>https://wxbty.github.io/en/docs3-v2/java-sdk/reference-manual/qos/</link><description>Recent content in QOS Operation Manual on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://wxbty.github.io/en/docs3-v2/java-sdk/reference-manual/qos/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs3-V2: QOS Overview</title><link>https://wxbty.github.io/en/docs3-v2/java-sdk/reference-manual/qos/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/en/docs3-v2/java-sdk/reference-manual/qos/overview/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – QOS Operation Manual</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/qos/</link><description>Recent content in QOS Operation Manual on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/qos/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs3-V2: QOS Overview</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/qos/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/qos/overview/</guid><description>
 &lt;h2 id="description-of-related-parameters">Description of related parameters&lt;/h2>
 &lt;p>QoS provides some startup parameters to configure startup, they mainly include:&lt;/p>
 &lt;table>
@@ -210,7 +210,7 @@ Example:&lt;/p>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>dubbo.application.qos-accept-foreign-ip=false
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>dubbo.application.qos-accept-foreign-ip-whitelist=123.12.10.13, 132.12.10.13/24
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>dubbo.application.qos-anonymous-access-permission-level=NONE
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Basic Command Manual</title><link>https://wxbty.github.io/en/docs3-v2/java-sdk/reference-manual/qos/command/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/en/docs3-v2/java-sdk/reference-manual/qos/command/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Basic Command Manual</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/qos/command/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/qos/command/</guid><description>
 &lt;h2 id="help-command">help command&lt;/h2>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>// list all commands
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>dubbo&amp;gt;help
@@ -236,7 +236,7 @@ Example:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>dubbo&amp;gt;quit
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>BYE!
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Connection closed by foreign host.
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Service Management Commands</title><link>https://wxbty.github.io/en/docs3-v2/java-sdk/reference-manual/qos/service-management/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/en/docs3-v2/java-sdk/reference-manual/qos/service-management/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Service Management Commands</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/qos/service-management/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/qos/service-management/</guid><description>
 &lt;h2 id="ls-command">ls command&lt;/h2>
 &lt;p>List consumers and providers&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>dubbo&amp;gt;ls
@@ -283,7 +283,7 @@ Example:&lt;/p>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>//According to the rules, some services are offline
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>dubbo&amp;gt;offline com.*
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>OK
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Frame State Command</title><link>https://wxbty.github.io/en/docs3-v2/java-sdk/reference-manual/qos/probe/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/en/docs3-v2/java-sdk/reference-manual/qos/probe/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Frame State Command</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/qos/probe/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/qos/probe/</guid><description>
 &lt;p>Reference document: &lt;a href="../../../advanced-features-and-usage/others/dubbo-kubernetes-probe/">Kubernetes Lifecycle Probe&lt;/a>&lt;/p>
 &lt;h2 id="startup-command">startup command&lt;/h2>
 &lt;p>Check if the current framework has been started&lt;/p>
@@ -303,7 +303,7 @@ Example:&lt;/p>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>true
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>dubbo&amp;gt;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Logging framework runtime management</title><link>https://wxbty.github.io/en/docs3-v2/java-sdk/reference-manual/qos/logger-management/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/en/docs3-v2/java-sdk/reference-manual/qos/logger-management/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Logging framework runtime management</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/qos/logger-management/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/qos/logger-management/</guid><description>
 &lt;h2 id="logging-framework-runtime-management">Logging framework runtime management&lt;/h2>
 &lt;p>Starting from &lt;code>3.0.10&lt;/code>, dubbo-qos runtime control supports querying log configuration and dynamically modifying the used log framework and log level.&lt;/p>
 &lt;p>Note: The log configuration modified by dubbo-qos is not stored persistently and will become invalid after the application is restarted.&lt;/p>
@@ -362,7 +362,7 @@ Example:&lt;/p>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>OK
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>dubbo&amp;gt;loggerInfo
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Available logger adapters: [jcl, slf4j, log4j, jdk]. Current Adapter: [slf4j]. Log level: INFO
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Performance Sampling Command</title><link>https://wxbty.github.io/en/docs3-v2/java-sdk/reference-manual/qos/profiler/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/en/docs3-v2/java-sdk/reference-manual/qos/profiler/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Performance Sampling Command</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/qos/profiler/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/qos/profiler/</guid><description>
 &lt;p>The performance sampling function can detect the time consumption of various parts of the Dubbo processing link. When a timeout occurs, &lt;code>( usageTime / timeout &amp;gt; profilerWarnPercent * 100 )&lt;/code> records the time consumption of calls through logs.&lt;/p>
 &lt;p>This function is divided into &lt;code>simple profiler&lt;/code> and &lt;code>detail profiler&lt;/code> two modes, where &lt;code>simple profiler&lt;/code> mode is enabled by default, and &lt;code>detail profiler&lt;/code> mode is disabled by default.
 Compared with the &lt;code>simple profiler&lt;/code> mode, the &lt;code>detail profiler&lt;/code> collects more time-consuming processing of each filter, specific time-consuming protocols, etc.
@@ -400,7 +400,7 @@ In the &lt;code>simple profiler&lt;/code> mode, if you find that there is a long
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>OK
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>dubbo&amp;gt;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Routing Status Command</title><link>https://wxbty.github.io/en/docs3-v2/java-sdk/reference-manual/qos/router-snapshot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/en/docs3-v2/java-sdk/reference-manual/qos/router-snapshot/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Routing Status Command</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/qos/router-snapshot/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/qos/router-snapshot/</guid><description>
 &lt;p>Many of Dubbo&amp;rsquo;s traffic management capabilities are implemented based on Router. In a production environment, if traffic results do not meet expectations, you can use the routing status command to check the routing status to locate possible problems.&lt;/p>
 &lt;p>Reference link: &lt;a href="../../../advanced-features-and-usage/performance/router-snapshot/">routing status collection&lt;/a>&lt;/p>
 &lt;h2 id="getroutersnapshot-command">getRouterSnapshot command&lt;/h2>
@@ -471,7 +471,7 @@ In the &lt;code>simple profiler&lt;/code> mode, if you find that there is a long
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>···
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>dubbo&amp;gt;
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Serialization Security Audit</title><link>https://wxbty.github.io/en/docs3-v2/java-sdk/reference-manual/qos/security/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/en/docs3-v2/java-sdk/reference-manual/qos/security/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Serialization Security Audit</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/qos/security/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/qos/security/</guid><description>
 &lt;p>Dubbo supports real-time viewing of current configuration information and trusted/untrusted class lists through QoS commands. Currently supports two commands: &lt;code>serializeCheckStatus&lt;/code> to view the current configuration information, &lt;code>serializeWarnedClasses&lt;/code> to view the real-time alarm list.&lt;/p>
 &lt;h3 id="serializecheckstatus-command">&lt;code>serializeCheckStatus&lt;/code> command&lt;/h3>
 &lt;p>Access directly through the console:&lt;/p>
@@ -523,5 +523,5 @@ In the &lt;code>simple profiler&lt;/code> mode, if you find that there is a long
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#719e07">{&lt;/span>&lt;span style="color:#2aa198">&amp;#34;warnedClasses&amp;#34;&lt;/span>:&lt;span style="color:#719e07">[&lt;/span>&lt;span style="color:#2aa198">&amp;#34;io.dubbo.test2.NotSerializable&amp;#34;&lt;/span>,&lt;span style="color:#2aa198">&amp;#34;org.apache.dubbo.samples.NotSerializable&amp;#34;&lt;/span>,&lt;span style="color:#2aa198">&amp;#34;io.dubbo.test.NotSerializable&amp;#34;&lt;/span>,&lt;span style="color:#2aa198">&amp;#34;io.dubbo.test2.OthersSerializable&amp;#34;&lt;/span>&lt;span style="color:#719e07">]}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Note: It is recommended to pay attention to the result of &lt;code>serializeWarnedClasses&lt;/code> in time, and judge whether it is attacked by whether the returned result is not empty.&lt;/p>
 &lt;blockquote>
-&lt;p>For more configuration details, please refer to &lt;a href="https://wxbty.github.io/zh-cn/overview/mannual/java-sdk/advanced-features-and-usage/security/class-check/">Dubbo Class Check Mechanism&lt;/a>.&lt;/p>
+&lt;p>For more configuration details, please refer to &lt;a href="https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/java-sdk/advanced-features-and-usage/security/class-check/">Dubbo Class Check Mechanism&lt;/a>.&lt;/p>
 &lt;/blockquote></description></item></channel></rss>
