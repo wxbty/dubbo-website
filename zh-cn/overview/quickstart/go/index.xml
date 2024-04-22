@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Go 微服务开发入门</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/quickstart/go/</link><description>Recent content in Go 微服务开发入门 on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://wxbty.github.io/dubbo-website/zh-cn/overview/quickstart/go/index.xml" rel="self" type="application/rss+xml"/><item><title>Overview: 安装 Dubbo-go 开发环境</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/quickstart/go/install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/overview/quickstart/go/install/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Go 微服务开发入门</title><link>https://wxbty.github.io/zh-cn/overview/quickstart/go/</link><description>Recent content in Go 微服务开发入门 on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://wxbty.github.io/zh-cn/overview/quickstart/go/index.xml" rel="self" type="application/rss+xml"/><item><title>Overview: 安装 Dubbo-go 开发环境</title><link>https://wxbty.github.io/zh-cn/overview/quickstart/go/install/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/overview/quickstart/go/install/</guid><description>
 &lt;h3 id="1-安装go语言环境">1. 安装Go语言环境&lt;/h3>
 &lt;blockquote>
 &lt;p>go version &amp;gt;= go 1.15。建议使用最新版 go 1.19&lt;/p>
@@ -22,7 +22,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>protoc-gen-go v1.26.0
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$ protoc-gen-go-triple --version
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>protoc-gen-go-triple 1.0.8
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Overview: 完成一次 RPC 调用</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/quickstart/go/quickstart_triple/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/overview/quickstart/go/quickstart_triple/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Overview: 完成一次 RPC 调用</title><link>https://wxbty.github.io/zh-cn/overview/quickstart/go/quickstart_triple/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/overview/quickstart/go/quickstart_triple/</guid><description>
 &lt;h2 id="1-生成-demo-项目">1. 生成 Demo 项目&lt;/h2>
 &lt;p>使用安装好的 dubbogo-cli 工具，创建 demo 工程。&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>$ mkdir quickstart
@@ -107,7 +107,7 @@
 &lt;div class="alert alert-primary" role="alert">
 &lt;h4 class="alert-heading">更多&lt;/h4>
 细心的读者可以发现，以上例子编写的的服务端可以接受来自客户端的普通 RPC、流式 RPC 调用请求。目前只编写了普通调用的 Client，读者可以根据 samples 库中的例子来尝试编写流式客户端和服务端应用。
-&lt;/div></description></item><item><title>Overview: 完成一次自己定义接口的 RPC 调用</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/quickstart/go/quickstart_triple_with_customize/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/overview/quickstart/go/quickstart_triple_with_customize/</guid><description>
+&lt;/div></description></item><item><title>Overview: 完成一次自己定义接口的 RPC 调用</title><link>https://wxbty.github.io/zh-cn/overview/quickstart/go/quickstart_triple_with_customize/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/overview/quickstart/go/quickstart_triple_with_customize/</guid><description>
 &lt;h2 id="1概述">1.概述&lt;/h2>
 &lt;p>我们本章来实现一个简单的小需求，实现一个分布式ID生成服务，通过该服务可以获取分布式ID
 （假设的分布式ID，我们不探讨ID的生成方案和算法，这里直接使用uuid代替，只为演示自定义服务的创建）&lt;/p>
@@ -212,7 +212,7 @@
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>export DUBBO_GO_CONFIG_PATH=conf&lt;span style="color:#719e07">/&lt;/span>dubbogo.yaml
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#719e07">go&lt;/span> run cmd&lt;span style="color:#719e07">/&lt;/span>app.&lt;span style="color:#719e07">go&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>打开nacos的控制台，可以看到服务已经注册
-&lt;img src="https://wxbty.github.io/dubbo-website/imgs/docs3-v2/golang-sdk/quickstart/nacos.jpg" alt="img">&lt;/p>
+&lt;img src="https://wxbty.github.io/imgs/docs3-v2/golang-sdk/quickstart/nacos.jpg" alt="img">&lt;/p>
 &lt;h2 id="2-客户端使用">2. 客户端使用&lt;/h2>
 &lt;p>首先，我们可以共享我们的服务端的api给客户端，并生成相关的代码（这里可以根据实际项目需要，共享共享proto，每个consumer自行生成代码，或统一生成sdk后给依赖的服务引入）
 客户端目录如下：&lt;/p>
@@ -267,4 +267,4 @@ client.go 代码如下&lt;/p>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>2022-12-30T20:59:19.971+0800 INFO cmd/client.go:44 start to &lt;span style="color:#b58900">test&lt;/span> dubbo
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>2022-12-30T20:59:19.982+0800 INFO cmd/client.go:52 get id result: aafd9c73-4014-4d67-a67f-5d107105647b
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="3-更多">3. 更多&lt;/h2>
-&lt;p>可以发现注册中心我们是使用nacos，当然，我们也可以使用其他的注册中心，更多的使用方式，可以参考&lt;a href="https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/">注册中心&lt;/a>&lt;/p></description></item></channel></rss>
+&lt;p>可以发现注册中心我们是使用nacos，当然，我们也可以使用其他的注册中心，更多的使用方式，可以参考&lt;a href="https://wxbty.github.io/zh-cn/overview/mannual/golang-sdk/tutorial/develop/registry/">注册中心&lt;/a>&lt;/p></description></item></channel></rss>

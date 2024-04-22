@@ -1,7 +1,7 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Release Notes</title><link>https://wxbty.github.io/dubbo-website/zh-cn/tags/release-notes/</link><description>Recent content in Release Notes on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 18 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wxbty.github.io/dubbo-website/zh-cn/tags/release-notes/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Dubbo Java 3.1.4 正式发布</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/2022/12/01/dubbo-java-3.1.4-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83/</link><pubDate>Thu, 01 Dec 2022 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/blog/2022/12/01/dubbo-java-3.1.4-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Release Notes</title><link>https://wxbty.github.io/zh-cn/tags/release-notes/</link><description>Recent content in Release Notes on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sun, 18 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wxbty.github.io/zh-cn/tags/release-notes/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Dubbo Java 3.1.4 正式发布</title><link>https://wxbty.github.io/zh-cn/blog/2022/12/01/dubbo-java-3.1.4-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83/</link><pubDate>Thu, 01 Dec 2022 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/blog/2022/12/01/dubbo-java-3.1.4-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83/</guid><description>
 &lt;p>Dubbo 3.1.4 版本是目前 Dubbo 3 的最新稳定版本，我们建议所有的用户都升级到最新的稳定版本。&lt;/p>
 &lt;h1 id="dubbo-314">Dubbo 3.1.4&lt;/h1>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/release/3-1-4.png" alt="image.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/release/3-1-4.png" alt="image.png">&lt;/p>
 &lt;h3 id="新特性">新特性&lt;/h3>
 &lt;ul>
 &lt;li>Dubbo QoS 支持指定白名单 IP 列表访问所有命令&lt;/li>
@@ -44,8 +44,8 @@
 &lt;li>@ShenFeng312 在 PR #11102 提交了第一个贡献&lt;/li>
 &lt;/ul>
 &lt;h1 id="未来版本规划">未来版本规划&lt;/h1>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/release/release-roadmap.png" alt="image.png">&lt;/p>
-&lt;p>Dubbo 版本的发布规划以及在《&lt;a href="https://mp.weixin.qq.com/s?__biz=MzIwODYwNTA4MA==&amp;amp;mid=2247484424&amp;amp;idx=1&amp;amp;sn=2f5ff4846f7dafad325f78fd8cf4d1fc&amp;amp;chksm=9701deffa07657e9a46eb97bb859770b4856599566b992724013a848a730f394702938e72404&amp;amp;token=1547029975&amp;amp;lang=zh_CN#rd">聚焦稳定性，Dubbo 发版规划公布&lt;/a>》一文中正式发布，欢迎查看。&lt;/p></description></item><item><title>Blog: Dubbo Java 3.0.2 发版公告</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/2021/07/18/dubbo-java-3.0.2-%E5%8F%91%E7%89%88%E5%85%AC%E5%91%8A/</link><pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/blog/2021/07/18/dubbo-java-3.0.2-%E5%8F%91%E7%89%88%E5%85%AC%E5%91%8A/</guid><description>
+&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/release/release-roadmap.png" alt="image.png">&lt;/p>
+&lt;p>Dubbo 版本的发布规划以及在《&lt;a href="https://mp.weixin.qq.com/s?__biz=MzIwODYwNTA4MA==&amp;amp;mid=2247484424&amp;amp;idx=1&amp;amp;sn=2f5ff4846f7dafad325f78fd8cf4d1fc&amp;amp;chksm=9701deffa07657e9a46eb97bb859770b4856599566b992724013a848a730f394702938e72404&amp;amp;token=1547029975&amp;amp;lang=zh_CN#rd">聚焦稳定性，Dubbo 发版规划公布&lt;/a>》一文中正式发布，欢迎查看。&lt;/p></description></item><item><title>Blog: Dubbo Java 3.0.2 发版公告</title><link>https://wxbty.github.io/zh-cn/blog/2021/07/18/dubbo-java-3.0.2-%E5%8F%91%E7%89%88%E5%85%AC%E5%91%8A/</link><pubDate>Sun, 18 Jul 2021 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/blog/2021/07/18/dubbo-java-3.0.2-%E5%8F%91%E7%89%88%E5%85%AC%E5%91%8A/</guid><description>
 &lt;h2 id="新特性">新特性&lt;/h2>
 &lt;ul>
 &lt;li>支持通过 @DubboService 注解暴露泛化服务&lt;/li>
@@ -169,9 +169,9 @@
 &lt;li>nacos client: 2.0.0 -&amp;gt; 2.0.2&lt;/li>
 &lt;li>swagger: 1.5.19 -&amp;gt; 1.5.24&lt;/li>
 &lt;li>hessian_lite: 3.2.8 -&amp;gt; 3.2.11&lt;/li>
-&lt;/ul></description></item><item><title>Blog: Dubbo Java 3.1.3 正式发布</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/2022/07/18/dubbo-java-3.1.3-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83/</link><pubDate>Mon, 18 Jul 2022 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/blog/2022/07/18/dubbo-java-3.1.3-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83/</guid><description>
+&lt;/ul></description></item><item><title>Blog: Dubbo Java 3.1.3 正式发布</title><link>https://wxbty.github.io/zh-cn/blog/2022/07/18/dubbo-java-3.1.3-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83/</link><pubDate>Mon, 18 Jul 2022 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/blog/2022/07/18/dubbo-java-3.1.3-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83/</guid><description>
 &lt;h2 id="dubbo-313">Dubbo 3.1.3&lt;/h2>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/release/3-1-3.png" alt="image.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/release/3-1-3.png" alt="image.png">&lt;/p>
 &lt;h3 id="修改内容">修改内容&lt;/h3>
 &lt;ul>
 &lt;li>修复本地调用的过程中 Filter 顺序异常的问题&lt;/li>
@@ -199,10 +199,10 @@
 &lt;li>&lt;a href="https://github.com/weixsun">@weixsun&lt;/a> 在 &lt;a href="https://github.com/apache/dubbo/pull/10941">#10941&lt;/a> 中提交了第一个贡献&lt;/li>
 &lt;/ul>
 &lt;h2 id="未来的版本规划">未来的版本规划&lt;/h2>
-&lt;p>3.0、3.1、3.2 有什么区别？未来会怎么发展？发版周期是怎么样的？更多的版本迭代规划也将在近期推出，欢迎关注 Apache Dubbo 官方公众号获取最新的信息。&lt;/p></description></item><item><title>Blog: Dubbo Java 3.2.0-beta.3 正式发布</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/2022/12/18/dubbo-java-3.2.0-beta.3-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83/</link><pubDate>Sun, 18 Dec 2022 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/blog/2022/12/18/dubbo-java-3.2.0-beta.3-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83/</guid><description>
+&lt;p>3.0、3.1、3.2 有什么区别？未来会怎么发展？发版周期是怎么样的？更多的版本迭代规划也将在近期推出，欢迎关注 Apache Dubbo 官方公众号获取最新的信息。&lt;/p></description></item><item><title>Blog: Dubbo Java 3.2.0-beta.3 正式发布</title><link>https://wxbty.github.io/zh-cn/blog/2022/12/18/dubbo-java-3.2.0-beta.3-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83/</link><pubDate>Sun, 18 Dec 2022 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/blog/2022/12/18/dubbo-java-3.2.0-beta.3-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83/</guid><description>
 &lt;p>Dubbo 3.2.0-beta.3 版本是目前 Dubbo 3 的最新特性版本，包括了如 Spring Boot 3、JDK 17、服务粒度的线程池隔离等新特性的支持，欢迎大家尝鲜使用。&lt;/p>
 &lt;h1 id="dubbo-320-beta3">Dubbo 3.2.0-beta.3&lt;/h1>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/release/3-2-0-beta-3.png" alt="image.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/release/3-2-0-beta-3.png" alt="image.png">&lt;/p>
 &lt;p>&lt;strong>注：Dubbo 3.2.0-beta.3 的代码基础和 Dubbo 3.1.4 完全一致，因此在 Dubbo 3.1.4 中包括的所有修改内容，在 Dubbo 3.2.0-beta.3 中也同样存在，后续说明中对于重复的内容讲不再赘述。&lt;/strong>&lt;/p>
 &lt;h3 id="新特性">新特性&lt;/h3>
 &lt;ul>
@@ -241,10 +241,10 @@
 &lt;li>@XDanwar 在 PR #11063 提交了第一个贡献&lt;/li>
 &lt;/ul>
 &lt;h1 id="未来版本规划">未来版本规划&lt;/h1>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/release/release-roadmap.png" alt="image.png">&lt;/p>
-&lt;p>Dubbo 版本的发布规划以及在《&lt;a href="https://mp.weixin.qq.com/s?__biz=MzIwODYwNTA4MA==&amp;amp;mid=2247484424&amp;amp;idx=1&amp;amp;sn=2f5ff4846f7dafad325f78fd8cf4d1fc&amp;amp;chksm=9701deffa07657e9a46eb97bb859770b4856599566b992724013a848a730f394702938e72404&amp;amp;token=1547029975&amp;amp;lang=zh_CN#rd">聚焦稳定性，Dubbo 发版规划公布&lt;/a>》一文中正式发布，欢迎查看。&lt;/p></description></item><item><title>Blog: Dubbo 3.2.0-beta.2 正式发布</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/2022/11/18/dubbo-3.2.0-beta.2-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83/</link><pubDate>Fri, 18 Nov 2022 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/blog/2022/11/18/dubbo-3.2.0-beta.2-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83/</guid><description>
+&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/release/release-roadmap.png" alt="image.png">&lt;/p>
+&lt;p>Dubbo 版本的发布规划以及在《&lt;a href="https://mp.weixin.qq.com/s?__biz=MzIwODYwNTA4MA==&amp;amp;mid=2247484424&amp;amp;idx=1&amp;amp;sn=2f5ff4846f7dafad325f78fd8cf4d1fc&amp;amp;chksm=9701deffa07657e9a46eb97bb859770b4856599566b992724013a848a730f394702938e72404&amp;amp;token=1547029975&amp;amp;lang=zh_CN#rd">聚焦稳定性，Dubbo 发版规划公布&lt;/a>》一文中正式发布，欢迎查看。&lt;/p></description></item><item><title>Blog: Dubbo 3.2.0-beta.2 正式发布</title><link>https://wxbty.github.io/zh-cn/blog/2022/11/18/dubbo-3.2.0-beta.2-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83/</link><pubDate>Fri, 18 Nov 2022 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/blog/2022/11/18/dubbo-3.2.0-beta.2-%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83/</guid><description>
 &lt;h2 id="dubbo-320-beta2">Dubbo 3.2.0-beta.2&lt;/h2>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/release/3-2-0-beta-2.png" alt="image.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/release/3-2-0-beta-2.png" alt="image.png">&lt;/p>
 &lt;h3 id="修改内容">修改内容&lt;/h3>
 &lt;ul>
 &lt;li>切换到在用户线程序列化，提升协议性能&lt;/li>
@@ -269,7 +269,7 @@
 &lt;li>&lt;a href="https://github.com/weixsun">@weixsun&lt;/a> 在 &lt;a href="https://github.com/apache/dubbo/pull/10941">#10941&lt;/a> 中提交了第一个贡献&lt;/li>
 &lt;/ul>
 &lt;h2 id="未来的版本规划">未来的版本规划&lt;/h2>
-&lt;p>3.0、3.1、3.2 有什么区别？未来会怎么发展？发版周期是怎么样的？更多的版本迭代规划也将在近期推出，欢迎关注 Apache Dubbo 官方公众号获取最新的信息。&lt;/p></description></item><item><title>Blog: Dubbo Java 2.7.14 发版公告</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/2020/05/18/dubbo-java-2.7.14-%E5%8F%91%E7%89%88%E5%85%AC%E5%91%8A/</link><pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/blog/2020/05/18/dubbo-java-2.7.14-%E5%8F%91%E7%89%88%E5%85%AC%E5%91%8A/</guid><description>
+&lt;p>3.0、3.1、3.2 有什么区别？未来会怎么发展？发版周期是怎么样的？更多的版本迭代规划也将在近期推出，欢迎关注 Apache Dubbo 官方公众号获取最新的信息。&lt;/p></description></item><item><title>Blog: Dubbo Java 2.7.14 发版公告</title><link>https://wxbty.github.io/zh-cn/blog/2020/05/18/dubbo-java-2.7.14-%E5%8F%91%E7%89%88%E5%85%AC%E5%91%8A/</link><pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/blog/2020/05/18/dubbo-java-2.7.14-%E5%8F%91%E7%89%88%E5%85%AC%E5%91%8A/</guid><description>
 &lt;h2 id="变动项">变动项&lt;/h2>
 &lt;ul>
 &lt;li>为 ServiceDiscovery 增加动态配置中心的覆盖规则。（#8389）&lt;/li>
@@ -296,7 +296,7 @@
 &lt;li>commons_io: 2.6 -&amp;gt; 2.7&lt;/li>
 &lt;li>curator: 5.0.0 -&amp;gt; 5.1.0&lt;/li>
 &lt;li>hessian_lite: 3.2.8 -&amp;gt; 3.2.11&lt;/li>
-&lt;/ul></description></item><item><title>Blog: Apache Dubbo 多语言体系再添新员：首个 Rust 语言版本正式发布</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/2022/10/23/apache-dubbo-%E5%A4%9A%E8%AF%AD%E8%A8%80%E4%BD%93%E7%B3%BB%E5%86%8D%E6%B7%BB%E6%96%B0%E5%91%98%E9%A6%96%E4%B8%AA-rust-%E8%AF%AD%E8%A8%80%E7%89%88%E6%9C%AC%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83/</link><pubDate>Sun, 23 Oct 2022 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/blog/2022/10/23/apache-dubbo-%E5%A4%9A%E8%AF%AD%E8%A8%80%E4%BD%93%E7%B3%BB%E5%86%8D%E6%B7%BB%E6%96%B0%E5%91%98%E9%A6%96%E4%B8%AA-rust-%E8%AF%AD%E8%A8%80%E7%89%88%E6%9C%AC%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83/</guid><description>
+&lt;/ul></description></item><item><title>Blog: Apache Dubbo 多语言体系再添新员：首个 Rust 语言版本正式发布</title><link>https://wxbty.github.io/zh-cn/blog/2022/10/23/apache-dubbo-%E5%A4%9A%E8%AF%AD%E8%A8%80%E4%BD%93%E7%B3%BB%E5%86%8D%E6%B7%BB%E6%96%B0%E5%91%98%E9%A6%96%E4%B8%AA-rust-%E8%AF%AD%E8%A8%80%E7%89%88%E6%9C%AC%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83/</link><pubDate>Sun, 23 Oct 2022 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/blog/2022/10/23/apache-dubbo-%E5%A4%9A%E8%AF%AD%E8%A8%80%E4%BD%93%E7%B3%BB%E5%86%8D%E6%B7%BB%E6%96%B0%E5%91%98%E9%A6%96%E4%B8%AA-rust-%E8%AF%AD%E8%A8%80%E7%89%88%E6%9C%AC%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83/</guid><description>
 &lt;p>Dubbo Rust 定位为 Dubbo 多语言体系的重要实现，提供高性能、易用、可扩展的 RPC 框架，同时通过接入 Dubbo Mesh 体系提供丰富的服务治理能力。本文主要为大家介绍 Dubbo Rust 项目基本情况，通过一个示例快速体验 Rust 首个正式版本特性，并给出了 Dubbo Rust 社区的近期规划，适合于关注或正在采用 Rust 语言的开发者与企业用户阅读。&lt;/p>
 &lt;h2 id="1-dubbo-rust-简介">1 Dubbo Rust 简介&lt;/h2>
 &lt;p>Dubbo 作为 Apache 基金会最活跃的明星项目之一，同时也是国内最受欢迎的开源微服务框架，在易用性、高性能通信、服务治理等方面有着非常大的优势，通过 Dubbo3、Dubbo Mesh 等提供了云原生友好的开发与部署模式。与此同时，Dubbo 的多语言体系也得到了快速发展，长期以来提供的有 Java、Golang 两种语言实现，Rust、Node、Python、C++ 等语言实现的支持也已在社区正式启动。&lt;/p>
@@ -315,7 +315,7 @@
 &lt;li>Rust：目前没有很完善的微服务框架&lt;/li>
 &lt;/ul>
 &lt;p>依托 Dubbo 庞大的用户群，以及 Dubbo 体系下的 Mesh 服务治理整体方案规划。Dubbo Rust 可以轻松地融入到现有的云原生研发体系中，不会增加使用者的研发负担。下图是社区推出的 Dubbo Mesh 架构设计。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/rust/dubbo-rust-mesh.png" alt="dubbo-rust">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/imgs/rust/dubbo-rust-mesh.png" alt="dubbo-rust">&lt;/p>
 &lt;p>在上述架构下，整体分为控制面和数据面两个部分，其中，&lt;/p>
 &lt;ul>
 &lt;li>控制面负责管理流量治理、地址发现、安全认证、可观测性等服务治理相关的配置信管控工作，包括与K8S等底层技术设施的对接；&lt;/li>
@@ -332,12 +332,12 @@
 &lt;li>设计了简洁的、可扩展的架构，支持对 Listener、Connector、Filter、Protocol以及Invoker组件进行扩展&lt;/li>
 &lt;/ul>
 &lt;p>Dubbo Rust v0.2.0 的核心组件及通信流程如下图所示&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/rust/dubbo-rust-module.png" alt="dubbo-rust">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/imgs/rust/dubbo-rust-module.png" alt="dubbo-rust">&lt;/p>
 &lt;p>核心架构已经基本完成，接下来的版本将重点关注核心组件的扩展以及服务治理相关组件的设计实现。&lt;/p>
 &lt;h3 id="22-quick-start">2.2 Quick Start&lt;/h3>
 &lt;blockquote>
 &lt;p>完整示例可查看 【Dubbo官网】 -&amp;gt; 【Rust SDK 文档】。
-&lt;a href="https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/rust-sdk/quick-start/">https://dubbo.apache.org/zh-cn/overview/mannual/rust-sdk/quick-start/&lt;/a>&lt;/p>
+&lt;a href="https://wxbty.github.io/zh-cn/overview/mannual/rust-sdk/quick-start/">https://dubbo.apache.org/zh-cn/overview/mannual/rust-sdk/quick-start/&lt;/a>&lt;/p>
 &lt;/blockquote>
 &lt;p>使用 Dubbo Rust 服务开发的基本步骤为&lt;/p>
 &lt;ol>
@@ -467,7 +467,7 @@
 &lt;/ul>
 &lt;p>其中，第一阶段的工作已经基本完成，大家可通过上文的 Quick Start 进行深入体验，第二、第三阶段的工作已经在社区全面开展，欢迎感兴趣的社区开发者参与进来，具体联系方式参见下文。&lt;/p>
 &lt;p>下图是侧重从第一阶段（RPC框架）、第二阶段（微服务开发框架）的视角对当前 Dubbo Rust 功能完备性的评估和任务拆解。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/rust/dubbo-rust-tasks.png" alt="dubbo-rust">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/imgs/rust/dubbo-rust-tasks.png" alt="dubbo-rust">&lt;/p>
 &lt;p>上图中都是 Dubbo Rust 核心设计的重要组件，保证 Dubbo Rust 具备微服务框架中完整的 RPC 通信能力以及服务治理能力。&lt;/p>
 &lt;ul>
 &lt;li>Protocol、Filter、Listener、Connector 等组件都是 RPC 通信核心能力&lt;/li>
@@ -493,7 +493,7 @@
 &lt;ul>
 &lt;li>搜索并加入钉钉群并参与社区双周会，钉钉群号 &lt;strong>44694199&lt;/strong>&lt;/li>
 &lt;li>到 GitHub 提 Issue 或贡献代码 &lt;a href="https://github.com/apache/dubbo-rust">https://github.com/apache/dubbo-rust&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Blog: Dubbo Java 3.0.2.1 发版公告</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/2021/08/23/dubbo-java-3.0.2.1-%E5%8F%91%E7%89%88%E5%85%AC%E5%91%8A/</link><pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/blog/2021/08/23/dubbo-java-3.0.2.1-%E5%8F%91%E7%89%88%E5%85%AC%E5%91%8A/</guid><description>
+&lt;/ul></description></item><item><title>Blog: Dubbo Java 3.0.2.1 发版公告</title><link>https://wxbty.github.io/zh-cn/blog/2021/08/23/dubbo-java-3.0.2.1-%E5%8F%91%E7%89%88%E5%85%AC%E5%91%8A/</link><pubDate>Mon, 23 Aug 2021 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/blog/2021/08/23/dubbo-java-3.0.2.1-%E5%8F%91%E7%89%88%E5%85%AC%E5%91%8A/</guid><description>
 &lt;p>这是 3.0.2 的错误修正版本。
 除了以下更改外，与版本 3.0.2 完全相同。&lt;/p>
 &lt;h2 id="bug-修复">Bug 修复&lt;/h2>
@@ -501,7 +501,7 @@
 &lt;li>修复 nacos group 在消费者端不生效的问题 (#8533)&lt;/li>
 &lt;li>修复请求超时时序列化检查的 NPE (#8547)&lt;/li>
 &lt;li>兼容使用 dubbo-all 时未导入 farbic-io 包的问题 (#8546)&lt;/li>
-&lt;/ul></description></item><item><title>Blog: Dubbo Java 3.0.1 发版公告</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/2021/07/02/dubbo-java-3.0.1-%E5%8F%91%E7%89%88%E5%85%AC%E5%91%8A/</link><pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/blog/2021/07/02/dubbo-java-3.0.1-%E5%8F%91%E7%89%88%E5%85%AC%E5%91%8A/</guid><description>
+&lt;/ul></description></item><item><title>Blog: Dubbo Java 3.0.1 发版公告</title><link>https://wxbty.github.io/zh-cn/blog/2021/07/02/dubbo-java-3.0.1-%E5%8F%91%E7%89%88%E5%85%AC%E5%91%8A/</link><pubDate>Fri, 02 Jul 2021 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/blog/2021/07/02/dubbo-java-3.0.1-%E5%8F%91%E7%89%88%E5%85%AC%E5%91%8A/</guid><description>
 &lt;h2 id="优化">优化&lt;/h2>
 &lt;ul>
 &lt;li>重构服务自省映射关系，支持地址迁移时直接配置上游应用名&lt;/li>
@@ -531,14 +531,14 @@
 &lt;a href="https://github.com/apache/dubbo/pull/8048">#8048&lt;/a>,
 &lt;a href="https://github.com/apache/dubbo/pull/8071">#8071&lt;/a>,
 &lt;a href="https://github.com/apache/dubbo/pull/8119">#8119&lt;/a>,
-&lt;a href="https://github.com/apache/dubbo/pull/8132">#8132&lt;/a>&lt;/p></description></item><item><title>Blog: Dubbo Go 1.4.0</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/2021/01/12/dubbo-go-1.4.0/</link><pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/blog/2021/01/12/dubbo-go-1.4.0/</guid><description>
+&lt;a href="https://github.com/apache/dubbo/pull/8132">#8132&lt;/a>&lt;/p></description></item><item><title>Blog: Dubbo Go 1.4.0</title><link>https://wxbty.github.io/zh-cn/blog/2021/01/12/dubbo-go-1.4.0/</link><pubDate>Tue, 12 Jan 2021 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/blog/2021/01/12/dubbo-go-1.4.0/</guid><description>
 &lt;p>得益于社区活跃的支持，2020 年 3 月 25 日 我们发布了一个让人兴奋的版本——dubbo-go v1.4.0。除了继续支持已有的 Dubbo 的一些特性外， dubbo-go 开始了一些自己的创新尝试。&lt;/p>
 &lt;p>这个版本，最大的意义在于，做了一些支持云原生的准备工作。比如说，社区在探讨了很久的 k8s 落地之后，终于拿出来了使用 k8s 作为注册中心的解决方案。&lt;/p>
 &lt;p>其次一个比较大的改进是&amp;ndash;我们在可观测性上也迈出了重要的一步。在这之前，dubbo-go只提供了日志这么一个单一手段，内部的信息比较不透明，这个版本将有很大的改善。&lt;/p>
 &lt;p>最后一个令人心动的改进是，我们支持了 REST 协议。&lt;/p>
 &lt;h2 id="1-k8s-注册中心">1. K8s 注册中心&lt;/h2>
 &lt;p>dubbo-go 注册中心的本质为K/V型的数据存储。当前版本实现了以 Endpoint 为维度在 k8s API Server 进行服务注册和发现的方案【下文简称 Endpoint 方案】，架构图如下。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/dubbo-go/1.4/k8s.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/dubbo-go/1.4/k8s.png" alt="img">&lt;/p>
 &lt;p>Endpoint 方案，首先将每个 dubbo-go 进程自身服务信息序列化后，通过 Kubernetes 提供的 Patch 的接口写入在自身 Pod 对象的 Annotation 中。其次，通过 Kubernetes 的 Watch 接口观察集群中本 Namespace 内带有某些固定lable [见上图] Pod 的Annotation 信息的更新，处理服务健康检查、服务上下线等情况并实时更新本地缓存。整体流程仅使用 Kubernetes 原生 API 完成将 Kubernetes 作为注册中心的功能特性。&lt;/p>
 &lt;p>这个方案非常简洁，不需要实现额外的第三方模块，也不需要对 Dubbo 业务作出改动，仅仅把 k8s 当做部署平台，依赖其容器管理能力，没有使用其 label selector 和 service 等服务治理特性。如果站在 k8s Operator 的角度来看，Operator 方案的优点即 Endpoint 方案的缺点，Endpoint 方案无法使用 k8s 的健康检查能力，亦没有使用 k8s service 的事件监听能力，每个 consumer 冗余监听一些不必要监听的事件，当 Endpoint 过多时会加大 API Server 的网络压力。&lt;/p>
 &lt;p>目前 dubbo-go 社区其实已经有了 operator 版本注册中心的技术方案， 后续版本【计划版本是 v1.6】的 dubbo-go 会给出其实现。相比当前实现，operator 方案开发和线上维护成本当然上升很多。二者如同硬币的两面，社区会让两种方式会共存，以满足不同 level 的使用者。&lt;/p>
@@ -547,14 +547,14 @@
 &lt;h2 id="2-tracing-和-metric">2. tracing 和 metric&lt;/h2>
 &lt;p>可观测性是微服务重要的一环，也是我们1.4版本着力支持的部分。在1.4版本中，我们主要在 tracing 和 metric 两个方向提供了支持。&lt;/p>
 &lt;p>为了支持 tracing 和 metric，关键的一点是支持context在整个调用过程中传递。为此我们解决了context跨端传递的问题。目前用户可以在接口中声明 context 并且设置值，dubbo-go 在底层完成 context 内容从 client 传递到 server 的任务。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/dubbo-go/1.4/context.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/dubbo-go/1.4/context.png" alt="img">&lt;/p>
 &lt;p>在 metric 方面，dubbo-go 开始支持 Prometheus 采集数据了。目前支持 Prometheus中 的 Histogram 和 Summary。用户也可以通过扩展 Reporter 接口来自定义数据采集。&lt;/p>
 &lt;p>在 tracing 方面，目前 dubbo-go 的设计是采用 opentracing 作为统一的 API，在该 API 的基础上，通过在 client 和 server 之中传递 context，从而将整个链路串起来。用户可以采用任何支持 opentracing API 的监控框架来作为实现，例如 zipkin，jaeger 等。&lt;/p>
 &lt;h2 id="3-rest协议支持">3. rest协议支持&lt;/h2>
 &lt;p>Dubbo 生态的应用与其他生态的应用互联互通，一直是 dubbo-go 社区追求的目标。dubbo-go v1.3 版本已经实现了 dubbo-go 与 grpc 生态应用的互联互通，若想与其他生态如 Spring 生态互联互通，借助 rest 协议无疑是一个很好的技术手段。&lt;/p>
 &lt;p>Rest 协议是一个很强大并且社区呼声很高的特性，它能够有效解决 open API，前端通信，异构系统通信等问题。比如，如果你的公司里面有一些陈年代码是通过 http 接口来提供服务的，那么使用我们的 rest 协议就可以无缝集成了。&lt;/p>
 &lt;p>通过在 dubbo-go 中发布 RESTful 的接口的应用可以调用任意的 RESTful 的接口，也可以被任何客户端以 http 的形式调用，框架图如下：&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/dubbo-go/1.4/rest.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/dubbo-go/1.4/rest.png" alt="img">&lt;/p>
 &lt;p>在设计过程中，考虑到不同的公司内部使用的 web 框架并不相同，所以我们允许用户扩展自己 rest server （ web 框架在 dubbo-go的封装）的实现，当然，与 rest server 相关的，诸如 filter 等，都可以在自己的 rest server 实现内部扩展。&lt;/p>
 &lt;h2 id="4-路由功能增强">4. 路由功能增强&lt;/h2>
 &lt;p>路由规则在发起一次 RPC 调用前起到过滤目标服务器地址的作用，过滤后的地址列表，将作为消费端最终发起 RPC 调用的备选地址。v1.4 版本的 dubbo-go 实现了 Condition Router 和 Health Instance First Router，将在后面版本中陆续给出诸如 Tag Router 等剩余 Router 的实现。&lt;/p>
@@ -591,12 +591,12 @@
 &lt;p>目前，上述四个特性已被某 Go 版本的 sidecar 集成到其商业版本中提供商业服务。&lt;/p>
 &lt;h2 id="6-nacos-配置中心">6. Nacos 配置中心&lt;/h2>
 &lt;p>配置中心是现代微服务架构里面的核心组件，现在 dubbo-go 提供了对配置中心的支持。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/dubbo-go/1.4/config-center.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/dubbo-go/1.4/config-center.png" alt="img">&lt;/p>
 &lt;p>Nacos 作为一个易于构建云原生应用的动态服务发现、配置管理和服务管理平台，在该版本终于作为配置中心而得到了支持。&lt;/p>
 &lt;p>参考范例&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>.&lt;/p>
 &lt;h2 id="7-接口级签名认证">7. 接口级签名认证&lt;/h2>
 &lt;p>Dubbo 鉴权认证是为了避免敏感接口被匿名用户调用而在 SDK 层面提供的额外保障。用户可以在接口级别进行定义是否允许匿名调用，并对调用方进行验签操作，对于验签不通过的消费端，禁止调用。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/dubbo-go/1.4/acl.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/dubbo-go/1.4/acl.png" alt="img">&lt;/p>
 &lt;p>如上图，总体实现基于 AK/SK 机制，应用通过 HTTPS 通信，启动时向鉴权服务拉取，定期更新。且允许用户自定义获取 AK/SK 的源，在 RPC 层面保障安全性。&lt;/p>
 &lt;h2 id="8-回顾与展望">8. 回顾与展望&lt;/h2>
 &lt;p>目前 dubbo-go 已经到了一个比较稳定成熟的状态。在接下来的版本里面，我们将集中精力在云原生上。下一个版本，我们将首先实现应用维度的服务注册，这是一个和现有注册模型完全不同的新的注册模型。也是我们朝着云原生努力的一个关键版本。&lt;/p>
@@ -619,7 +619,7 @@
 &lt;p>&lt;a href="https://github.com/apache/dubbo-go/milestone/1">https://github.com/apache/dubbo-go/milestone/1&lt;/a>&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/div></description></item><item><title>Blog: Dubbo Java 2.7.5 功能解析</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/2020/05/18/dubbo-java-2.7.5-%E5%8A%9F%E8%83%BD%E8%A7%A3%E6%9E%90/</link><pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/blog/2020/05/18/dubbo-java-2.7.5-%E5%8A%9F%E8%83%BD%E8%A7%A3%E6%9E%90/</guid><description>
+&lt;/div></description></item><item><title>Blog: Dubbo Java 2.7.5 功能解析</title><link>https://wxbty.github.io/zh-cn/blog/2020/05/18/dubbo-java-2.7.5-%E5%8A%9F%E8%83%BD%E8%A7%A3%E6%9E%90/</link><pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/blog/2020/05/18/dubbo-java-2.7.5-%E5%8A%9F%E8%83%BD%E8%A7%A3%E6%9E%90/</guid><description>
 &lt;p>近日，备受瞩目的 Dubbo 2.7.5 版本正式发布，在 2.7.5 版本中，Dubbo 引入了很多新的特性、对现有的很多功能做了增强、同时在性能上也有了非常大的提升，这个版本无论对 Dubbo 社区亦或是开发者来说，都将是一个里程碑式的版本。&lt;/p>
 &lt;ul>
 &lt;li>应用粒度服务注册【beta】&lt;/li>
@@ -635,10 +635,10 @@
 &lt;p>首先，从服务发现上，新版本突破以往基于接口粒度的模型，引入了全新的基于应用粒度的服务发现机制 - 服务自省，虽然该机制当前仍处于 beta 阶段，但对于 Dubbo 向整个微服务云原生体系靠齐，都打下了非常好的基础；得益于紧凑的协议设计和代码实现上的优化，Dubbo 一直以来都具有较好的性能表现，在 2.7.5 版本中，性能上有了进一步的提升，根据来自官方维护团队的压测，新版本在调用链路上性能提升达到 30%；云原生微服务时代，多语言需求变得越来越普遍，协议的通用性和穿透性对于构建打通前后端的整套微服务体系也变得非常关键，Dubbo 通过实现 gRPC 协议实现了对 HTTP/2 协议的支持，同时增加了与 Protobuf 的结合。&lt;/p>
 &lt;h2 id="1--应用粒度服务注册beta">1. 应用粒度服务注册【beta】&lt;/h2>
 &lt;p>从 Java 实现版本的角度来说，Dubbo 是一个面向接口代理的服务开发框架，服务定义、服务发布以及服务引用都是基于接口，服务治理层面包括服务发现、各种规则定义也都是基于接口定义的，基于接口可以说是 Dubbo 的一大优势，比如向开发者屏蔽了远程调用细节、治理粒度更精细等。但基于接口的服务定义同时也存在一些问题，如服务，与业界通用的微服务体系等。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/servicediscovery-old.png" alt="servicediscovery-old.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/servicediscovery-old.png" alt="servicediscovery-old.png">&lt;/p>
 &lt;p>针对以上问题，2.7.5 版本引入了一种新的服务定义/治理机制：&lt;strong>服务自省&lt;/strong>，简单来说这是一种基于应用粒度的服务治理方案。一个实例只向注册中心注册一条记录，彻底解决服务推送性能瓶颈，同时由于这样的模型与主流微服务体系如 SpringCloud、K8S 等天然是对等的，因此为 Dubbo 解决和此类异构体系间的互联互通清除了障碍。有兴趣进一步了解 Dubbo 服务自省机制如何解决异构微服务体系互联互通问题的，可具体参考我们之前的文章解析《Dubbo 如何成为联通异构微服务体系的最佳服务开发框架》。&lt;/p>
 &lt;p>以下是服务自省机制的基本工作原理图。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/servicediscovery-new.png" alt="servicediscovery-new.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/servicediscovery-new.png" alt="servicediscovery-new.png">&lt;/p>
 &lt;p>要了解更多关于服务自省工作原理的细节，请参与官方文档及后续文章。&lt;/p>
 &lt;p>服务自省与当前已有的机制之间可以说是互补的关系，Dubbo 框架会继续保持接口粒度的服务治理的优势，实现接口和应用两个粒度互为补充的局面，兼顾性能、灵活性和通用性，力争使 Dubbo 成为微服务开发的最佳框架。&lt;/p>
 &lt;h2 id="2-http2-grpc-协议支持">2. HTTP/2 (gRPC) 协议支持&lt;/h2>
@@ -692,7 +692,7 @@
 &lt;p>&lt;a href="https://github.com/apache/dubbo/issues/2013">https://github.com/apache/dubbo/issues/2013&lt;/a>&lt;/p>
 &lt;p>改进后的消费端线程池模型，通过复用业务端被阻塞的线程，很好的解决了这个问题。&lt;/p>
 &lt;p>&lt;strong>老的线程池模型&lt;/strong>&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/consumer-threadpool0.png" alt="消费端线程池.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/consumer-threadpool0.png" alt="消费端线程池.png">&lt;/p>
 &lt;p>我们重点关注 Consumer 部分：&lt;/p>
 &lt;ol>
 &lt;li>业务线程发出请求，拿到一个 Future 实例。&lt;/li>
@@ -701,7 +701,7 @@
 &lt;li>业务线程拿到结果直接返回&lt;/li>
 &lt;/ol>
 &lt;p>&lt;strong>2.7.5 版本引入的线程池模型&lt;/strong>&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/consumer-threadpool1.png" alt="消费端线程池新.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/consumer-threadpool1.png" alt="消费端线程池新.png">&lt;/p>
 &lt;ol>
 &lt;li>业务线程发出请求，拿到一个 Future 实例。&lt;/li>
 &lt;li>在调用 future.get() 之前，先调用 ThreadlessExecutor.wait()，wait 会使业务线程在一个阻塞队列上等待，直到队列中被加入元素。&lt;/li>
@@ -779,7 +779,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>bootstrap.start();
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="7-多注册中心集群负载均衡">7. 多注册中心集群负载均衡&lt;/h2>
 &lt;p>对于多注册中心订阅的场景，选址时的多了一层注册中心集群间的负载均衡：&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/cluster-lb.png" alt="cluster-lb.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/cluster-lb.png" alt="cluster-lb.png">&lt;/p>
 &lt;p>在 Cluster Invoker 这一级，我们支持的选址策略有（2.7.5+ 版本，具体使用请参见文档）：&lt;/p>
 &lt;ul>
 &lt;li>
