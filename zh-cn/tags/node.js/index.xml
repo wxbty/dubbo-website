@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – node.js</title><link>https://wxbty.github.io/zh-cn/tags/node.js/</link><description>Recent content in node.js on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 07 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://wxbty.github.io/zh-cn/tags/node.js/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Apache Dubbo 首个 Node.js 3.0-alpha 版本正式发布</title><link>https://wxbty.github.io/zh-cn/blog/2023/10/07/apache-dubbo-%E9%A6%96%E4%B8%AA-node.js-3.0-alpha-%E7%89%88%E6%9C%AC%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83/</link><pubDate>Sat, 07 Oct 2023 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/blog/2023/10/07/apache-dubbo-%E9%A6%96%E4%B8%AA-node.js-3.0-alpha-%E7%89%88%E6%9C%AC%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – node.js</title><link>https://wxbty.github.io/dubbo-website/zh-cn/tags/node.js/</link><description>Recent content in node.js on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 07 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://wxbty.github.io/dubbo-website/zh-cn/tags/node.js/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Apache Dubbo 首个 Node.js 3.0-alpha 版本正式发布</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/2023/10/07/apache-dubbo-%E9%A6%96%E4%B8%AA-node.js-3.0-alpha-%E7%89%88%E6%9C%AC%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83/</link><pubDate>Sat, 07 Oct 2023 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/blog/2023/10/07/apache-dubbo-%E9%A6%96%E4%B8%AA-node.js-3.0-alpha-%E7%89%88%E6%9C%AC%E6%AD%A3%E5%BC%8F%E5%8F%91%E5%B8%83/</guid><description>
 &lt;h1 id="关于-apache-dubbo3">关于 Apache Dubbo3&lt;/h1>
 &lt;p>Apache Dubbo 是一款易用、高性能的 WEB 和 RPC 框架，同时为构建企业级微服务提供服务发现、流量治理、可观测、认证鉴权等能力、工具与最佳实践。经过近几年发展，Dubbo3 已在阿里巴巴集团各条业务线实现全面推广，成功取代运行多年的 HSF 框架；同时 Dubbo3 的多语言体系也有了快速发展，目前涵盖的多语言体系有：&lt;/p>
 &lt;ul>
@@ -8,7 +8,7 @@
 &lt;li>&lt;a href="https://github.com/apache/dubbo-rust">apache/dubbo-rust&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;p>基于 Dubbo3 定义的 &lt;strong>Triple&lt;/strong> 协议，你可以轻松编写浏览器、移动端、gRPC 兼容的 RPC 服务，并让这些服务同时运行在 HTTP/1 和 HTTP/2 上。Dubbo Node.js SDK 支持使用 IDL 或编程语言特有的方式定义服务，并提供一套轻量的 API 来发布或调用这些服务。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/2023/9/nodejs/img.png" alt="image.png">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/2023/9/nodejs/img.png" alt="image.png">&lt;/p>
 &lt;h1 id="关于-dubbo3-nodejs-首个发布版">关于 Dubbo3 Node.js 首个发布版&lt;/h1>
 &lt;p>Dubbo-js 项目于 9 月份刚刚发布了支持 Dubbo3 协议的首个 alpha 版本，该项目是 Dubbo3 的 Typescript 版本实现，提供了 Web、Node.js 两种发布包。其中，Web 框架能让开发者直接在浏览器页面访问后端服务，Node.js 则进一步丰富了后端微服务技术栈的选择。当前 Node.js 版本主要是实现了 Triple 协议的完整支持，接下来的版本中，社区将继续完善地址发现、负载均衡等服务治理能力。目前 dubbo-js 项目快速发展中，对参与 apache/dubbo-js 项目感兴趣的开发者，欢迎搜索钉钉群：&lt;strong>29775027779&lt;/strong> 加入开发者群组。&lt;/p>
 &lt;h1 id="nodejs-微服务开发完整示例">Node.js 微服务开发完整示例&lt;/h1>
@@ -124,7 +124,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>运行客户端&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-shell" data-lang="shell">&lt;span style="display:flex;">&lt;span>npx tsx client.ts
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="总结">总结&lt;/h1>
-&lt;p>当前 Node.js 版本主要是实现了 Triple 协议的完整支持，接下来的版本中，社区将继续完善地址发现、负载均衡等服务治理能力。目前 dubbo-js 项目快速发展中，对参与 apache/dubbo-js 项目感兴趣的开发者，欢迎搜索钉钉群：&lt;strong>29775027779&lt;/strong> 加入开发者群组。&lt;/p></description></item><item><title>Blog: 从跨语言调用到dubbo2.js</title><link>https://wxbty.github.io/zh-cn/blog/2018/08/14/%E4%BB%8E%E8%B7%A8%E8%AF%AD%E8%A8%80%E8%B0%83%E7%94%A8%E5%88%B0dubbo2.js/</link><pubDate>Tue, 14 Aug 2018 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/zh-cn/blog/2018/08/14/%E4%BB%8E%E8%B7%A8%E8%AF%AD%E8%A8%80%E8%B0%83%E7%94%A8%E5%88%B0dubbo2.js/</guid><description>
+&lt;p>当前 Node.js 版本主要是实现了 Triple 协议的完整支持，接下来的版本中，社区将继续完善地址发现、负载均衡等服务治理能力。目前 dubbo-js 项目快速发展中，对参与 apache/dubbo-js 项目感兴趣的开发者，欢迎搜索钉钉群：&lt;strong>29775027779&lt;/strong> 加入开发者群组。&lt;/p></description></item><item><title>Blog: 从跨语言调用到dubbo2.js</title><link>https://wxbty.github.io/dubbo-website/zh-cn/blog/2018/08/14/%E4%BB%8E%E8%B7%A8%E8%AF%AD%E8%A8%80%E8%B0%83%E7%94%A8%E5%88%B0dubbo2.js/</link><pubDate>Tue, 14 Aug 2018 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/blog/2018/08/14/%E4%BB%8E%E8%B7%A8%E8%AF%AD%E8%A8%80%E8%B0%83%E7%94%A8%E5%88%B0dubbo2.js/</guid><description>
 &lt;blockquote>
 &lt;p>&lt;a href="https://github.com/dubbo/dubbo2.js">dubbo2.js&lt;/a> 是 &lt;a href="https://www.qianmi.com/">千米网&lt;/a> 贡献给 dubbo 社区的一款 nodejs dubbo 客户端，它提供了 nodejs 对原生 dubbo 协议的支持，使得 nodejs 和 java 这两种异构语言的 rpc 调用变得便捷，高效。&lt;/p>
 &lt;/blockquote>
@@ -148,7 +148,7 @@
 &lt;p>这也关键的选型因素。我们做出的第一个尝试，便是在 RPC 协议上下功夫。&lt;/p>
 &lt;h2 id="通用协议的跨语言支持">通用协议的跨语言支持&lt;/h2>
 &lt;h3 id="springmvc的美好时代">springmvc的美好时代&lt;/h3>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/springmvc.png" alt="springmvc">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/springmvc.png" alt="springmvc">&lt;/p>
 &lt;p>在没有实现真正的跨语言调用之前，想要实现“跨语言”大多数方案是使用 http 协议做一层转换，最常见的手段莫过于借助 springmvc 提供的 controller/restController，间接调用 dubbo provider。这种方案的优势和劣势显而易见&lt;/p>
 &lt;ul>
 &lt;li>优势是简单，是最通俗的解决方案。&lt;/li>
@@ -165,15 +165,15 @@
 &lt;h3 id="定制协议的跨语言支持">定制协议的跨语言支持&lt;/h3>
 &lt;p>微服务框架所谓的协议(protocol)可以简单理解为：报文格式和序列化方案。服务治理框架一般都提供了众多的协议配置项供使用者选择，除去上述两种通用协议，还存在一些定制化的协议，如 dubbo 框架的默认协议：dubbo 协议以及 motan 框架提供的跨语言协议：motan2。&lt;/p>
 &lt;h4 id="motan2协议的跨语言支持">motan2协议的跨语言支持&lt;/h4>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/motan-protocol.png" alt="motan2">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/motan-protocol.png" alt="motan2">&lt;/p>
 &lt;p>motan2 协议被设计用来满足跨语言的需求主要体现在两个细节中—MetaData 和 motan-go。在最初的 motan 协议中，协议报文仅由 Header+Body 组成，这样导致 path，param，group 等存储在 Body 中的数据需要反序列得到，这对异构语言来说是很不友好的，所以在 motan2 中修改了协议的组成；weibo 开源了 &lt;a href="https://github.com/weibocom/motan-go/">motan-go&lt;/a> ，&lt;a href="https://github.com/weibocom/motan-php">motan-php&lt;/a>，&lt;a href="https://github.com/weibocom/motan-openresty">motan-openresty&lt;/a> ,并借助于 motan-go 充当了 agent 这一翻译官的角色，使用 simple 序列化方案来序列化协议报文的 Body 部分（simple 序列化是一种较弱的序列化方案）。&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/motan-agent.png" alt="agent">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/motan-agent.png" alt="agent">&lt;/p>
 &lt;p>仔细揣摩下可以发现这么做和双协议的配置区别并不是大，只不过这里的 agent 是隐式存在的，与主服务共生。明显的区别在于 agent 方案中异构语言并不直接交互。&lt;/p>
 &lt;h4 id="dubbo协议的跨语言支持">dubbo协议的跨语言支持&lt;/h4>
 &lt;p>dubbo 协议设计之初只考虑到了常规的 rpc 调用场景，它并不是为跨语言而设计，但跨语言支持从来不是只有支持、不支持两种选择，而是要按难易&lt;/p>
 &lt;p>程度来划分。是的，dubbo 协议的跨语言调用可能并不好做，但并非无法实现。千米网便实现了这一点，nodejs 构建的前端业务是异构语言的主战场，最终实现了 dubbo2.js，打通了 nodejs 和原生 dubbo 协议。作为本文第二部分的核心内容，重点介绍下我们使用 dubbo2.js 干了什么事。&lt;/p>
 &lt;h5 id="dubbo协议报文格式">Dubbo协议报文格式&lt;/h5>
-&lt;p>&lt;img src="https://wxbty.github.io/imgs/blog/dubbo-protocol.png" alt="dubbo协议">&lt;/p>
+&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/dubbo-protocol.png" alt="dubbo协议">&lt;/p>
 &lt;p>dubbo协议报文消息头详解：&lt;/p>
 &lt;ul>
 &lt;li>magic：类似java字节码文件里的魔数，用来判断是不是 dubbo 协议的数据包。魔数是常量 0xdabb&lt;/li>
