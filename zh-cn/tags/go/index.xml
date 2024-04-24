@@ -1771,7 +1771,7 @@ PRI * HTTP/2.0\r\n\r\nSM\r\n\r\n；&lt;/li>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>clientSessionManager.RegisterGettySession(session)&lt;/code> 的逻辑将在下文中分析。&lt;/p>
 &lt;h3 id="3server-端-transaction-coordinator-实现">3）Server 端 Transaction Coordinator 实现&lt;/h3>
 &lt;p>代码见 &lt;code>DefaultCoordinator&lt;/code>：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">func&lt;/span> (coordinator &lt;span style="color:#719e07">*&lt;/span>DefaultCoordinator) &lt;span style="color:#268bd2">OnOpen&lt;/span>(session getty.Session) error {
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">func&lt;/span> (coordinator &lt;span style="color:#719e07">*&lt;/span>DefaultCoordinator) &lt;span style="color:#268bd2">OnOpen&lt;/span>(session getty.Session) &lt;span style="color:#dc322f">error&lt;/span> {
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> log.&lt;span style="color:#268bd2">Infof&lt;/span>(&lt;span style="color:#2aa198">&amp;#34;got getty_session:%s&amp;#34;&lt;/span>, session.&lt;span style="color:#268bd2">Stat&lt;/span>())
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#719e07">return&lt;/span> &lt;span style="color:#cb4b16">nil&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
