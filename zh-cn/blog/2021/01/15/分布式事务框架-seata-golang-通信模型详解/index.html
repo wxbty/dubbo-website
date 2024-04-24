@@ -476,8 +476,8 @@
 </span></span></span><span style=display:flex><span><span style=color:#586e75></span>  <span style=color:#586e75>// can do the logic processing in other asynchronous way.
 </span></span></span><span style=display:flex><span><span style=color:#586e75></span>  <span style=color:#586e75>// !!!In short, ur OnMessage callback func should return asap.
 </span></span></span><span style=display:flex><span><span style=color:#586e75></span>  <span style=color:#586e75>//
-</span></span></span><span style=display:flex><span><span style=color:#586e75></span>  <span style=color:#586e75>// If this is a udp event listener, the second parameter type is UDPContext.
-</span></span></span><span style=display:flex><span><span style=color:#586e75></span>  <span style=color:#268bd2>OnMessage</span>(Session, <span style=color:#268bd2>interface</span>{})
+</span></span></span><span style=display:flex><span><span style=color:#586e75></span>  <span style=color:#719e07>//</span> If this is a udp event listener, the second parameter <span style=color:#268bd2>type</span> is UDPContext.
+</span></span><span style=display:flex><span>  <span style=color:#268bd2>OnMessage</span>(Session, <span style=color:#268bd2>interface</span>{})
 </span></span><span style=display:flex><span>}
 </span></span></code></pre></div><p>通过对整个 getty 代码的分析，我们只要实现 <code>ReadWriter</code> 来对 RPC 消息编解码，再实现 <code>EventListener</code> 来处理 RPC 消息的对应的具体逻辑，将 <code>ReadWriter</code> 实现和 <code>EventLister</code> 实现注入到 RPC 的 Client 和 Server 端，则可实现 RPC 通信。</p><h3 id=1编解码协议实现>1）编解码协议实现</h3><p>下面是 seata 协议的定义：</p><p><img src=/imgs/blog/dubbo-go/seata/p2.webp alt=img></p><p>在 ReadWriter 接口的实现 <code>RpcPackageHandler</code> 中，调用 Codec 方法对消息体按照上面的格式编解码：</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-gdscript3 data-lang=gdscript3><span style=display:flex><span><span style=color:#719e07>//</span> 消息编码为二进制比特
 </span></span><span style=display:flex><span><span style=color:#719e07>func</span> MessageEncoder(codecType byte, <span style=color:#719e07>in</span> interface{}) []byte {
