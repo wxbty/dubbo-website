@@ -90,10 +90,10 @@
 &lt;meta http-equiv="X-UA-Compatible" content="IE=edge">
 &lt;meta name="viewport" content="width=device-width,initial-scale=1">
 &lt;title>dubbo-benchmark&lt;/title>
-&lt;script defer="defer" src="https://dubbo.apache.org/js/chunk-vendors.js">&lt;/script>
-&lt;script defer="defer" src="https://dubbo.apache.org/js/app.js">&lt;/script>
-&lt;link href="https://dubbo.apache.org/css/chunk-vendors.css" rel="stylesheet">
-&lt;link href="https://dubbo.apache.org/css/app.css" rel="stylesheet">
+&lt;script defer="defer" src="https://dubbo.apache.org/dubbo-website/js/chunk-vendors.js">&lt;/script>
+&lt;script defer="defer" src="https://dubbo.apache.org/dubbo-website/js/app.js">&lt;/script>
+&lt;link href="https://dubbo.apache.org/dubbo-website/css/chunk-vendors.css" rel="stylesheet">
+&lt;link href="https://dubbo.apache.org/dubbo-website/css/app.css" rel="stylesheet">
 &lt;/head>
 &lt;body>
 &lt;noscript>&lt;strong>We're sorry but dubbo-benchmark doesn't work properly without JavaScript enabled. Please enable it to
