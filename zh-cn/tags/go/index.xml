@@ -1676,8 +1676,8 @@ PRI * HTTP/2.0\r\n\r\nSM\r\n\r\n；&lt;/li>
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#586e75">&lt;/span> &lt;span style="color:#586e75">// can do the logic processing in other asynchronous way.
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#586e75">&lt;/span> &lt;span style="color:#586e75">// !!!In short, ur OnMessage callback func should return asap.
 &lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#586e75">&lt;/span> &lt;span style="color:#586e75">//
-&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#586e75">&lt;/span> &lt;span style="color:#719e07">//&lt;/span> If this is a udp event listener, the second parameter &lt;span style="color:#268bd2">type&lt;/span> is UDPContext.
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">OnMessage&lt;/span>(Session, &lt;span style="color:#268bd2">interface&lt;/span>{})
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#586e75">&lt;/span> &lt;span style="color:#586e75">// If this is a udp event listener, the second parameter type is UDPContext.
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#586e75">&lt;/span> &lt;span style="color:#268bd2">OnMessage&lt;/span>(Session, &lt;span style="color:#268bd2">interface&lt;/span>{})
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>通过对整个 getty 代码的分析，我们只要实现 &lt;code>ReadWriter&lt;/code> 来对 RPC 消息编解码，再实现 &lt;code>EventListener&lt;/code> 来处理 RPC 消息的对应的具体逻辑，将 &lt;code>ReadWriter&lt;/code> 实现和 &lt;code>EventLister&lt;/code> 实现注入到 RPC 的 Client 和 Server 端，则可实现 RPC 通信。&lt;/p>
 &lt;h3 id="1编解码协议实现">1）编解码协议实现&lt;/h3>
