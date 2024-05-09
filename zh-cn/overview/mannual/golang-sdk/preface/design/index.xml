@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – 代码架构</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/golang-sdk/preface/design/</link><description>Recent content in 代码架构 on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/golang-sdk/preface/design/index.xml" rel="self" type="application/rss+xml"/><item><title>Overview: AOP 与可扩展机制</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/golang-sdk/preface/design/aop_and_extension/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/golang-sdk/preface/design/aop_and_extension/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – 代码架构</title><link>https://cn.dubbo.apache.org/zh-cn/overview/mannual/golang-sdk/preface/design/</link><description>Recent content in 代码架构 on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://cn.dubbo.apache.org/zh-cn/overview/mannual/golang-sdk/preface/design/index.xml" rel="self" type="application/rss+xml"/><item><title>Overview: AOP 与可扩展机制</title><link>https://cn.dubbo.apache.org/zh-cn/overview/mannual/golang-sdk/preface/design/aop_and_extension/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/zh-cn/overview/mannual/golang-sdk/preface/design/aop_and_extension/</guid><description>
 &lt;h2 id="1-extension-模块与-init-方法">1. extension 模块与 init 方法&lt;/h2>
 &lt;h3 id="11-接口与实现">1.1 接口与实现&lt;/h3>
 &lt;p>golang 中的一个接口往往伴随多个实现类，dubbo-go 提供了针对接口实现类的可插拔可扩展机制。降低模块之间的耦合性，方便开发者引入、自定义组件。&lt;/p>
@@ -74,11 +74,11 @@
 &lt;h2 id="4-面向切面编程的设计aop">4. 面向切面编程的设计（AOP）&lt;/h2>
 &lt;p>在 Dubbo-go 服务框架中，许多接口是基于 AOP 的思路进行设计的。例如 Invoker、Filter、LoadBalance、Router。&lt;/p>
 &lt;p>这些接口的多种实现往往组成一组调用链，单个实现类只处理自己所关注的逻辑。&lt;/p>
-&lt;p>相关阅读：&lt;a href="https://en.wikipedia.org/wiki/Aspect-oriented_programming">【AOP wikipedia】&lt;/a>&lt;/p></description></item><item><title>Overview: Dubbo的应用和接口</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/golang-sdk/preface/design/app_and_interface/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/golang-sdk/preface/design/app_and_interface/</guid><description>
+&lt;p>相关阅读：&lt;a href="https://en.wikipedia.org/wiki/Aspect-oriented_programming">【AOP wikipedia】&lt;/a>&lt;/p></description></item><item><title>Overview: Dubbo的应用和接口</title><link>https://cn.dubbo.apache.org/zh-cn/overview/mannual/golang-sdk/preface/design/app_and_interface/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/zh-cn/overview/mannual/golang-sdk/preface/design/app_and_interface/</guid><description>
 &lt;h2 id="dubbogo-服务层级">Dubbogo 服务层级&lt;/h2>
 &lt;p>Dubbogo 服务层级为两个级别：分别是应用级别(App Level)和接口级别(Interface Level)，该服务分层与&lt;strong>框架配置&lt;/strong>结构息息相关。&lt;/p>
 &lt;p>如下图所示，可以看到，应用级别的组件以浅红色标注，接口级别的组件以浅蓝色标注：&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/docs3-v2/golang-sdk/concept/more/app_and_interface/dubbogo-concept.png" alt="img">&lt;/p>
+&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/docs3-v2/golang-sdk/concept/more/app_and_interface/dubbogo-concept.png" alt="img">&lt;/p>
 &lt;h2 id="1-应用级别组件">1. 应用级别组件&lt;/h2>
 &lt;p>应用级别组件的特点：被当前应用的所有接口级别组件共用。&lt;/p>
 &lt;p>应用级别的主要组件如下：&lt;/p>
@@ -133,9 +133,9 @@
 &lt;/li>
 &lt;/ul>
 &lt;h2 id="3-说明">3. 说明&lt;/h2>
-&lt;p>暴露的服务是接口级别的，一个用户定义的 Provider Struct/一个用户定义的Consumer Struct，对应一个Service/Reference 模块，一个应用可以同时存在Consumer 模块和 Provider 模块，因此可以同时存在多个Service/Reference 模块。&lt;/p></description></item><item><title>Overview: 架构</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/golang-sdk/preface/design/architecture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/golang-sdk/preface/design/architecture/</guid><description>
+&lt;p>暴露的服务是接口级别的，一个用户定义的 Provider Struct/一个用户定义的Consumer Struct，对应一个Service/Reference 模块，一个应用可以同时存在Consumer 模块和 Provider 模块，因此可以同时存在多个Service/Reference 模块。&lt;/p></description></item><item><title>Overview: 架构</title><link>https://cn.dubbo.apache.org/zh-cn/overview/mannual/golang-sdk/preface/design/architecture/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/zh-cn/overview/mannual/golang-sdk/preface/design/architecture/</guid><description>
 &lt;h3 id="架构说明">架构说明&lt;/h3>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/docs3-v2/golang-sdk/concept/more/architecture/architecture.png" alt="architecture">&lt;/p>
+&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/docs3-v2/golang-sdk/concept/more/architecture/architecture.png" alt="architecture">&lt;/p>
 &lt;h3 id="节点说明">节点说明&lt;/h3>
 &lt;ul>
 &lt;li>&lt;code>Registry&lt;/code> : dubbo-go中负责服务注册与发现的注册中心&lt;/li>

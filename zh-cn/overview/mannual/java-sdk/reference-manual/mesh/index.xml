@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Mesh手册</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/java-sdk/reference-manual/mesh/</link><description>Recent content in Mesh手册 on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/java-sdk/reference-manual/mesh/index.xml" rel="self" type="application/rss+xml"/><item><title>Overview: Debug参考文档</title><link>https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/java-sdk/reference-manual/mesh/mesh/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/java-sdk/reference-manual/mesh/mesh/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Mesh手册</title><link>https://cn.dubbo.apache.org/zh-cn/overview/mannual/java-sdk/reference-manual/mesh/</link><description>Recent content in Mesh手册 on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><atom:link href="https://cn.dubbo.apache.org/zh-cn/overview/mannual/java-sdk/reference-manual/mesh/index.xml" rel="self" type="application/rss+xml"/><item><title>Overview: Debug参考文档</title><link>https://cn.dubbo.apache.org/zh-cn/overview/mannual/java-sdk/reference-manual/mesh/mesh/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/zh-cn/overview/mannual/java-sdk/reference-manual/mesh/mesh/</guid><description>
 &lt;h2 id="前置环境准备">前置环境准备&lt;/h2>
 &lt;ul>
 &lt;li>docker环境&lt;/li>
@@ -65,7 +65,7 @@ Istio 安装文档(&lt;a href="https://istio.io/latest/docs/setup/getting-starte
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>kubectl apply &lt;span style="color:#719e07">-&lt;/span>f Deployment.yml
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>cd ..&lt;span style="color:#719e07">/&lt;/span>..&lt;span style="color:#719e07">/&lt;/span>..&lt;span style="color:#719e07">/&lt;/span>..&lt;span style="color:#719e07">/&lt;/span>..&lt;span style="color:#719e07">/&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>成功执行上述命令后的docker desktop containers页面长这样，其中dubbo-samples一共出现数个containers，包含consumer和provider：&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/user/docker-desktop.png" alt="docker-desktop.png">&lt;/p>
+&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/user/docker-desktop.png" alt="docker-desktop.png">&lt;/p>
 &lt;p>查看k8s_server_dubbo-samples-xds-provider-XXX日志，出现如下日志：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>Dec 28, 2022 8:42:48 AM org.apache.dubbo.config.deploy.DefaultApplicationDeployer info
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>INFO: &lt;span style="color:#719e07">[&lt;/span>DUBBO&lt;span style="color:#719e07">]&lt;/span> Dubbo Application&lt;span style="color:#719e07">[&lt;/span>1.1&lt;span style="color:#719e07">]&lt;/span>(dubbo&lt;span style="color:#719e07">-&lt;/span>samples&lt;span style="color:#719e07">-&lt;/span>xds&lt;span style="color:#719e07">-&lt;/span>provider) is ready., dubbo version: 1.0&lt;span style="color:#719e07">-&lt;/span>SNAPSHOT, current host: 10.1.5.64
@@ -74,18 +74,18 @@ Istio 安装文档(&lt;a href="https://istio.io/latest/docs/setup/getting-starte
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Dec 28, 2022 8:42:53 AM org.apache.dubbo.registry.xds.util.protocol.AbstractProtocol info
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>INFO: &lt;span style="color:#719e07">[&lt;/span>DUBBO&lt;span style="color:#719e07">]&lt;/span> receive notification from xds server, type: type.googleapis.com&lt;span style="color:#719e07">/&lt;/span>envoy.config.listener.v3.Listener, dubbo version: 1.0&lt;span style="color:#719e07">-&lt;/span>SNAPSHOT, current host: 10.1.5.64
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>dubbo service started
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/user/xds-provider-log.png" alt="xds-provider-log.png">&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/user/xds-provider-log.png" alt="xds-provider-log.png">&lt;/p>
 &lt;p>查看k8s_server_dubbo-samples-xds-consumer-XXX日志，发现其正等待debug连接：
-&lt;img src="https://wxbty.github.io/dubbo-website/imgs/user/xds-consumer-listener.png" alt="xds-consumer-listener.png">
+&lt;img src="https://cn.dubbo.apache.org/imgs/user/xds-consumer-listener.png" alt="xds-consumer-listener.png">
 打开命令终端，输入命令查看可用并处于Running状态的pods:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>kubectl get pods
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/user/k8s-pods.png" alt="k8s-pods.png">&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/user/k8s-pods.png" alt="k8s-pods.png">&lt;/p>
 &lt;p>输入以下命令将pods的端口映射到本地：&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>kubectl port&lt;span style="color:#719e07">-&lt;/span>forward dubbo&lt;span style="color:#719e07">-&lt;/span>samples&lt;span style="color:#719e07">-&lt;/span>xds&lt;span style="color:#719e07">-&lt;/span>consumer&lt;span style="color:#719e07">-&lt;/span>64c6c6f444&lt;span style="color:#719e07">-&lt;/span>kk2vr 31000:31000
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/user/port-forward.png" alt="port-forward.png">&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/user/port-forward.png" alt="port-forward.png">&lt;/p>
 &lt;p>切换到idea，edit configuration，debugger mode选择attach to remote JVM，port选择上面docker file expose的端口，module classpath选择dubbo-samples-xds-consumer，并点击debug，即可成功连接
-&lt;img src="https://wxbty.github.io/dubbo-website/imgs/user/remote-debug.png" alt="remote-debug.png">&lt;/p>
+&lt;img src="https://cn.dubbo.apache.org/imgs/user/remote-debug.png" alt="remote-debug.png">&lt;/p>
 &lt;p>可以看到断点已经成功进来了：
-&lt;img src="https://wxbty.github.io/dubbo-website/imgs/user/xds-debug-success.png" alt="xds-debug-success.png">
+&lt;img src="https://cn.dubbo.apache.org/imgs/user/xds-debug-success.png" alt="xds-debug-success.png">
 此时查看k8s_server_dubbo-samples-xds-consumer-XXX的日志可以看到已经成功在运行：
-&lt;img src="https://wxbty.github.io/dubbo-website/imgs/user/xds-consumer-debug-success-log.png" alt="xds-consumer-debug-success-log.png">&lt;/p></description></item></channel></rss>
+&lt;img src="https://cn.dubbo.apache.org/imgs/user/xds-consumer-debug-success-log.png" alt="xds-consumer-debug-success-log.png">&lt;/p></description></item></channel></rss>

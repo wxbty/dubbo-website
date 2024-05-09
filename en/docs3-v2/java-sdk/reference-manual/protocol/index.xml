@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – RPC protocol</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/protocol/</link><description>Recent content in RPC protocol on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/protocol/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs3-V2: Protocol Overview</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/protocol/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/protocol/overview/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – RPC protocol</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/protocol/</link><description>Recent content in RPC protocol on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/protocol/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs3-V2: Protocol Overview</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/protocol/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/protocol/overview/</guid><description>
 &lt;p>Dubbo3 provides Triple (Dubbo3) and Dubbo2 protocols, which are native protocols of the Dubbo framework. In addition, Dubbo3 also integrates many third-party protocols and incorporates them into Dubbo&amp;rsquo;s programming and service governance system.
 Including gRPC, Thrift, JsonRPC, Hessian2, REST, etc. The following focuses on the Triple and Dubbo2 protocols.&lt;/p>
 &lt;h2 id="protocol-description">protocol description&lt;/h2>
@@ -11,7 +11,7 @@ Including gRPC, Thrift, JsonRPC, Hessian2, REST, etc. The following focuses on t
 &lt;li>Protocol structure: defines the list of fields, the semantics of each field, and the arrangement of different fields&lt;/li>
 &lt;li>Protocols define how data is transmitted across networks by defining rules, formats, and semantics. A successful RPC requires both ends of the communication to be able to read and write network byte streams and convert objects according to the protocol. If the two ends cannot reach an agreement on the protocol used, there will be chickens talking with ducks, which cannot meet the needs of long-distance communication.&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/concepts/triple-protocol.png" alt="Protocol Selection">&lt;/p>
+&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/v3/concepts/triple-protocol.png" alt="Protocol Selection">&lt;/p>
 &lt;p>The design of the RPC protocol needs to consider the following:&lt;/p>
 &lt;ul>
 &lt;li>Versatility: Unified binary format, cross-language, cross-platform, multi-transport layer protocol support&lt;/li>
@@ -57,7 +57,7 @@ The advantages of gRPC are inherited from HTTP2 and Protobuf.&lt;/p>
 &lt;li>In terms of ease of use, in addition to supporting Protobuf serialization recommended by native gRPC, Triple supports other serializations such as Hessian/JSON in a general way, allowing users to upgrade to the Triple protocol more conveniently. For the original Dubbo service, modifying or adding the Triple protocol only needs to add a line of protocol configuration in the code block declaring the service, and the transformation cost is almost zero.&lt;/li>
 &lt;/ul>
 &lt;h2 id="triple-protocol">Triple protocol&lt;/h2>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/concepts/triple.png" alt="Triple protocol communication method">&lt;/p>
+&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/v3/concepts/triple.png" alt="Triple protocol communication method">&lt;/p>
 &lt;p>status quo&lt;/p>
 &lt;ul>
 &lt;li>
@@ -122,7 +122,7 @@ The advantages of gRPC are inherited from HTTP2 and Protobuf.&lt;/p>
 &lt;p>Under the trend of Cloud Native, the interoperability requirements between cross-platform, cross-vendor, and cross-environment systems will inevitably give rise to RPC technology based on open standards, and gRPC conforms to the historical trend and has been more and more widely used. In the field of microservices, the proposal and implementation of the Triple protocol is a big step for Dubbo3 to move towards cloud-native microservices.&lt;/p>
 &lt;p>##Dubbo2&lt;/p>
 &lt;h3 id="protocol-spec">Protocol SPEC&lt;/h3>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/dev/dubbo_protocol_header.png" alt="/dev-guide/images/dubbo_protocol_header.jpg">&lt;/p>
+&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/dev/dubbo_protocol_header.png" alt="/dev-guide/images/dubbo_protocol_header.jpg">&lt;/p>
 &lt;ul>
 &lt;li>
 &lt;p>Magic - Magic High &amp;amp; Magic Low (16 bits)&lt;/p>
@@ -196,11 +196,11 @@ The advantages of gRPC are inherited from HTTP2 and Protobuf.&lt;/p>
 &lt;/blockquote>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>Dubbo version bytes (line break)
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Service name bytes (newline)
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Dubbo protocol</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/protocol/dubbo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/protocol/dubbo/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Dubbo protocol</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/protocol/dubbo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/protocol/dubbo/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>Dubbo&amp;rsquo;s default protocol uses a single long connection and NIO asynchronous communication, which is suitable for small data volume and large concurrent service calls, and the situation where the number of service consumer machines is much larger than the number of service provider machines.&lt;/p>
 &lt;p>Conversely, Dubbo&amp;rsquo;s default protocol is not suitable for services that transmit large amounts of data, such as file transfers, video transfers, etc., unless the request volume is very low.&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/user/dubbo-protocol.jpg" alt="dubbo-protocol.jpg">&lt;/p>
+&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/user/dubbo-protocol.jpg" alt="dubbo-protocol.jpg">&lt;/p>
 &lt;ul>
 &lt;li>Transporter: mina, netty, grizzy&lt;/li>
 &lt;li>Serialization: dubbo, hessian2, java, json&lt;/li>
@@ -300,7 +300,7 @@ The advantages of gRPC are inherited from HTTP2 and Protobuf.&lt;/p>
 &lt;p>Because the dubbo protocol uses a single long connection, if the data packet size of each request is 500KByte, assuming that the network is a Gigabit network card&lt;strong>1024Mbit=128MByte&lt;/strong>, each connection can be up to 7MByte (different environments may be different), a single service provides The maximum TPS (transactions per second) of the latter is: 128MByte / 500KByte = 262. The maximum TPS (transactions per second) for a single consumer to call a single service provider is: 7MByte / 500KByte = 14. If acceptable, you can consider using it, otherwise the network will become a bottleneck.&lt;/p>
 &lt;h3 id="q3">Q3&lt;/h3>
 &lt;p>Why use asynchronous single long connection?&lt;/p>
-&lt;p>Because the current situation of the service is that there are few service providers, usually only a few machines, but many service consumers, the entire website may be accessing the service. For example, Morgan’s provider has only 6 providers, but there are hundreds of consumers. Or, there are 150 million calls per day. If the conventional Hessian service is used, the service provider is easily overwhelmed. Through a single connection, it is guaranteed that a single consumer will not overwhelm the provider, long-term connection, reducing connection handshake verification, etc. And use asynchronous IO, reuse thread pool, prevent C10K problem.&lt;/p></description></item><item><title>Docs3-V2: Triple Protocol</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/protocol/triple/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/protocol/triple/</guid><description/></item><item><title>Docs3-V2: Rest protocol</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/protocol/rest/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/protocol/rest/</guid><description>
+&lt;p>Because the current situation of the service is that there are few service providers, usually only a few machines, but many service consumers, the entire website may be accessing the service. For example, Morgan’s provider has only 6 providers, but there are hundreds of consumers. Or, there are 150 million calls per day. If the conventional Hessian service is used, the service provider is easily overwhelmed. Through a single connection, it is guaranteed that a single consumer will not overwhelm the provider, long-term connection, reducing connection handshake verification, etc. And use asynchronous IO, reuse thread pool, prevent C10K problem.&lt;/p></description></item><item><title>Docs3-V2: Triple Protocol</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/protocol/triple/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/protocol/triple/</guid><description/></item><item><title>Docs3-V2: Rest protocol</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/protocol/rest/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/protocol/rest/</guid><description>
 &lt;p>Support for REST calls based on the standard Java REST API - JAX-RS 2.0 (short for Java API for RESTful Web Services)&lt;/p>
 &lt;h3 id="quick-start">Quick Start&lt;/h3>
 &lt;p>It is relatively simple to develop a REST-style service in dubbo. Let&amp;rsquo;s take a simple service for registered users as an example.&lt;/p>
@@ -738,7 +738,7 @@ If you add neither HTTP header nor suffix, dubbo&amp;rsquo;s REST will give prio
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Then add this ExceptionMapper to the XML configuration:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;dubbo:protocol&lt;/span> name=&lt;span style="color:#2aa198">&amp;#34;rest&amp;#34;&lt;/span> port=&lt;span style="color:#2aa198">&amp;#34;8888&amp;#34;&lt;/span> extension=&lt;span style="color:#2aa198">&amp;#34;xxx.MyValidationExceptionMapper&amp;#34;&lt;/span>&lt;span style="color:#268bd2">/&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: gRPC Protocol</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/protocol/grpc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/protocol/grpc/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: gRPC Protocol</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/protocol/grpc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/protocol/grpc/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>Dubbo has supported the gRPC protocol since version 2.7.5. For developers who plan to use HTTP/2 communication, or want to take advantage of the capabilities of Stream, backpressure, and Reactive programming brought by gRPC,
 You can consider enabling the gRPC protocol.&lt;/p>
@@ -766,7 +766,7 @@ You can consider enabling the gRPC protocol.&lt;/p>
 &lt;/ol>
 &lt;blockquote>
 &lt;p>In addition to the native StreamObserver interface type, Dubbo also supports &lt;a href="https://github.com/apache/dubbo-samples/tree/925c3d150d9030bc72988564e4f97eca1f6fcb89/3-extensions/protocol/dubbo-samples-grpc/dubbo-samples-rxjava">RxJava&lt;/a>, &lt;a href="https://github.com/apache/dubbo-samples/tree/925c3d150d9030bc72988564e4f97eca1f6fcb89/3-extensions/protocol/dubbo-samples-grpc/dubbo-samples-reactor">Reactor&lt;/a> programming style API.&lt;/p>
-&lt;/blockquote></description></item><item><title>Docs3-V2: HTTP protocol</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/protocol/http/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/protocol/http/</guid><description>
+&lt;/blockquote></description></item><item><title>Docs3-V2: HTTP protocol</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/protocol/http/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/protocol/http/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>HTTP form-based remote invocation protocol, implemented by Spring&amp;rsquo;s HttpInvoker, supported by versions above &lt;code>2.3.0&lt;/code>.&lt;/p>
 &lt;ul>
@@ -785,7 +785,7 @@ You can consider enabling the gRPC protocol.&lt;/p>
 &lt;h2 id="scenes-to-be-used">scenes to be used&lt;/h2>
 &lt;p>HTTP short connection, standardized and easy-to-read protocol, easy to connect to external systems, suitable for upper-level business modules.&lt;/p>
 &lt;h2 id="how-to-use">How to use&lt;/h2>
-&lt;p>Starting from Dubbo 3, the Http protocol is no longer embedded in Dubbo, and an independent &lt;a href="https://wxbty.github.io/dubbo-website/zh-cn/download/spi-extensions/#dubbo-rpc">module&lt;/a> needs to be introduced separately.&lt;/p>
+&lt;p>Starting from Dubbo 3, the Http protocol is no longer embedded in Dubbo, and an independent &lt;a href="https://cn.dubbo.apache.org/zh-cn/download/spi-extensions/#dubbo-rpc">module&lt;/a> needs to be introduced separately.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;dependency&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">&amp;lt;groupId&amp;gt;&lt;/span>org.apache.dubbo.extensions&lt;span style="color:#268bd2">&amp;lt;/groupId&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">&amp;lt;artifactId&amp;gt;&lt;/span>dubbo-rpc-http&lt;span style="color:#268bd2">&amp;lt;/artifactId&amp;gt;&lt;/span>
@@ -813,7 +813,7 @@ You can consider enabling the gRPC protocol.&lt;/p>
 &lt;li>The protocol port &lt;code>&amp;lt;dubbo:protocol port=&amp;quot;8080&amp;quot; /&amp;gt;&lt;/code> must be the same as the port of the servlet container,&lt;/li>
 &lt;li>The context path of the protocol &lt;code>&amp;lt;dubbo:protocol contextpath=&amp;quot;foo&amp;quot; /&amp;gt;&lt;/code> must be the same as the context path of the servlet application.&lt;/li>
 &lt;/ul>
-&lt;/blockquote></description></item><item><title>Docs3-V2: Thrift protocol</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/protocol/thrift/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/protocol/thrift/</guid><description>
+&lt;/blockquote></description></item><item><title>Docs3-V2: Thrift protocol</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/protocol/thrift/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/protocol/thrift/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>The thrift protocol currently supported by dubbo is an extension of the thrift native protocol, adding some additional header information on the basis of the native protocol, such as service name, magic number, etc. &lt;code>2.3.0&lt;/code> and above are supported.&lt;/p>
 &lt;p>&lt;a href="http://thrift.apache.org">Thrift&lt;/a> is an RPC framework donated by Facebook to Apache.&lt;/p>
@@ -822,7 +822,7 @@ You can consider enabling the gRPC protocol.&lt;/p>
 &lt;p>For SOA standard RPC framework.&lt;/p>
 &lt;h2 id="how-to-use">How to use&lt;/h2>
 &lt;h3 id="dependencies">Dependencies&lt;/h3>
-&lt;p>Starting from Dubbo 3, the Thrift protocol is no longer embedded in Dubbo, and an independent &lt;a href="https://wxbty.github.io/dubbo-website/zh-cn/download/spi-extensions/#dubbo-rpc">module&lt;/a> needs to be introduced separately.&lt;/p>
+&lt;p>Starting from Dubbo 3, the Thrift protocol is no longer embedded in Dubbo, and an independent &lt;a href="https://cn.dubbo.apache.org/zh-cn/download/spi-extensions/#dubbo-rpc">module&lt;/a> needs to be introduced separately.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;dependency&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">&amp;lt;groupId&amp;gt;&lt;/span>org.apache.dubbo.extensions&lt;span style="color:#268bd2">&amp;lt;/groupId&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">&amp;lt;artifactId&amp;gt;&lt;/span>dubbo-rpc-native-thrift&lt;span style="color:#268bd2">&amp;lt;/artifactId&amp;gt;&lt;/span>
@@ -839,7 +839,7 @@ You can consider enabling the gRPC protocol.&lt;/p>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>[Example code in dubbo project](&lt;a href="https://github.com/apache/dubbo/tree/master/dubbo-rpc/dubbo-rpc-thrift/src/test/java/org/apache/dubbo/rpc/protocol">https://github.com/apache/dubbo/tree/master/dubbo-rpc/dubbo-rpc-thrift/src/test/java/org/apache/dubbo/rpc/protocol&lt;/a> /thrift)&lt;/p>
 &lt;blockquote>
 &lt;p>Thrift does not support null values, ie: you cannot pass null values in the protocol&lt;/p>
-&lt;/blockquote></description></item><item><title>Docs3-V2: Rmi agreement</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/protocol/rmi/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/protocol/rmi/</guid><description>
+&lt;/blockquote></description></item><item><title>Docs3-V2: Rmi agreement</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/protocol/rmi/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/protocol/rmi/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>The RMI protocol is implemented using the JDK standard &lt;code>java.rmi.*&lt;/code>, using blocking short connections and JDK standard serialization.&lt;/p>
 &lt;ul>
@@ -860,7 +860,7 @@ You can consider enabling the gRPC protocol.&lt;/p>
 &lt;p>It is a set of Java APIs that supports the development of distributed applications, and realizes the method calling of programs between different operating systems.&lt;/p>
 &lt;h2 id="how-to-use">How to use&lt;/h2>
 &lt;h3 id="import-dependencies">Import dependencies&lt;/h3>
-&lt;p>Starting from Dubbo 3, the RMI protocol is no longer embedded in Dubbo, and an independent &lt;a href="https://wxbty.github.io/dubbo-website/zh-cn/download/spi-extensions/#dubbo-rpc">module&lt;/a> needs to be introduced separately.&lt;/p>
+&lt;p>Starting from Dubbo 3, the RMI protocol is no longer embedded in Dubbo, and an independent &lt;a href="https://cn.dubbo.apache.org/zh-cn/download/spi-extensions/#dubbo-rpc">module&lt;/a> needs to be introduced separately.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;dependency&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">&amp;lt;groupId&amp;gt;&lt;/span>org.apache.dubbo.extensions&lt;span style="color:#268bd2">&amp;lt;/groupId&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">&amp;lt;artifactId&amp;gt;&lt;/span>dubbo-rpc-rmi&lt;span style="color:#268bd2">&amp;lt;/artifactId&amp;gt;&lt;/span>
@@ -906,7 +906,7 @@ You can consider enabling the gRPC protocol.&lt;/p>
 &lt;ul>
 &lt;li>** There is a deserialization security risk. ** Please check the application: Please upgrade commons-collections3 to &lt;a href="https://commons.apache.org/proper/commons-collections/release_3_2_2.html">3.2.2&lt;/a>; Please upgrade commons-collections4 to &lt;a href="https://commons.apache.org/proper/commons-collections/release_4_1.html">4.1&lt;/a>. The new version of commons-collections solves this problem.&lt;/li>
 &lt;/ul>
-&lt;/blockquote></description></item><item><title>Docs3-V2: Redis protocol</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/protocol/redis/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/protocol/redis/</guid><description>
+&lt;/blockquote></description></item><item><title>Docs3-V2: Redis protocol</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/protocol/redis/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/protocol/redis/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>RPC protocol implemented based on Redis. &lt;code>2.3.0&lt;/code> and above are supported.&lt;/p>
 &lt;p>&lt;a href="http://redis.io">Redis&lt;/a> is an efficient KV storage server.&lt;/p>
@@ -914,7 +914,7 @@ You can consider enabling the gRPC protocol.&lt;/p>
 &lt;p>Caching, current limiting, distributed locks, etc.&lt;/p>
 &lt;h2 id="how-to-use">How to use&lt;/h2>
 &lt;h3 id="import-dependencies">Import dependencies&lt;/h3>
-&lt;p>Starting from Dubbo 3, the Redis protocol is no longer embedded in Dubbo, and an independent &lt;a href="https://wxbty.github.io/dubbo-website/zh-cn/download/spi-extensions/#dubbo-rpc">module&lt;/a> needs to be introduced separately.&lt;/p>
+&lt;p>Starting from Dubbo 3, the Redis protocol is no longer embedded in Dubbo, and an independent &lt;a href="https://cn.dubbo.apache.org/zh-cn/download/spi-extensions/#dubbo-rpc">module&lt;/a> needs to be introduced separately.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;dependency&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">&amp;lt;groupId&amp;gt;&lt;/span>org.apache.dubbo.extensions&lt;span style="color:#268bd2">&amp;lt;/groupId&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">&amp;lt;artifactId&amp;gt;&lt;/span>dubbo-rpc-redis&lt;span style="color:#268bd2">&amp;lt;/artifactId&amp;gt;&lt;/span>
@@ -935,7 +935,7 @@ You can consider enabling the gRPC protocol.&lt;/p>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Where &amp;ldquo;p:xxx&amp;rdquo; is the standard p tag of spring&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;dubbo:reference&lt;/span> id=&lt;span style="color:#2aa198">&amp;#34;cache&amp;#34;&lt;/span> interface=&lt;span style="color:#2aa198">&amp;#34;com.foo.CacheService&amp;#34;&lt;/span> url=&lt;span style="color:#2aa198">&amp;#34;redis://10.20.153.10:6379&amp;#34;&lt;/span> p:set=&lt;span style="color:#2aa198">&amp;#34;putFoo&amp;#34;&lt;/span> p:get=&lt;span style="color:#2aa198">&amp;#34;getFoo&amp;#34;&lt;/span> p:delete=&lt;span style="color:#2aa198">&amp;#34; removeFoo&amp;#34;&lt;/span> &lt;span style="color:#268bd2">/&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The method name is suggested to be the same as the standard method name of redis, namely: get(key), set(key, value), delete(key).&lt;/p>
-&lt;p>If the method name is different from the standard method name of redis, you need to configure the mapping relationship:&lt;/p></description></item><item><title>Docs3-V2: Hessian Agreement</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/protocol/hessian/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/protocol/hessian/</guid><description>
+&lt;p>If the method name is different from the standard method name of redis, you need to configure the mapping relationship:&lt;/p></description></item><item><title>Docs3-V2: Hessian Agreement</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/protocol/hessian/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/protocol/hessian/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>The Hessian protocol is used to integrate Hessian&amp;rsquo;s services. The bottom layer of Hessian uses Http communication and Servlet to expose services. Dubbo&amp;rsquo;s default embedded Jetty is implemented as a server.&lt;/p>
 &lt;p>&lt;a href="http://hessian.caucho.com">Hessian&lt;/a> is an open source RPC framework of Caucho, whose communication efficiency is higher than the serialization that comes with WebService and Java.&lt;/p>
@@ -962,7 +962,7 @@ You can consider enabling the gRPC protocol.&lt;/p>
 &lt;p>Hessian is a lightweight RPC service implemented based on the Binary-RPC protocol, serializing and deserializing instances.&lt;/p>
 &lt;h2 id="how-to-use">How to use&lt;/h2>
 &lt;h3 id="dependencies">Dependencies&lt;/h3>
-&lt;p>Starting from Dubbo 3, the Hessian protocol is no longer embedded in Dubbo, and an independent &lt;a href="https://wxbty.github.io/dubbo-website/zh-cn/download/spi-extensions/#dubbo-rpc">module&lt;/a> needs to be introduced separately.&lt;/p>
+&lt;p>Starting from Dubbo 3, the Hessian protocol is no longer embedded in Dubbo, and an independent &lt;a href="https://cn.dubbo.apache.org/zh-cn/download/spi-extensions/#dubbo-rpc">module&lt;/a> needs to be introduced separately.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;dependency&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">&amp;lt;groupId&amp;gt;&lt;/span>org.apache.dubbo.extensions&lt;span style="color:#268bd2">&amp;lt;/groupId&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">&amp;lt;artifactId&amp;gt;&lt;/span>dubbo-rpc-hessian&lt;span style="color:#268bd2">&amp;lt;/artifactId&amp;gt;&lt;/span>
@@ -984,7 +984,7 @@ You can consider enabling the gRPC protocol.&lt;/p>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;dubbo:protocol&lt;/span> id=&lt;span style="color:#2aa198">&amp;#34;hessian2&amp;#34;&lt;/span> name=&lt;span style="color:#2aa198">&amp;#34;hessian&amp;#34;&lt;/span> port=&lt;span style="color:#2aa198">&amp;#34;8081&amp;#34;&lt;/span> &lt;span style="color:#268bd2">/&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="direct-connection">direct connection&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;dubbo:reference&lt;/span> id=&lt;span style="color:#2aa198">&amp;#34;helloService&amp;#34;&lt;/span> interface=&lt;span style="color:#2aa198">&amp;#34;HelloWorld&amp;#34;&lt;/span> url=&lt;span style="color:#2aa198">&amp;#34;hessian://10.20.153.10:8080/helloWorld&amp;#34;&lt;/span> &lt;span style="color:#268bd2">/&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Webservice protocol</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/protocol/webservice/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/protocol/webservice/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Webservice protocol</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/protocol/webservice/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/protocol/webservice/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>WebService-based remote invocation protocol, implemented based on &lt;code>frontend-simple&lt;/code> and &lt;code>transports-http&lt;/code> of &lt;a href="http://cxf.apache.org">Apache CXF&lt;/a>. &lt;code>2.3.0&lt;/code> and above are supported.&lt;/p>
 &lt;p>CXF is an open source RPC framework of Apache, which is merged from Xfire and Celtix.&lt;/p>
@@ -1010,7 +1010,7 @@ You can consider enabling the gRPC protocol.&lt;/p>
 &lt;p>To publish a service (internal/external), regardless of client type or performance, it is recommended to use webservice. The server has determined to use webservice, the client cannot choose, and must use webservice.&lt;/p>
 &lt;h2 id="how-to-use">How to use&lt;/h2>
 &lt;h3 id="dependencies">Dependencies&lt;/h3>
-&lt;p>Starting from Dubbo 3, the Webservice protocol is no longer embedded in Dubbo, and an independent &lt;a href="https://wxbty.github.io/dubbo-website/zh-cn/download/spi-extensions/#dubbo-rpc">module&lt;/a> needs to be introduced separately.&lt;/p>
+&lt;p>Starting from Dubbo 3, the Webservice protocol is no longer embedded in Dubbo, and an independent &lt;a href="https://cn.dubbo.apache.org/zh-cn/download/spi-extensions/#dubbo-rpc">module&lt;/a> needs to be introduced separately.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;dependency&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">&amp;lt;groupId&amp;gt;&lt;/span>org.apache.dubbo.extensions&lt;span style="color:#268bd2">&amp;lt;/groupId&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">&amp;lt;artifactId&amp;gt;&lt;/span>dubbo-rpc-webservice&lt;span style="color:#268bd2">&amp;lt;/artifactId&amp;gt;&lt;/span>
@@ -1059,7 +1059,7 @@ You can consider enabling the gRPC protocol.&lt;/p>
 &lt;li>The protocol port &lt;code>&amp;lt;dubbo:protocol port=&amp;quot;8080&amp;quot; /&amp;gt;&lt;/code> must be the same as the port of the servlet container.&lt;/li>
 &lt;li>The context path of the protocol &lt;code>&amp;lt;dubbo:protocol contextpath=&amp;quot;foo&amp;quot; /&amp;gt;&lt;/code> must be the same as the context path of the servlet application.&lt;/li>
 &lt;/ul>
-&lt;/blockquote></description></item><item><title>Docs3-V2: Memcached protocol</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/protocol/memcached/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/protocol/memcached/</guid><description>
+&lt;/blockquote></description></item><item><title>Docs3-V2: Memcached protocol</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/protocol/memcached/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/protocol/memcached/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>RPC protocol implemented based on memcached. &lt;code>2.3.0&lt;/code> and above are supported.&lt;/p>
 &lt;p>&lt;a href="http://memcached.org/">Memcached&lt;/a> is an efficient KV cache server.&lt;/p>
@@ -1067,7 +1067,7 @@ You can consider enabling the gRPC protocol.&lt;/p>
 &lt;p>Relieve database pressure, improve interaction speed, etc.&lt;/p>
 &lt;h2 id="how-to-use">How to use&lt;/h2>
 &lt;h3 id="import-dependencies">Import dependencies&lt;/h3>
-&lt;p>Starting from Dubbo 3, the Memcached protocol is no longer embedded in Dubbo, and an independent &lt;a href="https://wxbty.github.io/dubbo-website/zh-cn/download/spi-extensions/#dubbo-rpc">module&lt;/a> needs to be introduced separately.&lt;/p>
+&lt;p>Starting from Dubbo 3, the Memcached protocol is no longer embedded in Dubbo, and an independent &lt;a href="https://cn.dubbo.apache.org/zh-cn/download/spi-extensions/#dubbo-rpc">module&lt;/a> needs to be introduced separately.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;dependency&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">&amp;lt;groupId&amp;gt;&lt;/span>org.apache.dubbo.extensions&lt;span style="color:#268bd2">&amp;lt;/groupId&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">&amp;lt;artifactId&amp;gt;&lt;/span>dubbo-rpc-memcached&lt;span style="color:#268bd2">&amp;lt;/artifactId&amp;gt;&lt;/span>

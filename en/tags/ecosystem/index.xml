@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – ecosystem</title><link>https://wxbty.github.io/dubbo-website/en/tags/ecosystem/</link><description>Recent content in ecosystem on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 31 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://wxbty.github.io/dubbo-website/en/tags/ecosystem/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Tracing Dubbo With OpenTelemetry</title><link>https://wxbty.github.io/dubbo-website/en/blog/2024/01/31/tracing-dubbo-with-opentelemetry/</link><pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/blog/2024/01/31/tracing-dubbo-with-opentelemetry/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – ecosystem</title><link>https://cn.dubbo.apache.org/en/tags/ecosystem/</link><description>Recent content in ecosystem on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 31 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://cn.dubbo.apache.org/en/tags/ecosystem/index.xml" rel="self" type="application/rss+xml"/><item><title>Blog: Tracing Dubbo With OpenTelemetry</title><link>https://cn.dubbo.apache.org/en/blog/2024/01/31/tracing-dubbo-with-opentelemetry/</link><pubDate>Wed, 31 Jan 2024 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/blog/2024/01/31/tracing-dubbo-with-opentelemetry/</guid><description>
 &lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>This case shows using OpenTelemetry(otlp) as the Tracer in the Dubbo project to report the Trace information to the Otlp Collector, which then forwards it to Zipkin and Jagger. &lt;a href="https://github.com/conghuhu/dubbo-samples/tree/master/4-governance/dubbo-samples-tracing/dubbo-samples-spring-boot-tracing-otel-otlp">Code address&lt;/a>&lt;/p>
 &lt;p>It consists of three parts：&lt;/p>
@@ -8,7 +8,7 @@
 &lt;li>dubbo-samples-spring-boot-tracing-otel-oltp-consumer&lt;/li>
 &lt;/ul>
 &lt;h2 id="architecture">Architecture&lt;/h2>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/tasks/observability/tracing/otlp/demo_arch.png" alt="architecture architecture">&lt;/p>
+&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/v3/tasks/observability/tracing/otlp/demo_arch.png" alt="architecture architecture">&lt;/p>
 &lt;h2 id="quick-start">Quick Start&lt;/h2>
 &lt;h3 id="install--start-otlp-collector">Install &amp;amp; start Otlp Collector&lt;/h3>
 &lt;p>Follow &lt;a href="https://OpenTelemetry.io/docs/collector/getting-started/">OpenTelemetry Collector Quick Start&lt;/a> to start the otlp collector.&lt;/p>
@@ -18,11 +18,11 @@
 &lt;p>Start &lt;code>org.apache.dubbo.springboot.demo.consumer.ConsumerApplication&lt;/code> directly from IDE.&lt;/p>
 &lt;h3 id="view-trace-information">View trace information&lt;/h3>
 &lt;p>Open the zipkin dashboard &lt;code>http://localhost:9411/zipkin/&lt;/code> in the browser:&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/tasks/observability/tracing/otlp/zipkin_search.png" alt="zipkin.png">&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/tasks/observability/tracing/otlp/zipkin_detail.png" alt="zipkin.png">&lt;/p>
+&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/v3/tasks/observability/tracing/otlp/zipkin_search.png" alt="zipkin.png">&lt;/p>
+&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/v3/tasks/observability/tracing/otlp/zipkin_detail.png" alt="zipkin.png">&lt;/p>
 &lt;p>Open the Jaeger dashboard &lt;code>http://localhost:16686/search&lt;/code> in the browser:&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/tasks/observability/tracing/otlp/jaeger_search.png" alt="jaeger_search.png">&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/tasks/observability/tracing/otlp/jaeger_detail.png" alt="jaeger_detail.png">&lt;/p>
+&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/v3/tasks/observability/tracing/otlp/jaeger_search.png" alt="jaeger_search.png">&lt;/p>
+&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/v3/tasks/observability/tracing/otlp/jaeger_detail.png" alt="jaeger_detail.png">&lt;/p>
 &lt;h2 id="how-to-use-it-in-spring-boot-project">How to use it in Spring Boot project&lt;/h2>
 &lt;h3 id="1-add-dependencies-to-your-project">1. Add dependencies to your project&lt;/h3>
 &lt;p>For Spring Boot projects, you can use &lt;code>dubbo-spring-boot-tracing-otel-otlp-starter&lt;/code>:&lt;/p>

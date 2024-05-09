@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Configuration Manual</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/config/</link><description>Recent content in Configuration Manual on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/config/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs3-V2: Configuration Overview</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/config/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/config/overview/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Configuration Manual</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/config/</link><description>Recent content in Configuration Manual on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/config/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs3-V2: Configuration Overview</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/config/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/config/overview/</guid><description>
 &lt;p>Quickly jump to the content you care about through the following links:&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="../../../quick-start/spring-boot/">Use Spring Boot to quickly develop Dubbo applications&lt;/a>&lt;/li>
@@ -7,7 +7,7 @@
 &lt;/ul>
 &lt;h2 id="configuration-components">Configuration components&lt;/h2>
 &lt;p>In order to better manage various configurations, Dubbo abstracts a set of structured configuration components. Each component is generally divided by purpose and controls the behavior of different scopes.&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/user/dubbo-config.jpg" alt="dubbo-config">&lt;/p>
+&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/user/dubbo-config.jpg" alt="dubbo-config">&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -212,7 +212,7 @@
 &lt;li>Application Configuration, application attribute configuration, extract the attribute set starting with &amp;ldquo;dubbo&amp;rdquo; from the Spring application Environment&lt;/li>
 &lt;li>The configuration collected by programming interfaces such as API/XML/annotation can be understood as a kind of configuration source, which is a configuration collection method directly oriented to user programming&lt;/li>
 &lt;li>Read configuration file dubbo.properties from classpath&lt;/li>
-&lt;/ul></description></item><item><title>Docs3-V2: API Configuration</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/config/api/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/config/api/</guid><description>
+&lt;/ul></description></item><item><title>Docs3-V2: API Configuration</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/config/api/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/config/api/</guid><description>
 &lt;p>Assemble configuration, start Dubbo, publish and subscribe services through API coding. This method can support dynamic creation of ReferenceConfig/ServiceConfig, combined with generalized calls to meet the needs of API Gateway or test platform.&lt;/p>
 &lt;blockquote>
 &lt;p>Reference &lt;a href="https://github.com/apache/dubbo-samples/tree/master/1-basic/dubbo-samples-api">API Samples&lt;/a>&lt;/p>
@@ -485,7 +485,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>reference.setUrl(&lt;span style="color:#2aa198">&amp;#34;dubbo://10.20.130.230:20880/com.xxx.DemoService&amp;#34;&lt;/span>);
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>...
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Annotation configuration</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/config/annotation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/config/annotation/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Annotation configuration</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/config/annotation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/config/annotation/</guid><description>
 &lt;p>This article uses the Spring Boot + Annotation mode to describe Dubbo application development. Check out the Spring Annotation development mode without Spring Boot here [complete example](&lt;a href="https://github.com/apache/dubbo-samples/tree/master/1-basic/">https://github.com/apache/dubbo-samples/tree/master/1-basic/&lt;/a> dubbo-samples-annotation)&lt;/p>
 &lt;p>In Dubbo Spring Boot development, you only need to add a few annotations and configure the &lt;code>application.properties&lt;/code> or &lt;code>application.yml&lt;/code> file to complete the Dubbo service definition:&lt;/p>
 &lt;ul>
@@ -642,7 +642,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>dubbo.reference.org.apache.dubbo.springboot.demo.DemoService.timeout&lt;span style="color:#719e07">=&lt;/span>&lt;span style="color:#2aa198">6000&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
 &lt;p>Properties format configuration is currently not very structural, for example, the key field is more redundant, and support for yaml format will be considered in the future.&lt;/p>
-&lt;/blockquote></description></item><item><title>Docs3-V2: XML Configuration</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/config/xml/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/config/xml/</guid><description>
+&lt;/blockquote></description></item><item><title>Docs3-V2: XML Configuration</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/config/xml/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/config/xml/</guid><description>
 &lt;p>Dubbo has custom configuration components based on Spring Schema extensions, and the configuration capabilities that can be achieved using XML are generally equivalent to &lt;a href="../properties">Configuration Reference Manual&lt;/a>.&lt;/p>
 &lt;p>For complete examples of the following content, please refer to &lt;a href="https://github.com/apache/dubbo-samples/tree/master/2-advanced/dubbo-samples-spring-xml">dubbo-samples&lt;/a>&lt;/p>
 &lt;h2 id="service-provider">service provider&lt;/h2>
@@ -719,7 +719,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> System.out.println(hello);
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: How Configuration Works</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/config/principle/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/config/principle/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: How Configuration Works</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/config/principle/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/config/principle/</guid><description>
 &lt;p>The following is an example of Dubbo property configuration &lt;a href="https://github.com/apache/dubbo-spring-boot-project/tree/master/dubbo-spring-boot-samples">dubbo-spring-boot-samples&lt;/a>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-properties" data-lang="properties">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#586e75">## application.properties&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
@@ -907,7 +907,7 @@
 &lt;h2 id="3-configuration-loading-process">3 Configuration loading process&lt;/h2>
 &lt;h3 id="31-processing-flow">3.1 Processing flow&lt;/h3>
 &lt;p>Dubbo configuration loading is roughly divided into two stages:&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/config/config-load.svg" alt="Configuration loading process">&lt;/p>
+&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/v3/config/config-load.svg" alt="Configuration loading process">&lt;/p>
 &lt;ul>
 &lt;li>The first stage is before the initialization of DubboBootstrap, parse and process the XML configuration/annotation configuration/Java-config or execute the API configuration code when the Spring context starts, create a config bean and add it to the ConfigManager.&lt;/li>
 &lt;li>The second stage is the DubboBootstrap initialization process, which reads the external configuration from the configuration center, processes instance-level attribute configuration and application-level attribute configuration in turn, and finally refreshes the attributes of all configuration instances, that is, [property override](../principle#32 -property override).&lt;/li>
@@ -919,7 +919,7 @@
 &lt;li>The same configuration source, but the same configuration item is specified at different levels&lt;/li>
 &lt;/ol>
 &lt;h4 id="321-different-configuration-sources">3.2.1 Different configuration sources&lt;/h4>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/configuration.jpg" alt="Override relationship">&lt;/p>
+&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/blog/configuration.jpg" alt="Override relationship">&lt;/p>
 &lt;h4 id="321-same-configuration-source">3.2.1 Same configuration source&lt;/h4>
 &lt;p>Property override refers to overriding the properties of the config bean instance with the configured property values, similar to Spring [PropertyOverrideConfigurer](&lt;a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/">https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/beans/&lt;/a> factory/config/PropertyOverrideConfigurer.html) .&lt;/p>
 &lt;blockquote>
@@ -938,7 +938,7 @@ Configuration lines are expected to be of the following form:&lt;/p>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>dubbo.{config-type}.{config-item}&lt;span style="color:#719e07">=&lt;/span>&lt;span style="color:#2aa198">{config-item-value}&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Attribute override processing flow:&lt;/p>
 &lt;p>Search in order of priority from high to low. If an attribute starting with this prefix is found, use this prefix to extract the attribute and ignore the subsequent configuration.&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/config/properties-override.svg" alt="Properties Override Process">&lt;/p>
+&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/v3/config/properties-override.svg" alt="Properties Override Process">&lt;/p>
 &lt;h3 id="33-externalization-configuration">3.3 Externalization configuration&lt;/h3>
 &lt;p>One of the purposes of external configuration is to achieve centralized management of configuration. There are already many mature professional configuration systems in this part of the industry, such as Apollo, Nacos, etc. What Dubbo does is mainly to ensure that it can work with these systems.&lt;/p>
 &lt;p>There is no difference in content and format between externalized configuration and other local configurations. It can be simply understood as the externalized storage of &lt;code>dubbo.properties&lt;/code>. The configuration center is more suitable for extracting some public configurations such as registration centers and metadata center configurations for future use. centralized management.&lt;/p>
@@ -970,7 +970,7 @@ There are two levels of external configuration: global and application. The glob
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="2">
 &lt;li>Add global configuration items in the corresponding configuration center (zookeeper, Nacos, etc.), take Nacos as an example as follows:&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/config-center/nacos-extenal-properties.png" alt="nacos-extenal-properties">&lt;/p>
+&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/v3/config-center/nacos-extenal-properties.png" alt="nacos-extenal-properties">&lt;/p>
 &lt;p>After the external configuration is enabled, global configurations such as registry, metadata-report, protocol, and qos theoretically no longer need to be configured in the application. The application development side focuses on business service configuration, and some globally shared global configurations are transferred to O&amp;amp;M. The personnel are uniformly configured in the remote configuration center.&lt;/p>
 &lt;p>The effect of this is that the application only needs to care about:&lt;/p>
 &lt;ul>
@@ -994,7 +994,7 @@ When deployed to different environments, other configurations can be automatical
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#586e75">//Throw the organized configuration into the Dubbo framework&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ConfigCenterConfig configCenter &lt;span style="color:#719e07">=&lt;/span> &lt;span style="color:#719e07">new&lt;/span> ConfigCenterConfig();
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> configCenter.setExternalConfig(dubboConfigurations);
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Configuration Item Reference Manual</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/config/properties/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/config/properties/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Configuration Item Reference Manual</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/config/properties/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/config/properties/</guid><description>
 &lt;h2 id="configuration-details">Configuration Details&lt;/h2>
 &lt;h3 id="application">application&lt;/h3>
 &lt;p>Each application must have one and only one application configuration, corresponding configuration class: &lt;code>org.apache.dubbo.config.ApplicationConfig&lt;/code>&lt;/p>

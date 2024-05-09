@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Configuration Framework and Service Behavior</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/</link><description>Recent content in Configuration Framework and Service Behavior on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs3-V2: Check at startup</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/preflight-check/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/preflight-check/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – Configuration Framework and Service Behavior</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/</link><description>Recent content in Configuration Framework and Service Behavior on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs3-V2: Check at startup</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/preflight-check/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/preflight-check/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>By default, Dubbo will check whether the dependent service is available at startup, and will throw an exception when it is unavailable, preventing Spring initialization from completing, so that problems can be detected early when going online. The default &lt;code>check=&amp;quot;true&amp;quot;&lt;/code>.&lt;/p>
 &lt;p>Checking can be turned off by &lt;code>check=&amp;quot;false&amp;quot;&lt;/code>. For example, when testing, some services do not care, or there is a circular dependency, and one of them must be started first.&lt;/p>
@@ -31,7 +31,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="meaning-of-configuration">Meaning of configuration&lt;/h2>
 &lt;p>&lt;code>dubbo.reference.com.foo.BarService.check&lt;/code>, overrides the check value of the reference of &lt;code>com.foo.BarService&lt;/code>, even if there is a statement in the configuration, it will be overwritten.&lt;/p>
 &lt;p>&lt;code>dubbo.consumer.check=false&lt;/code> is the default value of &lt;code>check&lt;/code> for setting reference. If there is an explicit statement in the configuration, such as: &lt;code>&amp;lt;dubbo:reference check=&amp;quot;true&amp;quot;/&amp;gt;&lt;/code>, it will not be affected influences.&lt;/p>
-&lt;p>&lt;code>dubbo.registry.check=false&lt;/code>, the first two means that the subscription is successful, but whether the provider list is empty or whether an error is reported, if the registration subscription fails, it is also allowed to start, you need to use this option, and will retry periodically in the background .&lt;/p></description></item><item><title>Docs3-V2: Distributed Transactions</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/transaction/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/transaction/</guid><description>
+&lt;p>&lt;code>dubbo.registry.check=false&lt;/code>, the first two means that the subscription is successful, but whether the provider list is empty or whether an error is reported, if the registration subscription fails, it is also allowed to start, you need to use this option, and will retry periodically in the background .&lt;/p></description></item><item><title>Docs3-V2: Distributed Transactions</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/transaction/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/transaction/</guid><description>
 &lt;h2 id="how-to-use">How to use&lt;/h2>
 &lt;h3 id="first-step">&lt;strong>First step&lt;/strong>&lt;/h3>
 &lt;p>First visit: &lt;a href="https://seata.apache.org/unversioned/download/seata-server">https://seata.apache.org/unversioned/download/seata-server&lt;/a>&lt;/p>
@@ -211,7 +211,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>store.db.lockTable&lt;span style="color:#719e07">=&lt;/span>&lt;span style="color:#2aa198">lock_table&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>store.db.maxWait&lt;span style="color:#719e07">=&lt;/span>&lt;span style="color:#2aa198">5000&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Open the nacos console, create a configuration whose dataId is seata.properties under the corresponding namespace, fill in the group as SEATA_GROUP, and fill in the above content and select the type as properties to save
-&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/Dingtalk_20220724021635.jpg" alt="Dingtalk_20220724021635.jpg.png" style="zoom:50%;" />&lt;/p>
+&lt;img src="https://cn.dubbo.apache.org/imgs/blog/Dingtalk_20220724021635.jpg" alt="Dingtalk_20220724021635.jpg.png" style="zoom:50%;" />&lt;/p>
 &lt;h3 id="step-6">&lt;strong>Step 6&lt;/strong>&lt;/h3>
 &lt;p>Change application.yml in server&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-yaml" data-lang="yaml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">server&lt;/span>:
@@ -345,7 +345,7 @@
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Run seata-server, after success, run your own service dubbo provider&amp;amp;consumer&lt;/p>
 &lt;h3 id="the-eighth-step-is-to-build-a-highly-available-seata-server">&lt;strong>The eighth step is to build a highly available Seata-server&lt;/strong>&lt;/h3>
 &lt;p>Since seata-server supports the separation mode of computing and storage, and supports exposing service addresses to multiple registration centers, it only needs to be configured according to the sixth step and then expanded horizontally&lt;/p>
-&lt;p>For details, please visit: &lt;a href="https://seata.io/">https://seata.io/&lt;/a>&lt;/p></description></item><item><title>Docs3-V2: Group Aggregation</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/group-merger/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/group-merger/</guid><description>
+&lt;p>For details, please visit: &lt;a href="https://seata.io/">https://seata.io/&lt;/a>&lt;/p></description></item><item><title>Docs3-V2: Group Aggregation</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/group-merger/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/group-merger/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>Aggregate the results by grouping and return the aggregated results, such as menu service, use group to distinguish multiple implementations of the same interface, now the consumer needs to call once from each group and return the result, and return the result after merging, so You can implement aggregated menu items.&lt;/p>
 &lt;p>For relevant codes, please refer to &lt;a href="https://github.com/apache/dubbo-samples/tree/master/2-advanced/dubbo-samples-merge">Samples in the dubbo project&lt;/a>&lt;/p>
@@ -377,13 +377,13 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">&amp;lt;dubbo:method&lt;/span> name=&lt;span style="color:#2aa198">&amp;#34;getMenuItems&amp;#34;&lt;/span> merger=&lt;span style="color:#2aa198">&amp;#34;.addAll&amp;#34;&lt;/span> &lt;span style="color:#268bd2">/&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;/dubbo:reference&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="hint">hint:&lt;/h4>
-&lt;p>Supported since &lt;code>2.1.0&lt;/code> version&lt;/p></description></item><item><title>Docs3-V2: Port Protocol Multiplexing</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/port-unification/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/port-unification/</guid><description>
+&lt;p>Supported since &lt;code>2.1.0&lt;/code> version&lt;/p></description></item><item><title>Docs3-V2: Port Protocol Multiplexing</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/port-unification/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/port-unification/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>By configuring the protocol, dubbo3 can support port protocol multiplexing.
 For example, after using the Triple protocol to enable port multiplexing, you can add
 Dubbo protocol support, and Qos protocol support. These protocols are identified by a unified port multiplexing
 It can be used for service protocol migration, which is processed by the server, and can save ports and related resources and reduce the complexity of operation and maintenance.&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/pu-server/pu-server-flow.png" alt="pu-server-image1">&lt;/p>
+&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/blog/pu-server/pu-server-flow.png" alt="pu-server-image1">&lt;/p>
 &lt;ul>
 &lt;li>
 &lt;p>In the service creation phase, different Protocol objects are created for export by obtaining the protocol configuration exported by the service from the Config layer. in the process of exporting
@@ -399,7 +399,7 @@ In , if it is not the first time to create a server with port multiplexing, the 
 &lt;h2 id="reference-use-case">Reference use case&lt;/h2>
 &lt;p>[https://github.com/apache/dubbo-samples/tree/master/dubbo-samples-port-unification](&lt;a href="https://github.com/apache/dubbo-samples/tree/master/3-extensions/">https://github.com/apache/dubbo-samples/tree/master/3-extensions/&lt;/a> protocol/dubbo-samples-port-unification)&lt;/p>
 &lt;h2 id="configuration-method">configuration method&lt;/h2>
-&lt;p>For the configuration method supported by Dubbo, please refer to &lt;a href="https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/java-sdk/reference-manual/config/">Configuration Instructions&lt;/a>&lt;/p>
+&lt;p>For the configuration method supported by Dubbo, please refer to &lt;a href="https://cn.dubbo.apache.org/zh-cn/overview/mannual/java-sdk/reference-manual/config/">Configuration Instructions&lt;/a>&lt;/p>
 &lt;h3 id="service-multi-protocol-export">Service multi-protocol export&lt;/h3>
 &lt;p>The ext-protocol parameter supports configuring multiple different protocols, and the protocols are separated by &amp;ldquo;,&amp;rdquo;.&lt;/p>
 &lt;h4 id="xml-configuration">xml configuration&lt;/h4>
@@ -430,7 +430,7 @@ In , if it is not the first time to create a server with port multiplexing, the 
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">&amp;lt;groupId&amp;gt;&lt;/span>org.apache.dubbo&lt;span style="color:#268bd2">&amp;lt;/groupId&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">&amp;lt;artifactId&amp;gt;&lt;/span>dubbo-qos&lt;span style="color:#268bd2">&amp;lt;/artifactId&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;/dependency&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>After importing the Qos module, related configuration items can be configured by referring to &lt;a href="https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/java-sdk/reference-manual/qos/overview/">Qos Operation Manual&lt;/a> .&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>After importing the Qos module, related configuration items can be configured by referring to &lt;a href="https://cn.dubbo.apache.org/zh-cn/overview/mannual/java-sdk/reference-manual/qos/overview/">Qos Operation Manual&lt;/a> .&lt;/p>
 &lt;p>By default, the Qos service based on port multiplexing is started after the module is imported.&lt;/p>
 &lt;h2 id="how-to-use">How to use&lt;/h2>
 &lt;h3 id="qos-used">Qos used&lt;/h3>
@@ -439,7 +439,7 @@ In , if it is not the first time to create a server with port multiplexing, the 
 &lt;li>
 &lt;p>Call the command directly&lt;/p>
 &lt;p>The recognition can also be completed by directly calling the commands supported by telnet. If the user is not familiar with it, the help command can be called to complete the recognition.&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/pu-server/qos-telnet-directcall.png" alt="pu-server-image2">&lt;/p>
+&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/blog/pu-server/qos-telnet-directcall.png" alt="pu-server-image2">&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>Send telnet command to identify&lt;/p>
@@ -449,7 +449,7 @@ In , if it is not the first time to create a server with port multiplexing, the 
 &lt;li>Call &amp;ldquo;send ayt&amp;rdquo; to send a special identification field to the server (a special field of the telnet protocol)&lt;/li>
 &lt;li>Press Enter to complete the message sending and enter the interactive interface of dubbo&lt;/li>
 &lt;/ol>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/pu-server/qos-telnet-sendayt.png" alt="pu-server-imgs3">&lt;/p>
+&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/blog/pu-server/qos-telnet-sendayt.png" alt="pu-server-imgs3">&lt;/p>
 &lt;/li>
 &lt;/ol>
 &lt;h3 id="service-reference">Service reference&lt;/h3>
@@ -460,7 +460,7 @@ In , if it is not the first time to create a server with port multiplexing, the 
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>reference.setProtocol(&lt;span style="color:#719e07">this&lt;/span>.protocol);
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#586e75">// reference.setProtocol(CommonConstants.DUBBO);&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#586e75">// reference.setProtocol(CommonConstants.TRIPLE);&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/pu-server/reference-service.png" alt="pu-server-imgs4">&lt;/p></description></item><item><title>Docs3-V2: Reactive Programming</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/reactive/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/reactive/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/blog/pu-server/reference-service.png" alt="pu-server-imgs4">&lt;/p></description></item><item><title>Docs3-V2: Reactive Programming</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/reactive/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/reactive/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>This feature is implemented based on the Triple protocol and Project Reactor, and is supported in versions above &lt;code>3.1.0&lt;/code>. Users only need to write the IDL file and specify the corresponding Generator of the protobuf plug-in to generate and use the Stub code that supports the responsive API.&lt;/p>
 &lt;p>There are four call modes, namely OneToOne, OneToMany, ManyToOne, and ManyToMany, corresponding to Unary calls, server streams, client streams, and bidirectional streams. In the implementation of Reactor, One corresponds to Mono, and Many corresponds to Flux.&lt;/p>
@@ -472,7 +472,7 @@ In , if it is not the first time to create a server with port multiplexing, the 
 &lt;h2 id="scenes-to-be-used">scenes to be used&lt;/h2>
 &lt;p>The system needs to handle a large number of concurrent requests without overloading any servers. Systems with large numbers of users providing real-time data and want to ensure that the system can handle the load without crashing or slowing down.&lt;/p>
 &lt;h2 id="how-to-use">How to use&lt;/h2>
-&lt;p>For Triple usage and configuration, please refer to &lt;a href="https://wxbty.github.io/dubbo-website/zh-cn/overview/mannual/java-sdk/reference-manual/protocol/triple/idl/">Using Triple in IDL&lt;/a>, and ensure that the Dubbo version&amp;gt; = 3.1.0.&lt;/p>
+&lt;p>For Triple usage and configuration, please refer to &lt;a href="https://cn.dubbo.apache.org/zh-cn/overview/mannual/java-sdk/reference-manual/protocol/triple/idl/">Using Triple in IDL&lt;/a>, and ensure that the Dubbo version&amp;gt; = 3.1.0.&lt;/p>
 &lt;h3 id="add-the-necessary-dependencies">Add the necessary dependencies&lt;/h3>
 &lt;p>To use Reactor Triple, you need to add the following additional dependencies.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;dependency&amp;gt;&lt;/span>
@@ -658,7 +658,7 @@ In , if it is not the first time to create a server with port multiplexing, the 
 &lt;li>
 &lt;p>Start the consumer&lt;/p>
 &lt;/li>
-&lt;/ol></description></item><item><title>Docs3-V2: Service Version</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/multi-versions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/multi-versions/</guid><description>
+&lt;/ol></description></item><item><title>Docs3-V2: Service Version</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/multi-versions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/multi-versions/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>&lt;strong>Follow the steps below for version migration&lt;/strong>&lt;/p>
 &lt;ol>
@@ -689,9 +689,9 @@ In , if it is not the first time to create a server with port multiplexing, the 
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="does-not-distinguish-between-versions">Does not distinguish between versions&lt;/h3>
 &lt;p>If you don&amp;rsquo;t need to distinguish between versions, you can configure it in the following way&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;dubbo:reference&lt;/span> id=&lt;span style="color:#2aa198">&amp;#34;barService&amp;#34;&lt;/span> interface=&lt;span style="color:#2aa198">&amp;#34;com.foo.BarService&amp;#34;&lt;/span> version=&lt;span style="color:#2aa198">&amp;#34;*&amp;#34;&lt;/span> &lt;span style="color:#268bd2">/&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Cluster Fault Tolerance</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/fault-tolerent-strategy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/fault-tolerent-strategy/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Cluster Fault Tolerance</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/fault-tolerent-strategy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/fault-tolerent-strategy/</guid><description>
 &lt;p>When the cluster call fails, Dubbo provides a variety of fault tolerance schemes, and the default is failover retry.&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/user/cluster.jpg" alt="cluster">&lt;/p>
+&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/user/cluster.jpg" alt="cluster">&lt;/p>
 &lt;p>Each node relationship:&lt;/p>
 &lt;ul>
 &lt;li>Here &lt;code>Invoker&lt;/code> is an abstraction of &lt;code>Provider&lt;/code> that can call &lt;code>Service&lt;/code>, &lt;code>Invoker&lt;/code> encapsulates &lt;code>Provider&lt;/code> address and &lt;code>Service&lt;/code> interface information&lt;/li>
@@ -767,7 +767,7 @@ Effective in dubbo2.7.10 and above.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;dubbo:service&lt;/span> cluster=&lt;span style="color:#2aa198">&amp;#34;failsafe&amp;#34;&lt;/span> &lt;span style="color:#268bd2">/&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>or&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;dubbo:reference&lt;/span> cluster=&lt;span style="color:#2aa198">&amp;#34;failsafe&amp;#34;&lt;/span> &lt;span style="color:#268bd2">/&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Parameter Validation</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/parameter-validation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/parameter-validation/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Parameter Validation</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/parameter-validation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/parameter-validation/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>The parameter verification function is implemented based on &lt;a href="https://jcp.org/en/jsr/detail?id=303">JSR303&lt;/a>, users only need to identify the verification annotation of the JSR303 standard, and realize the verification by declaring the filter.&lt;/p>
 &lt;h4 id="maven-dependencies">Maven dependencies&lt;/h4>
@@ -921,7 +921,7 @@ Effective in dubbo2.7.10 and above.&lt;/p>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
 &lt;p>&lt;strong>The validation method can be extended, see &lt;a href="../../../reference-manual/spi/description/validation">Validation Extension&lt;/a> in the developer manual for the extension method&lt;/strong>&lt;/p>
-&lt;/blockquote></description></item><item><title>Docs3-V2: Service Group</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/service-group/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/service-group/</guid><description>
+&lt;/blockquote></description></item><item><title>Docs3-V2: Service Group</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/service-group/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/service-group/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>The same interface can use service grouping to distinguish different implementation methods for different business scenarios, different usage requirements, or different functional modules. At the same time, the services provided by these different implementations can coexist and support mutual calls.&lt;/p>
 &lt;h2 id="scenes-to-be-used">scenes to be used&lt;/h2>
@@ -942,7 +942,7 @@ Effective in dubbo2.7.10 and above.&lt;/p>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ...
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Start the Dubbo service, and you can see services with the same service name and different groups in the registry. Taking Nacos as the registry as an example, the following content is displayed:&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/service-group-1.png" alt="image-service-group-1.png">&lt;/p>
+&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/blog/service-group-1.png" alt="image-service-group-1.png">&lt;/p>
 &lt;h4 id="service-consumer-annotation-configuration">Service consumer (annotation configuration)&lt;/h4>
 &lt;p>Use @DubboReference annotation to add group parameter&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">@DubboReference&lt;/span>(group &lt;span style="color:#719e07">=&lt;/span> &lt;span style="color:#2aa198">&amp;#34;demo&amp;#34;&lt;/span>)
@@ -955,7 +955,7 @@ Effective in dubbo2.7.10 and above.&lt;/p>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">@DubboReference&lt;/span>(group &lt;span style="color:#719e07">=&lt;/span> &lt;span style="color:#2aa198">&amp;#34;*&amp;#34;&lt;/span>)
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">private&lt;/span> DemoService demoService2;
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>After starting the Dubbo service, you can see the references of the same service name in different groups in the registration center. Taking Nacos as the registration center as an example, the following content is displayed:
-&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/service-group-2.png" alt="image-service-group-2.png">&lt;/p>
+&lt;img src="https://cn.dubbo.apache.org/imgs/blog/service-group-2.png" alt="image-service-group-2.png">&lt;/p>
 &lt;h3 id="xml-configuration">xml configuration&lt;/h3>
 &lt;h4 id="service-provider-xml-configuration">Service provider (xml configuration)&lt;/h4>
 &lt;p>Use &amp;lt;dubbo:service /&amp;gt; tag, add group parameter&lt;/p>
@@ -974,7 +974,7 @@ Effective in dubbo2.7.10 and above.&lt;/p>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>...
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;/beans&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Start the Dubbo service, and you can see services with the same service name and different groups in the registry. Taking Nacos as the registry as an example, the following content is displayed:&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/service-group-1.png" alt="image-service-group-1.png">&lt;/p>
+&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/blog/service-group-1.png" alt="image-service-group-1.png">&lt;/p>
 &lt;h4 id="service-consumer-xml-configuration">Service consumer (xml configuration)&lt;/h4>
 &lt;p>Use &lt;a href="dubbo:reference/">dubbo:reference/&lt;/a> annotation to add group parameter&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#719e07">&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt;&lt;/span>
@@ -996,7 +996,7 @@ Effective in dubbo2.7.10 and above.&lt;/p>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> ...
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;/beans&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>After starting the Dubbo service, you can see the references of the same service name in different groups in the registration center. Taking Nacos as the registration center as an example, the following content is displayed:&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/service-group-2.png" alt="image-service-group-2.png">&lt;/p>
+&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/blog/service-group-2.png" alt="image-service-group-2.png">&lt;/p>
 &lt;h3 id="api-configuration">API configuration&lt;/h3>
 &lt;h4 id="service-provider-api-configuration">Service provider (API configuration)&lt;/h4>
 &lt;p>Use org.apache.dubbo.config.ServiceConfig class, add group parameter&lt;/p>
@@ -1012,7 +1012,7 @@ Effective in dubbo2.7.10 and above.&lt;/p>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>service.setGroup(&lt;span style="color:#2aa198">&amp;#34;demo2&amp;#34;&lt;/span>);
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>...
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Start the Dubbo service, and you can see services with the same service name and different groups in the registry. Taking Nacos as the registry as an example, the following content is displayed:&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/service-group-1.png" alt="image-service-group-1.png">&lt;/p>
+&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/blog/service-group-1.png" alt="image-service-group-1.png">&lt;/p>
 &lt;h4 id="service-consumer-api-configuration">Service consumer (API configuration)&lt;/h4>
 &lt;p>Use org.apache.dubbo.config.ReferenceConfig, add group parameter&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#586e75">// ReferenceConfig is a heavy object, which internally encapsulates the connection with the registration center and opens the service port&lt;/span>
@@ -1032,15 +1032,15 @@ Effective in dubbo2.7.10 and above.&lt;/p>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>reference3.setGroup(&lt;span style="color:#2aa198">&amp;#34;*&amp;#34;&lt;/span>);
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>...
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>After starting the Dubbo service, you can see the references of the same service name in different groups in the registration center. Taking Nacos as the registration center as an example, the following content is displayed:
-&lt;img src="https://wxbty.github.io/dubbo-website/imgs/blog/service-group-2.png" alt="image-service-group-2.png">&lt;/p>
+&lt;img src="https://cn.dubbo.apache.org/imgs/blog/service-group-2.png" alt="image-service-group-2.png">&lt;/p>
 &lt;blockquote>
 &lt;p>Always &lt;em>call&lt;/em>* only one available group implementation&lt;/p>
-&lt;/blockquote></description></item><item><title>Docs3-V2: Asynchronous call</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/async-call/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/async-call/</guid><description>
+&lt;/blockquote></description></item><item><title>Docs3-V2: Asynchronous call</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/async-call/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/async-call/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;h4 id="background">background&lt;/h4>
 &lt;p>Starting from 2.7.0, all asynchronous programming interfaces of Dubbo are based on &lt;a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html">CompletableFuture&lt;/a>&lt;/p>
 &lt;p>Based on NIO&amp;rsquo;s non-blocking implementation of parallel calls, the client does not need to start multi-threads to complete parallel calls to multiple remote services, and the overhead of multi-threading is relatively small.&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/user/future.jpg" alt="/user-guide/images/future.jpg">&lt;/p>
+&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/user/future.jpg" alt="/user-guide/images/future.jpg">&lt;/p>
 &lt;h2 id="reference-use-case">Reference use case&lt;/h2>
 &lt;p>&lt;a href="https://github.com/apache/dubbo-samples/tree/master/2-advanced/dubbo-samples-async">https://github.com/apache/dubbo-samples/tree/master/dubbo-samples-async&lt;/a>&lt;/p>
 &lt;h2 id="scenes-to-be-used">scenes to be used&lt;/h2>
@@ -1156,9 +1156,9 @@ Effective in dubbo2.7.10 and above.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;dubbo:method&lt;/span> name=&lt;span style="color:#2aa198">&amp;#34;findFoo&amp;#34;&lt;/span> async=&lt;span style="color:#2aa198">&amp;#34;true&amp;#34;&lt;/span> sent=&lt;span style="color:#2aa198">&amp;#34;true&amp;#34;&lt;/span> &lt;span style="color:#268bd2">/&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>If you just want to be asynchronous and completely ignore the return value, you can configure &lt;code>return=&amp;quot;false&amp;quot;&lt;/code> to reduce the cost of creating and managing Future objects&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;dubbo:method&lt;/span> name=&lt;span style="color:#2aa198">&amp;#34;findFoo&amp;#34;&lt;/span> async=&lt;span style="color:#2aa198">&amp;#34;true&amp;#34;&lt;/span> return=&lt;span style="color:#2aa198">&amp;#34;false&amp;#34;&lt;/span> &lt;span style="color:#268bd2">/&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Service Downgrade</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/service-downgrade/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/service-downgrade/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Service Downgrade</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/service-downgrade/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/service-downgrade/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
-&lt;p>It is recommended to use relevant current limiting and downgrading components (such as &lt;a href="https://sentinelguard.io/zh-cn/docs/open-source-framework-integrations.html">Sentinel&lt;/a>) to achieve the best experience. Reference example practice: &lt;a href="https://wxbty.github.io/dubbo-website/zh-cn/overview/tasks/ecosystem/rate-limit/">Microservice Governance/Limit and Downgrade&lt;/a>&lt;/p>
+&lt;p>It is recommended to use relevant current limiting and downgrading components (such as &lt;a href="https://sentinelguard.io/zh-cn/docs/open-source-framework-integrations.html">Sentinel&lt;/a>) to achieve the best experience. Reference example practice: &lt;a href="https://cn.dubbo.apache.org/zh-cn/overview/tasks/ecosystem/rate-limit/">Microservice Governance/Limit and Downgrade&lt;/a>&lt;/p>
 &lt;p>Service degradation refers to the emergency treatment of service degradation under abnormal circumstances.&lt;/p>
 &lt;h2 id="scenes-to-be-used">scenes to be used&lt;/h2>
 &lt;ul>
@@ -1212,7 +1212,7 @@ Effective in dubbo2.7.10 and above.&lt;/p>
 &lt;li>
 &lt;p>Type not found error, such as custom mock class, throw custom exception, please check if the type exists or if there is a typo&lt;/p>
 &lt;/li>
-&lt;/ul></description></item><item><title>Docs3-V2: Generalization call (client generalization)</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/generic-reference/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/generic-reference/</guid><description>
+&lt;/ul></description></item><item><title>Docs3-V2: Generalization call (client generalization)</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/generic-reference/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/generic-reference/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>Generalized call refers to calling the server without the API (SDK) provided by the server, and the call result can be obtained normally.&lt;/p>
 &lt;h2 id="scenes-to-be-used">scenes to be used&lt;/h2>
@@ -1533,8 +1533,8 @@ step:&lt;/p>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>student. &lt;span style="color:#268bd2">put&lt;/span>(&lt;span style="color:#2aa198">&amp;#34;age&amp;#34;&lt;/span>, &lt;span style="color:#2aa198">&amp;#34;xxx&amp;#34;&lt;/span>);
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;ol start="3">
 &lt;li>For other serialization formats, special configuration is required&lt;/li>
-&lt;/ol></description></item><item><title>Docs3-V2: Stream Communication</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/streaming/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/streaming/</guid><description>
-&lt;p>TBD&lt;/p></description></item><item><title>Docs3-V2: Thread Pool Isolation</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/isolation-executor/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/isolation-executor/</guid><description>
+&lt;/ol></description></item><item><title>Docs3-V2: Stream Communication</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/streaming/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/streaming/</guid><description>
+&lt;p>TBD&lt;/p></description></item><item><title>Docs3-V2: Thread Pool Isolation</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/isolation-executor/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/isolation-executor/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>A new thread pool management method enables the thread pools of each service in the provider application to be isolated and independent from each other. The exhaustion of the thread pool resources of a certain service will not affect other normal services. Support thread pool configurable, manually specified by the user.&lt;/p>
 &lt;h2 id="scenes-to-be-used">scenes to be used&lt;/h2>
@@ -1737,7 +1737,7 @@ step:&lt;/p>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#719e07">return&lt;/span> &lt;span style="color:#2aa198">&amp;#34;server hello&amp;#34;&lt;/span>;
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Call link to pass implicit parameters</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/attachment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/attachment/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Call link to pass implicit parameters</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/attachment/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/attachment/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>Parameters can be implicitly passed between the service consumer and the provider through &lt;code>setAttachment&lt;/code> and &lt;code>getAttachment&lt;/code> on &lt;code>RpcContext&lt;/code>.&lt;/p>
 &lt;h4 id="background">background&lt;/h4>
@@ -1751,7 +1751,7 @@ RpcContext in Dubbo is a ThreadLocal temporary state recorder. When RPC requests
 &lt;li>ServerAttachment: Used on the Server side, the parameters read from ServerAttachment are passed from the Client&lt;/li>
 &lt;li>ServerContext: It is used on both the client side and the server side, and is used to pass back from the server side to the client side. The parameters written by the server side to the ServerContext can be obtained from the ServerContext on the client side after the call ends&lt;/li>
 &lt;/ul>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/concepts/rpccontext.png" alt="/imgs/v3/concepts/rpccontext.png">&lt;/p>
+&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/v3/concepts/rpccontext.png" alt="/imgs/v3/concepts/rpccontext.png">&lt;/p>
 &lt;p>As shown in the figure above, when the consumer initiates an invocation, it can directly initiate a call to the remote service through Method Invoke, and at the same time, the data written by the consumer to RpcClientAttachment will be written into Invocation together with the parameter information of Invoke.
 The Invocation on the consumer side is serialized and sent to the server through network transmission. The server parses the Invocation to generate the parameters of Method Invoke and RpcServerAttachment, and then initiates the real call.
 After the processing on the server end, the Method Response result together with the RpcServiceContext will generate a Result object.
@@ -1805,12 +1805,12 @@ Dubbo 3 has refactored RpcContext to support optional parameter transparent tran
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Map&lt;span style="color:#719e07">&amp;lt;&lt;/span>String, Object&lt;span style="color:#719e07">&amp;gt;&lt;/span> &lt;span style="color:#268bd2">select&lt;/span>();
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Direct Connection Provider</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/explicit-target/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/explicit-target/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Direct Connection Provider</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/explicit-target/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/explicit-target/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
-&lt;p>This document is no longer maintained. You are currently viewing a snapshot version. If you want to view the latest version of the documentation, see &lt;a href="https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/specify-ip/">Latest Version&lt;/a>.&lt;/p>
+&lt;p>This document is no longer maintained. You are currently viewing a snapshot version. If you want to view the latest version of the documentation, see &lt;a href="https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/specify-ip/">Latest Version&lt;/a>.&lt;/p>
 &lt;/div>
 &lt;p>In the development and testing environment, it is often necessary to bypass the registration center and only test the specified service provider. At this time, point-to-point direct connection may be required. The point-to-point direct connection method will use the service interface as the unit and ignore the provider list of the registration center. A The point-to-point interface configuration does not affect the B interface to obtain the list from the registration center.&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/user/dubbo-directly.jpg" alt="/user-guide/images/dubbo-directly.jpg">&lt;/p>
+&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/user/dubbo-directly.jpg" alt="/user-guide/images/dubbo-directly.jpg">&lt;/p>
 &lt;h2 id="configuration-via-xml">Configuration via XML&lt;/h2>
 &lt;p>If the online demand needs point-to-point, you can configure the url to point to the provider in &lt;code>&amp;lt;dubbo:reference&amp;gt;&lt;/code>, which will bypass the registration center. Multiple addresses are separated by semicolons, and the configuration is as follows:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;dubbo:reference&lt;/span> id=&lt;span style="color:#2aa198">&amp;#34;xxxService&amp;#34;&lt;/span> interface=&lt;span style="color:#2aa198">&amp;#34;com.alibaba.xxx.XxxService&amp;#34;&lt;/span> url=&lt;span style="color:#2aa198">&amp;#34;dubbo://localhost:20890&amp;#34;&lt;/span> &lt;span style="color:#268bd2">/&amp;gt;&lt;/span>
@@ -1840,7 +1840,7 @@ The key is the service name, and the value is the service provider url. This con
 &lt;div class="alert alert-warning" role="alert">
 &lt;h4 class="alert-heading">Attention&lt;/h4>
 In order to avoid complicating the online environment, do not use this feature online, it should only be used during the testing phase.
-&lt;/div></description></item><item><title>Docs3-V2: Dynamic IP call</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/specify-ip/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/specify-ip/</guid><description>
+&lt;/div></description></item><item><title>Docs3-V2: Dynamic IP call</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/specify-ip/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/specify-ip/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>Use the extension of Dubbo to realize the specified IP call.&lt;/p>
 &lt;h2 id="scenes-to-be-used">scenes to be used&lt;/h2>
@@ -1912,7 +1912,7 @@ To customize the logic of creating invoker, please implement &lt;code>org.apache
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
 &lt;p>&lt;strong>Must be set every time, and the call must be initiated immediately after setting&lt;/strong>, if there is an interceptor error (remove this value in the Dubbo framework is performed during the address selection process), it is recommended to set null to avoid ThreadLocal memory leaks that will affect the follow-up transfer.&lt;/p>
-&lt;/blockquote></description></item><item><title>Docs3-V2: Consistent Hash Site Selection</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/consistent-hash/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/consistent-hash/</guid><description>
+&lt;/blockquote></description></item><item><title>Docs3-V2: Consistent Hash Site Selection</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/consistent-hash/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/consistent-hash/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>[Analysis of Dubbo Consistent Hash Load Balancing Implementation](/zh-cn/blog/2019/05/01/dubbo-%E4%B8%80%E8%87%B4%E6%80%A7hash%E8%B4%9F%E8 %BD%BD%E5%9D%87%E8%A1%A1%E5%AE%9E%E7%8E%B0%E5%89%96%E6%9E%90/)&lt;/p>
 &lt;h2 id="scenes-to-be-used">scenes to be used&lt;/h2>
@@ -1944,7 +1944,7 @@ To customize the logic of creating invoker, please implement &lt;code>org.apache
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>referenceConfig.setParameters(parameters);
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>referenceConfig.setLoadBalance(&lt;span style="color:#2aa198">&amp;#34;consistenthash&amp;#34;&lt;/span>);
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>referenceConfig. &lt;span style="color:#268bd2">get&lt;/span>();
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: RPC call context</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/context/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/context/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: RPC call context</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/context/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/context/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>The context stores the environment information needed in the current calling process. All configuration information will be converted to URL parameters, see the &lt;strong>corresponding URL parameters&lt;/strong> column in &lt;a href="../../../reference-manual/config/properties/">schema configuration reference manual&lt;/a>.&lt;/p>
 &lt;p>RpcContext is a temporary state recorder for ThreadLocal. When RPC requests are received or RPC requests are initiated, the state of RpcContext will change. For example: A tunes B, B then tunes C, then on machine B, before B tunes C, RpcContext records the information of A&amp;rsquo;s tune to B, after B tunes C, RpcContext records the information of B&amp;rsquo;s tune to C.&lt;/p>
@@ -1978,18 +1978,18 @@ To customize the logic of creating invoker, please implement &lt;code>org.apache
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#dc322f">boolean&lt;/span> isProviderSide &lt;span style="color:#719e07">=&lt;/span> RpcContext.getServiceContext().isProviderSide();
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Subscription Only</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/subscribe-only/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/subscribe-only/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Subscription Only</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/subscribe-only/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/subscribe-only/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>In order to facilitate development and testing, a registration center that is available for all services is often shared offline. At this time, if a service provider under development registers, it may affect the normal operation of consumers.&lt;/p>
 &lt;p>The service provider developer can only subscribe to the service (the developed service may depend on other services), without registering the service under development, and test the service under development through direct connection.&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/user/subscribe-only.jpg" alt="/user-guide/images/subscribe-only.jpg">&lt;/p>
+&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/user/subscribe-only.jpg" alt="/user-guide/images/subscribe-only.jpg">&lt;/p>
 &lt;h2 id="scenes-to-be-used">scenes to be used&lt;/h2>
 &lt;h2 id="how-to-use">How to use&lt;/h2>
 &lt;h3 id="disable-registration-configuration">Disable registration configuration&lt;/h3>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;dubbo:registry&lt;/span> address=&lt;span style="color:#2aa198">&amp;#34;10.20.153.10:9090&amp;#34;&lt;/span> register=&lt;span style="color:#2aa198">&amp;#34;false&amp;#34;&lt;/span> &lt;span style="color:#268bd2">/&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>or&lt;/strong>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;dubbo:registry&lt;/span> address=&lt;span style="color:#2aa198">&amp;#34;10.20.153.10:9090?register=false&amp;#34;&lt;/span> &lt;span style="color:#268bd2">/&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Call trigger event notification</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/events-notify/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/events-notify/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Call trigger event notification</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/events-notify/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/events-notify/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>Before calling, after calling, and when an exception occurs, three events &lt;code>oninvoke&lt;/code>, &lt;code>onreturn&lt;/code>, and &lt;code>onthrow&lt;/code> will be triggered. You can configure which method of which class to notify when an event occurs.&lt;/p>
 &lt;h2 id="reference-use-case">Reference use case&lt;/h2>
@@ -2059,7 +2059,7 @@ To customize the logic of creating invoker, please implement &lt;code>org.apache
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Assert.assertEquals(requestId, notify.ret.get(requestId).getId());
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Multi-protocol</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/multi-protocols/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/multi-protocols/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Multi-protocol</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/multi-protocols/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/multi-protocols/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>Dubbo allows multi-protocol configuration, supports different protocols on different services or supports multiple protocols on the same service at the same time.&lt;/p>
 &lt;h2 id="scenes-to-be-used">scenes to be used&lt;/h2>
@@ -2096,7 +2096,7 @@ To customize the logic of creating invoker, please implement &lt;code>org.apache
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#586e75">&amp;lt;!-- Exposing services using multiple protocols --&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#268bd2">&amp;lt;dubbo:service&lt;/span> id=&lt;span style="color:#2aa198">&amp;#34;helloService&amp;#34;&lt;/span> interface=&lt;span style="color:#2aa198">&amp;#34;com.alibaba.hello.api.HelloService&amp;#34;&lt;/span> version=&lt;span style="color:#2aa198">&amp;#34;1.0.0&amp;#34;&lt;/span> protocol=&lt;span style="color:#2aa198">&amp;#34;dubbo,hessian&amp;#34;&lt;/span> &lt;span style="color:#268bd2">/&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;/beans&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: The server makes a callback to the client</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/callback-parameter/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/callback-parameter/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: The server makes a callback to the client</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/callback-parameter/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/callback-parameter/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>The parameter callback method is the same as calling a local callback or listener, you only need to declare which parameter is the callback type in the Spring configuration file. Dubbo will generate a reverse proxy based on the persistent connection, so that the client logic can be invoked from the server. You can refer to &lt;a href="https://github.com/apache/dubbo-samples/tree/master/2-advanced/dubbo-samples-callback">sample code in the dubbo project&lt;/a>.&lt;/p>
 &lt;h2 id="scenes-to-be-used">scenes to be used&lt;/h2>
@@ -2184,7 +2184,7 @@ To customize the logic of creating invoker, please implement &lt;code>org.apache
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> System.out.println(&lt;span style="color:#2aa198">&amp;#34;callback1:&amp;#34;&lt;/span> &lt;span style="color:#719e07">+&lt;/span> msg);
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>});
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Local Masquerade</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/local-mock/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/local-mock/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Local Masquerade</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/local-mock/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/local-mock/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>There is a mechanism in Dubbo3 to achieve lightweight service degradation, which is local masquerade&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>.&lt;/p>
 &lt;h2 id="scenes-to-be-used">scenes to be used&lt;/h2>
@@ -2283,7 +2283,7 @@ To customize the logic of creating invoker, please implement &lt;code>org.apache
 &lt;p>Custom exceptions must have a constructor with &lt;code>String&lt;/code> as the input parameter, which will be used to receive exception information.&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/div></description></item><item><title>Docs3-V2: Multiple Registries</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/multi-registry/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/multi-registry/</guid><description>
+&lt;/div></description></item><item><title>Docs3-V2: Multiple Registries</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/multi-registry/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/multi-registry/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>Dubbo supports the simultaneous registration of the same service to multiple registries, or the registration of different services to different registries, or even references to services with the same name registered on different registries at the same time. In addition, the registry is &lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> that supports custom extensions.&lt;/p>
 &lt;h2 id="scenes-to-be-used">scenes to be used&lt;/h2>
@@ -2353,10 +2353,10 @@ To customize the logic of creating invoker, please implement &lt;code>org.apache
 &lt;p>You can extend the registry by yourself, see: &lt;a href="../../../reference-manual/spi/description/registry">Registry Extension&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/div></description></item><item><title>Docs3-V2: Local Stub</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/local-stub/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/local-stub/</guid><description>
+&lt;/div></description></item><item><title>Docs3-V2: Local Stub</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/local-stub/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/local-stub/</guid><description>
 &lt;h2 id="feature-description">Feature description:&lt;/h2>
 &lt;p>After the remote service, the client usually only has the interface, and the implementation is all on the server side, but the provider sometimes wants to execute some logic on the client side.&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/user/stub.jpg" alt="/user-guide/images/stub.jpg">&lt;/p>
+&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/user/stub.jpg" alt="/user-guide/images/stub.jpg">&lt;/p>
 &lt;h2 id="scenes-to-be-used">scenes to be used&lt;/h2>
 &lt;p>Do ThreadLocal cache, verify parameters in advance, forge fault-tolerant data after call failure, etc. At this time, you need to bring a Stub in the API, and the client generates a Proxy instance, which will pass the Proxy to the Stub through the constructor &lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>, and then pass the The Stub is exposed to the user, and the Stub can decide whether to call the Proxy.&lt;/p>
 &lt;h2 id="how-to-use">How to use&lt;/h2>
@@ -2394,7 +2394,7 @@ To customize the logic of creating invoker, please implement &lt;code>org.apache
 &lt;p>Next to the interface put a Stub implementation that implements the BarService interface and has a constructor that passes in the remote BarService instance.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/div></description></item><item><title>Docs3-V2: Echo Test</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/echo-service/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/echo-service/</guid><description>
+&lt;/div></description></item><item><title>Docs3-V2: Echo Test</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/echo-service/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/echo-service/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>The echo test is used to detect whether the service is available. The echo test is performed according to the normal request process. It can test whether the entire call is smooth and can be used for monitoring.&lt;/p>
 &lt;h2 id="reference-use-case">Reference use case&lt;/h2>
@@ -2414,7 +2414,7 @@ To customize the logic of creating invoker, please implement &lt;code>org.apache
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>String status &lt;span style="color:#719e07">=&lt;/span> echoService. &lt;span style="color:#268bd2">$echo&lt;/span>(&lt;span style="color:#2aa198">&amp;#34;OK&amp;#34;&lt;/span>);
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#719e07">assert&lt;/span>(status. &lt;span style="color:#268bd2">equals&lt;/span>(&lt;span style="color:#2aa198">&amp;#34;OK&amp;#34;&lt;/span>));
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Call Information Record</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/accesslog/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/accesslog/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Call Information Record</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/accesslog/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/accesslog/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>The log in dubbo3 is divided into log adaptation and access log. If you want to record each request information, you can enable the access log, which is similar to the apache access log.&lt;/p>
 &lt;h2 id="scenes-to-be-used">scenes to be used&lt;/h2>
@@ -2428,7 +2428,7 @@ To customize the logic of creating invoker, please implement &lt;code>org.apache
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;dubbo:protocol&lt;/span> accesslog=&lt;span style="color:#2aa198">&amp;#34;http://10.20.160.198/wiki/display/dubbo/foo/bar.log&amp;#34;&lt;/span> &lt;span style="color:#268bd2">/&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
 &lt;p>The log volume is relatively large, please pay attention to the disk capacity.&lt;/p>
-&lt;/blockquote></description></item><item><title>Docs3-V2: Achieving generalization (server-side generalization)</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/generic-service/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/generic-service/</guid><description>
+&lt;/blockquote></description></item><item><title>Docs3-V2: Achieving generalization (server-side generalization)</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/generic-service/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/generic-service/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>The universal interface implementation method is mainly used when there is no API interface and model classifier on the server side. All POJOs in the parameters and return values are represented by Map, which is usually used for framework integration. For example, to implement a general remote service Mock framework, you can All service requests are handled by implementing the GenericService interface.&lt;/p>
 &lt;h2 id="scenes-to-be-used">scenes to be used&lt;/h2>
@@ -2462,9 +2462,9 @@ To customize the logic of creating invoker, please implement &lt;code>org.apache
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#586e75">// expose and register services&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>service. &lt;span style="color:#268bd2">export&lt;/span>();
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Asynchronous execution</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/async-execute-on-provider/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/async-execute-on-provider/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Asynchronous execution</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/async-execute-on-provider/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/async-execute-on-provider/</guid><description>
 &lt;div class="pageinfo pageinfo-primary">
-&lt;p>This document is no longer maintained. You are currently viewing a snapshot version. If you want to see the latest version of the documentation, see &lt;a href="https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/attachment/">Latest Version&lt;/a>.&lt;/p>
+&lt;p>This document is no longer maintained. You are currently viewing a snapshot version. If you want to see the latest version of the documentation, see &lt;a href="https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/attachment/">Latest Version&lt;/a>.&lt;/p>
 &lt;/div>
 &lt;p>The asynchronous execution of the provider side switches the blocked business from Dubbo&amp;rsquo;s internal thread pool to the business-defined thread, avoiding excessive occupation of the Dubbo thread pool, and helping to avoid the mutual influence between different services. Asynchronous execution is tantamount to saving resources or improving RPC response performance, because if business execution needs to be blocked, there is always a thread to be responsible for execution.&lt;/p>
 &lt;div class="alert alert-warning" role="alert">
@@ -2527,7 +2527,7 @@ To customize the logic of creating invoker, please implement &lt;code>org.apache
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#719e07">return&lt;/span> &lt;span style="color:#cb4b16">null&lt;/span>;
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> }
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Local call</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/local-call/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/local-call/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Local call</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/local-call/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/local-call/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>The local call uses the injvm protocol, which is a pseudo-protocol. It does not open ports, does not initiate remote calls, and is only directly associated in the JVM, but executes Dubbo&amp;rsquo;s Filter chain.&lt;/p>
 &lt;h2 id="scenes-to-be-used">scenes to be used&lt;/h2>
@@ -2556,7 +2556,7 @@ To customize the logic of creating invoker, please implement &lt;code>org.apache
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>RpcContext.getServiceContext().setLocalInvoke(&lt;span style="color:#cb4b16">false&lt;/span>);
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>Configure a single call as a local call.&lt;/strong>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-java" data-lang="java">&lt;span style="display:flex;">&lt;span>RpcContext.getServiceContext().setLocalInvoker(&lt;span style="color:#cb4b16">true&lt;/span>);
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Delayed Exposure</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/delay-publish/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/delay-publish/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Delayed Exposure</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/delay-publish/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/delay-publish/</guid><description>
 &lt;p>If your service needs warm-up time, such as initializing the cache, waiting for related resources to be in place, etc., you can use delay for delayed exposure. In Dubbo version 2.6.5, we made minor adjustments to the service delay exposure logic, and postponed the countdown action for services that require delay exposure (delay &amp;gt; 0) until Spring initialization is complete. You will not feel this change while using Dubbo, so please feel free to use it.&lt;/p>
 &lt;h2 id="versions-before-dubbo-265">Versions before Dubbo 2.6.5&lt;/h2>
 &lt;p>Delay until Spring initialization completes before exposing services&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p>
@@ -2573,11 +2573,11 @@ To customize the logic of creating invoker, please implement &lt;code>org.apache
 &lt;ol>
 &lt;li>
 &lt;p>The applicationContext.getBean() call of the requesting thread first synchronizes the singletonObjects to determine whether the Bean exists, and initializes the synchronization beanDefinitionMap if it does not exist, and then synchronizes the singletonObjects again to write the Bean instance cache.&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/user/lock-get-bean.jpg" alt="deadlock">&lt;/p>
+&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/user/lock-get-bean.jpg" alt="deadlock">&lt;/p>
 &lt;/li>
 &lt;li>
 &lt;p>The Spring initialization thread, because it does not need to judge the existence of the bean, directly synchronizes the beanDefinitionMap to initialize, and synchronizes singletonObjects to write the bean instance cache.&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/user/lock-init-context.jpg" alt="/user-guide/images/lock-init-context.jpg">&lt;/p>
+&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/user/lock-init-context.jpg" alt="/user-guide/images/lock-init-context.jpg">&lt;/p>
 &lt;p>This causes the getBean thread to lock singletonObjects first, then beanDefinitionMap, and singletonObjects again.
 The Spring initialization thread first locks beanDefinitionMap and then singletonObjects. The reverse lock leads to thread deadlock, unable to provide services, and unable to start.&lt;/p>
 &lt;/li>
@@ -2596,7 +2596,7 @@ The Spring initialization thread first locks beanDefinitionMap and then singleto
 &lt;p>Trigger exposure based on Spring&amp;rsquo;s ContextRefreshedEvent event&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/div></description></item><item><title>Docs3-V2: Sign Up Only</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/registry-only/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/registry-only/</guid><description>
+&lt;/div></description></item><item><title>Docs3-V2: Sign Up Only</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/registry-only/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/registry-only/</guid><description>
 &lt;h2 id="feature-description">Feature description&lt;/h2>
 &lt;p>If there are two mirroring environments and two registries, one service is only deployed in one of the registries, and the other registry has not yet been deployed, and other applications in the two registries need to rely on this service. At this time, the service provider can only register the service to another registration center, but not subscribe to the service from another registration center.&lt;/p>
 &lt;h2 id="scenes-to-be-used">scenes to be used&lt;/h2>
@@ -2607,8 +2607,8 @@ The Spring initialization thread first locks beanDefinitionMap and then singleto
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>or&lt;/strong>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-xml" data-lang="xml">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;dubbo:registry&lt;/span> id=&lt;span style="color:#2aa198">&amp;#34;hzRegistry&amp;#34;&lt;/span> address=&lt;span style="color:#2aa198">&amp;#34;10.20.153.10:9090&amp;#34;&lt;/span> &lt;span style="color:#268bd2">/&amp;gt;&lt;/span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#268bd2">&amp;lt;dubbo:registry&lt;/span> id=&lt;span style="color:#2aa198">&amp;#34;qdRegistry&amp;#34;&lt;/span> address=&lt;span style="color:#2aa198">&amp;#34;10.20.141.150:9090?subscribe=false&amp;#34;&lt;/span> &lt;span style="color:#268bd2">/&amp;gt;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Distributed transaction support</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/distributed-transaction/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/advanced-features-and-usage/service/distributed-transaction/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs3-V2: Distributed transaction support</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/distributed-transaction/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/advanced-features-and-usage/service/distributed-transaction/</guid><description>
 &lt;p>Distributed transactions are implemented based on the JTA/XA specification.&lt;/p>
 &lt;p>&lt;strong>two-phase commit&lt;/strong>&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/user/jta-xa.jpg" alt="/user-guide/images/jta-xa.jpg">&lt;/p>
+&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/user/jta-xa.jpg" alt="/user-guide/images/jta-xa.jpg">&lt;/p>
 &lt;p>In Dubbo, you can use [seata](/zh-cn/blog/2019/01/17/How to use seata to ensure the consistency between dubbo microservices/) to complete the support for distributed transactions.&lt;/p></description></item></channel></rss>

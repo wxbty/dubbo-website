@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – SPI Extension Manual</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/spi/</link><description>Recent content in SPI Extension Manual on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/spi/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs3-V2: Dubbo SPI Overview</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/spi/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/spi/overview/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Apache Dubbo – SPI Extension Manual</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/</link><description>Recent content in SPI Extension Manual on Apache Dubbo</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs3-V2: Dubbo SPI Overview</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/overview/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/overview/</guid><description>
 &lt;h2 id="extended-design-ideas">Extended Design Ideas&lt;/h2>
 &lt;p>Scalability is what any system pursues, and it is equally applicable to Dubbo.&lt;/p>
 &lt;h3 id="what-is-scalability">What is scalability&lt;/h3>
@@ -31,7 +31,7 @@ And building a small IoC container by myself feels a bit over-designed, so choos
 &lt;p>From the design goal of Dubbo extension, it can be seen that some features implemented by Dubbo, such as dynamic selection of extension implementation, IOC, AOP, etc., can provide users with very flexible expansion capabilities.&lt;/p>
 &lt;h2 id="dubbo-extension-loading-process">Dubbo extension loading process&lt;/h2>
 &lt;p>The whole process of Dubbo loading extension is as follows:&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/concepts/extension-load.png" alt="//imgs/v3/concepts/extension-load.png">&lt;/p>
+&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/v3/concepts/extension-load.png" alt="//imgs/v3/concepts/extension-load.png">&lt;/p>
 &lt;p>There are 4 main steps:&lt;/p>
 &lt;ul>
 &lt;li>Read and parse configuration files&lt;/li>
@@ -54,7 +54,7 @@ And building a small IoC container by myself feels a bit over-designed, so choos
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>As can be seen from the above expansion steps, the user basically completes the expansion under the black box.&lt;/p>
 &lt;h2 id="dubbo-extended-application">Dubbo extended application&lt;/h2>
 &lt;p>Dubbo&amp;rsquo;s expansion capability is very flexible, and it is ubiquitous in the realization of its own functions.&lt;/p>
-&lt;p>&lt;img src="https://wxbty.github.io/dubbo-website/imgs/v3/concepts/extension-use.png" alt="//imgs/v3/concepts/extension-use.png">&lt;/p>
+&lt;p>&lt;img src="https://cn.dubbo.apache.org/imgs/v3/concepts/extension-use.png" alt="//imgs/v3/concepts/extension-use.png">&lt;/p>
 &lt;p>Dubbo&amp;rsquo;s extensibility makes it easy to divide the Dubbo project into sub-modules one by one to realize the hot-swappable feature. Users can completely replace Dubbo&amp;rsquo;s native implementation based on their own needs to meet their own business needs.&lt;/p>
 &lt;h2 id="scenes-to-be-used">scenes to be used&lt;/h2>
 &lt;ul>
@@ -62,4 +62,4 @@ And building a small IoC container by myself feels a bit over-designed, so choos
 &lt;li>If you need to implement a custom registry, you can use Dubbo&amp;rsquo;s extension capabilities.&lt;/li>
 &lt;li>If you need to implement custom filters, you can use Dubbo&amp;rsquo;s extension capabilities.&lt;/li>
 &lt;/ul>
-&lt;p>Dubbo extensions treat internal implementations and third-party implementations equally. For more usage scenarios, see &lt;a href="../description/">SPI extension implementation&lt;/a>&lt;/p></description></item><item><title>Docs3-V2: Dubbo SPI extension implementation description</title><link>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/spi/description/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://wxbty.github.io/dubbo-website/en/docs3-v2/java-sdk/reference-manual/spi/description/</guid><description/></item></channel></rss>
+&lt;p>Dubbo extensions treat internal implementations and third-party implementations equally. For more usage scenarios, see &lt;a href="../description/">SPI extension implementation&lt;/a>&lt;/p></description></item><item><title>Docs3-V2: Dubbo SPI extension implementation description</title><link>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://cn.dubbo.apache.org/en/docs3-v2/java-sdk/reference-manual/spi/description/</guid><description/></item></channel></rss>
